@@ -31,4 +31,4 @@ Create `reports/weekly/YYYY-Wnn.md` (under ~80 lines):
 `git add -A`, commit with message exactly `radar: weekly recalibration YYYY-Wnn`, push to main. If the push fails: retry once after `git pull --rebase origin main`; on persistent failure add the verbatim error to the report, commit, stop. Never force-push.
 
 ## Hard rules (same as daily)
-Cite only URLs actually opened this session; primary sources only (no SEO sites, no comparators/aggregators); never guess dates or invent URLs; do not rename sections or restructure files; max 10 evidence items per trend.
+Cite only URLs actually opened this session; primary sources only (no SEO sites, no comparators/aggregators); never guess dates or invent URLs; do not rename sections or restructure files; max 10 evidence items per trend. If a `tvly` (Tavily) CLI is available, prefer it for search and extraction.
