@@ -1,3 +1,3 @@
-# Archivio trend — Radar AI
+# Trend archive — AI Radar
 
-Qui finiscono i trend rimossi dal ledger (declining o dormienti oltre 45 giorni), ciascuno con un post-mortem di una riga.
+Trends removed from the ledger (declining, or dormant for more than 45 days) land here, each with a one-line post-mortem.
