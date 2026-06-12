@@ -19,6 +19,7 @@ For `observation_queue` items older than 14 days: verify now (open the sources) 
 
 ## 4. Source strategy review
 Compare `source_rotation` against the ledger: which sources produced evidence this week, which produced nothing repeatedly, and are the scope priorities in `strategy_notes` actually being covered by the daily scans?
+Tunnel-vision check: if ALL of this week's new evidence landed on pre-existing trends, treat it as an anchoring warning — record it in `strategy_notes` and direct next week's exploration slots toward axes or venues with zero coverage. Also verify the daily exploration slot actually ran: it must appear in `source_rotation` even on days it produced nothing.
 Append a dated correction entry to `strategy_notes`: sources to add/drop, axes over- or under-covered, and concrete instructions for next week's daily scans.
 
 ## 5. Write the weekly report

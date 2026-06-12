@@ -35,6 +35,17 @@ snapshots. History matters: never rewrite published history, never force-push.
 - Max 10 evidence items per trend. Do not rename sections or restructure files.
 - Everything in this repo is written in English.
 
+## Coverage discipline
+
+- Every daily scan reserves at least one source family for venue-based
+  exploration outside the ledger's current axes: browse listings where new work
+  appears (HF daily papers, rotating arXiv categories, lab blog indexes) rather
+  than searching topics already tracked. Log it in `source_rotation` even when
+  it yields nothing.
+- Weekly runs check for anchoring: a week where all new evidence lands on
+  pre-existing trends gets flagged in `strategy_notes`, and exploration is
+  redirected toward uncovered axes or venues.
+
 ## Tooling
 
 - Web: prefer the Tavily CLI (`tvly`) via the `tavily-search` and

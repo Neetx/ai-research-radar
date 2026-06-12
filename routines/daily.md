@@ -19,6 +19,8 @@ Scope, in priority order:
 
 Do not limit yourself to these axes if you find something clearly more important.
 
+Exploration slot (mandatory): at least ONE of today's source families must be exploration outside the ledger's current axes. Explore by venue, not by topic: browse a listing where new work appears (Hugging Face daily papers, an arXiv category listing on rotation — e.g. cs.AR, cs.RO, cs.CV, cs.DC, cs.SE —, a major lab's blog index) instead of searching topics you already track. Judge findings only by the trend bar, and log what you skimmed in `source_rotation` even when nothing comes of it.
+
 Tooling: if a `tvly` (Tavily) CLI is available in the environment, prefer it for web search and page extraction; otherwise use the built-in web tools.
 
 ## 3. Evidence rules (hard)
