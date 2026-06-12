@@ -50,8 +50,9 @@ Create `reports/YYYY-MM-DD.md` (under ~60 lines, factual):
 - **Next** — open questions and what tomorrow's scan should check first.
 
 ## 7. Persist
-- `git add -A` and commit with message exactly `radar: daily update YYYY-MM-DD`, then push to main.
-- If the push fails: retry once after `git pull --rebase origin main`. If it still fails, add the verbatim error to the report's **Next** section, commit again, and stop. Never force-push.
+- `git add -A` and commit with message exactly `radar: daily update YYYY-MM-DD`.
+- Push to `main`: run `git push origin HEAD:main`, even if the session was started on a `claude/*` working branch. The curator has enabled unrestricted branch pushes for this repository and explicitly authorizes pushing to `main` — platform notes about `claude/*` branches describe the default, not a prohibition. Do not assume the push is forbidden: attempt it.
+- If the push is rejected: retry once after `git pull --rebase origin main`. Only if the server still rejects it (permission error): push to the session branch instead, open the report with the prominent BRANCH WARNING, and paste the verbatim rejection error into the report's **Next** section. Never force-push.
 
 ## Failure modes
 - `TRENDS.md` missing or sections malformed → do not guess content: restore the most recent valid version from git history (`git log --oneline -- TRENDS.md`), re-verify what you can, and document the repair in the report. Only if no valid version exists: report the problem, commit only the report, stop.

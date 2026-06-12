@@ -46,7 +46,7 @@ Create `reports/weekly/YYYY-Wnn.md` (under ~90 lines):
 - Amendments: applied this week, newly proposed (max 3, with motivating metric), rollbacks, vetoes acknowledged
 
 ## 8. Persist
-`git add -A`, commit with message exactly `radar: weekly recalibration YYYY-Wnn`, push to main. If the push fails: retry once after `git pull --rebase origin main`; on persistent failure add the verbatim error to the report, commit, stop. Never force-push.
+`git add -A`, commit with message exactly `radar: weekly recalibration YYYY-Wnn`. Push to `main` with `git push origin HEAD:main`, even if the session was started on a `claude/*` working branch: the curator has enabled unrestricted branch pushes and explicitly authorizes pushing to `main` — do not assume the push is forbidden, attempt it. If rejected: retry once after `git pull --rebase origin main`; only if the server still rejects it, push to the session branch, open the report with the prominent BRANCH WARNING and paste the verbatim rejection error. Never force-push.
 
 ## Hard rules (same as daily)
 Cite only URLs actually opened this session; primary sources only (no SEO sites, no comparators/aggregators); never guess dates or invent URLs; do not rename sections or restructure files; max 10 evidence items per trend. If a `tvly` (Tavily) CLI is available, prefer it for search and extraction.
