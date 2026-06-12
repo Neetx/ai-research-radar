@@ -1,13 +1,14 @@
 # AI Radar
 
-![trends](https://img.shields.io/badge/trends-11-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-3-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-12-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--06--12-2f9e44?style=flat-square)
+![trends](https://img.shields.io/badge/trends-11-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-3-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-11-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--06--12-2f9e44?style=flat-square)
 
 Tracks research and engineering trends across the AI ecosystem, for an AI researcher / AI-systems engineer. This page is generated from [TRENDS.md](TRENDS.md), the ledger of record — click a trend for its full evidence.
 
 **Since last scan (2026-06-12):**
-- [Verifiable RL environments](TRENDS.md#id-rl-env-005-verifiable-rl-environments-as-an-infrastructure-category-for-agent-training) refreshed (exploration pass): three independent works in ~2 weeks — a [63-page survey](https://arxiv.org/abs/2606.12191), [RACES recursive composition](https://arxiv.org/abs/2606.12373), and [EvoTrainer](https://arxiv.org/abs/2606.03108) co-evolving policy+harness; kept emerging (academic surge, not yet production adoption).
 - [Low-bit quantization](TRENDS.md#id-lowbit-quant-011-ultra-low-bit-quantization-vector-and-trellis-coding-for-weights-and-kv-cache) is **accelerating**: vLLM ships an in-tree [`turboquant` KV-cache module](https://docs.vllm.ai/en/latest/api/vllm/model_executor/layers/quantization/turboquant) — second production engine after EXL3.
-- [Latent inter-model communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) gained a fourth independent group: [Interlat](https://arxiv.org/abs/2511.09149) accepted at **ACL 2026**.
+- [PPD](https://arxiv.org/abs/2603.13358) (ICML 2026) promoted from the watchlist into [Prefill/decode disaggregation](TRENDS.md#id-pd-disagg-002-prefilldecode-disaggregation-as-the-standard-llm-serving-architecture): affirms PD-disagg as "the standard architecture" and extends it to multi-turn (append-prefill routing).
+- [GenEnv](https://arxiv.org/abs/2512.19682) (Princeton) promoted into [Verifiable RL environments](TRENDS.md#id-rl-env-005-verifiable-rl-environments-as-an-infrastructure-category-for-agent-training): the "co-evolve environments with the policy" sub-theme now has two independent groups.
+- Off-axis exploration (cs.AR venue): low-bit LLM serving surfacing in the hardware-architecture listing — [SPEAR](https://arxiv.org/abs/2606.11244) and [TileFuse](https://arxiv.org/abs/2606.11357) logged to the [watchlist](TRENDS.md#observation_queue).
 
 ## Trends
 
@@ -29,6 +30,7 @@ Tracks research and engineering trends across the AI ecosystem, for an AI resear
 
 ## Worth studying
 
+- [PPD Disaggregation for Multi-turn LLM Serving](https://arxiv.org/abs/2603.13358) — ICML 2026; the "append-prefill is an order of magnitude cheaper than full prefill" insight reframes prefill/decode routing for chat and agent workloads
 - [Agentic Environment Engineering: A Survey](https://arxiv.org/abs/2606.12191) — 63-page systematization of the environment lifecycle (modeling/synthesis/evaluation/application); the map to read before building or buying RL-environment infrastructure
 - [On Subquadratic Architectures](https://arxiv.org/abs/2606.12364) — clean head-to-head of xLSTM vs Mamba-2 vs Gated DeltaNet on code-model pretraining, distillation and time-series pretraining, with a unified formulation
 - [vLLM `turboquant` module](https://docs.vllm.ai/en/latest/api/vllm/model_executor/layers/quantization/turboquant) — KV-cache vector quantization inside a mainstream serving engine; read next to the TurboQuant paper to see the research→production distance
@@ -36,8 +38,7 @@ Tracks research and engineering trends across the AI ecosystem, for an AI resear
 - [Cache-to-Cache (C2C)](https://arxiv.org/abs/2510.03215) — the cleanest formulation of direct KV-cache communication between different LLMs (ICLR'26)
 - [ExLlamaV3 / EXL3](https://github.com/turboderp-org/exllamav3) — production trellis-coded quantization (QTIP-derived) on consumer GPUs
 - [bitnet.cpp](https://github.com/microsoft/BitNet) — the official ternary-LLM inference stack; the practical entry point to 1-bit models on CPU
-- [Design Patterns for Securing LLM Agents](https://arxiv.org/abs/2506.08837) — the reference catalogue of injection-resistant agent architectures
 
 ## Output map
 
-Ledger: [TRENDS.md](TRENDS.md) · unverified signals: [watchlist (12)](TRENDS.md#observation_queue) · daily reports: [reports/](reports) — latest [2026-06-12](reports/2026-06-12.md) · weekly: none yet · conventions: [AGENTS.md](AGENTS.md)
+Ledger: [TRENDS.md](TRENDS.md) · unverified signals: [watchlist (11)](TRENDS.md#observation_queue) · daily reports: [reports/](reports) — latest [2026-06-12](reports/2026-06-12.md) · weekly: none yet · conventions: [AGENTS.md](AGENTS.md)
