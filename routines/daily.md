@@ -36,16 +36,16 @@ Tooling: if a `tvly` (Tavily) CLI is available in the environment, prefer it for
 - `observation_queue`: add today's weak signals (0–5, marked unverified unless opened); promote items that now meet the trend bar (new trends start at seed or emerging); when dropping an item, record the reason in today's report.
 - Append one dated line to `source_rotation` with the sources covered today.
 - Update the "Last updated" line. Do not rename sections or change the file structure.
-- Regenerate `DASHBOARD.md` from the updated ledger in the same commit (follow the `radar-render-dashboard` skill).
+- Regenerate `README.md` (the dashboard / landing page) from the updated ledger in the same commit (follow the `radar-render-dashboard` skill).
 
-## 5. Study picks (LIBRARY.md)
-From today's scan (exploration slot included), select 0–2 items that an AI researcher / AI-systems engineer / daily AI practitioner should know or study: a project, paper, technique or tool. The trend bar does NOT apply here — a single strong artifact qualifies — but the evidence rules do: only opened, primary sources. Add each pick to `LIBRARY.md` (newest first: date — link — one line of why it is worth studying). Don't force it: zero picks is fine.
+## 5. Study picks (study_shelf)
+From today's scan (exploration slot included), select 0–2 items that an AI researcher / AI-systems engineer / daily AI practitioner should know or study: a project, paper, technique or tool. The trend bar does NOT apply here — a single strong artifact qualifies — but the evidence rules do: only opened, primary sources. Add each pick to the `study_shelf` section of `TRENDS.md` (newest first: date — [name](url) — one line of why it is worth studying). Don't force it: zero picks is fine.
 
 ## 6. Write the daily report
 Create `reports/YYYY-MM-DD.md` (under ~60 lines, factual):
 - **Ledger changes** — evidence added per trend, stage moves with reasons, queue promotions/drops.
 - **Top 3 of the day** — the most interesting verified items, one line + link each.
-- **Study picks** — items added to `LIBRARY.md` today, one line of why (omit if none).
+- **Study picks** — items added to the `study_shelf` today, one line of why (omit if none).
 - **Next** — open questions and what tomorrow's scan should check first.
 
 ## 7. Persist

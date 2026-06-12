@@ -12,11 +12,11 @@ Judge each trend's velocity over the last 2–3 weeks: count of new independent 
 - **Dormancy**: 21+ days without evidence → `dormant`. If `last_evidence` is 45+ days old, move the whole entry to `ARCHIVE.md`, compressed to a one-line post-mortem (what it was, why it stalled).
 - **Merge** overlapping trends: keep the older id, union the aliases, keep the 10 strongest evidence items, note the merge in `notes`.
 - **Confidence**: raise to `high` only after repeated multi-week confirmation from primary sources; lower it when evidence is mostly vendor-reported.
-- After recalibration, regenerate `DASHBOARD.md` (follow the `radar-render-dashboard` skill).
+- After recalibration, regenerate `README.md` (the dashboard / landing page; follow the `radar-render-dashboard` skill).
 
 ## 3. Clean the observation queue
 For `observation_queue` items older than 14 days: verify now (open the sources) and either promote to a trend, drop with a one-line reason in the weekly report, or explicitly re-date the item stating what is still missing.
-Also curate `LIBRARY.md`: merge duplicates, drop picks that aged poorly (one-line reason in the report), and if several picks cluster around one theme, evaluate promoting that theme to the ledger.
+Also curate the `study_shelf` section of `TRENDS.md`: merge duplicates, drop picks that aged poorly (one-line reason in the report), and if several picks cluster around one theme, evaluate promoting that theme to a trend.
 
 ## 4. Source strategy review
 Compare `source_rotation` against the ledger: which sources produced evidence this week, which produced nothing repeatedly, and are the scope priorities in `strategy_notes` actually being covered by the daily scans?

@@ -8,17 +8,16 @@ apply to every session.
 
 Persistent state for AI Radar, a tracker of AI-ecosystem trends (research +
 engineering). It serves an AI researcher / AI-systems engineer who works with AI
-daily: besides trends, the radar curates `LIBRARY.md`, a shelf of things worth
-studying. `TRENDS.md` is the single source of truth; reports are derived
+daily: besides trends, the radar curates a study shelf (the `study_shelf`
+section of `TRENDS.md`, surfaced on the README). `TRENDS.md` is the single source of truth; reports are derived
 snapshots. History matters: never rewrite published history, never force-push.
 
 ## File map
 
 | Path | Contents | Edit policy |
 |---|---|---|
-| `TRENDS.md` | Trend ledger + `observation_queue`, `source_rotation`, `strategy_notes` | follow the `radar-ledger-update` skill |
-| `DASHBOARD.md` | Derived widget-style summary: badges, digest, stage strip, trend table | regenerate via the `radar-render-dashboard` skill; never edit by hand |
-| `LIBRARY.md` | Curated study shelf: projects/papers/concepts worth knowing | daily appends 0–2 picks; weekly prunes |
+| `TRENDS.md` | Trend ledger + `observation_queue`, `source_rotation`, `strategy_notes`, `study_shelf` | follow the `radar-ledger-update` skill |
+| `README.md` | THE output surface (repo landing page): badges, digest, clickable trend table, study shelf | fully derived — regenerate via the `radar-render-dashboard` skill; never edit by hand |
 | `ARCHIVE.md` | Archived trends, one-line post-mortems | append-only |
 | `reports/YYYY-MM-DD.md` | Daily reports | write once, never edit old ones |
 | `reports/weekly/YYYY-Wnn.md` | Weekly reports | write once |
@@ -64,7 +63,7 @@ snapshots. History matters: never rewrite published history, never force-push.
 - Commit messages: `radar: daily update YYYY-MM-DD`,
   `radar: weekly recalibration YYYY-Wnn`, `radar: refine skill <name>`, or
   `radar: <short description>` for anything else.
-- Any commit that changes `TRENDS.md` must regenerate `DASHBOARD.md` in the same
+- Any commit that changes `TRENDS.md` must regenerate `README.md` in the same
   commit (see the `radar-render-dashboard` skill).
 - Push to `main`. If the push fails: retry once after
   `git pull --rebase origin main`; on persistent failure record the verbatim
