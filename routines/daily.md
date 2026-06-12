@@ -34,6 +34,7 @@ Tooling: if a `tvly` (Tavily) CLI is available in the environment, prefer it for
 - `observation_queue`: add today's weak signals (0–5, marked unverified unless opened); promote items that now meet the trend bar (new trends start at seed or emerging); when dropping an item, record the reason in today's report.
 - Append one dated line to `source_rotation` with the sources covered today.
 - Update the "Last updated" line. Do not rename sections or change the file structure.
+- Regenerate `DASHBOARD.md` from the updated ledger in the same commit (follow the `radar-render-dashboard` skill).
 
 ## 5. Write the daily report
 Create `reports/YYYY-MM-DD.md` (under ~60 lines, factual):

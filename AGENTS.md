@@ -15,6 +15,7 @@ snapshots. History matters: never rewrite published history, never force-push.
 | Path | Contents | Edit policy |
 |---|---|---|
 | `TRENDS.md` | Trend ledger + `observation_queue`, `source_rotation`, `strategy_notes` | follow the `radar-ledger-update` skill |
+| `DASHBOARD.md` | Derived dashboard: stage pipeline (Mermaid), per-stage tables, watchlist | regenerate via the `radar-render-dashboard` skill; never edit by hand |
 | `ARCHIVE.md` | Archived trends, one-line post-mortems | append-only |
 | `reports/YYYY-MM-DD.md` | Daily reports | write once, never edit old ones |
 | `reports/weekly/YYYY-Wnn.md` | Weekly reports | write once |
@@ -49,6 +50,8 @@ snapshots. History matters: never rewrite published history, never force-push.
 - Commit messages: `radar: daily update YYYY-MM-DD`,
   `radar: weekly recalibration YYYY-Wnn`, `radar: refine skill <name>`, or
   `radar: <short description>` for anything else.
+- Any commit that changes `TRENDS.md` must regenerate `DASHBOARD.md` in the same
+  commit (see the `radar-render-dashboard` skill).
 - Push to `main`. If the push fails: retry once after
   `git pull --rebase origin main`; on persistent failure record the verbatim
   error in the report and stop. Never force-push.
