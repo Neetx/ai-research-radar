@@ -53,17 +53,27 @@ Goal: ground truth — did the radar see early what later became big?
 Log in `## calibration`:
 `- YYYY-MM-DD — retro M<mm>: <item> — HIT-early|HIT-late|MISS (first seen <date or never>), …`
 
-## 3. Curator proposals (every week, max 3)
+## 3. Amendments (proposed → cooling period → applied)
 
-The mission — scope axes, trend bar, prompts — belongs to the curator; the radar
-may question it but never change it. Close the weekly report with up to 3
-proposals the radar cannot apply alone: drop/merge a scope axis, change a
-routine prompt (give the exact replacement text), adjust the exploration budget.
-Each proposal must cite the metric or retrospective result that motivates it.
+The radar runs unattended and may change its own operating instructions —
+under the autonomy contract in AGENTS.md. Every week, up to 3 proposed
+amendments: routine edits (exact replacement text), axis drops/merges/
+supersessions, exploration-budget changes. Each must cite the metric or
+retrospective result that motivates it.
 
-Tracking: an unanswered proposal may be re-raised once, then dropped. An adopted
-proposal will appear later as a dated curator entry in `strategy_notes` —
-written by the curator, never by the radar.
+Lifecycle:
+- **Week N**: propose — log in `calibration` and the weekly report.
+- **Week N+1**: apply IF the motivating signal persists AND no dated curator
+  veto appeared in `strategy_notes` (silence is consent). One dedicated commit
+  per amendment. If the signal vanished, drop the proposal and say so.
+- **After applying**: if calibration metrics worsen for two consecutive weeks,
+  `git revert` the amendment and log the rollback.
+
+Scope-axis changes are recorded as "radar-adopted" dated entries in
+`strategy_notes`, explicitly naming what they supersede. Curator entries are
+never deleted or edited — vetoes and mission input belong to the curator alone.
+The immutable sections listed in AGENTS.md are out of bounds: an amendment
+touching them is invalid.
 
 ## Boundaries
 

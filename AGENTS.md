@@ -21,7 +21,7 @@ snapshots. History matters: never rewrite published history, never force-push.
 | `ARCHIVE.md` | Archived trends, one-line post-mortems | append-only |
 | `reports/YYYY-MM-DD.md` | Daily reports | write once, never edit old ones |
 | `reports/weekly/YYYY-Wnn.md` | Weekly reports | write once |
-| `routines/*.md` | Versioned copies of operating prompts | only on explicit request |
+| `routines/*.md` | LIVE operating instructions, loaded by the fixed platform prompt | weekly amendments only, per the Self-amendment policy |
 | `.claude/skills/` | Project skills | improvable — see policy below |
 
 ## Hard rules (never relax these)
@@ -48,10 +48,9 @@ snapshots. History matters: never rewrite published history, never force-push.
   pre-existing trends gets flagged in `strategy_notes`, and exploration is
   redirected toward uncovered axes or venues.
 - Weekly runs self-evaluate (see the `radar-self-eval` skill): calibration
-  metrics every week, a hit/miss retrospective monthly, up to 3 curator
-  proposals per weekly report. The `calibration` section of TRENDS.md is
-  append-only; adopted proposals become dated curator entries in
-  `strategy_notes` — written by the curator, never by the radar.
+  metrics every week, a hit/miss retrospective monthly, and up to 3 proposed
+  amendments per weekly report, handled per the Self-amendment policy below.
+  The `calibration` section of TRENDS.md is append-only.
 
 ## Tooling
 
@@ -77,6 +76,41 @@ snapshots. History matters: never rewrite published history, never force-push.
   `claude/*`) and forbids pushing to `main`, push there — and open the report
   with a prominent warning that `main` must be fast-forwarded from that branch
   before the next run, otherwise state is lost.
+
+## Self-amendment (autonomy contract)
+
+The radar runs unattended: in normal operation no human edits prompts, skills
+or scope. The platform prompt of each scheduled session is a fixed loader and
+must never need changing:
+
+> You are the daily [weekly] operator of this repository. Read AGENTS.md, then
+> read routines/daily.md [routines/weekly.md] and execute it exactly. If either
+> file is missing or unreadable, write a report describing the problem, commit
+> only the report, and stop.
+
+Because `routines/*.md` are the live operating instructions, they are
+amendable — under these rules:
+
+- Only weekly runs amend `routines/*.md`, skills, or scope axes. Daily runs
+  execute; they do not legislate.
+- Every amendment must cite the calibration metric or retrospective result
+  that motivates it. No metric, no change.
+- Cooling period: an amendment is first PROPOSED in a weekly report (logged in
+  `calibration`, with exact replacement text); it is APPLIED on the next weekly
+  run only if the motivating signal persists. The curator may veto in between
+  with a dated entry in `strategy_notes`; silence is consent.
+- One dedicated commit per applied amendment:
+  `radar: amend <target> — <short reason>`, explained in that week's report.
+- Auto-rollback: if calibration metrics worsen for two consecutive weeks after
+  an amendment, `git revert` it and log the rollback in `calibration`.
+- Scope axes evolve the same way: a "radar-adopted" dated entry in
+  `strategy_notes` may explicitly supersede an older axis. Curator entries are
+  never deleted or edited; vetoes and mission input are written only by the
+  curator.
+
+Immutable (curator-only, no exceptions): the Hard rules, Coverage discipline
+and this Self-amendment section; the existence of the self-evaluation step;
+append-only history. An amendment touching these is invalid — do not apply it.
 
 ## Skill maintenance policy
 

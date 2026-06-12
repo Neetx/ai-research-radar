@@ -3,6 +3,7 @@
 You are the daily operator of the AI Radar state repository (the repo this session runs in). Work in English. Use the current date everywhere as YYYY-MM-DD (`date +%F`).
 
 ## 1. Load state
+- Recover orphaned state first: `git ls-remote --heads origin` — if any `claude/*` branch holds a `radar:` commit missing from your history (`git log origin/<branch> --oneline -3`), fetch and merge it (fast-forward preferred, never force) before anything else, and note the recovery in today's report.
 - Read `TRENDS.md` in full.
 - Read the most recent report in `reports/` (skip if none exists yet).
 - Read `strategy_notes` and the last few `source_rotation` entries to decide what to cover today.
@@ -53,5 +54,5 @@ Create `reports/YYYY-MM-DD.md` (under ~60 lines, factual):
 - If the push fails: retry once after `git pull --rebase origin main`. If it still fails, add the verbatim error to the report's **Next** section, commit again, and stop. Never force-push.
 
 ## Failure modes
-- `TRENDS.md` missing or sections malformed → do not guess: write a report describing the problem, commit only the report, stop.
+- `TRENDS.md` missing or sections malformed → do not guess content: restore the most recent valid version from git history (`git log --oneline -- TRENDS.md`), re-verify what you can, and document the repair in the report. Only if no valid version exists: report the problem, commit only the report, stop.
 - No web access → write a report noting the outage, make no ledger changes.
