@@ -16,6 +16,12 @@ this session, (b) a real date, (c) one line of context.
    for recency). Search snippets are never citable on their own.
 2. **Open** each candidate with the `tavily-extract` skill. Opened = citable.
 3. **Pin dates** — by source type:
+   - Date by the NEWS EVENT: the evidence-line date is the date of whatever
+     makes the item worth logging now — v1 for a new paper, the acceptance or
+     latest-version date for an older paper that just got accepted/revised, the
+     release date for software. Keep the other dates in the context line, e.g.
+     "(v1 2025-11-12; accepted ACL 2026, v4 2026-04-16)" with the line dated
+     2026-04-16. This keeps the ledger's freshness machine-readable.
    - arXiv: `curl -sL 'https://export.arxiv.org/api/query?id_list=ID1,ID2'`
      gives exact v1/latest dates and the full author list (the abs page often
      hides them from extraction). Use https, not http.

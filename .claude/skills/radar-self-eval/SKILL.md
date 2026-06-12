@@ -22,9 +22,14 @@ commit:
   venue-exploration entry ÷ daily runs executed
 - **off-axis rate**: share of new queue items that do NOT match any axis in
   `strategy_notes` (judgment call — name them)
+- **discovery lag**: for each evidence item added this week, the days between
+  its evidence-line date and the date it entered the ledger (commit date via
+  `git log -p -- TRENDS.md`, or the daily reports). Report the median, split by
+  channel — exploration finds vs queue promotions (backfill) — plus the
+  backfill share of all new evidence. This is the daily-ness KPI.
 
 Append ONE dated line to `## calibration` in TRENDS.md:
-`- YYYY-MM-DD — W<nn>: queue +a/→p/−d/stale s · evidence +e · moves m · exploration c/r · off-axis o/a`
+`- YYYY-MM-DD — W<nn>: queue +a/→p/−d/stale s · evidence +e · moves m · exploration c/r · off-axis o/a · lag expl Xd / backfill Yd (Z%)`
 and include the same numbers, readable, in the weekly report.
 
 Interpretation thresholds (act, don't just log):
@@ -34,6 +39,10 @@ Interpretation thresholds (act, don't just log):
   propose narrowing or a verification-only day.
 - off-axis = 0 for two consecutive weeks → anchoring warning, even if the
   tunnel-vision check passed.
+- exploration-channel median lag > 7 days → the venues are stale: rotate them.
+- backfill share not shrinking for two consecutive weeks (once the bootstrap
+  queue is cleared) → the radar is doing literature review, not daily
+  detection: propose rebalancing scan time toward exploration.
 
 ## 2. Monthly retrospective (first weekly run of the month: `date +%d` ≤ 7)
 

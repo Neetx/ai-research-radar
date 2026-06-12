@@ -26,7 +26,7 @@ Append a dated correction entry to `strategy_notes`: sources to add/drop, axes o
 
 ## 5. Self-evaluation
 Follow the `radar-self-eval` skill:
-- Every run: compute the calibration metrics (queue funnel, evidence and stage moves, exploration-slot compliance, off-axis rate) from the week's daily reports and the TRENDS.md git history; append one dated line to the `calibration` section of TRENDS.md.
+- Every run: compute the calibration metrics (queue funnel, evidence and stage moves, exploration-slot compliance, off-axis rate, discovery lag by channel) from the week's daily reports and the TRENDS.md git history; append one dated line to the `calibration` section of TRENDS.md.
 - First run of each calendar month (`date +%d` ≤ 7): run the hit/miss retrospective first.
 - Prepare up to 3 proposed amendments (routine edits with exact replacement text, axis drops/merges, exploration-budget changes), each motivated by a metric or retrospective result.
 
