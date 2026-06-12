@@ -186,3 +186,7 @@ Things worth studying for an AI researcher / AI-systems engineer / daily AI prac
 - 2026-06-12 — [bitnet.cpp](https://github.com/microsoft/BitNet) — the official ternary-LLM inference stack; the practical entry point to 1-bit models on CPU
 - 2026-06-12 — [Design Patterns for Securing LLM Agents](https://arxiv.org/abs/2506.08837) — the reference catalogue of injection-resistant agent architectures; required reading before building any tool-using agent
 - 2026-06-12 — [Claude Code Agent Teams](https://code.claude.com/docs/en/agent-teams) — first mainstream built-in multi-agent orchestrator; the shared-task-list + mailbox architecture is a pattern worth studying regardless of vendor
+
+## calibration
+Self-evaluation log (append-only; see the radar-self-eval skill). Weekly line: `W<nn>: queue +added/→promoted/−dropped/stale n · evidence +n · moves n · exploration done/runs · off-axis n/added`. Monthly retro line: `retro M<mm>: <item> — HIT-early|HIT-late|MISS (first seen <date>)`.
+- 2026-06-12 — baseline: 11 trends (3 accelerating, 8 emerging), queue 9, study_shelf 7; exploration-slot and tunnel-vision rules active since 2026-06-12; first weekly metrics due with the next weekly run, first monthly retrospective due with the first weekly run of July 2026.

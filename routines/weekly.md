@@ -23,14 +23,22 @@ Compare `source_rotation` against the ledger: which sources produced evidence th
 Tunnel-vision check: if ALL of this week's new evidence landed on pre-existing trends, treat it as an anchoring warning — record it in `strategy_notes` and direct next week's exploration slots toward axes or venues with zero coverage. Also verify the daily exploration slot actually ran: it must appear in `source_rotation` even on days it produced nothing.
 Append a dated correction entry to `strategy_notes`: sources to add/drop, axes over- or under-covered, and concrete instructions for next week's daily scans.
 
-## 5. Write the weekly report
-Create `reports/weekly/YYYY-Wnn.md` (under ~80 lines):
+## 5. Self-evaluation
+Follow the `radar-self-eval` skill:
+- Every run: compute the calibration metrics (queue funnel, evidence and stage moves, exploration-slot compliance, off-axis rate) from the week's daily reports and the TRENDS.md git history; append one dated line to the `calibration` section of TRENDS.md.
+- First run of each calendar month (`date +%d` ≤ 7): run the hit/miss retrospective first.
+- Prepare up to 3 curator proposals — changes you cannot apply yourself (axis drops/merges, prompt edits with exact replacement text, exploration-budget changes) — each motivated by a metric or retrospective result.
+
+## 6. Write the weekly report
+Create `reports/weekly/YYYY-Wnn.md` (under ~90 lines):
 - Stage moves, merges, archivals — one-line reason each
 - Strongest and weakest trend of the week
 - 3–5 forward-looking bets for next week (what to watch, where)
 - Source strategy changes
+- Calibration metrics block (and the monthly retrospective when due)
+- Curator proposals (max 3), clearly marked, each with its motivating metric
 
-## 6. Persist
+## 7. Persist
 `git add -A`, commit with message exactly `radar: weekly recalibration YYYY-Wnn`, push to main. If the push fails: retry once after `git pull --rebase origin main`; on persistent failure add the verbatim error to the report, commit, stop. Never force-push.
 
 ## Hard rules (same as daily)

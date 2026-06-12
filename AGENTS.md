@@ -16,7 +16,7 @@ snapshots. History matters: never rewrite published history, never force-push.
 
 | Path | Contents | Edit policy |
 |---|---|---|
-| `TRENDS.md` | Trend ledger + `observation_queue`, `source_rotation`, `strategy_notes`, `study_shelf` | follow the `radar-ledger-update` skill |
+| `TRENDS.md` | Trend ledger + `observation_queue`, `source_rotation`, `strategy_notes`, `study_shelf`, `calibration` | follow the `radar-ledger-update` skill |
 | `README.md` | THE output surface (repo landing page): badges, digest, clickable trend table, study shelf | fully derived — regenerate via the `radar-render-dashboard` skill; never edit by hand |
 | `ARCHIVE.md` | Archived trends, one-line post-mortems | append-only |
 | `reports/YYYY-MM-DD.md` | Daily reports | write once, never edit old ones |
@@ -47,6 +47,11 @@ snapshots. History matters: never rewrite published history, never force-push.
 - Weekly runs check for anchoring: a week where all new evidence lands on
   pre-existing trends gets flagged in `strategy_notes`, and exploration is
   redirected toward uncovered axes or venues.
+- Weekly runs self-evaluate (see the `radar-self-eval` skill): calibration
+  metrics every week, a hit/miss retrospective monthly, up to 3 curator
+  proposals per weekly report. The `calibration` section of TRENDS.md is
+  append-only; adopted proposals become dated curator entries in
+  `strategy_notes` — written by the curator, never by the radar.
 
 ## Tooling
 

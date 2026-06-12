@@ -14,7 +14,7 @@ structure is a contract.
 - Header: `# Trend ledger — AI Radar`, then `Last updated: YYYY-MM-DD`, then the
   stage legend.
 - Sections, in this order: `## Active trends`, `## observation_queue`,
-  `## source_rotation`, `## strategy_notes`.
+  `## source_rotation`, `## strategy_notes`, `## study_shelf`, `## calibration`.
 - Trend block: `### [id: slug-NNN] Title` with fields `alias`, `stage`,
   `confidence`, `first_observed`, `last_evidence`, `evidence:` (list), `notes:`.
 - Evidence line: `- YYYY-MM-DD — URL — one line of context`.
@@ -33,13 +33,18 @@ structure is a contract.
   When dropping one, record why in the day's report.
 - Append one dated line per session to `source_rotation`. Append dated
   corrections to `strategy_notes`; never delete curator entries.
+- `study_shelf`: newest first, format `date — [name](url) — one line of why`;
+  single-artifact items allowed (the trend bar does not apply), opened primary
+  sources only.
+- `calibration` is append-only and written by weekly runs only (see the
+  `radar-self-eval` skill); daily runs never touch it.
 - Update the `Last updated` line. Keep everything in English.
 
 ## Validate before commit
 
 ```bash
 grep -n '^## ' TRENDS.md
-# expected, in order: Active trends, observation_queue, source_rotation, strategy_notes
+# expected, in order: Active trends, observation_queue, source_rotation, strategy_notes, study_shelf, calibration
 grep -c '^### \[id: ' TRENDS.md          # trend count matches expectations
 grep -nE '^  - [0-9]{4}-[0-9]{2}-[0-9]{2} — ' TRENDS.md | head -3   # evidence format
 grep -n '^Last updated:' TRENDS.md       # date is today
