@@ -1,5 +1,5 @@
 # Trend ledger — AI Radar
-Last updated: 2026-06-11
+Last updated: 2026-06-12
 
 Stage legend: seed | emerging | accelerating | mainstreaming | saturated |
 declining | dormant (21 days without evidence; after 45 → ARCHIVE.md).
@@ -132,34 +132,35 @@ Rule: max 10 evidence items per trend, most recent.
   - 2026-04-02 — https://arxiv.org/abs/2604.02029 — "The Latent Space: Foundation, Evolution, Mechanism, Ability, and Outlook" (Yu, Chen, He et al., 39 authors; v2 on 2026-06-05): community survey systematizing latent-space work, including latent communication as a new paradigm for multi-agent systems
   - 2026-02-17 — https://arxiv.org/abs/2602.15382 — Liu, Zhang, Yu, Xiong et al., "The Vision Wormhole: Latent-Space Communication in Heterogeneous Multi-Agent Systems" (v2 2026-05-28, preprint/WIP): extends latent communication to heterogeneous agents including vision models
   - 2025-11-25 — https://arxiv.org/abs/2511.20639 — Zou, Qiu, Li, Yang et al. (13 authors), "Latent Collaboration in Multi-Agent Systems" (LatentMAS; v2 2026-06-01): agent collaboration entirely through latent representations; code at github.com/Gen-Verse/LatentMAS (linked from the abs page)
+  - 2025-11-12 — https://arxiv.org/abs/2511.09149 — Du, Wang, Bai, Cao, Zhu, Cheng, Zheng, Chen, Ying, "Enabling Agents to Communicate Entirely in Latent Space" (Interlat; v4 2026-04-16, accepted to ACL 2026): inter-agent communication carried by last hidden states instead of text — a distinct (Alibaba/Zhejiang-line) cluster from C2C, Vision Wormhole and Gen-Verse
   - 2025-10-03 — https://arxiv.org/abs/2510.03215 — Fu, Min, Zhang, Yan et al., "Cache-to-Cache: Direct Semantic Communication Between Large Language Models" (published at ICLR'26; v2 2026-03-02): project and fuse the source model's KV-cache into the target's with learned gating, beating text-based communication on both accuracy and latency
-- notes: Companion to latent-reasoning-006: there the hidden states stay inside one model, here they cross model boundaries (KV-cache fusion, latent message passing). Independence check: C2C (Tsinghua-line), Vision Wormhole, and the Gen-Verse group (LatentMAS, which shares authors with RecursiveMAS) are three distinct clusters; the survey shares one author with C2C but spans 39 contributors. C2C's ICLR'26 acceptance is the strongest validation signal so far. Watch: Interlat (in queue), standardization of cross-model latent interfaces, first MAS framework shipping latent channels.
+- notes: Companion to latent-reasoning-006: there the hidden states stay inside one model, here they cross model boundaries (KV-cache fusion, latent message passing). Independence check: C2C (Tsinghua-line), Vision Wormhole, the Gen-Verse group (LatentMAS, shares authors with RecursiveMAS) and now Interlat (Alibaba/Zhejiang-line) are four distinct clusters; the survey shares one author with C2C but spans 39 contributors. Two peer-reviewed acceptances now anchor the line: C2C at ICLR'26 and Interlat at ACL 2026. Watch: standardization of cross-model latent interfaces, first MAS framework shipping latent channels.
 
 ### [id: lowbit-quant-011] Ultra-low-bit quantization: vector and trellis coding for weights and KV cache
 - alias: TCQ, trellis-coded quantization, QTIP, TurboQuant, EXL3, vector quantization, KV-cache quantization
-- stage: emerging
+- stage: accelerating
 - confidence: medium
 - first_observed: 2026-06-11
-- last_evidence: 2026-06-11
+- last_evidence: 2026-06-12
 - evidence:
+  - 2026-06-12 — https://docs.vllm.ai/en/latest/api/vllm/model_executor/layers/quantization/turboquant — official vLLM API docs: an in-tree `turboquant` KV-cache quantization module (Hadamard rotation + per-coordinate Lloyd-Max scalar quant for keys, uniform for values), explicitly tracing the method to TurboQuant (ICLR 2026) / DRIVE / EDEN (accessed today)
   - 2026-06-11 — https://github.com/turboderp-org/exllamav3 — ExLlamaV3: the EXL3 format is a simplified variant of Cornell RelaxML's QTIP running in a production consumer-GPU inference library; v0.0.40 released June 2026, 938 stars, a 70B quantizes in hours on one RTX 4090 (accessed today)
   - 2026-04-27 — https://arxiv.org/abs/2605.08114 — D'Alberto, "Statistical Inference and Quality Measures of KV Cache Quantisations Inspired by TurboQuant": independent statistical analysis of TurboQuant-class KV quantization (inner-product variance, softmax effects)
   - 2025-09-24 — https://arxiv.org/abs/2509.20214 — Lee & Song (SNU), "Q-Palette: Fractional-Bit Quantizers Toward Optimal Bit Allocation" (NeurIPS 2025): fractional-bit quantizers with trellis-coded quantizers among the tools, plus joint quantizer/fusion optimization with CUDA kernels
   - 2025-04-28 — https://arxiv.org/abs/2504.19874 — Zandieh, Daliri, Hadian, Mirrokni, "TurboQuant: Online Vector Quantization with Near-optimal Distortion Rate": data-oblivious online VQ (rotation + 1-bit QJL residual); KV cache quality-neutral at 3.5 bits/channel, marginal loss at 2.5
   - 2024-06-17 — https://arxiv.org/abs/2406.11235 — Tseng, Sun, Hou, De Sa (Cornell), "QTIP: Quantization with Trellises and Incoherence Processing" (NeurIPS 2024 Spotlight; last revised 2025-06-18): TCQ with a stateful decoder and hardware-friendly "bitshift trellis" decouples codebook size from bitrate, enabling ultra-high-dimensional quantization
-- notes: A coherent research-to-engineering line: QTIP (2024, trellis coding for weights) → TurboQuant (2025, online VQ for KV cache) → 2026 independent analyses and production implementations (EXL3). Five independent groups across research and engineering. Feeds small-cpu-models-008 (extreme quantization is what makes CPU/edge viable). Watch: trellis/VQ formats landing in mainstream engines (TurboQuant implementations are circulating — see queue), KV-cache VQ at serving scale, fractional-bit allocation.
+- notes: A coherent research-to-engineering line: QTIP (2024, trellis coding for weights) → TurboQuant (2025, online VQ for KV cache) → 2026 independent analyses and production implementations. Stage → accelerating: vector/trellis quant is now in two independent production serving stacks — EXL3 (weights, ExLlamaV3) and a `turboquant` KV-cache module in vLLM itself — i.e. the "landing in mainstream engines" watch item has fired. A community ik_llama.cpp port (issue #1509, CPU done / CUDA pending) is in review but not merged, so treat it as a weaker signal. Feeds small-cpu-models-008 (extreme quantization is what makes CPU/edge viable). Watch: vLLM turboquant leaving API-only docs for a benchmarked release, KV-cache VQ at serving scale, fractional-bit allocation.
 
 ## observation_queue
 Signals not yet promoted to seed. Format: date — description — link if available.
-- 2026-06-11 — "MiniMax M3" (frontier coding + 1M context + native multimodality) cited by aggregators as a June 2026 release, but NOT present on the MiniMaxAI Hugging Face org page as of today — unverified, check MiniMax official channels
+- 2026-06-12 — "MiniMax M3" (frontier coding + 1M context + native multimodality) still cited only by aggregators; rechecked the MiniMaxAI Hugging Face org page today — latest open weights are MiniMax-M2.7, no M3 — unverified, no official open-weight release yet
+- 2026-06-12 — MiniMaxAI shipped VTP visual tokenizers (VTP-Small/Base/Large, "Towards Scalable Pre-training of Visual Tokenizers for Generation") on the HF org page — single org / single artifact, below the trend bar; watch if other labs pursue scalable visual tokenizers
 - 2026-06-11 — vendor report "Stacklok State of MCP in Software 2026" reportedly claims 41–45% production MCP use — unverified (source not opened), find the original report
 - 2026-06-11 — paper "Not All Prefills Are Equal: PPD Disaggregation for Multi-turn LLM Serving" (arXiv 2603.13358): disaggregation pushed beyond the prefill/decode pair for multi-turn — unverified (not opened)
 - 2026-06-11 — "GenEnv: Difficulty-Aligned Co-Evolution Between LLM Agents and Environment Simulators" (arXiv 2512.19682): environment generation itself becomes a training target — unverified (not opened)
 - 2026-06-11 — series of real agent vulnerabilities disclosed in Q1 2026 (EchoLeak, GeminiJack, Reprompt…) cited only by secondary sources — unverified, trace the original advisories
 - 2026-06-11 — "loop engineering" circulating as a practitioner term: designing agent loops (trigger + verifiable goal + stopping conditions as first-class concerns) instead of hand-prompting; found only on vendor/creator blogs and an Oracle dev blog, no lab/primary anchor — unverified; watch whether a framework or lab adopts the term
-- 2026-06-11 — Meta announced "Muse Spark" on 2026-04-08 ("Scaling Towards Personal Superintelligence" — title seen on the official ai.meta.com/blog index, post not yet read); aggregators call it the Llama successor and some market-wire pieces mislabel it "Llama 5"; no Llama 5 entry on the official blog — read the post, check open-weight status of the Llama line
-- 2026-06-11 — "Interlat: Enabling Agents to Communicate Entirely in Latent Space" (arXiv 2511.09149), inter-agent communication via last hidden states — unverified (not opened); candidate evidence for latent-comm-010
-- 2026-06-11 — TurboQuant engine adoption signals: an implementation "ready for review" in ik_llama.cpp (issue #1509) and a Triton/vLLM-integrated implementation circulating on GitHub — unverified (not opened); would strengthen lowbit-quant-011
+- 2026-06-12 — ik_llama.cpp TurboQuant KV-cache port (issue #1509): community implementation, CPU complete (18/18 tests, ~4.9× compression at 3 bits/value), CUDA kernels awaiting GPU validation, not merged — verified but weak (single contributor, in review); the vLLM in-tree `turboquant` module was promoted to lowbit-quant-011 today
 - 2026-06-11 — "Sequential KV Cache Compression via Probabilistic Language Tries: Beyond the Per-Vector Shannon Limit" (arXiv 2604.15356) — unverified (not opened)
 
 ## source_rotation
@@ -167,6 +168,7 @@ Log of which sources were covered on which dates.
 - 2026-06-11 — blog.modelcontextprotocol.io; openai.github.io/openai-agents-python (OpenAI Agents SDK docs); adk.dev (Google ADK docs); docs.vllm.ai; docs.sglang.io; github.com/ai-dynamo/dynamo; huggingface.co (orgs: deepseek-ai, moonshotai, Qwen, MiniMaxAI, zai-org); arxiv.org (2605.17634, 2604.06436, 2506.08837, 2603.18815, 2604.27859); bugcrowd.com (press release); primeintellect.ai (blog). Attempted lmsys.org/blog: index not readable via fetch (JS rendering) — use direct post URLs for SGLang/LMSYS posts.
 - 2026-06-11 (second pass) — arxiv.org (2604.25917, 2602.10520, 2507.06203); github.com (RecursiveMAS/RecursiveMAS, microsoft/BitNet, ggml-org/llama.cpp); e2b.dev; daytona.io; developers.cloudflare.com/sandbox; modal.com/docs; huggingface.co/HuggingFaceTB; deepmind.google/models/gemma (ai.google.dev/gemma redirects here); learn.microsoft.com/agent-framework; code.claude.com/docs (agent teams); a2a-protocol.org/latest; ai.meta.com/blog (index only).
 - 2026-06-11 (third pass) — arxiv.org abs pages 2406.11235, 2504.19874, 2605.08114, 2509.20214 (direct) and 2604.02029, 2510.03215, 2511.20639, 2602.15382 (via extraction API, metadata cross-checked on export.arxiv.org); github.com/turboderp-org/exllamav3.
+- 2026-06-12 — arxiv.org/abs/2511.09149 (Interlat) + export.arxiv.org metadata (2511.09149, 2604.15356); ai.meta.com/blog (Muse Spark post, read in full); docs.vllm.ai (turboquant module API docs); github.com/ikawrakow/ik_llama.cpp (issue #1509); huggingface.co/MiniMaxAI (org page recheck). Tavily search surfaced mostly SEO/comparator results for serving engines and open-weight news — none citable; verified via primary pages only.
 
 ## strategy_notes
 Corrections to the source-coverage strategy.
