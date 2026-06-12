@@ -7,7 +7,9 @@ apply to every session.
 ## What this repo is
 
 Persistent state for AI Radar, a tracker of AI-ecosystem trends (research +
-engineering). `TRENDS.md` is the single source of truth; reports are derived
+engineering). It serves an AI researcher / AI-systems engineer who works with AI
+daily: besides trends, the radar curates `LIBRARY.md`, a shelf of things worth
+studying. `TRENDS.md` is the single source of truth; reports are derived
 snapshots. History matters: never rewrite published history, never force-push.
 
 ## File map
@@ -15,7 +17,8 @@ snapshots. History matters: never rewrite published history, never force-push.
 | Path | Contents | Edit policy |
 |---|---|---|
 | `TRENDS.md` | Trend ledger + `observation_queue`, `source_rotation`, `strategy_notes` | follow the `radar-ledger-update` skill |
-| `DASHBOARD.md` | Derived dashboard: stage pipeline (Mermaid), per-stage tables, watchlist | regenerate via the `radar-render-dashboard` skill; never edit by hand |
+| `DASHBOARD.md` | Derived widget-style summary: badges, digest, stage strip, trend table | regenerate via the `radar-render-dashboard` skill; never edit by hand |
+| `LIBRARY.md` | Curated study shelf: projects/papers/concepts worth knowing | daily appends 0–2 picks; weekly prunes |
 | `ARCHIVE.md` | Archived trends, one-line post-mortems | append-only |
 | `reports/YYYY-MM-DD.md` | Daily reports | write once, never edit old ones |
 | `reports/weekly/YYYY-Wnn.md` | Weekly reports | write once |
@@ -66,6 +69,10 @@ snapshots. History matters: never rewrite published history, never force-push.
 - Push to `main`. If the push fails: retry once after
   `git pull --rebase origin main`; on persistent failure record the verbatim
   error in the report and stop. Never force-push.
+- If the execution environment forces a dedicated session branch (e.g.
+  `claude/*`) and forbids pushing to `main`, push there — and open the report
+  with a prominent warning that `main` must be fast-forwarded from that branch
+  before the next run, otherwise state is lost.
 
 ## Skill maintenance policy
 
