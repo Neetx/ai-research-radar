@@ -81,6 +81,25 @@ snapshots. History matters: never rewrite published history, never force-push.
 - arXiv metadata (exact authors and dates):
   `curl -sL 'https://export.arxiv.org/api/query?id_list=ID1,ID2'`.
 
+## Efficiency (token discipline — single-agent; do NOT use sub-agents/teams)
+
+Sub-agents and agent teams cost MORE total tokens, not fewer (each has its own
+context) — they buy parallelism, not savings. A daily run is one session; keep
+it that way. Control cost with discipline instead:
+
+- Triage then extract: read feeds/titles/dates first (cheap); open the full page
+  only for genuinely new or candidate items. Never bulk-extract every source.
+- Read only what you need from the long append-only sections: to decide today's
+  coverage, the recent tail of `source_rotation` (last ~7 days) is enough — you
+  need not re-read its full history (or all of `calibration`) every run. The
+  files keep full history; just don't pay to read all of it.
+- Tavily: `--search-depth basic`, modest `--max-results`, `extract --query` to
+  pull only relevant chunks, and `--include-domains` to cut the SEO noise the
+  ledger has flagged.
+- This is light discipline, not a mandate to drop coverage. If a run ever
+  approaches the context limit, that is a signal to report (and a candidate
+  self-eval metric), not to spawn agents.
+
 ## Git conventions
 
 - Commit messages: `radar: daily update YYYY-MM-DD`,
