@@ -79,7 +79,7 @@ Instagram — public posts only; low feasibility, drop if it never yields.
 
 Tracked profiles/handles (candidates — agent verifies each resolves, then keeps
 the ones that recur with signal; add researchers/labs as discovered):
-- HF orgs: unsloth, bartowski, mradermacher, ggml-org (GGUF/quant/inference activity)
+- HF orgs/users: unsloth, bartowski, mradermacher, ggml-org, huihui, googlecs (GGUF/quant/inference + abliterated/derived model activity)
 - X (verify): @ggerganov (llama.cpp), @turboderp_ (ExLlama/EXL3), @danielhanchen (Unsloth), @reach_vb (HF), @teortaxesTex (release news), @kalomaze (sampling/quant)
 - (agent: extend with lab/researcher accounts on the pinned axes — latent reasoning, latent comm, small/CPU models, low-bit quant)
 

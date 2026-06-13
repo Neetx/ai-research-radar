@@ -1,53 +1,66 @@
 ---
 name: radar-repo-watch
 description: |
-  Watch GitHub every daily run for behind-the-scenes movement — across watched REPOS (releases, merged PRs, hot issues), watched PROFILES/USERS (what a key author ships next, across all their repos), and FORK TREES (notable forks up to depth 3, scored by a notability metric). Releases and merges are citable artifacts; profile/issue/fork movement is a queue signal until it lands. Use during the daily scan, after the lab sweep. Source lists live in SOURCES.md → "GitHub watch".
+  Watch GitHub every daily run for behind-the-scenes movement — across watched REPOS (releases, merged PRs, hot issues), watched PROFILES/USERS (what a key author ships next), and FORK TREES (notable forks up to depth 3, scored by a notability metric). Releases and merges are citable artifacts; profile/issue/fork movement is a queue signal until it lands. Default to GitHub's public Atom feeds + Tavily; the REST API is optional. Use during the daily scan, after the lab sweep. Source lists live in SOURCES.md → "GitHub watch".
 ---
 
 # GitHub watch — repos, profiles, and fork trees
 
 In big projects, important changes show up as PR/issue/fork activity well before
 the headline release. Watching repos, the people behind them, and their fork
-trees surfaces that build-up early. Prefer the GitHub REST API via curl (the
-routine has GitHub access); `tvly`/web as fallback. Use the routine's GitHub
-credentials for API calls when available (authenticated = 5000 req/hr); if
-unauthenticated (60 req/hr), keep it lean — batch, and shrink the fork walk
-before the rest of the scan suffers. Check activity since the last scan
-(previous `source_rotation` date). Log the watch every run, even when quiet
-("github-watch: no movement").
+trees surfaces that build-up early.
+
+## How to fetch (feeds first, no auth, no rate-limit worries)
+
+Prefer GitHub's public Atom feeds and plain pages — the same RSS pattern as the
+lab sweep, readable via `tvly` with no API key and no rate limit:
+- Releases: `https://github.com/<o>/<r>/releases.atom`
+- Tags: `https://github.com/<o>/<r>/tags.atom`
+- Commits on default branch: `https://github.com/<o>/<r>/commits.atom`
+- A user's public activity: `https://github.com/<u>.atom`
+- PR list / issues / a fork's page: extract the HTML via `tvly` (no feed exists).
+
+The REST API (`api.github.com`) is OPTIONAL — use it only if it is reachable
+and authenticated in this environment (it may not be: the network often routes
+through Tavily only, and unauthenticated API is 60 req/hr). When available it
+gives cleaner structured data (exact `ahead_by`, merged_at); when not, the feeds
+and page extraction above are sufficient. Never let the watch block on the API.
+
+Check activity since the last scan (previous `source_rotation` date). Log the
+watch every run, even when quiet ("github-watch: no movement").
 
 ## 1. Watched repositories
 
 For each repo in SOURCES.md → "Watched repositories":
-- **Releases / tags** — `…/repos/<o>/<r>/releases` — a new release is a citable
+- **Releases / tags** (releases.atom / tags.atom) — a new release is a citable
   artifact (evidence-eligible against a trend).
-- **Recently merged PRs** — `…/pulls?state=closed&sort=updated&direction=desc`,
-  filter `merged_at` after last scan — a notable merged PR (feature, format,
-  kernel, model support) is a citable artifact.
-- **Hot issues / discussions** — `…/issues?sort=comments&state=open` — a
-  suddenly high-activity thread is a QUEUE signal until it lands.
+- **Merged PRs** — extract the PRs page (`/<o>/<r>/pulls?q=is:pr+is:merged`);
+  a notable merge (feature, format, kernel, model support) is a citable artifact.
+- **Hot issues / discussions** — extract `/<o>/<r>/issues?q=is:open+sort:comments`;
+  a suddenly high-activity thread is a QUEUE signal until it lands.
 
 ## 2. Watched profiles / users
 
-For each user in SOURCES.md → "Watched profiles/users", see where the author is
-heading next: `…/users/<u>/repos?sort=pushed` and their recent public events
-(`…/users/<u>/events/public`). Surface: brand-new repos, a repo suddenly getting
-heavy pushes, or a new release across any of their repos. New repos/releases are
-citable; early push activity on an unreleased repo is a queue signal ("watch
-<user>/<repo>, pre-release").
+For each user in SOURCES.md → "Watched profiles/users", read their activity feed
+(`https://github.com/<u>.atom`) to see where they're heading: brand-new repos, a
+repo getting heavy pushes, a new release on any of their repos. New repos/releases
+are citable; early push activity on an unreleased repo is a queue signal
+("watch <user>/<repo>, pre-release").
 
 ## 3. Fork-tree analysis (depth 3) + Fork Notability Score
 
 For each project in SOURCES.md → "Fork-tree analysis", walk the fork tree up to
-depth 3 (`…/repos/<o>/<r>/forks?sort=newest`, then forks of those, then forks of
-those). Prune aggressively: only descend into a fork that is itself active
-(pushed in the last ~30 days) — dead forks have no live children worth chasing.
+depth 3 (the repo's forks page / `/network/members`, then forks of the active
+ones, etc.). Prune aggressively: only descend into a fork that is itself active
+(updated in the last ~30 days) — dead forks have no live children worth chasing.
 
-Compute the **Fork Notability Score (FNS)** per fork:
+Compute the **Fork Notability Score (FNS)** per fork. Read the values from the
+fork's page ("This branch is N commits ahead", star count, Releases tab) — or
+from the REST API if it's available:
 
 ```
-gate:   pushed within last 30 days           (else skip — stale)
-FNS  =  commits_ahead_of_upstream            (via /compare/<upstream>...<fork>, ahead_by)
+gate:   updated within last 30 days          (else skip — stale)
+FNS  =  commits_ahead_of_upstream            (the "N commits ahead" figure)
       + 2 × (fork's own stars)
       + 20 if the fork has its own releases/tags
       + 15 if the fork has an open PR back to upstream
