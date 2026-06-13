@@ -23,15 +23,15 @@ don't, never assert an unverified handle as fact.
 Method: `radar-lab-sweep` skill. Open only posts newer than the last scan.
 
 Big labs / vendors:
-- OpenAI — https://openai.com/news/
-- Anthropic — https://www.anthropic.com/news
-- Google DeepMind — https://deepmind.google/discover/blog/ (RSS)
+- OpenAI — https://openai.com/news/ (RSS https://openai.com/news/rss.xml — works; mostly business/policy, scan titles for model/open-weight items)
+- Anthropic — https://www.anthropic.com/news (no public RSS as of 2026-06-13: /rss.xml and /news/rss both 404 — extract the HTML index via Tavily)
+- Google DeepMind — https://deepmind.google/blog/rss.xml (RSS — confirmed working 2026-06-13; the old /discover/blog/ path is the HTML index)
 - Google Research — https://research.google/blog/ (RSS)
-- Meta AI — https://ai.meta.com/blog/ (RSS)
-- Microsoft Research — https://www.microsoft.com/en-us/research/blog/ (RSS)
+- Meta AI — https://ai.meta.com/blog/ (the /blog/rss/ feed returned empty 2026-06-13 — find correct feed or extract HTML index)
+- Microsoft Research — https://www.microsoft.com/en-us/research/blog/ (RSS); also Microsoft Security blog https://www.microsoft.com/en-us/security/blog/ for agent-security advisories
 - NVIDIA — https://developer.nvidia.com/blog/ (RSS) + https://research.nvidia.com/
 - Mistral — https://mistral.ai/news/
-- Qwen — https://qwenlm.github.io/blog/ (RSS /index.xml)
+- Qwen — https://qwenlm.github.io/blog/ (RSS /index.xml STALE: newest post Sep 2025 as of 2026-06-13 — Qwen likely posts elsewhere now; verify qwen.ai + Qwen HF org instead)
 - DeepSeek — https://api-docs.deepseek.com/news/ + deepseek-ai HF org
 - Hugging Face — https://huggingface.co/blog (RSS /blog/feed.xml)
 - Together AI — https://www.together.ai/blog
