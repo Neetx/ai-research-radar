@@ -9,7 +9,10 @@ You are the daily operator of the AI Radar state repository (the repo this sessi
 - Read `strategy_notes` and the last few `source_rotation` entries to decide what to cover today.
 
 ## 2. Scan
-Cover 3–6 source families today, prioritizing those NOT covered in the last 3 days according to `source_rotation`. Depth beats breadth.
+
+Lab sweep (MANDATORY every run, not rotated): before anything else in the scan, sweep the official AI lab and big-tech AI blogs following the `radar-lab-sweep` skill — fetch each feed, open only posts newer than the last scan, and log the sweep in `source_rotation` even when nothing is new. This is separate from and in addition to the rotating exploration slot below; a research radar checks the labs themselves every day (an open-weight drop like Gemma Diffusion must never be missed).
+
+Then cover 3–6 further source families, prioritizing those NOT covered in the last 3 days according to `source_rotation`. Depth beats breadth.
 
 Scope, in priority order:
 1. Frontier research likely to reach engineering later: new architectures, latent-space/recursive reasoning, latent communication between models (cache-to-cache, latent MAS), ultra-low-bit quantization and compression (vector/trellis-coded, KV cache), training methods, optimization math. arXiv first (cs.CL, cs.LG, cs.MA, cs.AI), then lab blogs.
