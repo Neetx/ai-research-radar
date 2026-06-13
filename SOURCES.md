@@ -16,6 +16,11 @@ The lists below are seeds; the agent should grow/prune them. Handles marked
 `(verify)` must be confirmed to resolve on first use — fix or drop any that
 don't, never assert an unverified handle as fact.
 
+Source health: inline notes flag degraded entries (404, stale, empty, parse
+error). These are not permanent — a source that fails the same way twice must be
+repaired and its working method recorded here, per the `radar-source-heal`
+skill. Don't leave a "degraded" note standing across runs.
+
 ---
 
 ## Lab & big-tech AI blogs (Phase 1 — swept EVERY run, prefer RSS/Atom)

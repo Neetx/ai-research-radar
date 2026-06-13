@@ -16,6 +16,8 @@ Community pulse (every run, light): sample the social/community sources followin
 
 GitHub watch (every run, light): follow the `radar-repo-watch` skill across watched repos, watched profiles/users, and fork trees (depth 3, scored by FNS) — releases/merged PRs and notable forks are citable artifacts; issue/PR/profile/fork movement is a queue signal.
 
+Self-healing: if any source or tool above fails the same way it did before (broken/stale feed, 404, empty, JSON/parse error), repair it this run per the `radar-source-heal` skill and record the working method in `SOURCES.md` — don't just re-log "degraded" (cap: 1–2 heals per run).
+
 Then cover 3–6 further source families, prioritizing those NOT covered in the last 3 days according to `source_rotation`. Depth beats breadth.
 
 Scope, in priority order:

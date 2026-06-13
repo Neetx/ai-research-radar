@@ -23,7 +23,7 @@ snapshots. History matters: never rewrite published history, never force-push.
 | `reports/YYYY-MM-DD.md` | Daily reports | write once, never edit old ones |
 | `reports/weekly/YYYY-Wnn.md` | Weekly reports | write once |
 | `routines/*.md` | LIVE operating instructions, loaded by the fixed platform prompt | weekly amendments only, per the Self-amendment policy |
-| `.claude/skills/` | Project skills (ledger update, source verify, dashboard render, self-eval, lab sweep) | improvable — see policy below |
+| `.claude/skills/` | Project skills (ledger update, source verify, dashboard render, self-eval, lab sweep, pulse, repo watch, source heal) | improvable — see policy below |
 
 ## Hard rules (never relax these)
 
@@ -80,6 +80,10 @@ snapshots. History matters: never rewrite published history, never force-push.
   Fall back to built-in web tools only if Tavily fails.
 - arXiv metadata (exact authors and dates):
   `curl -sL 'https://export.arxiv.org/api/query?id_list=ID1,ID2'`.
+- Self-healing: when a source or tool fails the same way twice (a broken/stale
+  feed, a 404, a parse/JSON error), repair the access path and record the
+  working method in `SOURCES.md` — see the `radar-source-heal` skill. Logging
+  "degraded" run after run is not acceptable; the agent fixes its own sources.
 
 ## Efficiency (token discipline — single-agent; do NOT use sub-agents/teams)
 
