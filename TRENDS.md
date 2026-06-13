@@ -79,6 +79,7 @@ Rule: max 10 evidence items per trend, most recent.
 
 ### [id: latent-reasoning-006] Latent-space reasoning and recursive computation (looped models, latent multi-agent)
 - alias: latent reasoning, continuous thought, looped transformers, RecursiveMAS, latent collaboration, RLTT
+- pinned: true
 - stage: dormant
 - confidence: medium
 - first_observed: 2026-06-11
@@ -106,6 +107,7 @@ Rule: max 10 evidence items per trend, most recent.
 
 ### [id: small-cpu-models-008] Small and 1-bit models: CPU-first and on-device inference
 - alias: SLM, BitNet, ternary models, bitnet.cpp, llama.cpp ecosystem, on-device AI, edge inference
+- pinned: true
 - stage: emerging
 - confidence: medium
 - first_observed: 2026-06-11
@@ -131,6 +133,7 @@ Rule: max 10 evidence items per trend, most recent.
 
 ### [id: latent-comm-010] Latent-space communication between models (cache-to-cache, latent collaboration)
 - alias: latent communication, C2C, KV-cache fusion, LatentMAS, model-to-model semantic transfer, Interlat
+- pinned: true
 - stage: emerging
 - confidence: medium
 - first_observed: 2026-06-11
@@ -145,6 +148,7 @@ Rule: max 10 evidence items per trend, most recent.
 
 ### [id: lowbit-quant-011] Ultra-low-bit quantization: vector and trellis coding for weights and KV cache
 - alias: TCQ, trellis-coded quantization, QTIP, TurboQuant, EXL3, vector quantization, KV-cache quantization
+- pinned: true
 - stage: accelerating
 - confidence: medium
 - first_observed: 2026-06-11
@@ -187,6 +191,7 @@ Corrections to the source-coverage strategy.
 - 2026-06-11 — Scope additions (curator input): (5) model compression research — vector/trellis-coded quantization (QTIP-class, TurboQuant) for weights and KV cache, tracked through to engine adoption; (6) latent-space communication between models (cache-to-cache, latent multi-agent collaboration), including surveys. Folded into the daily scan axes.
 - 2026-06-12 — Anti-anchoring correction (curator input): every daily scan must reserve at least one of its 3–6 source families for venue-based exploration outside the ledger's current axes — browse listings (HF daily papers, rotating arXiv categories such as cs.AR/cs.RO/cs.CV/cs.DC/cs.SE, lab blog indexes) rather than searching known topics; log the exploration in source_rotation even when fruitless. Weekly runs flag any week where all new evidence landed on pre-existing trends and redirect exploration toward uncovered axes or venues.
 - 2026-06-12 — Audience definition (curator input): the radar serves an AI researcher / AI-systems engineer / daily AI practitioner. Beyond trends, each daily scan may select 0–2 "study picks" into the `study_shelf` section below — projects, papers, techniques or tools worth studying; single-artifact items allowed there (trend bar does not apply), opened primary sources only.
+- 2026-06-13 — Source & feature expansion (curator input): (a) MANDATORY lab/big-tech blog sweep every daily run, not rotated (radar-lab-sweep skill) — the Gemma Diffusion open-weight miss must not recur. (b) Social/community INTAKE LANE (radar-pulse skill, best-effort via Tavily, no paid APIs): Reddit, Hacker News, YouTube, Hugging Face, best-effort X/Instagram, plus specific profiles/channels in SOURCES.md — NEVER evidence, only observation_queue (unverified) + the community-pulse note. (c) Watched GitHub repos (radar-repo-watch skill): releases/PRs/issues for the repos in SOURCES.md — releases/merges are citable, issue/PR turbulence is a queue signal. (d) PINNED topics never auto-archive (can still show dormant): seeded pinned set = latent-reasoning-006, latent-comm-010, small-cpu-models-008, lowbit-quant-011 (the curator's core axes); the agent keeps them fresh and may propose pin changes. The agent owns and evolves SOURCES.md and the social carve-out autonomously; the curator is out of the runtime loop.
 - 2026-06-13 — W24 source strategy review (weekly): All W24 evidence landed on trends created the same week (bootstrap week — not a meaningful anchoring warning; logging as baseline). Exploration-slot compliance: 2/3 daily passes on 2026-06-12 ran an exploration slot; the first pass explicitly skipped it (queue-only) — this violates the AGENTS.md hard rule; see amendment proposal W24-P1 in this week's report. Tavily search returns SEO/aggregator noise for serving-engine and open-weight queries — continue using primary docs/repos/HF org pages for those axes. cs.AR venue produced 2 corroborating signals in a single pass (SPEAR, TileFuse) — rotate through cs.AR roughly every 2–3 daily runs going forward. Stacklok "State of MCP 2026" report verified: 50% of orgs experimenting / 11% in production (secondary sources had reported 41–45% production, which was wrong). Next week priorities: (1) verify EchoLeak/GeminiJack/Reprompt advisories via primary CVEs or lab reports — all queue items cross 14 days by W25 and must be resolved; (2) continue cs.AR rotation for low-bit / hardware-aware serving signals; (3) recheck latent-reasoning sub-fields (open-weight looped checkpoints, LT2 follow-ons) — field is active, dormant trend could reactivate quickly; (4) trace A2A v1.0 implementations in LangGraph/CrewAI to keep multi-agent-eng-009 current.
 
 ## study_shelf

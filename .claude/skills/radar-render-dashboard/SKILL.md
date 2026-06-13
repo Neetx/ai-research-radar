@@ -23,22 +23,32 @@ on every run, never patch it. Design goal: one screen, everything clickable.
    priority order: stage moves, queue promotions/drops, strongest new evidence.
    Every bullet must contain at least one link (trend anchor or evidence URL).
    If nothing changed: one bullet, "Quiet scan — no ledger changes."
-5. **Trends section** — stage strip on one line
+5. **Pinned topics (⭐)** — `## ⭐ Pinned topics` then a table of ONLY the trends
+   with `pinned: true`, same columns as the main table. These are the curator's
+   standing-watch axes; they appear here AND in the main table (where their
+   trend label is prefixed with ⭐). Sort by `last_evidence` descending.
+6. **Trends section** — stage strip on one line
    (`🌱 n · 📈 n · 🚀 n · 🌊 n · 🏔 n · 📉 n · 💤 n`), then ONE table
-   `| trend | stage | latest signal |` with ALL trends, sorted accelerating →
-   emerging → seed → mainstreaming → saturated → declining → dormant, then by
-   `last_evidence` descending:
+   `| trend | stage | latest signal |` with ALL trends (pinned included, prefix
+   their label with ⭐), sorted accelerating → emerging → seed → mainstreaming →
+   saturated → declining → dormant, then by `last_evidence` descending:
    - **trend** = short label (≤5 words; reuse previous README labels for
-     stability) linking to the trend's anchor in TRENDS.md (see anchor rule).
+     stability) linking to the trend's anchor in TRENDS.md (see anchor rule);
+     prefix with `⭐ ` when `pinned: true`.
    - **stage** = emoji + word.
    - **latest signal** = the `last_evidence` date linking to the evidence URL
      whose date equals `last_evidence` (first match in list order); if none
      matches, link the top evidence item.
-6. **Worth studying** — the `study_shelf` section of TRENDS.md, newest first,
+7. **Worth studying** — the `study_shelf` section of TRENDS.md, newest first,
    up to 8 bullets: `[name](url) — one line of why`.
-7. **Output map** — one line of links: TRENDS.md, watchlist (queue count) →
+8. **Community pulse** — `## Community pulse` (Phase 3): up to 5 bullets distilled
+   from the latest `radar-pulse` intake — non-evidence, link-only, NEVER naming
+   individuals (link the thread/profile, summarise). If no pulse data yet, one
+   line: "No community pulse sampled yet." This section is clearly marked as
+   unverified sentiment, separate from the verified trend table.
+9. **Output map** — one line of links: TRENDS.md, watchlist (queue count) →
    `TRENDS.md#observation_queue`, `reports/` + newest daily, newest weekly
-   ("weekly: none yet" if absent), AGENTS.md.
+   ("weekly: none yet" if absent), AGENTS.md, SOURCES.md.
 
 ## Anchor rule (GitHub heading slugs)
 
@@ -56,6 +66,8 @@ Anchors are recomputed at every render, so title edits stay in sync.
   blocks in TRENDS.md.
 - Every table date equals that trend's `last_evidence` exactly; every row has
   two working relative/absolute links.
-- No Mermaid, no images besides the four badges, no sections beyond the seven
-  blocks above.
+- No Mermaid, no images besides the badges, no sections beyond the blocks above.
+- Pinned-topics table contains exactly the `pinned: true` trends; every pinned
+  trend is ⭐-prefixed in the main table too.
+- Community-pulse items are link-only and name no individuals.
 - Commit README.md together with the TRENDS.md change that triggered it.

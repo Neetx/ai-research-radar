@@ -24,28 +24,11 @@ the Hard rules, so anything found here is citable evidence.
 4. Log the sweep in `source_rotation` every run, even when nothing is new
    ("lab-sweep: no new posts").
 
-## Source list (maintain this — agent-owned)
+## Source list
 
-Mark a feed `DEAD` inline if it stops resolving; add new labs as they appear.
-Prefer the feed URL; fall back to the HTML index via `tvly extract` only if no
-feed exists.
-
-- OpenAI — https://openai.com/news/ (check for feed)
-- Anthropic — https://www.anthropic.com/news (check for feed)
-- Google DeepMind — https://deepmind.google/discover/blog/ (RSS)
-- Google Research — https://research.google/blog/ (RSS)
-- Meta AI — https://ai.meta.com/blog/ (RSS)
-- Microsoft Research — https://www.microsoft.com/en-us/research/blog/ (RSS)
-- NVIDIA developer/research — https://developer.nvidia.com/blog/ (RSS) + https://research.nvidia.com/
-- Mistral — https://mistral.ai/news/
-- Qwen — https://qwenlm.github.io/blog/ (RSS at /index.xml)
-- DeepSeek — https://api-docs.deepseek.com/news/ and the deepseek-ai HF org
-- Allen Institute (AI2) — https://allenai.org/blog (RSS)
-- Cohere — https://cohere.com/blog (RSS)
-- Hugging Face — https://huggingface.co/blog (RSS at /blog/feed.xml)
-- LMSYS / SGLang — https://lmsys.org/blog/ (use the RSS feed, not the JS index)
-- Together AI — https://www.together.ai/blog
-- Z.ai / GLM — https://z.ai/blog and the zai-org HF org
+The list lives in `SOURCES.md` → "Lab & big-tech AI blogs" (agent-owned: mark
+feeds `DEAD` if they stop resolving, add new labs as they appear). Prefer the
+feed URL; fall back to the HTML index via `tvly extract` only if no feed exists.
 
 ## Notes
 

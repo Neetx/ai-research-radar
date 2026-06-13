@@ -15,8 +15,9 @@ structure is a contract.
   stage legend.
 - Sections, in this order: `## Active trends`, `## observation_queue`,
   `## source_rotation`, `## strategy_notes`, `## study_shelf`, `## calibration`.
-- Trend block: `### [id: slug-NNN] Title` with fields `alias`, `stage`,
-  `confidence`, `first_observed`, `last_evidence`, `evidence:` (list), `notes:`.
+- Trend block: `### [id: slug-NNN] Title` with fields `alias`, optional
+  `pinned: true`, `stage`, `confidence`, `first_observed`, `last_evidence`,
+  `evidence:` (list), `notes:`.
 - Evidence line: `- YYYY-MM-DD — URL — one line of context`.
 
 ## Rules
@@ -29,6 +30,11 @@ structure is a contract.
   evidence, justified in `notes`. Demotions are always allowed. 21+ days without
   evidence → `dormant`; at 45+ days the weekly pass moves the entry to
   `ARCHIVE.md` as a one-line post-mortem.
+- Pinned trends (`pinned: true`): NEVER auto-archived, no matter how long
+  without evidence — they are the curator's standing-watch axes. They still
+  follow the normal stage rules, INCLUDING going `dormant` when quiet (the
+  ledger stays truthful about activity); they simply never leave the board.
+  Only the curator adds/removes a pin (or the agent proposes it via amendment).
 - `observation_queue` items are dated and marked "unverified" unless opened.
   When dropping one, record why in the day's report.
 - Append one dated line per session to `source_rotation`. Append dated

@@ -18,6 +18,7 @@ snapshots. History matters: never rewrite published history, never force-push.
 |---|---|---|
 | `TRENDS.md` | Trend ledger + `observation_queue`, `source_rotation`, `strategy_notes`, `study_shelf`, `calibration` | follow the `radar-ledger-update` skill |
 | `README.md` | THE output surface (repo landing page): badges, digest, clickable trend table, study shelf | fully derived — regenerate via the `radar-render-dashboard` skill; never edit by hand |
+| `SOURCES.md` | Agent-owned registry: lab blogs, social channels/profiles, watched repos | maintained by the radar itself |
 | `ARCHIVE.md` | Archived trends, one-line post-mortems | append-only |
 | `reports/YYYY-MM-DD.md` | Daily reports | write once, never edit old ones |
 | `reports/weekly/YYYY-Wnn.md` | Weekly reports | write once |
@@ -28,9 +29,16 @@ snapshots. History matters: never rewrite published history, never force-push.
 
 - Cite only URLs actually opened in the current session. Anything else is
   "unverified" and belongs in `observation_queue`.
-- Primary sources only: papers, official changelogs/release pages, repos,
-  official lab/vendor blogs and docs. Never SEO farms, never model
+- Primary sources only for EVIDENCE: papers, official changelogs/release pages,
+  repos, official lab/vendor blogs and docs. Never SEO farms, never model
   comparators/aggregators.
+- Social carve-out (curator-authorized): social/community sources (Reddit,
+  Hacker News, YouTube, Hugging Face, X, Instagram, and named profiles/channels)
+  are an INTAKE LANE ONLY — they may create unverified `observation_queue` items
+  (promotable only after confirmation on a primary artifact) and feed the
+  community-pulse note, but NEVER become trend evidence. Never name or quote
+  individuals in the repo. See the `radar-pulse` skill. The agent owns and
+  evolves the social source list in `SOURCES.md` autonomously.
 - Never guess dates or invent URLs. Undated pages: "(undated, accessed YYYY-MM-DD)".
 - Trend bar: ≥3 independent sources (different orgs/author groups) + ≥1 concrete
   artifact (code, paper, spec, release).
@@ -49,6 +57,12 @@ snapshots. History matters: never rewrite published history, never force-push.
   where new work appears (HF daily papers, rotating arXiv categories) rather than
   searching topics already tracked. Log it in `source_rotation` even when it
   yields nothing.
+- Every daily scan also runs a light community pulse (`radar-pulse`, intake
+  only) and a watched-repo check (`radar-repo-watch`). Pinned trends
+  (`pinned: true`, the curator's standing-watch axes) are never auto-archived
+  but still show `dormant` when quiet — see the `radar-ledger-update` skill.
+- Source lists for all of the above live in `SOURCES.md`, which the agent owns
+  and evolves autonomously.
 - Weekly runs check for anchoring: a week where all new evidence lands on
   pre-existing trends gets flagged in `strategy_notes`, and exploration is
   redirected toward uncovered axes or venues.
