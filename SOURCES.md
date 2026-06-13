@@ -55,20 +55,28 @@ Log degradation when a platform can't be reached. Never quote individuals in
 evidence/queue text — link the thread/profile, summarise. The watchlist of
 profiles below is a discovery aid, not an endorsement.
 
-Reddit (subreddits):
-- r/LocalLLaMA — the canonical pulse for local/small models, quant, llama.cpp
-- r/LocalLLM
-- r/MachineLearning
-- r/LLMDevs
-- r/RAG
-- r/StableDiffusion — diffusion / multimodal open-weight movement
-- (agent: add/prune subreddits as signal warrants)
+Reddit (subreddits — verified active 2026-06-13; organized by axis so coverage
+gaps are visible. Ensure every pinned axis has at least one channel):
+- Local / small / CPU models + quant: r/LocalLLaMA (the canonical pulse), r/LocalLLM
+- Research / papers: r/MachineLearning
+- Agents / agentic engineering: r/AI_Agents, r/LLMDevs, r/LangChain
+- MCP / tool use: r/mcp
+- RAG / retrieval: r/RAG
+- Multimodal / diffusion: r/StableDiffusion
+- Serving/inference has no dedicated active sub — that discussion lives in r/LocalLLaMA
+- (agent: add/prune by signal; latent-reasoning & latent-comm have no strong sub
+  yet — those surface on X/newsletters, watch for an emerging community)
 
-Hacker News — front page + Algolia search for AI/LLM/serving/quantization terms.
+Hacker News — front page + Algolia search for AI/LLM/serving/quantization/agent terms.
 
-YouTube — per-channel RSS (`/feeds/videos.xml?channel_id=…`) for technical
-channels the agent finds worth tracking (talks, paper walk-throughs, release
-explainers). Seed by discovery, not assumption.
+Curated digests (named-expert, high-signal intake — still NOT evidence; their
+value is pointing to primaries fast, so follow their links and verify):
+- Latent.Space / AINews — daily AI news digest
+- Ahead of AI — Sebastian Raschka's LLM research roundups
+
+YouTube — per-channel RSS (`/feeds/videos.xml?channel_id=…`). Seed: Yannic
+Kilcher (paper walk-throughs); add conference/lab talk channels (vLLM, SGLang,
+PyTorch, NeurIPS/ICLR recordings) and release explainers by discovery.
 
 Hugging Face — org/user activity for tracked accounts (below) + trending models/datasets.
 
@@ -80,7 +88,10 @@ Instagram — public posts only; low feasibility, drop if it never yields.
 Tracked profiles/handles (candidates — agent verifies each resolves, then keeps
 the ones that recur with signal; add researchers/labs as discovered):
 - HF orgs/users: unsloth, bartowski, mradermacher, ggml-org, huihui, googlecs (GGUF/quant/inference + abliterated/derived model activity)
-- X (verify): @ggerganov (llama.cpp), @turboderp_ (ExLlama/EXL3), @danielhanchen (Unsloth), @reach_vb (HF), @teortaxesTex (release news), @kalomaze (sampling/quant)
+- X (verify each resolves): @ggerganov (llama.cpp), @turboderp_ (ExLlama/EXL3), @danielhanchen (Unsloth), @reach_vb (HF), @teortaxesTex (release news), @kalomaze (sampling/quant), @rasbt (research roundups)
+- Agents axis (the previously-missing area): add active agent-framework/research
+  accounts as discovered (LangChain, LlamaIndex, AutoGen/Microsoft, CrewAI, and
+  individual agent researchers) — seed from r/AI_Agents and the MCP community.
 - (agent: extend with lab/researcher accounts on the pinned axes — latent reasoning, latent comm, small/CPU models, low-bit quant)
 
 ## GitHub watch (Phase 5 — repos, profiles, and fork trees)
