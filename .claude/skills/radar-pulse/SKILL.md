@@ -7,8 +7,14 @@ description: |
 # Community pulse — intake only, never evidence
 
 Social tells you what people *think* and what is gaining traction before it
-reaches papers/docs. But social is not a primary source. This skill captures
-that value without corroding the ledger's evidence standard.
+reaches papers/docs, and it is often the FASTEST place to spot that something
+official exists (a post links a repo, a release, a paper). Social is not a
+primary source — but it is a discovery accelerator. This skill captures both
+without corroding the ledger's evidence standard.
+
+The platform/channel/profile list lives in `SOURCES.md`; treat it as a seed and
+curate it by your own judgment — add platforms and accounts that prove useful,
+drop noise. Don't restrict yourself to a fixed roster.
 
 ## Absolute rules (constitutional carve-out — see AGENTS.md Hard rules)
 
@@ -34,9 +40,19 @@ Keep it light — this is a pulse, not a crawl. For each platform:
   log "X/IG degraded: <handle> unreachable" in `source_rotation` and move on —
   do not fabricate.
 
-For every signal worth keeping: if it points to a concrete artifact, log a
-queue item ("verify <artifact>"); if it is pure sentiment, hold it for the
-pulse note. Cap at ~5 pulse items per run.
+## Discovery fast-track (the main point)
+
+When a social signal LINKS TO or NAMES a primary artifact (repo, release, paper,
+official blog post), do not just queue the rumour — FOLLOW the link in the same
+run and verify the artifact via `radar-source-verify`. If the artifact clears
+the evidence rules, it becomes evidence THIS run, cited to the primary source
+(never to the social post). Social is how you find it days early; the primary
+artifact is what you cite. Only when there is no reachable artifact yet does the
+signal stay a queue item.
+
+For signals without an artifact: if it points to something concrete but not yet
+findable, log a queue item ("verify <thing>"); if it is pure sentiment, hold it
+for the pulse note. Cap at ~5 pulse items per run.
 
 ## Self-maintenance (agent owns this)
 
