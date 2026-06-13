@@ -24,6 +24,7 @@ Scope, in priority order:
 3. Small models: CPU-first inference, 1-bit/ternary (BitNet-class), sub-4B on-device releases.
 4. Agent infrastructure: remote sandboxes/workspaces (E2B, Daytona, Modal, Cloudflare), multi-agent engineering, agent-loop/harness design, MCP and tool use, agent security.
 5. Open-weight releases (HF org pages of major labs), post-training/RL, evals, multimodal.
+6. Hardware, coupled to the axes (not chip-business news): AI accelerators (datacenter + edge/NPU), CPU/edge inference substrates, and hardware datatype/format support (FP4/MX/ternary) that couples to low-bit quant and small/CPU models. Sources in SOURCES.md → Hardware; cs.AR is the standing venue. Capability changes only — never earnings/fab/export-control/gaming-GPU news.
 
 Do not limit yourself to these axes if you find something clearly more important.
 

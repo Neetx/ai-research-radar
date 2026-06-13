@@ -48,6 +48,18 @@ Research labs / independents (agent: verify feeds on first sweep):
 - LMSYS / SGLang — https://lmsys.org/blog/ (use RSS, JS index fails extraction)
 - Cohere — https://cohere.com/blog (RSS)
 
+Hardware (technical only — coupled to the small/CPU, low-bit-quant and serving
+axes; scan for capability changes, NOT chip-business/macro news. agent: verify
+feeds on first sweep):
+- NVIDIA technical blog — https://developer.nvidia.com/blog/ (also in big-labs above)
+- Apple Machine Learning Research — https://machinelearning.apple.com/research (on-device / ANE / small models)
+- AMD ROCm Blogs — https://rocm.blogs.amd.com/index.html (serving on non-CUDA)
+- Modular (MAX / Mojo) — https://www.modular.com/blog (inference engine + HW abstraction)
+- Qualcomm AI Research — https://www.qualcomm.com/developer/blog (edge NPU / on-device)
+- Google Cloud TPU / JAX — via research.google + cloud.google.com/blog/products/ai-machine-learning
+- Inference-chip startups (agent discretion — technical perf posts only, skip PR): Groq, Cerebras, SambaNova, Etched, Tenstorrent
+- Venue: arXiv cs.AR is the standing exploration listing for hardware-aware serving / low-bit kernels (already yielded SPEAR, TileFuse)
+
 ## Social & community channels (Phase 2 — INTAKE ONLY, never evidence)
 
 Method: `radar-pulse` skill. Best-effort via Tavily (no paid APIs / no secrets).
