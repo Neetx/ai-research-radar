@@ -32,9 +32,9 @@ Big labs / vendors:
 - Anthropic — https://www.anthropic.com/news (no public RSS as of 2026-06-13: /rss.xml and /news/rss both 404 — extract the HTML index via Tavily)
 - Google DeepMind — https://deepmind.google/blog/rss.xml (RSS — confirmed working 2026-06-13; the old /discover/blog/ path is the HTML index)
 - Google Research — https://research.google/blog/ (RSS)
-- Meta AI — https://ai.meta.com/blog/ (the /blog/rss/ feed returned empty 2026-06-13 — find correct feed or extract HTML index)
+- Meta AI — https://ai.meta.com/blog/ (HEALED 2026-06-14: no RSS exists — /blog/rss/, /blog/feed/, /blog/rss.xml all 404 and the HTML index has no feed <link>. Working method: `tvly extract "https://ai.meta.com/blog/" --extract-depth advanced`. As of 2026-06-14 the blog's freshest post is April 2026 — Meta posts infrequently)
 - Microsoft Research — https://www.microsoft.com/en-us/research/blog/ (RSS); also Microsoft Security blog https://www.microsoft.com/en-us/security/blog/ for agent-security advisories
-- NVIDIA — https://developer.nvidia.com/blog/ (RSS) + https://research.nvidia.com/
+- NVIDIA — https://developer.nvidia.com/blog/ (HEALED 2026-06-14: the bare `/blog/feed` returns empty; use https://developer.nvidia.com/blog/feed/ (trailing slash) for the full Atom feed, or the on-axis category feed https://developer.nvidia.com/blog/category/generative-ai/feed/ — titles are CDATA in <entry>) + https://research.nvidia.com/
 - Mistral — https://mistral.ai/news/
 - Qwen — https://qwenlm.github.io/blog/ (RSS /index.xml STALE: newest post Sep 2025 as of 2026-06-13 — Qwen likely posts elsewhere now; verify qwen.ai + Qwen HF org instead)
 - DeepSeek — https://api-docs.deepseek.com/news/ + deepseek-ai HF org
