@@ -32,8 +32,11 @@ drop noise. Don't restrict yourself to a fixed roster.
 
 Per run, sample the channels in `SOURCES.md` → "Social & community channels".
 Keep it light — this is a pulse, not a crawl. For each platform:
-- **Reddit / Hacker News**: search the tracked subreddits / HN for the day's
-  high-engagement AI posts; note recurring topics and sentiment shifts.
+- **Reddit**: read the TOP posts of the tracked subreddits — both the technical
+  subs AND the broad-pulse subs. Note two things, not one: (a) recurring on-axis
+  topics, and (b) whatever is *dominating* a community right now, on-axis or not.
+- **Hacker News**: read the FRONT PAGE unconditionally (the #1 story is a
+  don't-miss), in addition to term searches.
 - **YouTube / Hugging Face**: check tracked channels/accounts for new activity.
 - **X / Instagram**: best-effort via Tavily on the profile URLs in SOURCES.md.
   These are unreliable in 2026 (no free API); if a profile can't be fetched,
@@ -52,7 +55,29 @@ signal stay a queue item.
 
 For signals without an artifact: if it points to something concrete but not yet
 findable, log a queue item ("verify <thing>"); if it is pure sentiment, hold it
-for the pulse note. Cap at ~5 pulse items per run.
+for the pulse note. Cap at ~5 pulse items per run — but a field-shaking event
+(below) always makes the cut, even off-axis.
+
+## Don't miss the earthquake (field-shaking events)
+
+The pulse's job is NOT only to extract on-axis signal — it is also to notice when
+the ground moves. The classic failure: the top post of your #1 community is a
+field-shaking story, but you discard it because it doesn't map to a tracked axis.
+Do not do that.
+
+- **Cross-community virality = importance.** If one event is dominating the top
+  of a major community — or several communities at once (technical AND broad) —
+  that IS the signal, on-axis or not. Surface it.
+- **Where it lives.** A field-shaking event that is not a research/engineering
+  trend (a model ban, an abrupt global access cut, a vendor/government action, an
+  acquisition, a major outage) does NOT go in the trend ledger and is NOT
+  evidence — but it MUST appear in the community-pulse note ("the community is
+  consumed by X"). The radar must *say the ground moved*, even when it has no
+  trend for it. Follow to a primary source if one exists; otherwise log it as
+  the dominant unverified pulse item with the thread link.
+- **Test:** if a practitioner would say "how did your radar not mention THAT?",
+  it belonged in the pulse. Operational earthquakes (a model you depend on
+  vanishing) count, even though they are not papers or releases.
 
 ## Self-maintenance (agent owns this)
 

@@ -72,8 +72,13 @@ Log degradation when a platform can't be reached. Never quote individuals in
 evidence/queue text — link the thread/profile, summarise. The watchlist of
 profiles below is a discovery aid, not an endorsement.
 
-Reddit (subreddits — verified active 2026-06-13; organized by axis so coverage
-gaps are visible. Ensure every pinned axis has at least one channel):
+Reddit (subreddits — verified active; organized by axis so coverage gaps are
+visible. Ensure every pinned axis has at least one channel):
+- **Broad AI pulse / breaking news** (HIGH traffic, high noise — intake only;
+  where field-shaking events surface first and loudest, and the layer whose
+  absence let the radar miss the Anthropic Fable/Mythos shutdown 2026-06-12):
+  r/singularity, r/artificial, r/ClaudeAI, r/OpenAI, r/Anthropic, r/LocalLLaMA.
+  Read these for "what is the field consumed by right now", not just on-axis topics.
 - Local / small / CPU models + quant: r/LocalLLaMA (the canonical pulse), r/LocalLLM
 - Research / papers: r/MachineLearning
 - Agents / agentic engineering: r/AI_Agents, r/LLMDevs, r/LangChain
@@ -83,6 +88,12 @@ gaps are visible. Ensure every pinned axis has at least one channel):
 - Serving/inference has no dedicated active sub — that discussion lives in r/LocalLLaMA
 - (agent: add/prune by signal; latent-reasoning & latent-comm have no strong sub
   yet — those surface on X/newsletters, watch for an emerging community)
+
+Rationale for the broad-pulse tier: the technical subs maximise on-axis signal
+but are blind to field-shaking events outside the tracked axes. Big news breaks
+in the generalist/vendor communities first — include them (intake only) so the
+pulse never misses an earthquake. See the "Don't miss the earthquake" rule in
+the `radar-pulse` skill.
 
 Hacker News — front page + Algolia search for AI/LLM/serving/quantization/agent terms.
 
