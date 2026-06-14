@@ -68,6 +68,10 @@ Do not do that.
 - **Cross-community virality = importance.** If one event is dominating the top
   of a major community — or several communities at once (technical AND broad) —
   that IS the signal, on-axis or not. Surface it.
+- **Vendor-neutral.** This applies to the WHOLE field, not any one company:
+  OpenAI, Google, Meta, Anthropic, Mistral, xAI, regulators, the open-weight
+  labs — whoever the earthquake involves. Do not over-index on a single vendor;
+  the test is "is the field consumed by it", not "which logo is on it".
 - **Where it lives.** A field-shaking event that is not a research/engineering
   trend (a model ban, an abrupt global access cut, a vendor/government action, an
   acquisition, a major outage) does NOT go in the trend ledger and is NOT
