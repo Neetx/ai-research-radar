@@ -5,9 +5,10 @@
 Tracks research and engineering trends across the AI ecosystem, for an AI researcher / AI-systems engineer. This page is generated from [TRENDS.md](TRENDS.md), the ledger of record — click a trend for its full evidence. ⭐ marks pinned standing-watch topics.
 
 **Since last scan (2026-06-14):**
-- [Open-weight frontier MoE wave](TRENDS.md#id-open-weight-003-open-weight-wave-frontier-scale-moe-released-at-high-cadence-by-chinese-labs) → **accelerating**: NVIDIA's [official deployment guide](https://developer.nvidia.com/blog/deploy-long-context-reasoning-and-agentic-workflows-with-minimax-m3-on-nvidia-accelerated-infrastructure/) documents MiniMax-M3 across TensorRT-LLM/SGLang/vLLM/Dynamo (disaggregated, MXFP8) within days of release — the serving-adoption watch item fired. Caveat: vLLM stable still serves M3 recipe-only, not natively.
-- [⭐ Latent inter-model communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration): a fifth independent cluster ([Dense Latent Communication](https://arxiv.org/abs/2606.13594), NVIDIA/Penn-line) tackles cross-model latent alignment between *heterogeneous* agents — refreshes the pinned axis (last evidence 06-05 → 06-11).
-- Watchlist +2 intake: a Xiaomi-line **MiMo-V2.5-Pro** recurs in open-weight value comparisons and **Qwen3.5** base models surfaced (verify next run); a [VIA-SD speculative-decoding](TRENDS.md#observation_queue) serving idea queued. Feeds healed: NVIDIA (`/blog/feed/`) and Meta (no RSS → Tavily) in [SOURCES.md](SOURCES.md).
+- [Open-weight frontier MoE wave](TRENDS.md#id-open-weight-003-open-weight-wave-frontier-scale-moe-released-at-high-cadence-by-chinese-labs) **broadens from four to six Chinese labs**: two queued intake items were verified against primary HF cards and promoted — Xiaomi [MiMo-V2.5-Pro](https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro) (1.02T/42B MoE, hybrid attention + MTP, 1M ctx) and Alibaba [Qwen3.5](https://huggingface.co/Qwen/Qwen3.5-397B-A17B) (multimodal MoE up to 397B-A17B). Stays 🚀 accelerating.
+- A fresh Moonshot drop verified from the pulse: [Kimi-K2.7-Code](https://huggingface.co/moonshotai/Kimi-K2.7-Code) (06-12, 1T/32B MoE, MLA + MoonViT) — coding/agentic, shipped *natively in INT4*. Newer than the K2.6 already cited.
+- Sub-pattern across the new drops: frontier open weights increasingly ship **natively in low-bit/MX formats** (Kimi INT4, MiMo FP4-DFlash, MiniMax-M3 MXFP8) — logged under the hardware↔low-bit [watchlist](TRENDS.md#observation_queue) note, not yet its own trend.
+- Earlier today: [⭐ Latent inter-model communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) gained a fifth cluster ([Dense Latent Communication](https://arxiv.org/abs/2606.13594)); M3 serving-adoption watch fired ([NVIDIA guide](https://developer.nvidia.com/blog/deploy-long-context-reasoning-and-agentic-workflows-with-minimax-m3-on-nvidia-accelerated-infrastructure/)) — vLLM still serves M3 recipe-only (v0.23.0 unchanged this pass).
 
 ## ⭐ Pinned topics
 
@@ -40,6 +41,7 @@ Standing-watch axes — never archived, but shown `dormant` honestly when quiet.
 
 ## Worth studying
 
+- [Kimi-K2.7-Code](https://huggingface.co/moonshotai/Kimi-K2.7-Code) — a frontier coding/agentic open MoE (1T/32B, MLA + MoonViT) shipped *natively in INT4*; study how a top lab now treats low-bit as the default distribution format, plus its interleaved-thinking + multi-step-tool-call design
 - [Deploy MiniMax-M3 on NVIDIA (TensorRT-LLM/SGLang/vLLM/Dynamo)](https://developer.nvidia.com/blog/deploy-long-context-reasoning-and-agentic-workflows-with-minimax-m3-on-nvidia-accelerated-infrastructure/) — how a frontier 1M-context open-weight MoE actually gets served (disaggregated prefill/decode, MXFP8, MSA at 1/20th per-token compute); the research→production map for long-context serving
 - [Dense Latent Communication Across Heterogeneous Agents](https://arxiv.org/abs/2606.13594) — pushes KV-cache communication past duplicate-model setups to cross-model latent alignment between different model families
 - [MiniMax-M3](https://huggingface.co/MiniMaxAI/MiniMax-M3) — frontier open-weight native-multimodal MoE (~428B/23B-active, 1M context); its MiniMax Sparse Attention (MSA) claims 9× prefill / 15× decode speedup at 1M tokens — study the operator + tech report (arXiv:2606.13392)
@@ -47,14 +49,13 @@ Standing-watch axes — never archived, but shown `dormant` honestly when quiet.
 - [EchoLeak: First Real-World Zero-Click Prompt Injection (AAAI 2025)](https://arxiv.org/abs/2509.10540) — the canonical production exploit (CVE-2025-32711, M365 Copilot, CVSS 9.3) behind the "move security into the architecture" thesis
 - [LT2: Linear-Time Looped Transformers](https://arxiv.org/abs/2605.20670) — looped reasoning at linear cost; keeps the latent-reasoning line practical
 - [PPD Disaggregation for Multi-turn LLM Serving](https://arxiv.org/abs/2603.13358) — ICML 2026; "append-prefill is an order of magnitude cheaper than full prefill" reframes prefill/decode routing for chat and agent workloads
-- [Agentic Environment Engineering: A Survey](https://arxiv.org/abs/2606.12191) — 63-page systematization of the environment lifecycle; the map to read before building or buying RL-environment infrastructure
 
 ## Community pulse
 
 > Unverified sentiment from social/community sources — intake only, never evidence. Links to threads, no individuals named.
 
-- [r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/) is deep on DeepSeek-V4 architecture takeaways (CSA + HCA) and budget local deployment (W8A8 on legacy GPUs) — corroborates the open-weight wave + low-bit axes as community-leading signals, not evidence.
-- Open-weight "value wars" comparisons now include a Xiaomi-line **MiMo-V2.5-Pro** alongside DeepSeek-V4-Pro and MiniMax-M3 — queued as unverified intake to verify against a primary model card next run.
+- [r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/) open-weight "value wars" now compare frontier MoE that the radar has since verified — Xiaomi **MiMo-V2.5-Pro** and Alibaba **Qwen3.5** were opened on their primary HF cards and promoted to evidence (the post is intake; the model card is the evidence).
+- A curated AI-news digest flagged **Kimi-K2.7-Code**; following the link to the [official Moonshot HF card](https://huggingface.co/moonshotai/Kimi-K2.7-Code) verified it (06-12) — the intake-lane → primary-artifact path working as designed.
 - Direct Reddit / HF-papers JSON is blocked from this run's IP; sampled via Tavily search instead (logged for the source-heal trail).
 
 ## Output map
