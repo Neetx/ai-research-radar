@@ -48,6 +48,23 @@ is agent-owned; the repaired method is what makes the fix permanent. If a source
 is genuinely dead with no replacement, mark it `RETIRED <date> — <reason>` and
 drop it from the active list.
 
+## Persistent environmental / IP blocks (don't re-log forever)
+
+Some sources are blocked not by a broken path but by the environment — a
+datacenter-IP block by the site, or egress restricted to a few hosts. You cannot
+"repair" these, but you must NOT re-log "blocked from this IP" every run either.
+- **Diagnose** which it is: try a neutral *programmatic* endpoint (an API host
+  like `hn.algolia.com`). If it works, the block is site-specific → switch that
+  source to its API host (e.g. HN → `hn.algolia.com/api/v1/...`; HF → the
+  `huggingface.co/api/...` endpoints; Reddit → the `.json`/RSS endpoints or a
+  mirror). If even the neutral API host fails, the environment's egress is
+  restricted.
+- **Record once**: pick the best reachable method and write it into SOURCES.md as
+  a KNOWN CONSTRAINT with that method; then stop re-logging it run after run.
+- **Escalate** (weekly proposal) only if the only real fix needs a secret (e.g. a
+  free Reddit OAuth app → `REDDIT_CLIENT_ID/SECRET`) or a change to the
+  environment's allowed domains — those are the curator's call.
+
 ## Escalate only when a fix needs what the agent can't grant
 
 If the only working path needs a secret or paid API (e.g. a paid X API), do NOT

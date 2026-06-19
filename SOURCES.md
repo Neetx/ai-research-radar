@@ -95,7 +95,9 @@ in the generalist/vendor communities first — include them (intake only) so the
 pulse never misses an earthquake. See the "Don't miss the earthquake" rule in
 the `radar-pulse` skill.
 
-Hacker News — front page + Algolia search for AI/LLM/serving/quantization/agent terms.
+Hacker News — via the Algolia API host `https://hn.algolia.com/api/v1/search?tags=front_page` (and `query=<term>` searches): programmatic, CDN-fronted, not IP-blocked — use this, don't scrape the HTML front page.
+
+Known cloud-env constraint (RECORDED — do NOT re-log "degraded" every run; see the persistent-block rule in `radar-source-heal`): direct `reddit.com` and `huggingface.co` JSON are blocked from the routine's IP. Working methods until fixed: HN via the Algolia API host above; HF papers via `https://huggingface.co/api/daily_papers`; Reddit via Tavily + the curated digests (which surface the same big threads). Reliable Reddit-direct would need a free Reddit OAuth app (`REDDIT_CLIENT_ID/SECRET` in env) or widening the env's allowed domains — both curator calls; propose via the weekly, don't keep logging the block.
 
 Curated digests (named-expert, high-signal intake — still NOT evidence; their
 value is pointing to primaries fast, so follow their links and verify):
