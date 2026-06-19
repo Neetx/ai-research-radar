@@ -29,10 +29,18 @@ this session, (b) a real date, (c) one line of context.
    - Hugging Face org pages: "updated X days ago" → compute the estimate and
      write "(date estimated from the org page)".
    - Undated pages: "(undated, accessed YYYY-MM-DD)".
-4. **Independence check** (for the ≥3-sources trend bar): sources must come from
+4. **Investigate the content and lineage — never judge by the surface.** Do not
+   accept or dismiss a signal on the first/oldest hit or a single date. Open the
+   ACTUAL artifact the signal is about (not just the top search result), and
+   trace the line: is there a newer version, a follow-up paper, a 2026
+   continuation? A research line can look "stale" only because your first hit is
+   its oldest paper while a fresh one exists (e.g. a 2025 method with a 2026
+   follow-up). Judge freshness and relevance from the real, latest artifact, not
+   from what the search surfaced first.
+5. **Independence check** (for the ≥3-sources trend bar): sources must come from
    different orgs/author groups. Shared co-authors collapse two papers into one
    group — compare author lists before counting.
-5. **Classify**:
+6. **Classify**:
    - Opened + dated + primary → evidence line:
      `- YYYY-MM-DD — URL — one line of context`
    - Not opened, or secondary-only → `observation_queue` line marked
@@ -40,7 +48,11 @@ this session, (b) a real date, (c) one line of context.
 
 ## Red flags (queue or drop — never cite)
 
-- SEO content farms, model comparators/aggregators, market-wire press syndication.
+- SEO content farms, model comparators/aggregators, market-wire press syndication
+  are never CITABLE — but they can POINT to a real primary artifact. Before
+  discarding one, read what paper/repo/release it is actually about, verify that
+  primary, and cite IT (never the SEO source). Don't let a clickbait wrapper hide
+  a live underlying result.
 - Releases claimed by aggregators but absent from the vendor's official channel
   (check the org's HF page or official blog index before believing them).
 - Vendor-reported adoption numbers: citable, but label them "vendor-reported".
