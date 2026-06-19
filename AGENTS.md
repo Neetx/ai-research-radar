@@ -47,6 +47,11 @@ snapshots. History matters: never rewrite published history, never force-push.
 
 ## Coverage discipline
 
+- Runs are not rate-limited by these instructions: multiple daily runs in the
+  same day are allowed and expected when triggered. The only per-day cap is on
+  stage promotions (one step up per trend), never on running. An agent must
+  never refuse a run citing a "one run per day" rule — none exists here.
+
 - Every daily scan sweeps the official AI lab and big-tech AI blogs FIRST, on
   every run, not rotated (see the `radar-lab-sweep` skill): fetch feeds, open
   posts newer than the last scan, log the sweep in `source_rotation` even when
