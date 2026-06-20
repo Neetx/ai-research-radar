@@ -97,7 +97,12 @@ the `radar-pulse` skill.
 
 Hacker News — via the Algolia API host `https://hn.algolia.com/api/v1/search?tags=front_page` (and `query=<term>` searches): programmatic, CDN-fronted, not IP-blocked — use this, don't scrape the HTML front page.
 
-Cloud-env network note (see the persistent-block rule in `radar-source-heal`; do NOT re-log "degraded" every run): direct `reddit.com` / `huggingface.co` JSON was failing from the routine's IP. Curator chose 2026-06-19 to WIDEN the routine environment's allowed-domains (reddit.com, hn.algolia.com, huggingface.co, news.ycombinator.com). Action: RE-ATTEMPT the direct endpoints next run and record what now works — HN via the Algolia API host above, HF papers via `https://huggingface.co/api/daily_papers`, Reddit via `reddit.com/r/<sub>/top.json?t=day` (or RSS). If a direct endpoint STILL fails after the allowlist change, the block is site-side (datacenter-IP), not egress → keep the Tavily + curated-digest fallback and note it once; reliable Reddit-direct would then need a free Reddit OAuth app (`REDDIT_CLIENT_ID/SECRET`), a separate curator call.
+Cloud-env network note (HEALED 2026-06-20 — see the persistent-block rule in `radar-source-heal`; do NOT re-log "degraded" every run): the curator's 2026-06-19 allowlist widening (reddit.com, hn.algolia.com, huggingface.co, news.ycombinator.com) was RE-TESTED on 2026-06-20 and partially took effect. WHAT NOW WORKS DIRECT (preferred over tvly — no key, full JSON):
+  - HN front page / search: `https://hn.algolia.com/api/v1/search?tags=front_page` (+ `&query=<term>`) — returns JSON, use for the broad-pulse earthquake check.
+  - HF daily papers: `https://huggingface.co/api/daily_papers?date=YYYY-MM-DD` (empty `[]` until the day's list posts, usually next-day; omit `?date` for current). Sort the returned items by `paper.upvotes` for the significance-first read.
+  - HF models (open-weight recheck): `https://huggingface.co/api/models?author=<org>&sort=lastModified&direction=-1&limit=N` — JSON with `id`/`lastModified`/`createdAt`.
+  STILL BLOCKED (site-side / datacenter-IP, NOT egress — do not keep retrying): `reddit.com/r/<sub>/*.json` returns "Blocked by egress policy" even after the allowlist change → keep the tvly fallback for Reddit. Reliable Reddit-direct would need a free Reddit OAuth app (`REDDIT_CLIENT_ID/SECRET`), a separate curator call.
+  Tooling note (2026-06-20): the `tvly` CLI flag set drifted from the `tavily-search` skill docs — use `--time-range [day|week|month|year]` (not `--days`), `--depth [ultra-fast|fast|basic|advanced]` (not `--search-depth`), and `--topic [general|news|finance]`.
 
 Curated digests (named-expert, high-signal intake — still NOT evidence; their
 value is pointing to primaries fast, so follow their links and verify):
