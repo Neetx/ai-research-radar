@@ -40,7 +40,8 @@ on every run, never patch it. Design goal: one screen, everything clickable.
      whose date equals `last_evidence` (first match in list order); if none
      matches, link the top evidence item.
 7. **Worth studying** — the `study_shelf` section of TRENDS.md, newest first,
-   up to 8 bullets: `[name](url) — one line of why`.
+   up to 12 bullets: `[name](url) — one line of why` (the shelf persists ~20 picks
+   / 30 days so a reader away for a couple of weeks can still catch up).
 8. **Community pulse** — `## Community pulse` (Phase 3): up to 5 bullets distilled
    from the latest `radar-pulse` intake — non-evidence, link-only, NEVER naming
    individuals (link the thread/profile, summarise). If no pulse data yet, one
