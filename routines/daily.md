@@ -48,10 +48,13 @@ Tooling: if a `tvly` (Tavily) CLI is available in the environment, prefer it for
 - Trend bar: ≥3 independent sources (different orgs/authors) AND ≥1 concrete artifact (code, paper, spec, release). A single paper or repo is not a trend.
 
 ## 4. Update TRENDS.md
+
+This section is NOT skippable on a quiet pass. Even when the scan found no new evidence, the `observation_queue` maintenance below is OWED every run — a quiet pass has the spare budget for exactly this. "Nothing new found" ≠ "no ledger work": at minimum, check the queue against its cap and burn down if over.
+
 - Match findings to existing trends via title and `alias`. Append new evidence; keep max 10 evidence items per trend (drop the oldest); update `last_evidence`.
 - Stage moves: at most ONE stage up per trend per day, only on new independent evidence, justified in `notes`. Demotions are allowed without new evidence.
 - 21+ days without evidence → set stage `dormant` (the weekly pass archives at 45+).
-- `observation_queue`: add today's weak signals (0–5, marked unverified unless opened); promote items that now meet the trend bar (new trends start at seed or emerging). BURN DOWN the backlog so it stays bounded: each run, resolve the 2–3 OLDEST items — verify→promote, or drop with a one-line reason in today's report — so daily intake is counterbalanced by daily resolution (soft cap ~25). NEVER silently delete: a dropped item's reason goes in today's report (permanent); re-date an item only if it's genuinely still worth watching, noting what's missing.
+- `observation_queue` (MANDATORY maintenance — do this EVERY run, including quiet/no-evidence passes): add today's weak signals (0–5, marked unverified unless opened); promote items that now meet the trend bar (new trends start at seed or emerging). KEEP IT BOUNDED to a soft cap of ~25, by a cap-driven burndown (NOT a fixed per-run quota): whenever the queue is OVER the cap, you MUST resolve the oldest items toward the cap in THIS pass regardless of what the scan found — verify→promote, or drop with a one-line reason in today's report; when already at/under the cap, still resolve the 1–2 oldest if they are stale. Over cap → always burn; at cap → it stops on its own. Intake is daily, so resolution is daily too — never defer the burndown to the weekly. NEVER silently delete: a dropped item's reason goes in today's report (permanent); re-date an item only if it's genuinely still worth watching, noting what's missing.
 - Append one dated line to the coverage log `logs/source_rotation.md` (append-only; never edit past lines) with the sources covered today. The `source_rotation` section of TRENDS.md is now just a pointer — do not write scans into TRENDS.md.
 - Update the "Last updated" line. Do not rename sections or change the file structure.
 - Regenerate `README.md` (the dashboard / landing page) from the updated ledger in the same commit (follow the `radar-render-dashboard` skill).

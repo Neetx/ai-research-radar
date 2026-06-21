@@ -41,7 +41,12 @@ structure is a contract.
   Only the curator adds/removes a pin (or the agent proposes it via amendment).
 - `observation_queue` items are dated and marked "unverified" unless opened. It
   is a WORKING SET (signals pending verification), not a knowledge store — keep it
-  bounded (soft cap ~25 live items). Items leave ONLY by resolution: promoted to a
+  bounded to a soft cap of ~25 live items by a CAP-DRIVEN burndown that runs every
+  session, including quiet/no-evidence passes: while the queue is OVER the cap,
+  resolve the oldest items toward the cap that run regardless of what the scan
+  found; at/under the cap it stops on its own (resolve only the 1–2 oldest if
+  stale). This is owed every run, never deferred to the weekly — a no-evidence
+  pass is not a no-op for the queue. Items leave ONLY by resolution: promoted to a
   trend (the signal is captured there) or dropped with a one-line reason in the
   day's/week's report (write-once, permanent). NEVER silently delete — because
   every removal is either a promotion or a recorded drop, shrinking the queue
