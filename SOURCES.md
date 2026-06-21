@@ -122,8 +122,13 @@ pointer. Trackers to sweep on rotation (agent: verify each on first use):
 - alphaXiv (alphaxiv.org) — community-discussed/trending arXiv papers
 - Papers with Code — trending papers + SOTA leaderboards
 - emergentmind.com — topic/paper tracker that surfaces emerging work
-- (an explainer blog encountered in the wild is handled by the rule above, not by
-  adding it here — pointer → primary → cite the primary)
+- alphamatch.ai — explainer blog (curator-seeded). Surfaced the DMoE /
+  parametric-knowledge-injection paper (a W25 miss). Intake-only: follow to the
+  named primary, verify it, cite the primary — NEVER the blog. Sweep its blog
+  index on the pointer-lane rotation.
+- (explainer/SEO blogs that REPEATEDLY surface verified primaries get ADDED here
+  as tracked pointers via the discovery mechanism below — alphamatch.ai is the
+  first; always pointer → primary → cite the primary, never the blog)
 
 YouTube — TRUSTED-CURATOR POINTER LANE (check EVERY run, intake only, never
 cited). High-signal channels that explain serious new papers are topic-agnostic
@@ -142,10 +147,13 @@ its `channel_id` once (open the channel page, grep `"channelId":"UC…"`), then 
 - Machine Learning Street Talk — long-form technical interviews with researchers
 - (lower-priority / pop-sci, optional: Two Minute Papers, 3Blue1Brown for math)
 
-### Discovering NEW / emerging curators (don't just use the list above)
+### Discovering NEW / emerging curators AND explainer/aggregator blogs (grow the list)
 
-The curated list must GROW on its own — a static roster goes stale and misses the
-next code4AI. Three mechanisms, all agent-owned:
+This covers BOTH human curators (YouTube channels, researcher handles) AND
+explainer/aggregator blogs & sites (the alphamatch.ai class — even SEO-ish ones,
+used as intake-only pointers, never cited). The curated list must GROW on its own
+— a static roster goes stale and misses the next code4AI or the next explainer
+blog sitting on a great paper. Three mechanisms, all agent-owned:
 1. **Hit attribution (daily, free).** Whenever you follow a signal to a primary
    you then verify as serious, note WHO surfaced it first (which channel / blog /
    handle / thread). A source that recurs as the origin of verified-serious finds
