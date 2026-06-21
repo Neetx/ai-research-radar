@@ -1,7 +1,7 @@
 ---
 name: radar-self-eval
 description: |
-  Compute the radar's self-calibration: weekly funnel metrics (queue dynamics, exploration compliance, off-axis rate), a monthly hit/miss retrospective against what actually became big, and up to 3 curator proposals. Use during every weekly recalibration, after the source-strategy review; results go into the append-only `calibration` section of TRENDS.md and into the weekly report.
+  Compute the radar's self-calibration: weekly funnel metrics (queue dynamics, exploration compliance, off-axis rate), a monthly hit/miss retrospective against what actually became big, and up to 3 curator proposals. Use during every weekly recalibration, after the source-strategy review; results go into the append-only `logs/calibration.md` and into the weekly report.
 ---
 
 # Self-evaluation
@@ -18,8 +18,8 @@ commit:
 - **queue funnel**: items added / promoted to trend / dropped / older than 14
   days and still unverified (stale)
 - **ledger**: evidence items added, stage moves (up and down)
-- **exploration compliance**: daily runs whose `source_rotation` line contains a
-  venue-exploration entry ÷ daily runs executed
+- **exploration compliance**: daily runs whose `logs/source_rotation.md` line
+  contains a venue-exploration entry ÷ daily runs executed
 - **off-axis rate**: share of new queue items that do NOT match any axis in
   `strategy_notes` (judgment call — name them)
 - **discovery lag**: for each evidence item added this week, the days between
@@ -28,7 +28,7 @@ commit:
   channel — exploration finds vs queue promotions (backfill) — plus the
   backfill share of all new evidence. This is the daily-ness KPI.
 
-Append ONE dated line to `## calibration` in TRENDS.md:
+Append ONE dated line to `logs/calibration.md` (the externalized self-eval log; the `## calibration` section of TRENDS.md is now only a pointer):
 `- YYYY-MM-DD — W<nn>: queue +a/→p/−d/stale s · evidence +e · moves m · exploration c/r · off-axis o/a · lag expl Xd / backfill Yd (Z%)`
 and include the same numbers, readable, in the weekly report.
 
@@ -59,7 +59,7 @@ Goal: ground truth — did the radar see early what later became big?
 4. For every MISS: add it to `observation_queue` now, and name the venue or
    axis that would have caught it — feed that into the proposals.
 
-Log in `## calibration`:
+Log in `logs/calibration.md`:
 `- YYYY-MM-DD — retro M<mm>: <item> — HIT-early|HIT-late|MISS (first seen <date or never>), …`
 
 ## 3. Amendments (proposed → cooling period → applied)
@@ -87,7 +87,7 @@ touching them is invalid.
 ## Boundaries
 
 - Evidence rules apply to the retrospective: cite only opened pages.
-- `## calibration` is append-only: never edit or delete existing lines.
+- `logs/calibration.md` is append-only: never edit or delete existing lines.
 - If a metric shows the same procedural failure twice, trigger a skill
   refinement per the maintenance policy in AGENTS.md (dedicated commit,
   explained in the report).

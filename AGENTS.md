@@ -16,7 +16,9 @@ snapshots. History matters: never rewrite published history, never force-push.
 
 | Path | Contents | Edit policy |
 |---|---|---|
-| `TRENDS.md` | Trend ledger + `observation_queue`, `source_rotation`, `strategy_notes`, `study_shelf`, `calibration` | follow the `radar-ledger-update` skill |
+| `TRENDS.md` | Trend ledger + `observation_queue`, `strategy_notes`, `study_shelf`; `source_rotation` and `calibration` are now one-line pointer stubs | follow the `radar-ledger-update` skill |
+| `logs/source_rotation.md` | Append-only daily coverage log (externalized from TRENDS.md to keep the ledger small); read only the recent tail | append-only; never edit/reorder past lines |
+| `logs/calibration.md` | Append-only weekly self-evaluation log (externalized from TRENDS.md) | append-only; written by weekly runs only |
 | `README.md` | THE output surface (repo landing page): badges, digest, clickable trend table, study shelf | fully derived — regenerate via the `radar-render-dashboard` skill; never edit by hand |
 | `SOURCES.md` | Agent-owned registry: lab blogs, social channels/profiles, watched repos | maintained by the radar itself |
 | `ARCHIVE.md` | Archived trends, one-line post-mortems | append-only |
@@ -74,7 +76,7 @@ snapshots. History matters: never rewrite published history, never force-push.
 - Weekly runs self-evaluate (see the `radar-self-eval` skill): calibration
   metrics every week, a hit/miss retrospective monthly, and up to 3 proposed
   amendments per weekly report, handled per the Self-amendment policy below.
-  The `calibration` section of TRENDS.md is append-only.
+  The calibration log (`logs/calibration.md`, externalized from TRENDS.md) is append-only.
 
 ## Tooling
 
@@ -98,10 +100,11 @@ it that way. Control cost with discipline instead:
 
 - Triage then extract: read feeds/titles/dates first (cheap); open the full page
   only for genuinely new or candidate items. Never bulk-extract every source.
-- Read only what you need from the long append-only sections: to decide today's
-  coverage, the recent tail of `source_rotation` (last ~7 days) is enough — you
-  need not re-read its full history (or all of `calibration`) every run. The
-  files keep full history; just don't pay to read all of it.
+- Read only what you need from the long append-only logs: to decide today's
+  coverage, the recent tail of `logs/source_rotation.md` (last ~7 days) is enough
+  — you need not re-read its full history (or `logs/calibration.md`) every run.
+  These logs are externalized from TRENDS.md precisely so the ledger stays small
+  and the full history stays out of the default read; just read the tail.
 - Tavily: `--search-depth basic`, modest `--max-results`, `extract --query` to
   pull only relevant chunks, and `--include-domains` to cut the SEO noise the
   ledger has flagged.

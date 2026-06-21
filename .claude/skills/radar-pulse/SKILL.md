@@ -41,7 +41,7 @@ Keep it light — this is a pulse, not a crawl. For each platform:
 - **Hugging Face**: check tracked accounts/orgs for new activity.
 - **X / Instagram**: best-effort via Tavily on the profile URLs in SOURCES.md.
   These are unreliable in 2026 (no free API); if a profile can't be fetched,
-  log "X/IG degraded: <handle> unreachable" in `source_rotation` and move on —
+  log "X/IG degraded: <handle> unreachable" in `logs/source_rotation.md` and move on —
   do not fabricate.
 
 ## Discovery fast-track (the main point)

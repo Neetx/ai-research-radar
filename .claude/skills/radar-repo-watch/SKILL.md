@@ -26,8 +26,8 @@ through Tavily only, and unauthenticated API is 60 req/hr). When available it
 gives cleaner structured data (exact `ahead_by`, merged_at); when not, the feeds
 and page extraction above are sufficient. Never let the watch block on the API.
 
-Check activity since the last scan (previous `source_rotation` date). Log the
-watch every run, even when quiet ("github-watch: no movement").
+Check activity since the last scan (previous date in `logs/source_rotation.md`).
+Log the watch every run, even when quiet ("github-watch: no movement").
 
 ## 1. Watched repositories
 

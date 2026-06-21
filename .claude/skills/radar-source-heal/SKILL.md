@@ -7,8 +7,8 @@ description: |
 # Source self-healing
 
 Logging "degraded" run after run is a failure of the radar, not of the source.
-If you logged the same breakage last run (check the recent `source_rotation`
-tail and SOURCES.md notes), **fix it this run** — don't just re-log it.
+If you logged the same breakage last run (check the recent tail of
+`logs/source_rotation.md` and SOURCES.md notes), **fix it this run** — don't just re-log it.
 
 ## When to heal (don't thrash)
 

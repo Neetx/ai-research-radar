@@ -17,11 +17,11 @@ the Hard rules, so anything found here is citable evidence.
    index — feeds are immune to the JS-rendering that hid `lmsys.org/blog`. To
    find a feed: try `/rss.xml`, `/feed`, `/atom.xml`, `/index.xml`, or read the
    page's `<link rel="alternate" type="application/rss+xml">`.
-2. Open only entries dated AFTER the last daily scan (check the previous
-   `source_rotation` date). Skip everything older — this keeps the sweep cheap.
+2. Open only entries dated AFTER the last daily scan (check the previous date in
+   `logs/source_rotation.md`). Skip everything older — this keeps the sweep cheap.
 3. Apply the evidence rules: open the actual post, cite its own date, match to a
    trend or log to `observation_queue`/`study_shelf` as appropriate.
-4. Log the sweep in `source_rotation` every run, even when nothing is new
+4. Log the sweep in `logs/source_rotation.md` every run, even when nothing is new
    ("lab-sweep: no new posts").
 
 ## Source list
