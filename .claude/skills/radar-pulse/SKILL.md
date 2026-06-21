@@ -31,7 +31,12 @@ drop noise. Don't restrict yourself to a fixed roster.
 ## Method (best-effort via Tavily, no paid APIs)
 
 Per run, sample the channels in `SOURCES.md` → "Social & community channels".
-Keep it light — this is a pulse, not a crawl. For each platform:
+Keep it light — this is a pulse, not a crawl — but "light" means SHALLOW per
+source (read the new items' titles), NOT skipping sources: the CHECK (open every
+channel/blog and see what is new since the last pass) is owed EVERY run, even one
+minute after another pass; only the EXTRACT (follow a new item to its primary and
+verify) is conditional on something new. A skipped channel is not "light", it is
+a missed lane. For each platform:
 - **Reddit**: read the TOP posts of the tracked subreddits — both the technical
   subs AND the broad-pulse subs. Note two things, not one: (a) recurring on-axis
   topics, and (b) whatever is *dominating* a community right now, on-axis or not.

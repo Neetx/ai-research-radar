@@ -11,6 +11,11 @@ mandatory on every daily run and is separate from (and in addition to) the
 rotating exploration slot. Official lab/vendor blogs are primary sources under
 the Hard rules, so anything found here is citable evidence.
 
+The CHECK (fetch every feed and see what is new since the last scan) is owed on
+EVERY run, even one minute after another pass — it is cheap triage and may never
+be skipped as a "light pass". Only the EXTRACT (open a new post in full) is
+conditional on a genuinely new entry.
+
 ## Method (efficient)
 
 1. For each source in the list, fetch its FEED first (RSS/Atom), not the HTML
