@@ -127,8 +127,13 @@ in the log is a dead lane. Agent: verify each on first use.
 - emergentmind.com — topic/paper tracker that surfaces emerging work
 - alphamatch.ai — explainer blog (curator-seeded; added after it surfaced a
   serious paper the radar had missed). Intake-only: follow to the named primary,
-  verify it, cite the primary — NEVER the blog. Sweep its blog index EVERY run as
-  part of the mandatory curator lane and log it.
+  verify it, cite the primary — NEVER the blog. ACCESS METHOD (healed
+  2026-06-22): it has NO RSS (`/rss`, `/feed`, `/rss.xml` all 404); the index
+  `https://alphamatch.ai/blog` returns 200 — fetch it with `tvly extract
+  https://alphamatch.ai/blog` (or built-in fetch of that URL) to list posts. Sweep
+  it EVERY run as part of the mandatory curator lane and log it as opened OR as
+  `degraded: <reason>` — do NOT silently omit it (it was listed-but-never-fetched
+  for days precisely because no access method was recorded).
 - (explainer/SEO blogs that REPEATEDLY surface verified primaries get ADDED here
   as tracked pointers via the discovery mechanism below — alphamatch.ai is the
   first; always pointer → primary → cite the primary, never the blog)
