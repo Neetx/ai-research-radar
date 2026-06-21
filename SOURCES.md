@@ -135,10 +135,10 @@ scan, FOLLOW the description to the named paper/repo and verify the PRIMARY
 (radar-source-verify); cite the primary, never the video. Resolve each handle to
 its `channel_id` once (open the channel page, grep `"channelId":"UC…"`), then use
 `https://www.youtube.com/feeds/videos.xml?channel_id=UC…`.
-- @code4AI — daily deep-dives on fresh AI papers (curator-supplied, high signal)
-- Yannic Kilcher — long-form, section-by-section paper readings
-- bycloud — frontier research breakdowns + lab analysis (high signal)
-- AI Explained — what new capabilities actually mean, with nuance
+- @code4AI (now "Discover AI") — daily deep-dives on fresh AI papers (curator-supplied, high signal) — channel_id `UCfOvNb3xj28SNqPQ_JIbumg` (resolved 2026-06-21; NOTE: the handle's HTML lists featured side-channels first — take the canonical `channel/UC…` link, not the first `"channelId"` match)
+- Yannic Kilcher — long-form, section-by-section paper readings — channel_id `UCZHmQk67mSJgfCCTn7xBfew` (resolved 2026-06-21; main channel quiet, newest 2026-03)
+- bycloud — frontier research breakdowns + lab analysis (high signal) — channel_id `UCgfe2ooZD3VJPB6aJAnuQng` (resolved 2026-06-21)
+- AI Explained — what new capabilities actually mean, with nuance — channel_id `UCNJ1Ymd5yFuUPtn21xtRbbw` (resolved 2026-06-21)
 - Machine Learning Street Talk — long-form technical interviews with researchers
 - (lower-priority / pop-sci, optional: Two Minute Papers, 3Blue1Brown for math)
 
