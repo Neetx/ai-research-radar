@@ -16,6 +16,8 @@ Lab sweep (MANDATORY every run, not rotated): before anything else in the scan, 
 
 Community pulse (every run, light): sample the social/community sources following the `radar-pulse` skill — intake only, NEVER evidence (feeds `observation_queue` unverified + the pulse note; never name individuals).
 
+Trusted-curator lane (MANDATORY every run, including light/2nd passes — do NOT skip it): check the tracked YouTube channels (code4AI, Yannic Kilcher, bycloud, …) and explainer blogs/newsletters in `SOURCES.md`, per the `radar-pulse` skill — for each NEW item since the last pass, follow the description/link to the named paper/repo and verify the PRIMARY (cite the primary, never the curator). This is a primary discovery path (it is where curator-surfaced serious work like a code4AI paper deep-dive gets caught), so it is mandatory like the lab sweep. Also do hit attribution and grow/probation the curator list per SOURCES.md. LOG the curator check in `source_rotation` every run even when nothing is new — so a skipped check is visible.
+
 GitHub watch (every run, light): follow the `radar-repo-watch` skill across watched repos, watched profiles/users, and fork trees (depth 3, scored by FNS) — releases/merged PRs and notable forks are citable artifacts; issue/PR/profile/fork movement is a queue signal.
 
 Self-healing: if any source or tool above fails the same way it did before (broken/stale feed, 404, empty, JSON/parse error), repair it this run per the `radar-source-heal` skill and record the working method in `SOURCES.md` — don't just re-log "degraded" (cap: 1–2 heals per run).
