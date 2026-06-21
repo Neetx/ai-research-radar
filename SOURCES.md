@@ -104,10 +104,21 @@ Cloud-env network note (HEALED 2026-06-20 — see the persistent-block rule in `
   STILL BLOCKED (site-side / datacenter-IP, NOT egress — do not keep retrying): `reddit.com/r/<sub>/*.json` returns "Blocked by egress policy" even after the allowlist change → keep the tvly fallback for Reddit. Reliable Reddit-direct would need a free Reddit OAuth app (`REDDIT_CLIENT_ID/SECRET`), a separate curator call.
   Tooling note (2026-06-20): the `tvly` CLI flag set drifted from the `tavily-search` skill docs — use `--time-range [day|week|month|year]` (not `--days`), `--depth [ultra-fast|fast|basic|advanced]` (not `--search-depth`), and `--topic [general|news|finance]`.
 
-Curated digests (named-expert, high-signal intake — still NOT evidence; their
-value is pointing to primaries fast, so follow their links and verify):
+Curated digests + trending-paper trackers (POINTER LANE — intake only, NEVER
+cited as evidence; their only job is to surface what is getting attention so you
+follow the link to the PRIMARY artifact and verify that). This is the scalable
+answer to "amplified work the radar would miss": do NOT whitelist individual
+explainer/SEO blogs (e.g. alphamatch.ai-style posts) as sources — instead, when
+ANY explainer/aggregator/blog/YouTube names a paper or repo, extract the named
+primary, verify it (radar-source-verify), cite the primary, and never the
+pointer. Trackers to sweep on rotation (agent: verify each on first use):
 - Latent.Space / AINews — daily AI news digest
 - Ahead of AI — Sebastian Raschka's LLM research roundups
+- alphaXiv (alphaxiv.org) — community-discussed/trending arXiv papers
+- Papers with Code — trending papers + SOTA leaderboards
+- emergentmind.com — topic/paper tracker that surfaces emerging work
+- (an explainer blog encountered in the wild is handled by the rule above, not by
+  adding it here — pointer → primary → cite the primary)
 
 YouTube — per-channel RSS (`/feeds/videos.xml?channel_id=…`). Seed: Yannic
 Kilcher (paper walk-throughs); add conference/lab talk channels (vLLM, SGLang,
