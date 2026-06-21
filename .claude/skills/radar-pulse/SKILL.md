@@ -37,7 +37,7 @@ Keep it light — this is a pulse, not a crawl. For each platform:
   topics, and (b) whatever is *dominating* a community right now, on-axis or not.
 - **Hacker News**: read the FRONT PAGE unconditionally (the #1 story is a
   don't-miss), in addition to term searches.
-- **Trusted curators (YouTube channels + explainer blogs/newsletters) — check EVERY run, this is a PRIMARY DISCOVERY path, not "social noise":** check BOTH halves — the YouTube channels AND the explainer/digest pointer blogs (SOURCES.md → YouTube + the pointer-lane trackers, incl. alphamatch.ai). Neither half is "on rotation"; the explainer-blog half is as mandatory as the YouTube half and is the one that tends to get silently dropped — NAME in the coverage log which pointer blogs you actually opened, because a tracked blog that never appears in the log is a dead lane (how the DMoE paper sat unswept in alphamatch.ai). For every new video/post, FOLLOW the description/link to the named paper/repo and verify the PRIMARY (radar-source-verify); cite the primary, never the curator. This is how high-signal work surfaced by a person (e.g. a code4AI paper deep-dive) gets caught even when it hasn't ranked on arXiv/HF yet.
+- **Trusted curators (YouTube channels + explainer blogs/newsletters) — check EVERY run, this is a PRIMARY DISCOVERY path, not "social noise":** check BOTH halves — the YouTube channels AND the explainer/digest pointer blogs (SOURCES.md → YouTube + the pointer-lane trackers, incl. alphamatch.ai). Neither half is "on rotation"; the explainer-blog half is as mandatory as the YouTube half and is the one that tends to get silently dropped — NAME in the coverage log which pointer blogs you actually opened, because a tracked blog that never appears in the log is a dead lane — its papers never get captured. For every new video/post, FOLLOW the description/link to the named paper/repo and verify the PRIMARY (radar-source-verify); cite the primary, never the curator. This is how high-signal work surfaced by a person (e.g. a code4AI paper deep-dive) gets caught even when it hasn't ranked on arXiv/HF yet.
 - **Hugging Face**: check tracked accounts/orgs for new activity.
 - **X / Instagram**: best-effort via Tavily on the profile URLs in SOURCES.md.
   These are unreliable in 2026 (no free API); if a profile can't be fetched,
@@ -60,10 +60,10 @@ no action", "noted", "hit-attributed to <curator>" are NOT end-states: attributi
 records WHERE you saw it, capture records WHAT it is, and only the queue/ledger is
 capture — report prose and SOURCES notes are not. "We already know this is a miss"
 is the trap, not an excuse: if a named primary is recognized but is not in the
-queue or the ledger, it has been LOST, so queue it now. (Concrete failure this
-rule prevents: the DMoE / parametric-knowledge-injection paper was named "a W25
-miss" and attributed to code4AI across several reports, yet never followed to its
-arXiv primary, verified, or queued — the radar never even captured its id.)
+queue or the ledger, it has been LOST, so queue it now. (The failure this
+prevents: a primary named repeatedly in report/SOURCES prose and attributed to a
+curator, yet never followed to its artifact, verified, or queued — so the radar
+never even holds its id.)
 
 For signals without an artifact: if it points to something concrete but not yet
 findable, log a queue item ("verify <thing>"); if it is pure sentiment, hold it
