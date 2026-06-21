@@ -28,6 +28,13 @@ structure is a contract.
 
 - Match findings to existing trends via id and `alias` before creating a new
   trend. New trends take the next free NNN and start at `seed` or `emerging`.
+- ROUTE a captured primary, don't default to "queue it": (a) if it lands on an
+  EXISTING trend's axis, append it as EVIDENCE there — a single primary suffices
+  for an existing trend; the ≥3-source bar is only for CREATING a trend; (b) if
+  the queue now holds ≥3 independent groups on one untracked sub-theme, promote
+  that cluster to a `seed` trend; (c) else it stays a queue item. Leaving an
+  on-axis primary in the queue (hoarding evidence) or a named primary in report
+  prose only is a routing failure.
 - Max 10 evidence items per trend — drop the oldest. Keep `last_evidence` equal
   to the newest evidence date.
 - Stage moves: at most ONE stage up per trend per day, only on new independent
