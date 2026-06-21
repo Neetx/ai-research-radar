@@ -35,8 +35,13 @@ structure is a contract.
   follow the normal stage rules, INCLUDING going `dormant` when quiet (the
   ledger stays truthful about activity); they simply never leave the board.
   Only the curator adds/removes a pin (or the agent proposes it via amendment).
-- `observation_queue` items are dated and marked "unverified" unless opened.
-  When dropping one, record why in the day's report.
+- `observation_queue` items are dated and marked "unverified" unless opened. It
+  is a WORKING SET (signals pending verification), not a knowledge store — keep it
+  bounded (soft cap ~25 live items). Items leave ONLY by resolution: promoted to a
+  trend (the signal is captured there) or dropped with a one-line reason in the
+  day's/week's report (write-once, permanent). NEVER silently delete — because
+  every removal is either a promotion or a recorded drop, shrinking the queue
+  loses no knowledge. Re-date an item only if it is genuinely still worth watching.
 - Append one dated line per session to `source_rotation`. Append dated
   corrections to `strategy_notes`; never delete curator entries.
 - `study_shelf`: newest first, format `date — [name](url) — one line of why`;

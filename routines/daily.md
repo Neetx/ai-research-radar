@@ -51,7 +51,7 @@ Tooling: if a `tvly` (Tavily) CLI is available in the environment, prefer it for
 - Match findings to existing trends via title and `alias`. Append new evidence; keep max 10 evidence items per trend (drop the oldest); update `last_evidence`.
 - Stage moves: at most ONE stage up per trend per day, only on new independent evidence, justified in `notes`. Demotions are allowed without new evidence.
 - 21+ days without evidence → set stage `dormant` (the weekly pass archives at 45+).
-- `observation_queue`: add today's weak signals (0–5, marked unverified unless opened); promote items that now meet the trend bar (new trends start at seed or emerging); when dropping an item, record the reason in today's report.
+- `observation_queue`: add today's weak signals (0–5, marked unverified unless opened); promote items that now meet the trend bar (new trends start at seed or emerging). BURN DOWN the backlog so it stays bounded: each run, resolve the 2–3 OLDEST items — verify→promote, or drop with a one-line reason in today's report — so daily intake is counterbalanced by daily resolution (soft cap ~25). NEVER silently delete: a dropped item's reason goes in today's report (permanent); re-date an item only if it's genuinely still worth watching, noting what's missing.
 - Append one dated line to `source_rotation` with the sources covered today.
 - Update the "Last updated" line. Do not rename sections or change the file structure.
 - Regenerate `README.md` (the dashboard / landing page) from the updated ledger in the same commit (follow the `radar-render-dashboard` skill).
