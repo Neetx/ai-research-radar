@@ -120,9 +120,21 @@ pointer. Trackers to sweep on rotation (agent: verify each on first use):
 - (an explainer blog encountered in the wild is handled by the rule above, not by
   adding it here — pointer → primary → cite the primary)
 
-YouTube — per-channel RSS (`/feeds/videos.xml?channel_id=…`). Seed: Yannic
-Kilcher (paper walk-throughs); add conference/lab talk channels (vLLM, SGLang,
-PyTorch, NeurIPS/ICLR recordings) and release explainers by discovery.
+YouTube — TRUSTED-CURATOR POINTER LANE (check EVERY run, intake only, never
+cited). High-signal channels that explain serious new papers are topic-agnostic
+FILTERS for "what's worth attention" — exactly how the radar catches important
+work it would otherwise miss (e.g. code4AI's "looped world model" = a
+looped-transformer world model that sits on the latent-reasoning pinned axis,
+missed because YouTube wasn't being worked). For each NEW video since the last
+scan, FOLLOW the description to the named paper/repo and verify the PRIMARY
+(radar-source-verify); cite the primary, never the video. Resolve each handle to
+its `channel_id` once (open the channel page, grep `"channelId":"UC…"`), then use
+`https://www.youtube.com/feeds/videos.xml?channel_id=UC…`.
+- @code4AI — daily deep-dives on fresh AI papers (curator-supplied, high signal)
+- Yannic Kilcher — paper walk-throughs
+- (agent: ADD a channel when it repeatedly surfaces work the radar later verifies
+  as serious; drop noisy ones. conference/lab talk channels — vLLM, SGLang,
+  PyTorch, NeurIPS/ICLR — by discovery.)
 
 Hugging Face — org/user activity for tracked accounts (below) + trending models/datasets.
 

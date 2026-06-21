@@ -37,7 +37,8 @@ Keep it light — this is a pulse, not a crawl. For each platform:
   topics, and (b) whatever is *dominating* a community right now, on-axis or not.
 - **Hacker News**: read the FRONT PAGE unconditionally (the #1 story is a
   don't-miss), in addition to term searches.
-- **YouTube / Hugging Face**: check tracked channels/accounts for new activity.
+- **Trusted curators (YouTube channels + explainer blogs/newsletters) — check EVERY run, this is a PRIMARY DISCOVERY path, not "social noise":** for each tracked curator (SOURCES.md → YouTube + the pointer-lane trackers), look at new items since the last scan. A good curator is a topic-agnostic high-signal FILTER for serious new work — do not skip it. For every new video/post, FOLLOW the description/link to the named paper/repo and verify the PRIMARY (radar-source-verify); cite the primary, never the curator. This is how high-signal work surfaced by a person (e.g. a code4AI paper deep-dive) gets caught even when it hasn't ranked on arXiv/HF yet.
+- **Hugging Face**: check tracked accounts/orgs for new activity.
 - **X / Instagram**: best-effort via Tavily on the profile URLs in SOURCES.md.
   These are unreliable in 2026 (no free API); if a profile can't be fetched,
   log "X/IG degraded: <handle> unreachable" in `source_rotation` and move on —
