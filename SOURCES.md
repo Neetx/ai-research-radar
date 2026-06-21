@@ -111,7 +111,10 @@ answer to "amplified work the radar would miss": do NOT whitelist individual
 explainer/SEO blogs (e.g. alphamatch.ai-style posts) as sources — instead, when
 ANY explainer/aggregator/blog/YouTube names a paper or repo, extract the named
 primary, verify it (radar-source-verify), cite the primary, and never the
-pointer. Trackers to sweep on rotation (agent: verify each on first use):
+pointer. Trackers swept EVERY run as the explainer/digest half of the mandatory
+trusted-curator lane (NOT "on rotation" — see routines/daily.md). Name in the
+coverage log which of these you actually opened each run; one that never appears
+in the log is a dead lane. Agent: verify each on first use.
 - Latent.Space / AINews — daily AI news digest
 - Ahead of AI (Sebastian Raschka) — LLM architecture / ML research roundups
 - Interconnects (Nathan Lambert) — post-training, RLHF, open-model dynamics (high signal)
@@ -123,9 +126,12 @@ pointer. Trackers to sweep on rotation (agent: verify each on first use):
 - Papers with Code — trending papers + SOTA leaderboards
 - emergentmind.com — topic/paper tracker that surfaces emerging work
 - alphamatch.ai — explainer blog (curator-seeded). Surfaced the DMoE /
-  parametric-knowledge-injection paper (a W25 miss). Intake-only: follow to the
-  named primary, verify it, cite the primary — NEVER the blog. Sweep its blog
-  index on the pointer-lane rotation.
+  parametric-knowledge-injection paper (a W25 miss STILL uncaptured because this
+  blog was registered but never actually swept). Intake-only: follow to the named
+  primary, verify it, cite the primary — NEVER the blog. Sweep its blog index
+  EVERY run as part of the mandatory curator lane and log it; on the next sweep,
+  follow its DMoE/parametric-knowledge-injection post to the arXiv primary and
+  capture it (we still do not hold its id).
 - (explainer/SEO blogs that REPEATEDLY surface verified primaries get ADDED here
   as tracked pointers via the discovery mechanism below — alphamatch.ai is the
   first; always pointer → primary → cite the primary, never the blog)
