@@ -22,6 +22,7 @@ Also curate the `study_shelf` section of `TRENDS.md`: merge duplicates, drop pic
 ## 4. Source strategy review
 Compare `source_rotation` against the ledger: which sources produced evidence this week, which produced nothing repeatedly, and are the scope priorities in `strategy_notes` actually being covered by the daily scans?
 Tunnel-vision check: if ALL of this week's new evidence landed on pre-existing trends, treat it as an anchoring warning — record it in `strategy_notes` and direct next week's exploration slots toward axes or venues with zero coverage. Also verify the daily exploration slot actually ran: it must appear in `source_rotation` even on days it produced nothing.
+Curator scouting (grow the trusted-curator lane, don't let it go stale): per SOURCES.md → "Discovering NEW / emerging curators", (a) review hit attribution from the week — which channels/blogs/handles surfaced the primaries the radar verified — and add recurring high-hit sources to the candidate (probation) list; (b) scout for emerging explainers (search + community recommendation threads); (c) promote a probation candidate that hit ≥2 verified-serious primaries over ~3–4 weeks, and drop noisy/quiet ones. Record promotions/drops in SOURCES.md and this report.
 Append a dated correction entry to `strategy_notes`: sources to add/drop, axes over- or under-covered, and concrete instructions for next week's daily scans.
 
 ## 5. Self-evaluation

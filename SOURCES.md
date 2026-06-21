@@ -113,7 +113,12 @@ ANY explainer/aggregator/blog/YouTube names a paper or repo, extract the named
 primary, verify it (radar-source-verify), cite the primary, and never the
 pointer. Trackers to sweep on rotation (agent: verify each on first use):
 - Latent.Space / AINews — daily AI news digest
-- Ahead of AI — Sebastian Raschka's LLM research roundups
+- Ahead of AI (Sebastian Raschka) — LLM architecture / ML research roundups
+- Interconnects (Nathan Lambert) — post-training, RLHF, open-model dynamics (high signal)
+- Import AI (Jack Clark) — weekly research + policy summary, candid commentary
+- AlphaSignal — research-grade weekly: trending papers, repos, coding breakdowns
+- Lilian Weng's blog (lilianweng.github.io) — deep technical surveys (verify)
+- Simon Willison's blog (simonwillison.net) — LLM practitioner notes/releases (verify)
 - alphaXiv (alphaxiv.org) — community-discussed/trending arXiv papers
 - Papers with Code — trending papers + SOTA leaderboards
 - emergentmind.com — topic/paper tracker that surfaces emerging work
@@ -131,7 +136,33 @@ scan, FOLLOW the description to the named paper/repo and verify the PRIMARY
 its `channel_id` once (open the channel page, grep `"channelId":"UC…"`), then use
 `https://www.youtube.com/feeds/videos.xml?channel_id=UC…`.
 - @code4AI — daily deep-dives on fresh AI papers (curator-supplied, high signal)
-- Yannic Kilcher — paper walk-throughs
+- Yannic Kilcher — long-form, section-by-section paper readings
+- bycloud — frontier research breakdowns + lab analysis (high signal)
+- AI Explained — what new capabilities actually mean, with nuance
+- Machine Learning Street Talk — long-form technical interviews with researchers
+- (lower-priority / pop-sci, optional: Two Minute Papers, 3Blue1Brown for math)
+
+### Discovering NEW / emerging curators (don't just use the list above)
+
+The curated list must GROW on its own — a static roster goes stale and misses the
+next code4AI. Three mechanisms, all agent-owned:
+1. **Hit attribution (daily, free).** Whenever you follow a signal to a primary
+   you then verify as serious, note WHO surfaced it first (which channel / blog /
+   handle / thread). A source that recurs as the origin of verified-serious finds
+   has earned a place — add it to "Candidate curators" with the hit count.
+2. **Scouting (weekly, cheap).** Periodically search for emerging explainers
+   ("best AI paper YouTube/Substack 2026", new researcher blogs) AND scan the
+   community recommendation threads (r/MachineLearning, HN, r/LocalLLaMA "who
+   explains X / best channel for Y") for creators repeatedly praised for serious
+   explanations. Add promising ones to "Candidate curators".
+3. **Probation → promote / drop (weekly, measured).** A candidate rides the
+   probation list; if it surfaces ≥2 verified-serious primaries over ~3–4 weeks,
+   promote it to the curated list; if it's hype/noise or never hits, drop it with
+   a one-line reason. Demote a curated source that goes quiet or noisy. This is
+   the self-improvement loop applied to GROWING the source set, not just healing it.
+
+Candidate curators (probation — agent fills; format: name/handle — why — hits/since):
+- (none yet — populate via mechanisms 1–2 above)
 - (agent: ADD a channel when it repeatedly surfaces work the radar later verifies
   as serious; drop noisy ones. conference/lab talk channels — vLLM, SGLang,
   PyTorch, NeurIPS/ICLR — by discovery.)
