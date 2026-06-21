@@ -54,6 +54,17 @@ the evidence rules, it becomes evidence THIS run, cited to the primary source
 artifact is what you cite. Only when there is no reachable artifact yet does the
 signal stay a queue item.
 
+A NAMED primary has exactly TWO valid end-states, never a third: (a) verified →
+evidence, or (b) an `observation_queue` item carrying the named id/URL. "Intake —
+no action", "noted", "hit-attributed to <curator>" are NOT end-states: attribution
+records WHERE you saw it, capture records WHAT it is, and only the queue/ledger is
+capture — report prose and SOURCES notes are not. "We already know this is a miss"
+is the trap, not an excuse: if a named primary is recognized but is not in the
+queue or the ledger, it has been LOST, so queue it now. (Concrete failure this
+rule prevents: the DMoE / parametric-knowledge-injection paper was named "a W25
+miss" and attributed to code4AI across several reports, yet never followed to its
+arXiv primary, verified, or queued — the radar never even captured its id.)
+
 For signals without an artifact: if it points to something concrete but not yet
 findable, log a queue item ("verify <thing>"); if it is pure sentiment, hold it
 for the pulse note. Cap at ~5 pulse items per run — but a field-shaking event
