@@ -66,6 +66,14 @@ the ground moves. The classic failure: the top post of your #1 community is a
 field-shaking story, but you discard it because it doesn't map to a tracked axis.
 Do not do that.
 
+- **Check ALL channels, not one — never collapse the pulse to HN.** The
+  earthquake check is multi-channel every run: HN front page (Algolia) + the
+  broad Reddit subs + the trusted curators + the digests; X best-effort. HN is
+  the reliable backbone, but an HN-only pulse is incomplete — and the report
+  must NAME which channels were actually checked (a single-channel pulse is a
+  visible gap to fix, not "done"). Cross-posting is your friend: a real
+  field-shaking event shows up across several of these within hours, so checking
+  the reliable set catches it even when X/Reddit-direct are flaky.
 - **Cross-community virality = importance.** If one event is dominating the top
   of a major community — or several communities at once (technical AND broad) —
   that IS the signal, on-axis or not. Surface it.

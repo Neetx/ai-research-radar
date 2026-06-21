@@ -169,8 +169,14 @@ Candidate curators (probation — agent fills; format: name/handle — why — h
 
 Hugging Face — org/user activity for tracked accounts (below) + trending models/datasets.
 
-X / Twitter — best-effort via Tavily on profile URLs (no free API in 2026; log
-when degraded).
+X / Twitter — BEST-EFFORT, never a dependency. No free API in 2026, Nitter dead,
+scraping blocked → reading X is unreliable. Method: tvly on the handle/profile
+URLs below + pick up the big X threads that the digests (AINews/Latent.Space)
+and HN/Reddit already surface (a real X earthquake cross-posts everywhere within
+hours). So the earthquake net must NOT rely on X — the reliable channels (HN +
+broad Reddit + curators + digests) catch it regardless; X is a bonus. Log
+"X degraded" when unreachable and move on; do not let it block the pulse. The
+only reliable-X path is a paid X API (a curator call — declined for now).
 
 Instagram — public posts only; low feasibility, drop if it never yields.
 
