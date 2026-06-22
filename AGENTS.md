@@ -25,7 +25,7 @@ snapshots. History matters: never rewrite published history, never force-push.
 | `reports/YYYY-MM-DD.md` | Daily reports | write once, never edit old ones |
 | `reports/weekly/YYYY-Wnn.md` | Weekly reports | write once |
 | `routines/*.md` | LIVE operating instructions, loaded by the fixed platform prompt | weekly amendments only, per the Self-amendment policy |
-| `.claude/skills/` | Project skills (ledger update, source verify, dashboard render, self-eval, lab sweep, pulse, repo watch, source heal) | improvable — see policy below |
+| `.claude/skills/` | Project skills (ledger update, source verify, dashboard render, self-eval, lab sweep, pulse, explore, repo watch, source heal) | improvable — see policy below |
 
 ## Hard rules (never relax these)
 

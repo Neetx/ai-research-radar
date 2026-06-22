@@ -209,6 +209,26 @@ the ones that recur with signal; add researchers/labs as discovered):
   individual agent researchers) — seed from r/AI_Agents and the MCP community.
 - (agent: extend with lab/researcher accounts on the pinned axes — latent reasoning, latent comm, small/CPU models, low-bit quant)
 
+## Discovery / exploration venues (Phase 4 — iterated EVERY run by radar-explore)
+
+Where NEW / not-yet-tracked important work surfaces. The `radar-explore` skill
+iterates this list significance-first (read the TOP / most-attention items
+REGARDLESS of topic), to find what the radar SHOULD be tracking — not to confirm
+the axes it already tracks. Same contract as the other sweeps: execute the list,
+log venues + date range covered. A venue that recurrently surfaces serious work
+gets ADDED here (so it is iterated next run); a dead one is dropped.
+
+PRIMARY (cross-category, attention-ranked — covered EVERY run; this cross-cutting
+view is what a single arXiv category cannot give):
+- Hugging Face daily papers — https://huggingface.co/papers + /papers/date/YYYY-MM-DD ; API https://huggingface.co/api/daily_papers — rank by upvotes, read the top items regardless of category.
+- alphaXiv (alphaxiv.org) + Papers with Code /trending — community attention signals on fresh arXiv work (cross-check; intake → follow to the arXiv primary).
+
+SUPPLEMENT (ONE per run, rotating, with an ADVANCING date window — read newer than
+the last browse of that venue per logs/source_rotation.md; never re-mine the same
+batch):
+- arXiv category recent listings, rotated: cs.AR, cs.RO, cs.CV, cs.DC, cs.SE, cs.LG, cs.CL, cs.MA, cs.AI (export.arxiv API or the /list/<cat>/recent page).
+- Watch-area venues (off-axis — surface and queue, never force a trend): world models / world simulators (cs.RO, cs.CV), physics AI / AI-for-science (physics.comp-ph + AI-for-science lab blogs), quantum ML (quant-ph).
+
 ## GitHub watch (Phase 5 — repos, profiles, and fork trees)
 
 Method: `radar-repo-watch` skill. Releases/merged PRs are citable artifacts;
