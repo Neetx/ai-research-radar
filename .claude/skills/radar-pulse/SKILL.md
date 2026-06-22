@@ -1,7 +1,7 @@
 ---
 name: radar-pulse
 description: |
-  Sample social/community sources (Reddit, Hacker News, YouTube, Hugging Face, and best-effort X/Instagram) for sentiment and leading-indicator buzz on every daily run. Social is an INTAKE LANE ONLY — it can feed observation_queue (unverified) and a community-pulse note, but NEVER becomes trend evidence. Use after the lab sweep and arXiv scan.
+  Iterate the FULL social/community + trusted-curator source lists in SOURCES.md (Reddit, Hacker News, YouTube curators, explainer/digest pointer blogs, Hugging Face, best-effort X/Instagram) on every daily run — every listed entry, fetched by its recorded access method, NOT a sampled subset. Social/curator is an INTAKE LANE ONLY — it can feed observation_queue (unverified) and a community-pulse note, but NEVER becomes trend evidence. Use after the lab sweep.
 ---
 
 # Community pulse — intake only, never evidence
@@ -30,24 +30,40 @@ drop noise. Don't restrict yourself to a fixed roster.
 
 ## Method (best-effort via Tavily, no paid APIs)
 
-Per run, sample the channels in `SOURCES.md` → "Social & community channels".
-Keep it light — this is a pulse, not a crawl — but "light" means SHALLOW per
-source (read the new items' titles), NOT skipping sources: the CHECK (open every
-channel/blog and see what is new since the last pass) is owed EVERY run, even one
-minute after another pass; only the EXTRACT (follow a new item to its primary and
-verify) is conditional on something new. A skipped channel is not "light", it is
-a missed lane. For each platform:
+Per run, ITERATE EVERY entry in the source lists at `SOURCES.md` (see "## Source
+lists" below) — the list is the CONTRACT: execute all of it, do not "sample" a
+representative subset (sampling is exactly how feed-less entries get silently
+dropped while the easy RSS ones get done). "Light" means SHALLOW per source (read
+the new items' titles), NEVER skipping a source: the CHECK (fetch each entry and
+see what is new since the last pass) is owed EVERY run, even one minute after
+another pass; only the EXTRACT (follow a new item to its primary and verify) is
+conditional on something new. A skipped source is not "light", it is a missed
+lane. For each source, by category:
 - **Reddit**: read the TOP posts of the tracked subreddits — both the technical
   subs AND the broad-pulse subs. Note two things, not one: (a) recurring on-axis
   topics, and (b) whatever is *dominating* a community right now, on-axis or not.
 - **Hacker News**: read the FRONT PAGE unconditionally (the #1 story is a
   don't-miss), in addition to term searches.
-- **Trusted curators (YouTube channels + explainer blogs/newsletters) — check EVERY run, this is a PRIMARY DISCOVERY path, not "social noise":** check BOTH halves — the YouTube channels AND the explainer/digest pointer blogs (SOURCES.md → YouTube + the pointer-lane trackers, incl. alphamatch.ai). Neither half is "on rotation"; the explainer-blog half is as mandatory as the YouTube half and is the one that tends to get silently dropped — NAME in the coverage log which pointer blogs you actually opened, because a tracked blog that never appears in the log is a dead lane — its papers never get captured. For every new video/post, FOLLOW the description/link to the named paper/repo and verify the PRIMARY (radar-source-verify); cite the primary, never the curator. This is how high-signal work surfaced by a person (e.g. a code4AI paper deep-dive) gets caught even when it hasn't ranked on arXiv/HF yet.
+- **Trusted curators (YouTube + explainer/digest pointer blogs) — a PRIMARY DISCOVERY path, not "social noise":** ITERATE EVERY entry in the SOURCES.md curator lists, one by one, with the SAME discipline as the lab sweep — not a sampled subset. For each entry, fetch by its recorded access method: its feed if it has one, else `tvly extract` of its index/page (exactly as the lab sweep does for feed-less NVIDIA/Meta). A feed-less entry is NEVER a reason to skip — if it has no recorded method, that is a `radar-source-heal` job, not a drop. Log each entry as opened OR `degraded: <reason>`; a listed entry absent from the coverage log is a coverage lie. For every new video/post, FOLLOW the link to the named primary and verify it (`radar-source-verify`); cite the primary, never the curator. This is how high-signal work surfaced by a curator gets caught before it ranks on arXiv/HF.
 - **Hugging Face**: check tracked accounts/orgs for new activity.
 - **X / Instagram**: best-effort via Tavily on the profile URLs in SOURCES.md.
   These are unreliable in 2026 (no free API); if a profile can't be fetched,
   log "X/IG degraded: <handle> unreachable" in `logs/source_rotation.md` and move on —
   do not fabricate.
+
+## Source lists (iterate every entry — the list is the contract)
+
+Like `radar-lab-sweep`, this skill does NOT name individual channels/blogs in its
+prose; the data lives in `SOURCES.md` and you execute ALL of it. The lists to
+iterate every run:
+- `SOURCES.md` → "Social & community channels" (Reddit subs, Hacker News, X/IG).
+- `SOURCES.md` → "YouTube — TRUSTED-CURATOR POINTER LANE" (one feed per channel).
+- `SOURCES.md` → "Curated digests + explainer/aggregator blogs" (the pointer/digest
+  blogs — fetch each by its recorded method: feed, or `tvly extract` of its index
+  for feed-less ones).
+For each list: iterate EVERY entry, fetch by its recorded access method, log each
+as opened or `degraded: <reason>`. A new source you find goes INTO the relevant
+SOURCES.md list (so it is iterated next run), never just into the skill prose.
 
 ## Discovery fast-track (the main point)
 
