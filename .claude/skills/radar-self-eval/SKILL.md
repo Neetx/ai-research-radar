@@ -27,9 +27,21 @@ commit:
   `git log -p -- TRENDS.md`, or the daily reports). Report the median, split by
   channel — exploration finds vs queue promotions (backfill) — plus the
   backfill share of all new evidence. This is the daily-ness KPI.
+- **coverage** (the self-check that auto-detects the alphamatch failure class):
+  for each "swept every run" list in SOURCES.md (lab blogs, YouTube curators,
+  pointer/digest blogs, discovery venues), diff the list against the week's
+  `logs/source_rotation.md` lines and classify every listed source as `opened`,
+  `degraded`, or **MISSING** (in SOURCES.md but never in any log line this week).
+  MISSING = a coverage lie — NAME them. A source MISSING or `degraded` for the
+  whole week is a heal-or-REMOVE candidate (see Amendments): the registry must be
+  honest about what it actually sweeps.
+- **routing-leak**: queue items tagged with (or clearly on) an EXISTING trend's
+  axis yet absent from that trend's evidence — on-axis primaries hoarded in the
+  queue instead of routed to evidence (the UltraQuant failure class). Count and
+  name them; each is a routing miss to correct this week.
 
 Append ONE dated line to `logs/calibration.md` (the externalized self-eval log; the `## calibration` section of TRENDS.md is now only a pointer):
-`- YYYY-MM-DD — W<nn>: queue +a/→p/−d/stale s · evidence +e · moves m · exploration c/r · off-axis o/a · lag expl Xd / backfill Yd (Z%)`
+`- YYYY-MM-DD — W<nn>: queue +a/→p/−d/stale s · evidence +e · moves m · exploration c/r · off-axis o/a · lag expl Xd / backfill Yd (Z%) · coverage <opened>/<listed> (miss <n>, degr <d>) · routing-leak <n>`
 and include the same numbers, readable, in the weekly report.
 
 Interpretation thresholds (act, don't just log):
@@ -69,6 +81,17 @@ under the autonomy contract in AGENTS.md. Every week, up to 3 proposed
 amendments: routine edits (exact replacement text), axis drops/merges/
 supersessions, exploration-budget changes. Each must cite the metric or
 retrospective result that motivates it.
+
+The new coverage/routing metrics feed amendments directly (this is how the
+radar self-corrects the failure classes the curator used to catch by hand):
+- a source **MISSING or `degraded` all week** → first a `radar-source-heal`
+  attempt; if it was already healed and still fails, a **heal-or-REMOVE**
+  amendment (remove it from the SOURCES.md "swept every run" list, or escalate
+  the secret/allowlist it needs) — a first-class amendment, because a listed-but-
+  unswept source is a coverage lie.
+- a non-zero **routing-leak** → not an amendment but a this-week FIX: route the
+  hoarded on-axis queue items to their trend's evidence now; if it recurs, amend
+  the routing instruction.
 
 Lifecycle:
 - **Week N**: propose — log in `calibration` and the weekly report.
