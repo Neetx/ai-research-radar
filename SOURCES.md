@@ -104,17 +104,21 @@ Cloud-env network note (HEALED 2026-06-20 — see the persistent-block rule in `
   STILL BLOCKED (site-side / datacenter-IP, NOT egress — do not keep retrying): `reddit.com/r/<sub>/*.json` returns "Blocked by egress policy" even after the allowlist change → keep the tvly fallback for Reddit. Reliable Reddit-direct would need a free Reddit OAuth app (`REDDIT_CLIENT_ID/SECRET`), a separate curator call.
   Tooling note (2026-06-20): the `tvly` CLI flag set drifted from the `tavily-search` skill docs — use `--time-range [day|week|month|year]` (not `--days`), `--depth [ultra-fast|fast|basic|advanced]` (not `--search-depth`), and `--topic [general|news|finance]`.
 
-Curated digests + trending-paper trackers (POINTER LANE — intake only, NEVER
-cited as evidence; their only job is to surface what is getting attention so you
-follow the link to the PRIMARY artifact and verify that). This is the scalable
-answer to "amplified work the radar would miss": do NOT whitelist individual
-explainer/SEO blogs (e.g. alphamatch.ai-style posts) as sources — instead, when
-ANY explainer/aggregator/blog/YouTube names a paper or repo, extract the named
-primary, verify it (radar-source-verify), cite the primary, and never the
-pointer. Trackers swept EVERY run as the explainer/digest half of the mandatory
-trusted-curator lane (NOT "on rotation" — see routines/daily.md). Name in the
-coverage log which of these you actually opened each run; one that never appears
-in the log is a dead lane. Agent: verify each on first use.
+Curated digests + explainer/aggregator blogs (INTAKE LANE). Like the lab blogs
+above, these are SWEPT EVERY RUN; unlike them, they are intake only — NEVER cited
+as evidence. Their job is to surface what is getting attention so you FOLLOW the
+link to the PRIMARY artifact and verify THAT (cite the primary, never the
+pointer/blog).
+
+These are tracked SOURCES, swept with the SAME discipline as the lab blogs —
+there is NO second-class "sample a few on rotation" tier. Every entry below is a
+coverage PROMISE: open it (or log `degraded: <reason>`) EVERY run and NAME it in
+the coverage log. A tracked source silently absent from the log is a coverage
+LIE, not a lean sweep. If an entry has no feed, HEAL its access method and record
+it here (as done for alphamatch / NVIDIA / Meta) — never drop a source for being
+awkward to fetch. If you genuinely will not sweep an entry every run, REMOVE it
+from this list: the registry must be honest about what it actually covers, with
+no tier that is skipped a priori. Agent: verify each on first use.
 - Latent.Space / AINews — daily AI news digest
 - Ahead of AI (Sebastian Raschka) — LLM architecture / ML research roundups
 - Interconnects (Nathan Lambert) — post-training, RLHF, open-model dynamics (high signal)
