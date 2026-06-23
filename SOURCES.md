@@ -152,6 +152,15 @@ scan, FOLLOW the description to the named paper/repo and verify the PRIMARY
 (radar-source-verify); cite the primary, never the video. Resolve each handle to
 its `channel_id` once (open the channel page, grep `"channelId":"UC…"`), then use
 `https://www.youtube.com/feeds/videos.xml?channel_id=UC…`.
+- SOURCE-HEALTH note (2026-06-23): the `feeds/videos.xml?channel_id=UC…` Atom
+  endpoint returned HTTP 404 intermittently from this datacenter IP for code4AI /
+  bycloud / AI-Explained today (one early Yannic fetch succeeded, then all 404'd);
+  the channel HTML is JS-rendered (built-in fetch returns only the footer) and a
+  WebSearch for recent uploads did not surface them. So the YouTube curator lane
+  was DEGRADED this run (logged in source_rotation). Likely transient YouTube
+  rate-limiting, not a channel_id change. If it 404s again next run: re-resolve
+  each `channel_id` from the channel page, and consider a `tvly extract` of the
+  `/videos` page (once `tvly` auth is restored) as the heal path.
 - @code4AI (now "Discover AI") — daily deep-dives on fresh AI papers (curator-supplied, high signal) — channel_id `UCfOvNb3xj28SNqPQ_JIbumg` (resolved 2026-06-21; NOTE: the handle's HTML lists featured side-channels first — take the canonical `channel/UC…` link, not the first `"channelId"` match)
 - Yannic Kilcher — long-form, section-by-section paper readings — channel_id `UCZHmQk67mSJgfCCTn7xBfew` (resolved 2026-06-21; main channel quiet, newest 2026-03)
 - bycloud — frontier research breakdowns + lab analysis (high signal) — channel_id `UCgfe2ooZD3VJPB6aJAnuQng` (resolved 2026-06-21)
