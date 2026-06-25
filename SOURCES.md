@@ -158,9 +158,19 @@ its `channel_id` once (open the channel page, grep `"channelId":"UC…"`), then 
   the channel HTML is JS-rendered (built-in fetch returns only the footer) and a
   WebSearch for recent uploads did not surface them. So the YouTube curator lane
   was DEGRADED this run (logged in source_rotation). Likely transient YouTube
-  rate-limiting, not a channel_id change. If it 404s again next run: re-resolve
-  each `channel_id` from the channel page, and consider a `tvly extract` of the
-  `/videos` page (once `tvly` auth is restored) as the heal path.
+  rate-limiting, not a channel_id change.
+- HEAL UPDATE (2026-06-25, after the 3rd consecutive failure 06-23/06-24/06-25):
+  youtube.com is IP-BLOCKED end-to-end from this datacenter — BOTH access paths
+  now confirmed dead: (a) `feeds/videos.xml?channel_id=UC…` returns HTTP 404, and
+  (b) the previously-proposed heal path `tvly extract ".../@<handle>/videos"`
+  returns "Error fetching content". DO NOT keep re-attempting both every run (wasted
+  budget). Working BEST-EFFORT fallback until the block lifts or a Reddit/YT API key
+  is provisioned: (1) `tvly search "<channel> latest video 2026"` surfaces recent
+  upload TITLES (not descriptions) — use a title→arXiv search to try to recover the
+  named primary, and if it can't be pinned, log it and rely on (2) the HF-daily-papers
+  + HN overlap, where code4AI/bycloud's picks recur (the exploration slot already
+  covers these). Re-test the Atom feed roughly weekly; restore the feed method if
+  the IP block lifts.
 - @code4AI (now "Discover AI") — daily deep-dives on fresh AI papers (curator-supplied, high signal) — channel_id `UCfOvNb3xj28SNqPQ_JIbumg` (resolved 2026-06-21; NOTE: the handle's HTML lists featured side-channels first — take the canonical `channel/UC…` link, not the first `"channelId"` match)
 - Yannic Kilcher — long-form, section-by-section paper readings — channel_id `UCZHmQk67mSJgfCCTn7xBfew` (resolved 2026-06-21; main channel quiet, newest 2026-03)
 - bycloud — frontier research breakdowns + lab analysis (high signal) — channel_id `UCgfe2ooZD3VJPB6aJAnuQng` (resolved 2026-06-21)
