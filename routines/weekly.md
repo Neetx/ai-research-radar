@@ -12,7 +12,7 @@ Judge each trend's velocity over the last 2–3 weeks: count of new independent 
 - **Demote** honestly when evidence thinned (e.g. accelerating → emerging, or → declining when the ecosystem moved on).
 - **Dormancy**: 21+ days without evidence → `dormant`. If `last_evidence` is 45+ days old, move the whole entry to `ARCHIVE.md`, compressed to a one-line post-mortem (what it was, why it stalled).
 - **Merge** overlapping trends: keep the older id, union the aliases, keep the 10 strongest evidence items, note the merge in `notes`.
-- **Confidence**: raise to `high` only after repeated multi-week confirmation from primary sources; lower it when evidence is mostly vendor-reported.
+- **Confidence**: raise to `high` when EITHER ≥2 INDEPENDENT authoritative primary sources (different orgs/groups) corroborate the trend on concrete artifacts, OR after sustained multi-week confirmation — whichever comes first; otherwise hold at `medium`. Lower it when evidence thins or is mostly vendor-reported.
 - After recalibration, regenerate `README.md` (the dashboard / landing page; follow the `radar-render-dashboard` skill).
 
 ## 3. Clean the observation queue
