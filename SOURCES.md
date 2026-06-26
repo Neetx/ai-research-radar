@@ -50,6 +50,7 @@ Research labs / independents (agent: verify feeds on first sweep):
 - Berkeley AI Research (BAIR) — https://bair.berkeley.edu/blog/ (RSS)
 - Stanford CRFM / Hazy Research — https://crfm.stanford.edu/ + https://hazyresearch.stanford.edu/blog
 - PrismML — https://prismml.com/blog + https://prismml.com/news (Ternary Bonsai 1.58-bit family, Bonsai Image — directly on the small/CPU + low-bit axes)
+- Liquid AI (LFM) — https://www.liquid.ai/blog (RSS https://www.liquid.ai/blog/rss.xml — verified) + LiquidAI HF org — the Liquid Foundation Models line ships a steady stream of on-device / small / MoE / GGUF-ONNX releases (LFM2.5-230M, -350M, -8B-A1B, VL, retrievers) — squarely on the small/CPU axis; announced on the blog, NOT arXiv, so the lab sweep is the only lane that catches it.
 - LMSYS / SGLang — https://lmsys.org/blog/ (use RSS, JS index fails extraction)
 - Cohere — https://cohere.com/blog (RSS)
 
