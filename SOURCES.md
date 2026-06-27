@@ -80,7 +80,7 @@ Promotion bar: ≥2 on-axis primary artifacts OR recurrence across ≥2 runs, AN
 verification (real feed, on-axis, not SEO). Line format:
 `domain/org — times seen — last on-axis artifact (date) — first seen YYYY-MM-DD`.
 
-- (empty — the daily fills this; the weekly drains it)
+- aws.amazon.com/blogs/aws — 1 — AWS Lambda MicroVMs, Firecracker agent/AI-code sandbox primitive (2026-06-22) — first seen 2026-06-27 (surfaced via HN front page → agent-sandbox-007 evidence; the cloud vendors' own blogs — AWS, and by extension GCP/Azure — aren't in any swept list, yet the agent-sandbox category now includes a hyperscaler. Weekly: verify the AWS "What's New"/compute-blog feed and consider promoting an AWS-AI-infra feed for agent-sandbox / serving announcements)
 
 ## Social & community channels (Phase 2 — INTAKE ONLY, never evidence)
 
