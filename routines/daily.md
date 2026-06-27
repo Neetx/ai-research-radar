@@ -47,6 +47,7 @@ Scope, in priority order:
 Do not limit yourself to these axes if you find something clearly more important.
 
 Exploration slot (mandatory) — follow the `radar-explore` skill: ITERATE the discovery-venue list in `SOURCES.md` → "Discovery / exploration venues" (cross-category attention venues EVERY run; one rotating arXiv category as a supplement, with an advancing date window so you never re-mine the same batch). The list is the contract — do NOT re-enumerate venues here, and do NOT explore "by vibe"; execute the list. In each venue read the TOP / most-attention items REGARDLESS of topic (significance over topic-match): assess each on its own merits, not the trend bar — a genuinely significant result OFF every current axis is exactly what the radar exists to catch, and recurring off-axis significance is a candidate new axis for the weekly. Route finds per §4. Log the venues + date range covered in `logs/source_rotation.md` even when nothing comes of it.
+> Rotate the exploration VENUE, not just the topic: at least one pass per week must browse a non-arXiv/non-HF-papers venue (a lab/framework GitHub org's recent activity, a conference proceedings page, or an engineering blog index outside the lab-sweep set). Log it in source_rotation.
 
 Tooling: if a `tvly` (Tavily) CLI is available in the environment, prefer it for web search and page extraction; otherwise use the built-in web tools.
 
