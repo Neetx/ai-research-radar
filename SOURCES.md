@@ -53,6 +53,7 @@ Research labs / independents (agent: verify feeds on first sweep):
 - Liquid AI (LFM) — https://www.liquid.ai/blog (RSS https://www.liquid.ai/blog/rss.xml — verified) + LiquidAI HF org — the Liquid Foundation Models line ships a steady stream of on-device / small / MoE / GGUF-ONNX releases (LFM2.5-230M, -350M, -8B-A1B, VL, retrievers) — squarely on the small/CPU axis; announced on the blog, NOT arXiv, so the lab sweep is the only lane that catches it.
 - LMSYS / SGLang — https://lmsys.org/blog/ (use RSS, JS index fails extraction)
 - Cohere — https://cohere.com/blog (RSS)
+- GSAI-ML (Renmin University, the LLaDA / iLLaDA diffusion-LM group) — HF org https://huggingface.co/GSAI-ML — added 2026-06-27 (W26 source-discovery): recurring on the diffusion-lm-013 axis (3rd independent open diffusion base model, iLLaDA-8B). Check the HF org for new open diffusion base models; announces via arXiv + HF card, not a blog.
 
 Hardware (technical only — coupled to the small/CPU, low-bit-quant and serving
 axes; scan for capability changes, NOT chip-business/macro news. agent: verify
