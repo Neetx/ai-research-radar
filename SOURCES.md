@@ -281,6 +281,20 @@ issue/PR turbulence and profile/fork movement are queue signals until they land.
 - ai-dynamo/dynamo
 - modelcontextprotocol/modelcontextprotocol
 
+### Engine BLOGS (swept every run ALONGSIDE the release feeds — added 2026-06-27)
+Lesson (2026-06-27, daily Pass 2): watching only the GitHub `releases.atom` feeds
+MISSED the gate-firing engineering posts that live on the serving engines' own
+BLOGS — vLLM announced day-0 native MiniMax-M3 (MSA kernel), DiffusionGemma
+(native diffusion sampler) and a benchmarked TurboQuant KV-quant study on its
+blog weeks before any of it surfaced in release notes, so three pre-registered
+serving-engine promotion gates sat "unfired" for weeks. Fetch these blog feeds
+every run (RSS/Atom; fall back to `tvly extract` of the index):
+- vLLM — https://blog.vllm.ai/ (Atom likely at /feed.xml; index is `tvly`-extractable)
+- SGLang — https://lmsys.org/blog/ (already in Phase 1; the same posts cover SGLang)
+- NVIDIA Dynamo / TensorRT-LLM — developer.nvidia.com technical blog (already swept)
+A serving-engine post that natively supports a tracked model/operator OR
+benchmarks a tracked method is a PRIMARY engineering artifact (citable), not intake.
+
 ### Watched profiles/users (what a key author will ship next)
 Track these accounts' new repos, notable pushes, and releases across all their
 repos — early sight of where an influential author is heading:
