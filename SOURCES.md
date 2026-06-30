@@ -223,7 +223,13 @@ Candidate curators (probation — agent fills; format: name/handle — why — h
   as serious; drop noisy ones. conference/lab talk channels — vLLM, SGLang,
   PyTorch, NeurIPS/ICLR — by discovery.)
 
-Hugging Face — org/user activity for tracked accounts (below) + trending models/datasets.
+Hugging Face — org/user activity for tracked accounts (below), PLUS the GLOBAL trending/new-models lane (this is the reliable, complete version of what X reposter accounts like "HuggingModels" relay — the X account is just a derivative pointer to HF, and X is unreadable via code anyway, so query the primary directly, never the pointer):
+- **HF GLOBAL trending / new (intake + discovery, every run)** — key-less JSON, no scraping:
+  `https://huggingface.co/api/models?sort=trendingScore&limit=30` (what is hot now), plus
+  `…?sort=createdAt&direction=-1&limit=30` (brand-new drops) and `…?sort=likes30d&direction=-1` (recent traction).
+  Read top items significance-first; filter for on-axis (small/CPU, low-bit quant, new architectures, agent/serving).
+  For each on-axis hit, follow to the model card / linked paper and route per the daily §4 (intake until the primary is opened).
+  DISCOVERY HOOK (feeds the source-discovery loop): any trending org/author NOT already in a swept list is a candidate lab → stage it in "Discovered-source candidates". A new org trending on HF is exactly a source to track.
 
 X / Twitter — BEST-EFFORT, never a dependency. No free API in 2026, Nitter dead,
 scraping blocked → reading X is unreliable. Method: tvly on the handle/profile
