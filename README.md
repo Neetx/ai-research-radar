@@ -1,14 +1,14 @@
 # AI Radar
 
-![trends](https://img.shields.io/badge/trends-15-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-6-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-25-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--06--30-2f9e44?style=flat-square)
+![trends](https://img.shields.io/badge/trends-16-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-6-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-24-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--07--01-2f9e44?style=flat-square)
 
 Tracks research and engineering trends across the AI ecosystem, for an AI researcher / AI-systems engineer. This page is generated from [TRENDS.md](TRENDS.md), the ledger of record — click a trend for its full evidence. ⭐ marks pinned standing-watch topics.
 
-**Since last scan (2026-06-30):**
-- **[Deployment-grounded agent eval](TRENDS.md#id-agent-eval-014-deployment-grounded-agent-evaluation-long-horizon-real-session-benchmarks-beyond-static-leaderboards): a 7th group, the day's top paper.** Added [Agentic Abstention](https://arxiv.org/abs/2606.28733) (109 up on HF) — a 28K-task / 13-system study of *when* an agent should stop acting under uncertainty (not just whether it can abstain); last_evidence 06-26 → 06-27, stays seed.
-- **[Agent harness/runtime/memory](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) refreshed.** Added [Experience Graphs / Trellis](https://arxiv.org/abs/2606.29823) — agent experience/state as first-class queryable database state; the memory-as-managed-data facet now spans ≥3 independent groups (last_evidence 06-23 → 06-29), but no shared interface yet → stays seed.
-- **[Open-weight frontier MoE](TRENDS.md#id-open-weight-003-open-weight-wave-frontier-scale-moe-released-at-high-cadence-across-labs): an 8th lab.** [LongCat-2.0](https://huggingface.co/meituan-longcat/LongCat-2.0) (Meituan, 1.6T/48B, trained entirely on non-NVIDIA AI ASIC superpods) — weights still "coming soon" (re-checked this pass); stays mainstreaming.
-- **Watchlist 25 (at cap).** Dropped MosaicLeaks (06-19 agent-privacy, no recurrence in 11d). `capture-leak: 11 ids checked / 0 leaks`. Dormancy watch: MCP & latent-comm (both last_evidence 06-11, 19d) cross the dormant line ~07-02 absent a new primary.
+**Since last scan (2026-07-01):**
+- **New trend seeded: [On-policy distillation as the post-training method for reasoning/agentic LLMs](TRENDS.md#id-on-policy-distill-016-on-policy-distillation-as-the-post-training-method-for-reasoning-and-agentic-llms).** ≥3 independent groups in one week share the same OPD method (train the student on its own rollouts under dense token-level teacher supervision) — [DOPD](https://arxiv.org/abs/2606.30626), [OPID](https://arxiv.org/abs/2606.26790), [AsyncOPD](https://arxiv.org/abs/2606.24143) — plus [Agents-A1](https://arxiv.org/abs/2606.30616) applying it. Seeded, confidence low.
+- **Earthquake (off-axis, pulse only).** Anthropic shipped [Claude Sonnet 5](https://www.anthropic.com/news/claude-sonnet-5) (1012 pts) and the US lifted export controls on Fable 5 / Mythos 5 ("Redeploying Fable 5") — completing the 06-12 shutdown → 06-27 partial-reopening → full-lifting arc. Closed-model + policy; recorded, never a trend.
+- **Watchlist 24.** Added the 07-01 routing line (Dockerless env-free verifier, BlockPilot diffusion-spec-decode, TRIAGE/QVal agentic-RL supervision, the earthquake, MCP/latent-comm dormancy); dropped 2 stale 06-19 items (UFP4, Taylor-Calibrate). `capture-leak: 18 ids checked / 0 leaks`.
+- **Dormancy watch.** MCP & latent-comm both still last_evidence 06-11 (20d) — MCP repo's newest release is still the 07-28 RC; latent-comm found no post-06-11 primary. Both cross the dormant line ~07-02 absent a new artifact.
 
 ## ⭐ Pinned topics
 
@@ -23,7 +23,7 @@ Standing-watch axes — never archived, but shown `dormant` honestly when quiet.
 
 ## Trends
 
-🌱 2 · 📈 6 · 🚀 6 · 🌊 1 · 🏔 0 · 📉 0 · 💤 0
+🌱 3 · 📈 6 · 🚀 6 · 🌊 1 · 🏔 0 · 📉 0 · 💤 0
 
 | trend | stage | latest signal |
 |---|---|---|
@@ -39,12 +39,14 @@ Standing-watch axes — never archived, but shown `dormant` honestly when quiet.
 | [Agent security (injection limits)](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) | 📈 emerging | [2026-06-16](https://deepmind.google/blog/securing-the-future-of-ai-agents/) |
 | [⭐ Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 emerging | [2026-06-16](https://arxiv.org/abs/2606.18023) |
 | [⭐ Latent inter-model communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 📈 emerging | [2026-06-11](https://arxiv.org/abs/2606.13594) |
+| [On-policy distillation (post-training)](TRENDS.md#id-on-policy-distill-016-on-policy-distillation-as-the-post-training-method-for-reasoning-and-agentic-llms) | 🌱 seed | [2026-06-29](https://arxiv.org/abs/2606.30626) |
 | [Agent harness/runtime/memory infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) | 🌱 seed | [2026-06-29](https://arxiv.org/abs/2606.29823) |
 | [Deployment-grounded agent eval](TRENDS.md#id-agent-eval-014-deployment-grounded-agent-evaluation-long-horizon-real-session-benchmarks-beyond-static-leaderboards) | 🌱 seed | [2026-06-27](https://arxiv.org/abs/2606.28733) |
 | [Open-weight frontier MoE wave](TRENDS.md#id-open-weight-003-open-weight-wave-frontier-scale-moe-released-at-high-cadence-across-labs) | 🌊 mainstreaming | [2026-06-30](https://huggingface.co/meituan-longcat/LongCat-2.0) |
 
 ## Worth studying
 
+- [DOPD: Dual On-policy Distillation](https://arxiv.org/abs/2606.30626) — the artifact that tips on-policy distillation over the trend bar this week. OPD trains a student on its OWN sampled rollouts under dense token-level teacher signals; DOPD's contribution is a warning — infusing privileged information induces a *privilege illusion* (the student conflates the transferable capability gap it should close with an information-asymmetry gap it can only mimic), so extra signal teaches imitation of un-actionable context rather than real capability. A concrete design constraint for distillation pipelines (pair with OPID 2606.26790 and AsyncOPD 2606.24143)
 - [Agentic Abstention: Do Agents Know When to Stop Instead of Act?](https://arxiv.org/abs/2606.28733) — the day's top HF paper (109 up): agentic abstention is sequential (answer / abstain / gather-more per turn), so the metric that matters is not WHETHER an agent can abstain but WHEN. Across web-shopping, terminal and QA (28K+ tasks, 13 systems), some agents never stop when they should, others burn many wasted tool calls — study it before trusting any long-horizon agent loop in production
 - [Experience Graphs / Trellis: The Data Foundation for Self-Improving Agents](https://arxiv.org/abs/2606.29823) — a 25-author argument that long-horizon agentic work is a database WORKLOAD: the "experience graph" an agent produces (artifacts, tool outputs, rewards, sibling comparisons, causal lineage over hundreds of steps) is thrown away as JSON checkpoints today; Trellis treats it as first-class, governed, queryable state. The systems lens on agent memory consolidating the agent-runtime-015 axis
 - [LongCat-2.0 (Meituan, 1.6T/48B MoE)](https://huggingface.co/meituan-longcat/LongCat-2.0) — an 8th lab's frontier open-weight MoE announcement, notable for its TRAINING substrate: the full 1.6T run (>35T tokens, "no rollbacks or irrecoverable loss spikes") was done ENTIRELY on AI ASIC superpods (non-NVIDIA) — an existence proof that frontier-scale pretraining is now viable off the CUDA stack, plus "LongCat Sparse Attention" for 1M ctx. Caveat: weights "coming soon", so an announcement to track
@@ -56,18 +58,17 @@ Standing-watch axes — never archived, but shown `dormant` honestly when quiet.
 - [AWS Lambda MicroVMs](https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/) — the first hyperscaler-native agent-sandbox primitive: per-session Firecracker microVMs (VM-level isolation) with image-then-launch snapshot resume for user/AI-generated code; the reference for what an agent-code execution layer needs (isolation, fast resume, statefulness)
 - [The Verification Horizon: No Silver Bullet for Coding Agent Rewards](https://arxiv.org/abs/2606.26300) — a 12-author (Alibaba/Qwen-line) result inverting a load-bearing assumption of agentic RL: "verifying is easier than producing" is breaking down for coding agents — generating complex solutions outpaces our ability to verify them, so reward *verification* becomes the bottleneck; read before trusting any verifiable-reward / RLVR pipeline
 - [iLLaDA-8B (Improved Large Language Diffusion Models)](https://huggingface.co/GSAI-ML/iLLaDA-8B-Base) — RUC/GSAI-ML's open-weights (Apache-2.0, paper 2606.25331) 8B fully-bidirectional masked-diffusion LM trained from scratch on 12T tokens: the clearest "diffusion LM at autoregressive quality" datapoint — its card ties autoregressive Qwen2.5-7B (63.9 vs 63.3); the third independent open diffusion base model
-- [Thinking to Recall: How Reasoning Unlocks Parametric Knowledge in LLMs](https://research.google/blog/thinking-to-recall-how-reasoning-unlocks-parametric-knowledge-in-llms/) — Google Research: why a reasoning trace helps an LLM recall even *simple* single-hop facts — a *computational buffer* (reasoning tokens as latent computation) and *factual priming* — so reasoning expands the parametric-knowledge boundary; the hook is process rewards on factually-supported steps to cut hallucination
 
 ## Community pulse
 
-> Unverified sentiment from social/community sources — intake only, never evidence. Links to threads, no individuals named. (Latest daily intake: 2026-06-30.)
+> Unverified sentiment from social/community sources — intake only, never evidence. Links to threads, no individuals named. (Latest daily intake: 2026-07-01.)
 
-- **No earthquake this scan.** The loudest AI threads on the [HN front page](https://news.ycombinator.com/) are "Ornith-1.0: self-improving open-source models for agentic coding" (~232 pts) and "[LongCat-2.0](https://huggingface.co/meituan-longcat/LongCat-2.0), a 1.6T/48B MoE" (~205 pts) — both already captured/routed; nothing new on-axis.
-- Intake captured and routed this pass: [Ornith-1.0](https://huggingface.co/deepreinforce-ai/Ornith-1.0-397B) (deepreinforce-ai; card opened — a self-improving *agentic-coding specialist* family, below the frontier-general bar → watchlist), and the cs.MA exploration tops (Agentic Abstention, Experience Graphs/Trellis → routed to trends).
+- **Earthquake (off every tracked axis — closed models + policy).** Anthropic shipped [Claude Sonnet 5](https://www.anthropic.com/news/claude-sonnet-5) (HN ~1012 pts) and the US Dept. of Commerce **lifted export controls on Fable 5 / Mythos 5** with Anthropic "Redeploying Fable 5" (HN ~486/80 pts) — completing the 2026-06-12 shutdown → 06-27 partial-reopening → full-lifting arc. Recorded so the ledger reflects the field's attention; never a trend or evidence.
+- Also loud: "Claude Code is steganographically marking requests" (~1625 pts, meta/tooling) and DeepMind's [Nano Banana 2 Lite](https://deepmind.google/models/gemini-image/flash-lite/) (~337 pts, image model, off-axis).
+- Intake routed this pass: DOPD/OPID/AsyncOPD/Agents-A1 → new on-policy-distill-016; Dockerless + BlockPilot + TRIAGE/QVal → watchlist. Pointers to follow next run: Google "Open Knowledge Format" (via alphamatch) and Mistral Leanstral 1.5 (formal-math specialist, off-axis).
 - Degraded: the [code4AI](https://www.youtube.com/@code4AI) YouTube curator lane remains IP-blocked end-to-end (not re-attempted per the standing heal note); HF-daily-papers + HN overlap carried discovery this run.
 
 ## Output map
 
-Ledger: [TRENDS.md](TRENDS.md) · unverified signals: [watchlist (25)](TRENDS.md#observation_queue) · sources: [SOURCES.md](SOURCES.md) · daily reports: [reports/](reports) — latest [2026-06-30](reports/2026-06-30.md) · weekly: [2026-W26](reports/weekly/2026-W26.md) · conventions: [AGENTS.md](AGENTS.md)
+Ledger: [TRENDS.md](TRENDS.md) · unverified signals: [watchlist (24)](TRENDS.md#observation_queue) · sources: [SOURCES.md](SOURCES.md) · daily reports: [reports/](reports) — latest [2026-07-01](reports/2026-07-01.md) · weekly: [2026-W26](reports/weekly/2026-W26.md) · conventions: [AGENTS.md](AGENTS.md)
 </content>
-</invoke>
