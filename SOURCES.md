@@ -276,6 +276,19 @@ batch):
 Method: `radar-repo-watch` skill. Releases/merged PRs are citable artifacts;
 issue/PR turbulence and profile/fork movement are queue signals until they land.
 
+ACCESS NOTE (2026-07-02, daily — GitHub scope block, self-heal): as of this run
+GitHub is proxy-SCOPED to only the radar's own repo — every EXTERNAL GitHub
+endpoint (the watched-repo `releases.atom` feeds AND `api.github.com/repos/...`
+for vllm-project, sgl-project, ggml-org, modelcontextprotocol, etc.) returns
+HTTP 403 `"GitHub access to this repository is not enabled for this session"`.
+This is a CHANGE from earlier runs, which fetched these feeds directly. WORKING
+METHOD until scope is restored: route the GitHub-watch lane through `tvly`
+(search the repo/release name + version + month; extract the release page if a
+non-github primary mirrors it) — lower fidelity (no diff of commit/PR turbulence)
+but catches new release tags and version bumps. If the block persists, the
+weekly should ask the curator to enable broader GitHub read scope (restores the
+direct `releases.atom` lane and fork-tree analysis, which tvly cannot replicate).
+
 ### Watched repositories (releases / merged PRs / hot issues)
 - vllm-project/vllm
 - sgl-project/sglang
