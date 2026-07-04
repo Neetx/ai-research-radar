@@ -23,11 +23,23 @@ skill. Don't leave a "degraded" note standing across runs.
 
 ---
 
-## Lab & big-tech AI blogs (Phase 1 — swept EVERY run, prefer RSS/Atom)
+## Lab & big-tech AI blogs (Phase 1 — TIERED, prefer RSS/Atom)
 
 Method: `radar-lab-sweep` skill. Open only posts newer than the last scan.
 
-Big labs / vendors:
+TIERING (W26-P1, applied 2026-07-04 W27; motivated by the W26 coverage-honesty
+finding that ~12 low-cadence blogs were listed "swept every run" yet absent from
+all 7 days' rotation logs — a coverage lie). Two tiers:
+- **Tier (i) — EVERY-RUN high-cadence:** the big labs/vendors below + the
+  open-weight HF orgs. These post frequently and on-axis; a daily sweep is
+  realistic and OWED — a tier-(i) source silently absent from a run's log is a
+  coverage lie.
+- **Tier (ii) — LOW-CADENCE (weekly + 1/day rotation):** the "Research labs /
+  independents" and "Hardware" lists below. These post infrequently; the DAILY
+  rotates ONE per day (logged), and the WEEKLY run owns a full sweep of the tier.
+  They are NOT promised every run — this keeps the registry honest.
+
+### Tier (i) — Big labs / vendors (EVERY run):
 - OpenAI — https://openai.com/news/ (RSS https://openai.com/news/rss.xml — works; mostly business/policy, scan titles for model/open-weight items)
 - Anthropic — https://www.anthropic.com/news (no public RSS as of 2026-06-13: /rss.xml and /news/rss both 404 — extract the HTML index via Tavily)
 - Google DeepMind — https://deepmind.google/blog/rss.xml (RSS — confirmed working 2026-06-13; the old /discover/blog/ path is the HTML index)
@@ -42,22 +54,22 @@ Big labs / vendors:
 - Together AI — https://www.together.ai/blog
 - Z.ai / GLM — https://z.ai/blog + zai-org HF org
 
-Research labs / independents (agent: verify feeds on first sweep):
-- Allen Institute (AI2) — https://allenai.org/blog + https://allenai.org/research
+### Tier (ii) — Research labs / independents (LOW-CADENCE: weekly sweep + 1/day rotation; agent: verify feeds on first sweep):
+- Allen Institute (AI2) — https://allenai.org/blog + https://allenai.org/research (verified-swept 2026-07-04 W27: top posts DiScoFormer / hybrid-token analysis / EMO MoE-for-emergent-modularity — off-axis or already-intake, nothing new on-axis)
 - EleutherAI — https://blog.eleuther.ai/ (RSS)
 - Sakana AI — https://sakana.ai/blog/
 - Nous Research — https://nousresearch.com/
 - Berkeley AI Research (BAIR) — https://bair.berkeley.edu/blog/ (RSS)
 - Stanford CRFM / Hazy Research — https://crfm.stanford.edu/ + https://hazyresearch.stanford.edu/blog
-- PrismML — https://prismml.com/blog + https://prismml.com/news (Ternary Bonsai 1.58-bit family, Bonsai Image — directly on the small/CPU + low-bit axes)
+- PrismML — https://prismml.com/blog + https://prismml.com/news (VERIFIED-SWEPT 2026-07-04 W27 — first actual sweep; `tvly extract https://prismml.com/blog` lists dated posts, `tvly map` gives post URLs at prismml.com/news/<slug>. On-axis ternary/1-bit line: Ternary Bonsai [true 1.58-bit 8B/4B/1.7B, 04-16, → small-cpu-models-008 evidence], 1-bit Bonsai [03-31, prismml.com/news/bonsai-8b], Ternary Bonsai Image 4B [05-26, local-device image gen]. Directly on the small/CPU + low-bit pinned axes — a coverage win the low-cadence tier now captures.)
 - Liquid AI (LFM) — https://www.liquid.ai/blog (RSS https://www.liquid.ai/blog/rss.xml — verified) + LiquidAI HF org — the Liquid Foundation Models line ships a steady stream of on-device / small / MoE / GGUF-ONNX releases (LFM2.5-230M, -350M, -8B-A1B, VL, retrievers) — squarely on the small/CPU axis; announced on the blog, NOT arXiv, so the lab sweep is the only lane that catches it.
 - LMSYS / SGLang — https://lmsys.org/blog/ (use RSS, JS index fails extraction)
 - Cohere — https://cohere.com/blog (RSS)
 - GSAI-ML (Renmin University, the LLaDA / iLLaDA diffusion-LM group) — HF org https://huggingface.co/GSAI-ML — added 2026-06-27 (W26 source-discovery): recurring on the diffusion-lm-013 axis (3rd independent open diffusion base model, iLLaDA-8B). Check the HF org for new open diffusion base models; announces via arXiv + HF card, not a blog.
 
-Hardware (technical only — coupled to the small/CPU, low-bit-quant and serving
-axes; scan for capability changes, NOT chip-business/macro news. agent: verify
-feeds on first sweep):
+### Tier (ii) — Hardware (LOW-CADENCE: weekly sweep + 1/day rotation) — technical
+only, coupled to the small/CPU, low-bit-quant and serving axes; scan for
+capability changes, NOT chip-business/macro news. agent: verify feeds on first sweep:
 - NVIDIA technical blog — https://developer.nvidia.com/blog/ (also in big-labs above)
 - Apple Machine Learning Research — https://machinelearning.apple.com/research (on-device / ANE / small models)
 - AMD ROCm Blogs — https://rocm.blogs.amd.com/index.html (serving on non-CUDA)
