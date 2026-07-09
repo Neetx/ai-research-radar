@@ -1,13 +1,13 @@
 # AI Radar
 
-![trends](https://img.shields.io/badge/trends-18-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-5-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-22-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--07--08-2f9e44?style=flat-square)
+![trends](https://img.shields.io/badge/trends-18-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-5-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-23-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--07--09-2f9e44?style=flat-square)
 
 Tracking AI-ecosystem trends (frontier research → engineering) for an AI researcher / AI-systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-07-08):**
-- 🚀 Evidence add — [Nemotron-Labs-Diffusion](https://arxiv.org/abs/2607.05722) (NVIDIA, a tri-mode AR+diffusion+self-speculation LM shipped open at 3B/8B/14B) refreshes [diffusion language models](TRENDS.md#id-diffusion-lm-013-diffusion-language-models-reach-open-weights-production-scale) (last_evidence 06-26 → 07-07) — the 4th independent / 2nd major lab with an open diffusion-capable base; no stage move (native diffusion serving unconfirmed).
-- 🗂 Watchlist: queued [AUTOMEM](https://arxiv.org/abs/2607.01224) (capture-leak closure), [HiLS sparse attention](https://arxiv.org/abs/2607.02980), [TREK](https://arxiv.org/abs/2607.05339), [SkillOpt-Lite](https://arxiv.org/abs/2607.03451), [OmniOpt](https://arxiv.org/abs/2607.04033), [DSpark](https://arxiv.org/abs/2607.05147); dropped 2 stale 06-26 items.
-- 🔍 Quiet field day — no [earthquake](https://hn.algolia.com/?query=&sort=byPopularity&type=story), no new frontier open-weight drop, no stage moves; `capture-leak: 12 ids / 0 missing`.
+**Since last scan (2026-07-09):**
+- 🔍 Quiet field day — no [earthquake](https://hn.algolia.com/?query=&sort=byPopularity&type=story) (Grok 4.5 / GPT-Live are closed-model products, off-axis), no new frontier open-weight drop, no evidence adds, no stage moves; `capture-leak: 25 ids / 0 missing`.
+- 🗂 Watchlist intake: [NVIDIA "Data for Agents"](https://huggingface.co/blog/nvidia/open-data-for-agents) (open agent-training data under Nemotron — rl-env-005-adjacent, data not a verifiable-environment artifact) and [transformer-linearization](https://arxiv.org/abs/2607.07706) (subquad-attn corroboration, that trend at its 10-evidence cap); no queue promotions/drops (23, under cap).
+- 🌊 No convergence — a heterogeneous cs.LG agentic-RL cluster ([Agon](https://arxiv.org/abs/2607.07690), [Max-Out-GRPO](https://arxiv.org/abs/2607.07674), [Single-Rollout-Async](https://arxiv.org/abs/2607.07508)) noted by category; HF daily papers 07-09 was entirely world-model/robotics (watch-only).
 
 ## ⭐ Pinned topics
 
@@ -60,14 +60,15 @@ Tracking AI-ecosystem trends (frontier research → engineering) for an AI resea
 
 ## Community pulse
 
-> Unverified sentiment from social/community sources — intake only, never evidence. Links to threads, no individuals named. (Latest daily intake: 2026-07-08.)
+> Unverified sentiment from social/community sources — intake only, never evidence. Links to threads, no individuals named. (Latest daily intake: 2026-07-09.)
 
-- **Quiet run — no earthquake.** No frontier model drop, ban or policy event on the [HN front page](https://hn.algolia.com/?query=&sort=byPopularity&type=story); the ground did not move.
-- Light pulse leans education + small/edge: "[Ilya's 30 essential ML papers, beginner-friendly](https://news.ycombinator.com/)" (439 pts), "[Kokoro — local CPU-friendly high-quality TTS](https://news.ycombinator.com/)" (356 pts, on-device speech), "[Rowboat — local-first Claude-Desktop alternative](https://news.ycombinator.com/)" (132 pts) and "[First Principles of Model Routing](https://news.ycombinator.com/)" (34 pts) — tooling/technique, no research primary to route.
-- Product/access continuation: "[extending Fable 5 access through July 12](https://news.ycombinator.com/)" (128 pts) and "GPT-5.6 Sol/Terra/Luna launch Thursday" (52 pts) — closed-model product news, off every axis.
-- Curator lane: [alphamatch](https://alphamatch.ai/blog) new top post AUTOMEM (Stanford memory framework → queued); Strix / OKF-vs-RAG / Sakana Fugu / Baidu OCR all previously captured.
+- **Quiet run — no earthquake.** No frontier open-weight drop, ban or policy event on the [HN front page](https://hn.algolia.com/?query=&sort=byPopularity&type=story); the ground did not move.
+- Closed-model product churn leads the pulse: "[GPT-Live](https://hn.algolia.com/?query=GPT-Live&sort=byPopularity&type=story)" (655 pts), "[Grok 4.5](https://hn.algolia.com/?query=Grok%204.5&sort=byPopularity&type=story)" (539 pts) and "[Grok 4.5 / GPT-5.5 / Claude build the same apps](https://hn.algolia.com/?query=build%20the%20same%20apps&sort=byPopularity&type=story)" (122 pts) — off every tracked axis.
+- Robotics + world-model attention: "[Mistral Robostral Navigate — SOTA robotics navigation](https://hn.algolia.com/?query=Robostral&sort=byPopularity&type=story)" (449 pts) and "[MIRA — Multiplayer Interactive World Models on Rocket League](https://hn.algolia.com/?query=MIRA%20world%20models&sort=byPopularity&type=story)" (50 pts) — watch-only areas, not tracked axes.
+- Agent-eval-adjacent intake: "[Separating signal from noise in coding evaluations](https://hn.algolia.com/?query=signal%20from%20noise%20coding&sort=byPopularity&type=story)" (190 pts) and "[benchmarking coding agents on a multi-million-line codebase](https://hn.algolia.com/?query=benchmarking%20coding%20agents%20Databricks&sort=byPopularity&type=story)" (35 pts) — no research primary to route.
+- Curator lane: [alphamatch](https://alphamatch.ai/blog) unchanged (AUTOMEM already queued 07-08; Strix / OKF-vs-RAG / Sakana Fugu / Baidu OCR all previously captured).
 - Degraded: GitHub is proxy-scoped to only this repo, so the external release-feed watch (vLLM/SGLang/llama.cpp/MCP) is 403 all week; the [code4AI](https://www.youtube.com/@code4AI) YouTube lane and Reddit remain IP/datacenter-blocked. HF-daily-papers + HN overlap carried discovery.
 
 ## Output map
 
-[TRENDS.md](TRENDS.md) · [watchlist (22)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-07-08](reports/2026-07-08.md) · weekly: [2026-W27](reports/weekly/2026-W27.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
+[TRENDS.md](TRENDS.md) · [watchlist (23)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-07-09](reports/2026-07-09.md) · weekly: [2026-W27](reports/weekly/2026-W27.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
