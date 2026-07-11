@@ -1,13 +1,13 @@
 # AI Radar
 
-![trends](https://img.shields.io/badge/trends-18-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-5-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-24-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--07--10-2f9e44?style=flat-square)
+![trends](https://img.shields.io/badge/trends-18-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-5-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-24-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--07--11-2f9e44?style=flat-square)
 
 Tracking AI-ecosystem trends (frontier research → engineering) for an AI researcher / AI-systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-07-10):**
-- 🧪 Evidence add: [Deployment-grounded agent eval](TRENDS.md#id-agent-eval-014-deployment-grounded-agent-evaluation-long-horizon-real-session-benchmarks-beyond-static-leaderboards) ← [UniClawBench](https://arxiv.org/abs/2607.08768) (07-09, HKU-MMLab) — a 10th group: capability-driven proactive-agent eval in **live Docker containers** with step-checkpoints + a closed-loop executor/hidden-supervisor/user-agent multi-turn loop (`last_evidence 07-02 → 07-09`, no stage move).
-- 🧠 Evidence add on the pinned axis: [⭐ Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) ← ["Hidden Decoding at Scale: Latent Computation Scaling"](https://arxiv.org/abs/2607.08186) (07-09, 48 authors) — fixed-backbone per-token compute along the **sequence-length** dimension, framed against depth-recurrent looped Transformers (`last_evidence 06-30 → 07-09`).
-- 🔍 Otherwise quiet — no [earthquake](https://hn.algolia.com/?query=&sort=byPopularity&type=story) (GPT-5.6 closed-model / EU Chat-Control policy are off-axis), no new frontier open-weight drop (LongCat-2.0 BF16 07-05 still newest); watchlist 24 (under cap), `capture-leak: 23 ids / 0 missing`.
+**Since last scan (2026-07-11, weekly W28 recalibration):**
+- 🎚️ Confidence raise: [Subquadratic & sparse attention](TRENDS.md#id-subquad-attn-012-subquadratic-and-sparse-attention-reaches-frontier-open-weight-models) medium → **high** — 6 independent labs on model cards + first-class native kernels in **both** [vLLM](https://blog.vllm.ai/2026/06/12/minimax-m3-vllm.html) and [SGLang](https://github.com/sgl-project/sglang/releases/tag/v0.5.14), sustained 3+ weeks (stays accelerating; the mainstreaming gate — a cross-operator serving abstraction — is still unfired).
+- 🌀 **Anchoring warning:** genuinely quiet week — all 9 in-week evidence adds landed on pre-existing trends, **zero new trends** (first since W25). The one bar-clearing-but-unseeded cluster, **speculative-decoding / MTP**, was adjudicated *not seeded* (heterogeneous mechanisms + mature technique) and given a sharp [promotion gate](TRENDS.md#observation_queue); it's the W29 exploration-redirect target.
+- 🧹 Housekeeping: study shelf trimmed 41 → 30 (older tier → `study_shelf_archive`, nothing lost); `capture-leak: 35 ids / 0 missing`; watchlist 24 (under cap); amendment **W27-P1 applied** (weekly low-cadence sweep must *open & capture*, not title-triage — PrismML/Liquid/EleutherAI/Sakana swept, nothing new on-axis).
 
 ## ⭐ Pinned topics
 
@@ -71,4 +71,4 @@ Tracking AI-ecosystem trends (frontier research → engineering) for an AI resea
 
 ## Output map
 
-[TRENDS.md](TRENDS.md) · [watchlist (24)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-07-10](reports/2026-07-10.md) · weekly: [2026-W27](reports/weekly/2026-W27.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
+[TRENDS.md](TRENDS.md) · [watchlist (24)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-07-10](reports/2026-07-10.md) · weekly: [2026-W28](reports/weekly/2026-W28.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
