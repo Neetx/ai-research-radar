@@ -93,6 +93,7 @@ verification (real feed, on-axis, not SEO). Line format:
 `domain/org — times seen — last on-axis artifact (date) — first seen YYYY-MM-DD`.
 
 - aws.amazon.com/blogs/aws — 1 — AWS Lambda MicroVMs, Firecracker agent/AI-code sandbox primitive (2026-06-22) — first seen 2026-06-27 (surfaced via HN front page → agent-sandbox-007 evidence; the cloud vendors' own blogs — AWS, and by extension GCP/Azure — aren't in any swept list, yet the agent-sandbox category now includes a hyperscaler. Weekly: verify the AWS "What's New"/compute-blog feed and consider promoting an AWS-AI-infra feed for agent-sandbox / serving announcements)
+- kimi.com/blog — 1 — Kimi K3 announcement, 2.8T "world's first open 3T-class model" (2026-07-16) — first seen 2026-07-17 (surfaced via HN #1 → open-weight-003 + subquad-attn-012 evidence. Moonshot is currently covered ONLY via its HF org recheck, but K3 was announced on the org's own blog with weights/tech-report deferred to 07-27 — so the announcement blog is a high-signal pointer the HF-org lane misses at announcement time. Weekly: verify kimi.com/blog has a usable feed/index and consider promoting it as a Moonshot announcement source, esp. ahead of the 07-27 weights drop)
 
 ## Social & community channels (Phase 2 — INTAKE ONLY, never evidence)
 
