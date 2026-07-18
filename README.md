@@ -1,14 +1,13 @@
 # AI Radar
 
-![trends](https://img.shields.io/badge/trends-18-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-3-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-25-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--07--17-2f9e44?style=flat-square)
+![trends](https://img.shields.io/badge/trends-18-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-4-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-25-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--07--18-2f9e44?style=flat-square)
 
 Tracking AI-ecosystem trends (frontier research → engineering) for an AI researcher / AI-systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-07-17):**
-- New frontier open-model announcement: **[Kimi K3](https://www.kimi.com/blog/kimi-k3)** (Moonshot) — a 2.8T-param MoE billed "the world's first open 3T-class model" (KDA + Attention Residuals + Stable LatentMoE, native vision, 1M ctx); live via API, weights due 07-27 → evidence on the [open-weight wave](TRENDS.md#id-open-weight-003-open-weight-wave-frontier-scale-moe-released-at-high-cadence-across-labs).
-- Same K3 architecture (Kimi Delta / linear attention + AttnRes at 3T scale) is fresh evidence for [subquadratic & sparse attention](TRENDS.md#id-subquad-attn-012-subquadratic-and-sparse-attention-reaches-frontier-open-weight-models).
-- Two research adds off HF daily papers: [SEED self-evolving OPD](https://arxiv.org/abs/2607.14777) → [on-policy distillation](TRENDS.md#id-on-policy-distill-016-on-policy-distillation-as-the-post-training-method-for-reasoning-and-agentic-llms); [DeepLoop](https://arxiv.org/abs/2607.13491) → pinned [latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent).
-- Queue: +Demystifying-OPD, +Byte-Exact-KV-Grafting, +LM Studio Bionic (intake). No earthquake beyond K3; capture-leak 11/0.
+**Since last scan (2026-07-18, weekly W29):**
+- Reactivated: **[MCP standard integration layer](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks)** 💤 dormant → 🚀 accelerating (confidence → high) — the weekly sweep of the (un-swept) MCP blog captured two interim primaries: [EMA-stable auth](https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/) (06-18, adopted by Okta + Anthropic + Microsoft + 8 servers) and [four Tier-1 SDK betas](https://blog.modelcontextprotocol.io/posts/sdk-betas-2026-07-28/) (06-29) for the 07-28 stateless-core spec.
+- Coverage fix: the MCP blog was a named reactivation-watch but in no swept list (~3–4-week capture lag) → promoted to the swept registry; amendment **W28-P1 applied** (Meta AI + Together AI re-tiered to low-cadence).
+- Anchoring warning (2nd consecutive — all daily evidence on pre-existing trends), partially mitigated by the non-arXiv MCP capture. Daily dormancy marks confirmed (rl-env / agent-sandbox / multi-agent-eng / low-bit quant). Capture-leak 20/0.
 
 ## ⭐ Pinned topics
 
@@ -21,13 +20,14 @@ Tracking AI-ecosystem trends (frontier research → engineering) for an AI resea
 
 ## Trends
 
-🌱 5 · 📈 4 · 🚀 3 · 🌊 1 · 🏔 0 · 📉 0 · 💤 5
+🌱 5 · 📈 4 · 🚀 4 · 🌊 1 · 🏔 0 · 📉 0 · 💤 4
 
 | trend | stage | latest signal |
 |---|---|---|
 | [Subquadratic & sparse attention](TRENDS.md#id-subquad-attn-012-subquadratic-and-sparse-attention-reaches-frontier-open-weight-models) | 🚀 accelerating | [2026-07-16](https://www.kimi.com/blog/kimi-k3) |
 | [Diffusion language models](TRENDS.md#id-diffusion-lm-013-diffusion-language-models-reach-open-weights-production-scale) | 🚀 accelerating | [2026-07-07](https://arxiv.org/abs/2607.05722) |
 | [Prefill/decode disaggregation](TRENDS.md#id-pd-disagg-002-prefilldecode-disaggregation-as-the-standard-llm-serving-architecture) | 🚀 accelerating | [2026-07-01](https://arxiv.org/abs/2607.00466) |
+| [MCP standard integration layer](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks) | 🚀 accelerating | [2026-06-29](https://blog.modelcontextprotocol.io/posts/sdk-betas-2026-07-28/) |
 | [⭐ Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 emerging | [2026-07-15](https://arxiv.org/abs/2607.13491) |
 | [⭐ Small & 1-bit models (CPU/edge)](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 📈 emerging | [2026-07-14](https://prismml.com/news/bonsai-27b) |
 | [⭐ Latent inter-model communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 📈 emerging | [2026-07-01](https://arxiv.org/abs/2607.01308) |
@@ -42,10 +42,10 @@ Tracking AI-ecosystem trends (frontier research → engineering) for an AI resea
 | [Verifiable RL environments](TRENDS.md#id-rl-env-005-verifiable-rl-environments-as-an-infrastructure-category-for-agent-training) | 💤 dormant | [2026-06-22](https://arxiv.org/abs/2606.22883) |
 | [Remote agent sandboxes](TRENDS.md#id-agent-sandbox-007-remote-sandboxes-as-the-execution-layer-for-agents) | 💤 dormant | [2026-06-22](https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/) |
 | [Multi-agent engineering](TRENDS.md#id-multi-agent-eng-009-multi-agent-engineering-becomes-product-surface-teams-workflows-a2a) | 💤 dormant | [2026-06-22](https://sakana.ai/fugu-release/) |
-| [MCP standard integration layer](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks) | 💤 dormant | [2026-06-11](https://openai.github.io/openai-agents-python/mcp/) |
 
 ## Worth studying
 
+- [MCP goes stateless: the 2026-07-28 spec, four SDK betas, and Enterprise-Managed Auth](https://blog.modelcontextprotocol.io/posts/sdk-betas-2026-07-28/) — the biggest MCP revision since launch: stateless core (no init handshake/session, round-robin-scalable), MRTR, routable headers, four Tier-1 SDK betas + now-stable zero-touch OAuth (Okta/Anthropic/Microsoft).
 - [Kimi K3: the first open 3T-class model (KDA + Attention Residuals + Stable LatentMoE)](https://www.kimi.com/blog/kimi-k3) — Moonshot's 2.8T-param flagship; delta/linear attention + a new depth-wise residual pathway as the native substrate of a frontier open model (weights due 07-27).
 - [Inkling: a ~1T-param multimodal open-weights model with relative attention](https://huggingface.co/thinkingmachines/Inkling) — Thinking Machines' first open model (952B/41B, image+audio+text, 1M ctx); drops RoPE for learned relative attention + interleaved local/global layers.
 - [Bonsai 27B: the first 27B-class model to run on a phone](https://prismml.com/news/bonsai-27b) — PrismML: a Qwen3.6-27B-based multimodal model shipped low-bit end-to-end (1-bit 3.9 GB / ternary 5.9 GB), fits an iPhone.
@@ -57,17 +57,16 @@ Tracking AI-ecosystem trends (frontier research → engineering) for an AI resea
 - [OmniOpt: Taxonomy, Geometry, and Benchmarking of Modern Optimizers](https://arxiv.org/abs/2607.04033) — a unified survey + benchmark cookbook for 100+ optimizers as a five-stage meta-pipeline.
 - [Bridging Latent and Explicit Reasoning with Looped Transformers](https://arxiv.org/abs/2606.31779) — names why latent CoT underperforms beyond ~1B params and gives a looped-transformer recipe that closes the gap.
 - [AI-Infra-Guard: Multi-Layer Agent Red Teaming](https://arxiv.org/abs/2606.31227) — open-source blueprint matching a detection paradigm to each layer of the agent attack surface (infra/protocol/behavior/model).
-- [SkillOpt: Agent skills as trainable parameters](https://www.microsoft.com/en-us/research/blog/skillopt-agent-skills-as-trainable-parameters/) — treat the skill file as a trainable parameter outside a frozen model; best/tied-best in all 52 eval cells, no weight updates.
 
 ## Community pulse
 
 _Unverified sentiment from social/community channels — intake only, never trend evidence, no individuals named._
 
-- Frontier open models topped Hacker News: Moonshot's [Kimi K3](https://www.kimi.com/blog/kimi-k3) (#1 thread, ~1390 pts) — a 2.8T "open 3T-class" model (captured as verified evidence above; weights due 07-27).
+- Frontier open models topped Hacker News two weeks running: Moonshot's [Kimi K3](https://www.kimi.com/blog/kimi-k3) (#1, ~1390 pts) and Thinking Machines' [Inkling](https://huggingface.co/thinkingmachines/Inkling) (#1, ~840 pts) — both captured as verified evidence above.
+- On-device demo: a community post running [Gemma 4 26B at ~5 tok/s on a 13-year-old Xeon, no GPU](https://hn.algolia.com/?query=Gemma%204%20Xeon) (small-CPU-adjacent, no new artifact).
 - Local-agent tooling: [LM Studio "Bionic"](https://hn.algolia.com/?query=LM%20Studio%20Bionic) — an agent runtime for open models (queued as intake).
 - Platform security: Hugging Face posted a [security incident disclosure](https://huggingface.co/blog) for July 2026 (field news, no model artifact).
-- World-model discourse continued: a front-page essay on the [promise and limits of world models](https://hn.algolia.com/?query=world%20models) (watch-only area).
 
 ## Output map
 
-[TRENDS.md](TRENDS.md) · [watchlist (25)](TRENDS.md#observation_queue) · [reports/](reports/) ([2026-07-17](reports/2026-07-17.md)) · weekly: [2026-W28](reports/weekly/2026-W28.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
+[TRENDS.md](TRENDS.md) · [watchlist (25)](TRENDS.md#observation_queue) · [reports/](reports/) ([2026-07-17](reports/2026-07-17.md)) · weekly: [2026-W29](reports/weekly/2026-W29.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
