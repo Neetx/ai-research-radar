@@ -44,17 +44,17 @@ all 7 days' rotation logs — a coverage lie). Two tiers:
 - Anthropic — https://www.anthropic.com/news (no public RSS as of 2026-06-13: /rss.xml and /news/rss both 404 — extract the HTML index via Tavily)
 - Google DeepMind — https://deepmind.google/blog/rss.xml (RSS — confirmed working 2026-06-13; the old /discover/blog/ path is the HTML index)
 - Google Research — https://research.google/blog/ (RSS)
-- Meta AI — https://ai.meta.com/blog/ (HEALED 2026-06-14: no RSS exists — /blog/rss/, /blog/feed/, /blog/rss.xml all 404 and the HTML index has no feed <link>. Working method: `tvly extract "https://ai.meta.com/blog/" --extract-depth advanced`. As of 2026-06-14 the blog's freshest post is April 2026 — Meta posts infrequently)
 - Microsoft Research — https://www.microsoft.com/en-us/research/blog/ (RSS); also Microsoft Security blog https://www.microsoft.com/en-us/security/blog/ for agent-security advisories
 - NVIDIA — https://developer.nvidia.com/blog/ (HEALED 2026-06-14: the bare `/blog/feed` returns empty; use https://developer.nvidia.com/blog/feed/ (trailing slash) for the full Atom feed, or the on-axis category feed https://developer.nvidia.com/blog/category/generative-ai/feed/ — titles are CDATA in <entry>. RE-HEAL 2026-06-22: the `/blog/feed/` Atom URL now intermittently returns an EMPTY body too (curl 200 but 0 bytes, seen across 06-21/06-22 passes); reliable fallback is `tvly extract "https://developer.nvidia.com/blog/recent-posts/" --format text` which lists dated post titles + blurbs — use it to triage newest posts when the Atom feed is empty) + https://research.nvidia.com/
 - Mistral — https://mistral.ai/news/
 - Qwen — https://qwenlm.github.io/blog/ (RSS /index.xml STALE: newest post Sep 2025 as of 2026-06-13 — Qwen likely posts elsewhere now; verify qwen.ai + Qwen HF org instead)
 - DeepSeek — https://api-docs.deepseek.com/news/ + deepseek-ai HF org
 - Hugging Face — https://huggingface.co/blog (RSS /blog/feed.xml)
-- Together AI — https://www.together.ai/blog
 - Z.ai / GLM — https://z.ai/blog + zai-org HF org
 
 ### Tier (ii) — Research labs / independents (LOW-CADENCE: weekly sweep + 1/day rotation; agent: verify feeds on first sweep):
+- Meta AI — https://ai.meta.com/blog/ (RE-TIERED to low-cadence 2026-07-18 W29, amendment W28-P1: 0/6 in W28 daily logs + 0/5 in W29, freshest on-axis post infrequent — genuinely low-cadence, mis-placed in tier-(i) "every run". No RSS exists (/blog/rss/, /blog/feed/, /blog/rss.xml all 404); working method `tvly extract "https://ai.meta.com/blog/" --extract-depth advanced`. Recent posts are media-gen/CV/neuro — Muse Image/Video 07-07, Brain2Qwerty 06-29 — mostly OFF the tracked axes; llama releases are also caught via the meta-llama HF org in the daily open-weight recheck)
+- Together AI — https://www.together.ai/blog (RE-TIERED to low-cadence 2026-07-18 W29, amendment W28-P1: JS-degraded/empty on the 07-15 + 07-17 daily attempts, infrequent + rarely on-axis; the blog index returns no dated on-axis content via `tvly extract` — treat as low-yield, verify a working extraction method on the next sweep)
 - Allen Institute (AI2) — https://allenai.org/blog + https://allenai.org/research (verified-swept 2026-07-04 W27: top posts DiScoFormer / hybrid-token analysis / EMO MoE-for-emergent-modularity — off-axis or already-intake, nothing new on-axis)
 - EleutherAI — https://blog.eleuther.ai/ (RSS)
 - Sakana AI — https://sakana.ai/blog/
