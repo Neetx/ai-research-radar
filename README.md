@@ -1,19 +1,19 @@
 # AI Radar
 
-![trends](https://img.shields.io/badge/trends-18-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-4-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-25-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--07--18-2f9e44?style=flat-square)
+![trends](https://img.shields.io/badge/trends-18-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-4-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-25-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--07--20-2f9e44?style=flat-square)
 
 Tracking AI-ecosystem trends (frontier research → engineering) for an AI researcher / AI-systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-07-18, weekly W29):**
-- Reactivated: **[MCP standard integration layer](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks)** 💤 dormant → 🚀 accelerating (confidence → high) — the weekly sweep of the (un-swept) MCP blog captured two interim primaries: [EMA-stable auth](https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/) (06-18, adopted by Okta + Anthropic + Microsoft + 8 servers) and [four Tier-1 SDK betas](https://blog.modelcontextprotocol.io/posts/sdk-betas-2026-07-28/) (06-29) for the 07-28 stateless-core spec.
-- Coverage fix: the MCP blog was a named reactivation-watch but in no swept list (~3–4-week capture lag) → promoted to the swept registry; amendment **W28-P1 applied** (Meta AI + Together AI re-tiered to low-cadence).
-- Anchoring warning (2nd consecutive — all daily evidence on pre-existing trends), partially mitigated by the non-arXiv MCP capture. Daily dormancy marks confirmed (rl-env / agent-sandbox / multi-agent-eng / low-bit quant). Capture-leak 20/0.
+**Since last scan (2026-07-20):**
+- New evidence: **[⭐ Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent)** ← [Loopie](https://arxiv.org/abs/2607.16051) — two looped-transformer MoE models (20B-A2B, 6B-A0.6B) that, for the first time with trained models, beat a same-compute vanilla 30B-A3B baseline, closing the loop-vs-parameter-scaling gap.
+- Watchlist: **Qwen3.8-Max** (Alibaba, 2.4T multimodal, "open weights to follow") topped Hacker News but was queued as an *unverified announcement* — no citable official primary, weights not yet on the HF org (cf. Kimi K3 / LongCat announce→ship pattern).
+- Dormancy: [Agentic-RL credit assignment](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards) crosses the 21-day line tomorrow; [MCP](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks) held at accelerating pending the 07-28 final spec. Capture-leak 10/0.
 
 ## ⭐ Pinned topics
 
 | trend | stage | latest signal |
 |---|---|---|
-| [⭐ Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 emerging | [2026-07-15](https://arxiv.org/abs/2607.13491) |
+| [⭐ Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 emerging | [2026-07-17](https://arxiv.org/abs/2607.16051) |
 | [⭐ Small & 1-bit models (CPU/edge)](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 📈 emerging | [2026-07-14](https://prismml.com/news/bonsai-27b) |
 | [⭐ Latent inter-model communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 📈 emerging | [2026-07-01](https://arxiv.org/abs/2607.01308) |
 | [⭐ Low-bit quantization (vector/trellis)](TRENDS.md#id-lowbit-quant-011-ultra-low-bit-quantization-vector-and-trellis-coding-for-weights-and-kv-cache) | 💤 dormant | [2026-06-23](https://arxiv.org/abs/2606.24033) |
@@ -28,7 +28,7 @@ Tracking AI-ecosystem trends (frontier research → engineering) for an AI resea
 | [Diffusion language models](TRENDS.md#id-diffusion-lm-013-diffusion-language-models-reach-open-weights-production-scale) | 🚀 accelerating | [2026-07-07](https://arxiv.org/abs/2607.05722) |
 | [Prefill/decode disaggregation](TRENDS.md#id-pd-disagg-002-prefilldecode-disaggregation-as-the-standard-llm-serving-architecture) | 🚀 accelerating | [2026-07-01](https://arxiv.org/abs/2607.00466) |
 | [MCP standard integration layer](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks) | 🚀 accelerating | [2026-06-29](https://blog.modelcontextprotocol.io/posts/sdk-betas-2026-07-28/) |
-| [⭐ Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 emerging | [2026-07-15](https://arxiv.org/abs/2607.13491) |
+| [⭐ Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 emerging | [2026-07-17](https://arxiv.org/abs/2607.16051) |
 | [⭐ Small & 1-bit models (CPU/edge)](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 📈 emerging | [2026-07-14](https://prismml.com/news/bonsai-27b) |
 | [⭐ Latent inter-model communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 📈 emerging | [2026-07-01](https://arxiv.org/abs/2607.01308) |
 | [Agent security (injection limits)](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) | 📈 emerging | [2026-06-30](https://arxiv.org/abs/2606.31227) |
@@ -45,6 +45,7 @@ Tracking AI-ecosystem trends (frontier research → engineering) for an AI resea
 
 ## Worth studying
 
+- [Loopie: the strongest looped-Transformer MoE to date](https://arxiv.org/abs/2607.16051) — two MoE models (20B-A2B, 6B-A0.6B) that beat a same-compute vanilla 30B-A3B baseline, finally winning the loop-vs-parameter-scaling trade recurrent-depth normally loses (no public weights yet).
 - [MCP goes stateless: the 2026-07-28 spec, four SDK betas, and Enterprise-Managed Auth](https://blog.modelcontextprotocol.io/posts/sdk-betas-2026-07-28/) — the biggest MCP revision since launch: stateless core (no init handshake/session, round-robin-scalable), MRTR, routable headers, four Tier-1 SDK betas + now-stable zero-touch OAuth (Okta/Anthropic/Microsoft).
 - [Kimi K3: the first open 3T-class model (KDA + Attention Residuals + Stable LatentMoE)](https://www.kimi.com/blog/kimi-k3) — Moonshot's 2.8T-param flagship; delta/linear attention + a new depth-wise residual pathway as the native substrate of a frontier open model (weights due 07-27).
 - [Inkling: a ~1T-param multimodal open-weights model with relative attention](https://huggingface.co/thinkingmachines/Inkling) — Thinking Machines' first open model (952B/41B, image+audio+text, 1M ctx); drops RoPE for learned relative attention + interleaved local/global layers.
@@ -56,17 +57,16 @@ Tracking AI-ecosystem trends (frontier research → engineering) for an AI resea
 - [Nemotron-Labs-Diffusion: a tri-mode AR + diffusion + self-speculation LM](https://arxiv.org/abs/2607.05722) — one model, joint AR-diffusion objective, mode-switching by deployment regime; open at 3B/8B/14B.
 - [OmniOpt: Taxonomy, Geometry, and Benchmarking of Modern Optimizers](https://arxiv.org/abs/2607.04033) — a unified survey + benchmark cookbook for 100+ optimizers as a five-stage meta-pipeline.
 - [Bridging Latent and Explicit Reasoning with Looped Transformers](https://arxiv.org/abs/2606.31779) — names why latent CoT underperforms beyond ~1B params and gives a looped-transformer recipe that closes the gap.
-- [AI-Infra-Guard: Multi-Layer Agent Red Teaming](https://arxiv.org/abs/2606.31227) — open-source blueprint matching a detection paradigm to each layer of the agent attack surface (infra/protocol/behavior/model).
 
 ## Community pulse
 
 _Unverified sentiment from social/community channels — intake only, never trend evidence, no individuals named._
 
-- Frontier open models topped Hacker News two weeks running: Moonshot's [Kimi K3](https://www.kimi.com/blog/kimi-k3) (#1, ~1390 pts) and Thinking Machines' [Inkling](https://huggingface.co/thinkingmachines/Inkling) (#1, ~840 pts) — both captured as verified evidence above.
-- On-device demo: a community post running [Gemma 4 26B at ~5 tok/s on a 13-year-old Xeon, no GPU](https://hn.algolia.com/?query=Gemma%204%20Xeon) (small-CPU-adjacent, no new artifact).
-- Local-agent tooling: [LM Studio "Bionic"](https://hn.algolia.com/?query=LM%20Studio%20Bionic) — an agent runtime for open models (queued as intake).
-- Platform security: Hugging Face posted a [security incident disclosure](https://huggingface.co/blog) for July 2026 (field news, no model artifact).
+- Frontier open models keep topping Hacker News: [Qwen3.8-Max](https://hn.algolia.com/?query=Qwen%203.8) (#1, 828 pts) — Alibaba's 2.4T multimodal preview with open weights promised, queued as an unverified announcement pending an official primary / HF weights.
+- AI-for-math moment: [an AI model produced a counterexample to the Jacobian Conjecture](https://hn.algolia.com/?query=Jacobian%20Conjecture) (188 pts) — off-axis AI-for-science watch-area, no citable paper yet.
+- Open-model distribution: [Ollama "All Aboard Open Models"](https://ollama.com/blog/all-aboard-open-models) (131 pts) — tooling for running open models locally.
+- Serving-engine version signal (GitHub external scope still 403): PyPI shows vLLM 0.25.1 / SGLang 0.5.15.post1, newer than the ledger's cited releases — [release notes inaccessible](https://hn.algolia.com/?query=vLLM), queue signal only.
 
 ## Output map
 
-[TRENDS.md](TRENDS.md) · [watchlist (25)](TRENDS.md#observation_queue) · [reports/](reports/) ([2026-07-17](reports/2026-07-17.md)) · weekly: [2026-W29](reports/weekly/2026-W29.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
+[TRENDS.md](TRENDS.md) · [watchlist (25)](TRENDS.md#observation_queue) · [reports/](reports/) ([2026-07-20](reports/2026-07-20.md)) · weekly: [2026-W29](reports/weekly/2026-W29.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
