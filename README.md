@@ -1,14 +1,14 @@
 # AI Radar
 
-![trends](https://img.shields.io/badge/trends-18-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-4-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-25-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--07--23-2f9e44?style=flat-square)
+![trends](https://img.shields.io/badge/trends-18-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-4-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-25-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--07--24-2f9e44?style=flat-square)
 
 Tracking AI-ecosystem trends (frontier research → engineering) for an AI researcher / AI-systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-07-23):**
-- **Latent reasoning** gains an RL-side datapoint — [SLPO](https://arxiv.org/abs/2607.19691) brings outcome-reward RL to autoregressive latent reasoners (a surrogate policy density over continuous latent transitions + a learned variable-horizon stopping head). Routed as evidence to [Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent), broadening the pinned axis from architecture toward training.
-- **Parametric injection** (behavior→weights) marked 💤 **dormant** (last evidence 07-02 = 21 days, pre-flagged); reactivates on any new skill/knowledge→adapter primary.
-- Watchlist +4 / −5 (26 → 25): queued SLAI T-Rex ([2607.20145](https://arxiv.org/abs/2607.20145), full-param post-training on Ascend), Beyond-Euclidean-Clipping ([2607.10169](https://arxiv.org/abs/2607.10169)), FVAttn ([2607.16190](https://arxiv.org/abs/2607.16190)), GigaToken; burned 5 stale → [watchlist](TRENDS.md#observation_queue).
-- No new frontier open-weight WEIGHTS drop, no earthquake (Kimi K3 weights due 07-27; 07-28 final MCP spec 5 days out).
+**Since last scan (2026-07-24):**
+- **Parametric injection** REACTIVATED 💤 dormant → 🌱 **seed** — a new independent group brings train-time knowledge-into-weights via hypernetworks with scaling laws ([2607.19604](https://arxiv.org/abs/2607.19604)); routed as evidence to [Parametric injection](TRENDS.md#id-parametric-injection-018-parametric-injection-compiling-behavior-and-knowledge-into-model-weights-instead-of-promptcontext).
+- **Open-weight wave** adds a NEW lab — Upstage ships [Solar-Open2-250B](https://huggingface.co/upstage/Solar-Open2-250B) (320-expert / 8-active MoE, 1M ctx, downloadable), evidence for [Open-weight frontier MoE wave](TRENDS.md#id-open-weight-003-open-weight-wave-frontier-scale-moe-released-at-high-cadence-across-labs).
+- **Deployment-grounded agent eval** refreshed — Tencent [WorkBuddy Bench](https://arxiv.org/abs/2607.20911) (contamination-resistant multi-domain coding-agent benchmark) → [evidence](TRENDS.md#id-agent-eval-014-deployment-grounded-agent-evaluation-long-horizon-real-session-benchmarks-beyond-static-leaderboards).
+- Watchlist steady at 25 (+3 intake: AREX, NVIDIA OO Agents, Nunchaku 4-bit diffusion; −3 stale) → [watchlist](TRENDS.md#observation_queue). No new frontier open-weight WEIGHTS drop, no earthquake (07-28 final MCP spec 4 days out).
 
 ## ⭐ Pinned topics
 
@@ -21,7 +21,7 @@ Tracking AI-ecosystem trends (frontier research → engineering) for an AI resea
 
 ## Trends
 
-🌱 4 · 📈 4 · 🚀 4 · 🌊 1 · 🏔 0 · 📉 0 · 💤 5
+🌱 5 · 📈 4 · 🚀 4 · 🌊 1 · 🏔 0 · 📉 0 · 💤 4
 
 | trend | stage | latest signal |
 | --- | --- | --- |
@@ -33,12 +33,12 @@ Tracking AI-ecosystem trends (frontier research → engineering) for an AI resea
 | [⭐ Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 emerging | [2026-07-22](https://arxiv.org/abs/2607.19691) |
 | [⭐ Small & 1-bit models (CPU/edge)](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 📈 emerging | [2026-07-14](https://prismml.com/news/bonsai-27b) |
 | [⭐ Latent inter-model communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 📈 emerging | [2026-07-01](https://arxiv.org/abs/2607.01308) |
+| [Deployment-grounded agent eval](TRENDS.md#id-agent-eval-014-deployment-grounded-agent-evaluation-long-horizon-real-session-benchmarks-beyond-static-leaderboards) | 🌱 seed | [2026-07-23](https://arxiv.org/abs/2607.20911) |
+| [Parametric injection (behavior→weights)](TRENDS.md#id-parametric-injection-018-parametric-injection-compiling-behavior-and-knowledge-into-model-weights-instead-of-promptcontext) | 🌱 seed | [2026-07-21](https://arxiv.org/abs/2607.19604) |
 | [Agentic-RL credit assignment](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards) | 🌱 seed | [2026-07-20](https://arxiv.org/abs/2607.18110) |
 | [On-policy distillation (post-training)](TRENDS.md#id-on-policy-distill-016-on-policy-distillation-as-the-post-training-method-for-reasoning-and-agentic-llms) | 🌱 seed | [2026-07-16](https://arxiv.org/abs/2607.14777) |
 | [Agent harness/runtime/memory infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) | 🌱 seed | [2026-07-14](https://arxiv.org/abs/2607.13285) |
-| [Deployment-grounded agent eval](TRENDS.md#id-agent-eval-014-deployment-grounded-agent-evaluation-long-horizon-real-session-benchmarks-beyond-static-leaderboards) | 🌱 seed | [2026-07-09](https://arxiv.org/abs/2607.08964) |
-| [Open-weight frontier MoE wave](TRENDS.md#id-open-weight-003-open-weight-wave-frontier-scale-moe-released-at-high-cadence-across-labs) | 🌊 mainstreaming | [2026-07-16](https://www.kimi.com/blog/kimi-k3) |
-| [Parametric injection (behavior→weights)](TRENDS.md#id-parametric-injection-018-parametric-injection-compiling-behavior-and-knowledge-into-model-weights-instead-of-promptcontext) | 💤 dormant | [2026-07-02](https://arxiv.org/abs/2607.02512) |
+| [Open-weight frontier MoE wave](TRENDS.md#id-open-weight-003-open-weight-wave-frontier-scale-moe-released-at-high-cadence-across-labs) | 🌊 mainstreaming | [2026-07-22](https://huggingface.co/upstage/Solar-Open2-250B) |
 | [⭐ Low-bit quantization (vector/trellis)](TRENDS.md#id-lowbit-quant-011-ultra-low-bit-quantization-vector-and-trellis-coding-for-weights-and-kv-cache) | 💤 dormant | [2026-06-23](https://arxiv.org/abs/2606.24033) |
 | [Verifiable RL environments](TRENDS.md#id-rl-env-005-verifiable-rl-environments-as-an-infrastructure-category-for-agent-training) | 💤 dormant | [2026-06-22](https://arxiv.org/abs/2606.22883) |
 | [Remote agent sandboxes](TRENDS.md#id-agent-sandbox-007-remote-sandboxes-as-the-execution-layer-for-agents) | 💤 dormant | [2026-06-22](https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/) |
@@ -46,6 +46,8 @@ Tracking AI-ecosystem trends (frontier research → engineering) for an AI resea
 
 ## Worth studying
 
+- [Solar-Open2-250B (Upstage, 320-expert / 8-active MoE, 1M ctx)](https://huggingface.co/upstage/Solar-Open2-250B) — a fresh open-weights architecture datapoint from a lab new to the open-weight set: very high expert count with very sparse routing, 1M context, downloadable weights.
+- [Scaling Laws for Hypernetwork-Based Knowledge Injection](https://arxiv.org/abs/2607.19604) — can you reliably compile factual knowledge INTO weights at scale? Repurposes hypernetworks as a train-time knowledge-injection mechanism and derives scaling laws — the reference for parametric-injection-vs-RAG.
 - [SLPO: outcome-reward RL for latent reasoners](https://arxiv.org/abs/2607.19691) — a surrogate policy density over latent transitions for trajectory-level credit + a learned variable-horizon stopping head; the training-side reference for the latent-reasoning axis.
 - [GigaToken: a ~1000× faster LLM tokenizer in Rust](https://github.com/marcelroed/gigatoken) — a practical systems artifact for tokenization-bound data/serving pipelines; study the Rust pretokenizer engineering + optimization writeups.
 - [The HF security incident: first real-world autonomous-AI-agent intrusion of a major AI platform](https://huggingface.co/blog/security-incident-july-2026) — HF's own disclosure: malicious dataset → RCE in the data pipeline → agent-swarm lateral movement; the canonical threat-model writeup for anyone running dataset/agent pipelines.
@@ -56,17 +58,16 @@ Tracking AI-ecosystem trends (frontier research → engineering) for an AI resea
 - [Inkling: a ~1T-param multimodal open-weights model with relative attention](https://huggingface.co/thinkingmachines/Inkling) — Thinking Machines' first open-weights model (Apache-2.0).
 - [Bonsai 27B: the first 27B-class model to run on a phone](https://prismml.com/news/bonsai-27b) — a Qwen3.6-27B-based multimodal model shipped low-bit end-to-end.
 - [Direct-OPD: Weak-to-Strong Generalization via Direct On-Policy Distillation](https://arxiv.org/abs/2607.05394) — a clean, practically-motivated post-training recipe.
-- [Flash-MSA: open-source training kernels for MiniMax Sparse Attention](https://nanduruganesh.github.io/flash-msa/) — a solo engineer's CuTeDSL kernels for frontier sparse attention.
 
 ## Community pulse
 
 _Unverified community sentiment (intake only, never trend evidence); links are to threads/venues, individuals are never named._
 
-- No earthquake. Top discussion was an AI-for-math thread (a ChatGPT conversation about the Jacobian-Conjecture counterexample) — a watch-area attention event, no citable primary paper.
-- [GigaToken](https://github.com/marcelroed/gigatoken) (a ~1000× faster Rust tokenizer) trended on HN — captured as a study pick + watchlist intake.
-- Continued buzz around Kimi K3 benchmark parity with frontier models (weights due 07-27, tracked under [Open-weight wave](TRENDS.md#id-open-weight-003-open-weight-wave-frontier-scale-moe-released-at-high-cadence-across-labs)).
-- Reddit and YouTube curator channels remain IP-blocked from this environment (known, multi-week).
+- No earthquake. Top AI-policy thread on [Hacker News](https://news.ycombinator.com/) argued against shutting off Chinese open-weight models — a policy attention event, no citable primary.
+- The OpenAI × Hugging Face [security-incident](https://huggingface.co/blog/security-incident-july-2026) coverage topped HN again — already tracked under [Agent security](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn).
+- Continued buzz on the Qwen 3.8-Max preview and Kimi K3 (weights due 07-27) under [Open-weight wave](TRENDS.md#id-open-weight-003-open-weight-wave-frontier-scale-moe-released-at-high-cadence-across-labs); still preview/announcement, no new WEIGHTS drop.
+- Reddit r/LocalLLaMA (datacenter-IP-blocked JSON) and YouTube curator channels remain IP-blocked from this environment (known, multi-week).
 
 ## Output map
 
-[TRENDS.md](TRENDS.md) · [watchlist (25)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-07-23](reports/2026-07-23.md) · weekly: [2026-W29](reports/weekly/2026-W29.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
+[TRENDS.md](TRENDS.md) · [watchlist (25)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-07-24](reports/2026-07-24.md) · weekly: [2026-W29](reports/weekly/2026-W29.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
