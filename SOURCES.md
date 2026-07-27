@@ -75,7 +75,7 @@ capability changes, NOT chip-business/macro news. agent: verify feeds on first s
 - Apple Machine Learning Research — https://machinelearning.apple.com/research (on-device / ANE / small models)
 - AMD ROCm Blogs — https://rocm.blogs.amd.com/index.html (serving on non-CUDA)
 - Modular (MAX / Mojo) — https://www.modular.com/blog (inference engine + HW abstraction)
-- Qualcomm AI Research — https://www.qualcomm.com/developer/blog (edge NPU / on-device)
+- Qualcomm AI Research — https://www.qualcomm.com/developer/blog (edge NPU / on-device). VERIFIED-SWEPT 2026-07-27 (first real sweep of this hardware-tier source, tier-ii daily rotation): `tvly extract` lists dated posts directly, no heal needed. Captured GenieX (07-07) — an open-source on-device Gen AI runtime (NPU/GPU/CPU, GGUF support) — as small-cpu-models-008 evidence.
 - Google Cloud TPU / JAX — via research.google + cloud.google.com/blog/products/ai-machine-learning
 - Inference-chip startups (agent discretion — technical perf posts only, skip PR): Groq, Cerebras, SambaNova, Etched, Tenstorrent
 - Venue: arXiv cs.AR is the standing exploration listing for hardware-aware serving / low-bit kernels (already yielded SPEAR, TileFuse)
@@ -150,16 +150,16 @@ it here (as done for alphamatch / NVIDIA / Meta) — never drop a source for bei
 awkward to fetch. If you genuinely will not sweep an entry every run, REMOVE it
 from this list: the registry must be honest about what it actually covers, with
 no tier that is skipped a priori. Agent: verify each on first use.
-- Latent.Space / AINews — daily AI news digest
-- Ahead of AI (Sebastian Raschka) — LLM architecture / ML research roundups
-- Interconnects (Nathan Lambert) — post-training, RLHF, open-model dynamics (high signal)
-- Import AI (Jack Clark) — weekly research + policy summary, candid commentary
-- AlphaSignal — research-grade weekly: trending papers, repos, coding breakdowns
-- Lilian Weng's blog (lilianweng.github.io) — deep technical surveys (verify)
-- Simon Willison's blog (simonwillison.net) — LLM practitioner notes/releases (verify)
-- alphaXiv (alphaxiv.org) — community-discussed/trending arXiv papers
-- Papers with Code — trending papers + SOTA leaderboards
-- emergentmind.com — topic/paper tracker that surfaces emerging work
+- Latent.Space / AINews (news.smol.ai) — daily AI news digest. DEGRADED (recurring, first flagged W27): the index is JS-rendered marketing copy with no dated post list via `tvly extract` — heal candidate, not yet fixed.
+- Ahead of AI (Sebastian Raschka, magazine.sebastianraschka.com) — LLM architecture / ML research roundups. DEGRADED 2026-07-27 (first real sweep): Substack index returns only a 412-char JS shell via `tvly extract`, no post titles — same shape as Interconnects below; heal candidate (try a direct post-URL guess or an RSS path like `/feed`).
+- Interconnects (Nathan Lambert, interconnects.ai) — post-training, RLHF, open-model dynamics (high signal). DEGRADED 2026-07-27 (first real sweep): Substack index returns only a 429-char JS shell via `tvly extract`, no post titles; same Substack-JS-index shape as Ahead of AI — heal candidate.
+- Import AI (Jack Clark, jack-clark.net) — weekly research + policy summary, candid commentary. PARTIALLY WORKING 2026-07-27 (first real sweep): `tvly extract` returns a full issue (good — not JS-blocked) but the returned issue (#462, dated 2026-06-22) reads as a cached/older snapshot, not necessarily the newest; verify against the site's own archive/issue-number index on next sweep to confirm freshness before treating extract results as current.
+- AlphaSignal (alphasignal.ai) — research-grade weekly: trending papers, repos, coding breakdowns. VERIFIED-SWEPT 2026-07-27 (first real sweep): `tvly extract` works well, returns a live "N days/hours ago" feed of items with source attribution — a genuinely productive lane (led to the vLLM AFD Plugin + Kimi K3 preview blog posts this run via its vLLM-tagged items). Sweep every run.
+- Lilian Weng's blog (lilianweng.github.io) — deep technical surveys. VERIFIED-SWEPT 2026-07-27 (first real sweep): `tvly extract "https://lilianweng.github.io/"` lists post titles/summaries directly (not JS-blocked); post URLs follow `/posts/YYYY-MM-DD-slug/` — grep `href="https://lilianweng.github.io/posts/..."` from a raw `curl` of the index if tvly's summary doesn't give the exact slug. Surfaced "Harness Engineering for Self-Improvement" (07-04), directly on the agent-runtime-015 axis — a real find from a source that had been listed-but-never-swept.
+- Simon Willison's blog (simonwillison.net) — LLM practitioner notes/releases. VERIFIED-SWEPT 2026-07-27 (first real sweep): `tvly extract` works well, dated entries readable directly.
+- alphaXiv (alphaxiv.org) — community-discussed/trending arXiv papers. VERIFIED-SWEPT 2026-07-27: `tvly extract` of the homepage lists dated trending items directly (no JS issue) — surfaced HOPE (2607.21366, DeepMind) this run.
+- Papers with Code (paperswithcode.com) — trending papers + SOTA leaderboards. VERIFIED-SWEPT 2026-07-27: readable via `tvly extract`, but the "Trending Papers" list looked generic/stale (same items across checks) — treat as a weak signal, cross-check against HF daily papers / alphaXiv rather than relying on it alone.
+- emergentmind.com — topic/paper tracker that surfaces emerging work. VERIFIED-SWEPT 2026-07-27: readable, but the date-filtered "Trending Papers" query returned empty ("no papers found") on this attempt — the "Explainer Videos" list below it is static/unfiltered and showed nothing new on-axis; may need a different date-range param, revisit.
 - alphamatch.ai — explainer blog (curator-seeded; added after it surfaced a
   serious paper the radar had missed). Intake-only: follow to the named primary,
   verify it, cite the primary — NEVER the blog. ACCESS METHOD (healed
@@ -202,6 +202,12 @@ its `channel_id` once (open the channel page, grep `"channelId":"UC…"`), then 
   + HN overlap, where code4AI/bycloud's picks recur (the exploration slot already
   covers these). Re-test the Atom feed roughly weekly; restore the feed method if
   the IP block lifts.
+- **HEAL RESOLVED 2026-07-27 (daily, W31)**: the IP-block LIFTED — `feeds/videos.xml?channel_id=UC…`
+  returned HTTP 200 with real entries for code4AI, bycloud AND AI Explained on
+  re-test (the direct Atom-feed method from before the block, not a new heal).
+  Restore this as the primary method going forward; only fall back to the
+  best-effort `tvly search` path above if a future run hits 404s again (re-flag
+  a fresh block rather than assuming this one).
 - @code4AI (now "Discover AI") — daily deep-dives on fresh AI papers (curator-supplied, high signal) — channel_id `UCfOvNb3xj28SNqPQ_JIbumg` (resolved 2026-06-21; NOTE: the handle's HTML lists featured side-channels first — take the canonical `channel/UC…` link, not the first `"channelId"` match)
 - Yannic Kilcher — long-form, section-by-section paper readings — channel_id `UCZHmQk67mSJgfCCTn7xBfew` (resolved 2026-06-21; main channel quiet, newest 2026-03)
 - bycloud — frontier research breakdowns + lab analysis (high signal) — channel_id `UCgfe2ooZD3VJPB6aJAnuQng` (resolved 2026-06-21)
@@ -322,7 +328,7 @@ BLOGS — vLLM announced day-0 native MiniMax-M3 (MSA kernel), DiffusionGemma
 blog weeks before any of it surfaced in release notes, so three pre-registered
 serving-engine promotion gates sat "unfired" for weeks. Fetch these blog feeds
 every run (RSS/Atom; fall back to `tvly extract` of the index):
-- vLLM — https://blog.vllm.ai/ (Atom likely at /feed.xml; index is `tvly`-extractable)
+- vLLM — https://blog.vllm.ai/ (HEALED 2026-07-27: no RSS exists — `/feed.xml` and `/rss.xml` both 404. The blog index IS `tvly`-extractable and lists recent post titles/dates directly, but post URLs are NOT in that summary; the site is Next.js so a raw `curl` of `/` doesn't expose `<a href>` either in most tools — the working method is `curl -sL https://blog.vllm.ai/ | grep -oE 'href="/blog/[0-9]{4}-[0-9]{2}-[0-9]{2}-[a-z0-9-]+"'` which DOES surface the slugs from the embedded Next.js payload, then `tvly extract` each `https://blog.vllm.ai/blog/YYYY-MM-DD-slug` directly. This is how the AFD-plugin (07-23) and Kimi-K3-preview (07-22) posts were found this run.)
 - SGLang — https://lmsys.org/blog/ (already in Phase 1; the same posts cover SGLang)
 - NVIDIA Dynamo / TensorRT-LLM — developer.nvidia.com technical blog (already swept)
 A serving-engine post that natively supports a tracked model/operator OR
