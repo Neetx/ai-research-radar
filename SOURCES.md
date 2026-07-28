@@ -45,7 +45,7 @@ all 7 days' rotation logs — a coverage lie). Two tiers:
 - Google DeepMind — https://deepmind.google/blog/rss.xml (RSS — confirmed working 2026-06-13; the old /discover/blog/ path is the HTML index)
 - Google Research — https://research.google/blog/ (RSS)
 - Microsoft Research — https://www.microsoft.com/en-us/research/blog/ (RSS); also Microsoft Security blog https://www.microsoft.com/en-us/security/blog/ for agent-security advisories
-- NVIDIA — https://developer.nvidia.com/blog/ (HEALED 2026-06-14: the bare `/blog/feed` returns empty; use https://developer.nvidia.com/blog/feed/ (trailing slash) for the full Atom feed, or the on-axis category feed https://developer.nvidia.com/blog/category/generative-ai/feed/ — titles are CDATA in <entry>. RE-HEAL 2026-06-22: the `/blog/feed/` Atom URL now intermittently returns an EMPTY body too (curl 200 but 0 bytes, seen across 06-21/06-22 passes); reliable fallback is `tvly extract "https://developer.nvidia.com/blog/recent-posts/" --format text` which lists dated post titles + blurbs — use it to triage newest posts when the Atom feed is empty) + https://research.nvidia.com/
+- NVIDIA — https://developer.nvidia.com/blog/ (HEALED 2026-06-14: the bare `/blog/feed` returns empty; use https://developer.nvidia.com/blog/feed/ (trailing slash) for the full Atom feed, or the on-axis category feed https://developer.nvidia.com/blog/category/generative-ai/feed/ — titles are CDATA in <entry>. RE-HEAL 2026-06-22: the `/blog/feed/` Atom URL now intermittently returns an EMPTY body too (curl 200 but 0 bytes, seen across 06-21/06-22 passes); reliable fallback is `tvly extract "https://developer.nvidia.com/blog/recent-posts/" --format text` which lists dated post titles + blurbs — use it to triage newest posts when the Atom feed is empty. HEALED AGAIN 2026-07-28: `curl https://developer.nvidia.com/blog/feed/` now returns a full, real Atom feed with dated `<entry>` items again (tested after weeks of the empty-body failure) — surfaced "Six Agent Harness Capabilities for Higher Model Performance" (07-27, NOOA → agent-runtime-015 promotion evidence). Try the direct Atom feed FIRST each run; fall back to the tvly recent-posts extract only if it 0-bytes again) + https://research.nvidia.com/
 - Mistral — https://mistral.ai/news/
 - Qwen — https://qwenlm.github.io/blog/ (RSS /index.xml STALE: newest post Sep 2025 as of 2026-06-13 — Qwen likely posts elsewhere now; verify qwen.ai + Qwen HF org instead)
 - DeepSeek — https://api-docs.deepseek.com/news/ + deepseek-ai HF org
@@ -208,6 +208,13 @@ its `channel_id` once (open the channel page, grep `"channelId":"UC…"`), then 
   Restore this as the primary method going forward; only fall back to the
   best-effort `tvly search` path above if a future run hits 404s again (re-flag
   a fresh block rather than assuming this one).
+- **RE-DEGRADED 2026-07-28**: the very next run's re-test 404'd again for all
+  three channels — the 07-27 lift did not hold (intermittent, not a stable heal).
+  Logged as a fresh single-run failure, NOT yet a repeat-failure pattern (that
+  needs the SAME failure twice before spending heal budget on it again per
+  `radar-source-heal`) — re-test next run before concluding the block is back
+  for good; if it 404s a second consecutive time, treat as re-blocked and fall
+  back to the `tvly search` method above.
 - @code4AI (now "Discover AI") — daily deep-dives on fresh AI papers (curator-supplied, high signal) — channel_id `UCfOvNb3xj28SNqPQ_JIbumg` (resolved 2026-06-21; NOTE: the handle's HTML lists featured side-channels first — take the canonical `channel/UC…` link, not the first `"channelId"` match)
 - Yannic Kilcher — long-form, section-by-section paper readings — channel_id `UCZHmQk67mSJgfCCTn7xBfew` (resolved 2026-06-21; main channel quiet, newest 2026-03)
 - bycloud — frontier research breakdowns + lab analysis (high signal) — channel_id `UCgfe2ooZD3VJPB6aJAnuQng` (resolved 2026-06-21)
