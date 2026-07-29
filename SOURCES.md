@@ -160,6 +160,15 @@ no tier that is skipped a priori. Agent: verify each on first use.
 - alphaXiv (alphaxiv.org) — community-discussed/trending arXiv papers. VERIFIED-SWEPT 2026-07-27: `tvly extract` of the homepage lists dated trending items directly (no JS issue) — surfaced HOPE (2607.21366, DeepMind) this run.
 - Papers with Code (paperswithcode.com) — trending papers + SOTA leaderboards. VERIFIED-SWEPT 2026-07-27: readable via `tvly extract`, but the "Trending Papers" list looked generic/stale (same items across checks) — treat as a weak signal, cross-check against HF daily papers / alphaXiv rather than relying on it alone.
 - emergentmind.com — topic/paper tracker that surfaces emerging work. VERIFIED-SWEPT 2026-07-27: readable, but the date-filtered "Trending Papers" query returned empty ("no papers found") on this attempt — the "Explainer Videos" list below it is static/unfiltered and showed nothing new on-axis; may need a different date-range param, revisit.
+- **Practitioner-discourse blogs (where PRACTICES GET NAMED)** — this sub-lane serves the
+  VOCABULARY-capture step in `routines/daily.md`: these authors coin or popularise the umbrella
+  terms the field then adopts (the "<X> engineering" class of paradigm label). Such a naming
+  ships no paper, release or changelog, so every artifact lane is blind to it — this is the only
+  lane that can see it. Intake-only, NEVER evidence: follow to a primary when one exists,
+  otherwise capture the NAME as an `also-called:` alias on the trend it renames. Sweep + log
+  every run like the rest of this lane.
+  - Addy Osmani — https://addyosmani.com/blog/ · RSS `https://addyosmani.com/rss.xml` **[verified 2026-07-29; both 200]**
+  - Louis Bouchard ("What's AI") — https://www.louisbouchard.ai/ · RSS `https://www.louisbouchard.ai/rss/` **[verified 2026-07-29; both 200]**
 - alphamatch.ai — explainer blog (curator-seeded; added after it surfaced a
   serious paper the radar had missed). Intake-only: follow to the named primary,
   verify it, cite the primary — NEVER the blog. ACCESS METHOD (healed
