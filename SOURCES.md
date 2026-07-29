@@ -151,7 +151,7 @@ awkward to fetch. If you genuinely will not sweep an entry every run, REMOVE it
 from this list: the registry must be honest about what it actually covers, with
 no tier that is skipped a priori. Agent: verify each on first use.
 - Latent.Space / AINews (news.smol.ai) — daily AI news digest. DEGRADED (recurring, first flagged W27): the index is JS-rendered marketing copy with no dated post list via `tvly extract` — heal candidate, not yet fixed.
-- Ahead of AI (Sebastian Raschka, magazine.sebastianraschka.com) — LLM architecture / ML research roundups. DEGRADED 2026-07-27 (first real sweep): Substack index returns only a 412-char JS shell via `tvly extract`, no post titles — same shape as Interconnects below; heal candidate (try a direct post-URL guess or an RSS path like `/feed`).
+- Ahead of AI (Sebastian Raschka, magazine.sebastianraschka.com) — LLM architecture / ML research roundups. DEGRADED 2026-07-27 (first real sweep): Substack index returns only a 412-char JS shell via `tvly extract`, no post titles — same shape as Interconnects below; heal candidate (try a direct post-URL guess or an RSS path like `/feed`). **HEALED 2026-07-29**: the author's OWN blog, `sebastianraschka.com/blog/` (distinct domain from the Substack magazine index), is directly `tvly`-extractable with a full dated post archive going back months — surfaced "Kimi K3 Architecture Notes" (07-28, via HN 358pts) with genuinely new architecture detail (NoPE everywhere instead of RoPE, attention-residuals connecting layers via an attention-weighted score) on top of the already-cited K3 tech report. Sweep `sebastianraschka.com/blog/` going forward as the working access path for this author's technical notes; the Substack magazine index stays degraded/redundant.
 - Interconnects (Nathan Lambert, interconnects.ai) — post-training, RLHF, open-model dynamics (high signal). DEGRADED 2026-07-27 (first real sweep): Substack index returns only a 429-char JS shell via `tvly extract`, no post titles; same Substack-JS-index shape as Ahead of AI — heal candidate.
 - Import AI (Jack Clark, jack-clark.net) — weekly research + policy summary, candid commentary. PARTIALLY WORKING 2026-07-27 (first real sweep): `tvly extract` returns a full issue (good — not JS-blocked) but the returned issue (#462, dated 2026-06-22) reads as a cached/older snapshot, not necessarily the newest; verify against the site's own archive/issue-number index on next sweep to confirm freshness before treating extract results as current.
 - AlphaSignal (alphasignal.ai) — research-grade weekly: trending papers, repos, coding breakdowns. VERIFIED-SWEPT 2026-07-27 (first real sweep): `tvly extract` works well, returns a live "N days/hours ago" feed of items with source attribution — a genuinely productive lane (led to the vLLM AFD Plugin + Kimi K3 preview blog posts this run via its vLLM-tagged items). Sweep every run.
@@ -215,6 +215,15 @@ its `channel_id` once (open the channel page, grep `"channelId":"UC…"`), then 
   `radar-source-heal`) — re-test next run before concluding the block is back
   for good; if it 404s a second consecutive time, treat as re-blocked and fall
   back to the `tvly search` method above.
+- **CONFIRMED RE-BLOCKED 2026-07-29**: 2nd CONSECUTIVE 404 (07-28 + 07-29) for
+  all three channels — per the rule above this is now a repeat-failure pattern,
+  not a one-off. The `tvly search "<channel> latest video 2026"` fallback was
+  attempted this run too and returned no usable upload titles (generic/irrelevant
+  results). Treat the direct Atom-feed method as blocked again until further
+  notice; keep relying on HF-daily-papers + HN overlap for code4AI/bycloud's
+  picks; re-test the Atom feed on the weekly cadence rather than every daily run
+  (it just proved itself unstable even after a real lift, so daily re-tests are
+  low-yield until there's a reason to expect it changed).
 - @code4AI (now "Discover AI") — daily deep-dives on fresh AI papers (curator-supplied, high signal) — channel_id `UCfOvNb3xj28SNqPQ_JIbumg` (resolved 2026-06-21; NOTE: the handle's HTML lists featured side-channels first — take the canonical `channel/UC…` link, not the first `"channelId"` match)
 - Yannic Kilcher — long-form, section-by-section paper readings — channel_id `UCZHmQk67mSJgfCCTn7xBfew` (resolved 2026-06-21; main channel quiet, newest 2026-03)
 - bycloud — frontier research breakdowns + lab analysis (high signal) — channel_id `UCgfe2ooZD3VJPB6aJAnuQng` (resolved 2026-06-21)
