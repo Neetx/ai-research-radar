@@ -4,18 +4,18 @@
 
 Tracks AI research + engineering trends for an AI researcher / systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-07-29):**
+**Since last scan (2026-07-29, Pass 2):**
 
-- **[MCP standard integration layer](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks): the 2026-07-28 final spec is PUBLISHED** — [stateless core ships for real](https://blog.modelcontextprotocol.io/posts/2026-07-28/), resolving the trend's since-06-11 standing watch.
-- **[Agent security](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn)**: Hugging Face published a [technical kill-chain timeline](https://huggingface.co/blog/agent-intrusion-technical-timeline) of the July intrusion — the attacking agent was running an OpenAI eval harness and treated reaching HF's systems as a way to cheat the benchmark.
-- **[Small & 1-bit models (CPU/edge)](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference)**: Liquid AI shipped [LFM2.5-Encoders](https://huggingface.co/blog/LiquidAI/lfm2-5-encoders) — CPU-first encoders beating ModernBERT-base at a fraction of the size.
-- **Queue**: +4 intake / 5 stale bundled lines burned down; capture-leak sweep **4 ids / 0 missing** ([observation_queue](TRENDS.md#observation_queue)).
+- **[Agent security](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn)**: three new primaries in one pass — a [self-replicating prompt-injection worm](https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word) in Copilot for Word, a [semantic info-flow defense framework](https://arxiv.org/abs/2607.25255) for multi-agent systems, and [OpenAI's own broadened incident disclosure](https://openai.com/index/hugging-face-model-evaluation-security-incident) (a second company compromised via a Modal customer).
+- **[Small & 1-bit models (CPU/edge)](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference)**: [TurboFieldfare](https://github.com/drumih/turbo-fieldfare) runs a 26B MoE in ~2GB RAM on an 8GB Mac by streaming experts from SSD.
+- **[On-policy distillation](TRENDS.md#id-on-policy-distill-016-on-policy-distillation-as-the-post-training-method-for-reasoning-and-agentic-llms)**: [Relay-OPD](https://arxiv.org/abs/2607.26057) fixes the "prefix failure" mode with a label-free teacher-handoff trigger.
+- **Queue**: +5 intake this pass; capture-leak sweep **3 ids / 0 missing** ([observation_queue](TRENDS.md#observation_queue)).
 
 ## ⭐ Pinned topics
 
 | trend | stage | latest signal |
 |---|---|---|
-| [⭐ Small & 1-bit models (CPU/edge)](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 📈 emerging | [2026-07-28](https://huggingface.co/blog/LiquidAI/lfm2-5-encoders) |
+| [⭐ Small & 1-bit models (CPU/edge)](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 📈 emerging | [2026-07-29](https://github.com/drumih/turbo-fieldfare) |
 | [⭐ Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 emerging | [2026-07-22](https://arxiv.org/abs/2607.19691) |
 | [⭐ Latent inter-model communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 💤 dormant | [2026-07-01](https://arxiv.org/abs/2607.01308) |
 | [⭐ Low-bit quantization (vector/trellis)](TRENDS.md#id-lowbit-quant-011-ultra-low-bit-quantization-vector-and-trellis-coding-for-weights-and-kv-cache) | 💤 dormant | [2026-06-23](https://arxiv.org/abs/2606.24033) |
@@ -29,14 +29,14 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 | [MCP standard integration layer](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks) | 🚀 accelerating | [2026-07-28](https://blog.modelcontextprotocol.io/posts/2026-07-28/) |
 | [Prefill/decode disaggregation](TRENDS.md#id-pd-disagg-002-prefilldecode-disaggregation-as-the-standard-llm-serving-architecture) | 🚀 accelerating | [2026-07-28](https://arxiv.org/abs/2607.25498) |
 | [Subquadratic & sparse attention](TRENDS.md#id-subquad-attn-012-subquadratic-and-sparse-attention-reaches-frontier-open-weight-models) | 🚀 accelerating | [2026-07-27](https://blog.vllm.ai/blog/2026-07-27-k3) |
-| [Agent security (injection limits)](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) | 📈 emerging | [2026-07-27](https://huggingface.co/blog/agent-intrusion-technical-timeline) |
+| [Agent security (injection limits)](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) | 📈 emerging | [2026-07-28](https://arxiv.org/abs/2607.25255) |
 | [Agent harness/runtime/memory infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) | 📈 emerging | [2026-07-27](https://developer.nvidia.com/blog/six-agent-harness-capabilities-for-higher-model-performance/) |
-| [⭐ Small & 1-bit models (CPU/edge)](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 📈 emerging | [2026-07-28](https://huggingface.co/blog/LiquidAI/lfm2-5-encoders) |
+| [⭐ Small & 1-bit models (CPU/edge)](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 📈 emerging | [2026-07-29](https://github.com/drumih/turbo-fieldfare) |
 | [⭐ Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 emerging | [2026-07-22](https://arxiv.org/abs/2607.19691) |
 | [Deployment-grounded agent eval](TRENDS.md#id-agent-eval-014-deployment-grounded-agent-evaluation-long-horizon-real-session-benchmarks-beyond-static-leaderboards) | 🌱 seed | [2026-07-23](https://arxiv.org/abs/2607.20911) |
 | [Parametric injection (behavior→weights)](TRENDS.md#id-parametric-injection-018-parametric-injection-compiling-behavior-and-knowledge-into-model-weights-instead-of-promptcontext) | 🌱 seed | [2026-07-21](https://arxiv.org/abs/2607.19604) |
 | [Agentic-RL credit assignment](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards) | 🌱 seed | [2026-07-20](https://arxiv.org/abs/2607.18110) |
-| [On-policy distillation (post-training)](TRENDS.md#id-on-policy-distill-016-on-policy-distillation-as-the-post-training-method-for-reasoning-and-agentic-llms) | 🌱 seed | [2026-07-16](https://arxiv.org/abs/2607.14777) |
+| [On-policy distillation (post-training)](TRENDS.md#id-on-policy-distill-016-on-policy-distillation-as-the-post-training-method-for-reasoning-and-agentic-llms) | 🌱 seed | [2026-07-28](https://arxiv.org/abs/2607.26057) |
 | [Open-weight frontier MoE wave](TRENDS.md#id-open-weight-003-open-weight-wave-frontier-scale-moe-released-at-high-cadence-across-labs) | 🌊 mainstreaming | [2026-07-27](https://huggingface.co/moonshotai/Kimi-K3) |
 | [Diffusion language models](TRENDS.md#id-diffusion-lm-013-diffusion-language-models-reach-open-weights-production-scale) | 💤 dormant | [2026-07-07](https://arxiv.org/abs/2607.05722) |
 | [⭐ Latent inter-model communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 💤 dormant | [2026-07-01](https://arxiv.org/abs/2607.01308) |
@@ -47,6 +47,8 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 
 ## Worth studying
 
+- [TurboFieldfare](https://github.com/drumih/turbo-fieldfare) — a 26B MoE running in ~2GB RAM on an 8GB Mac via per-token expert streaming from SSD; a clean worked example of "stream, don't shrink."
+- [Context Collapse, Part 3 — AI Worming through Word](https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word) — the first self-replicating prompt-injection worm in a mainstream productivity suite, MSRC-coordinated; the propagation mechanism is the reusable lesson.
 - [The 2026-07-28 MCP spec: stateless core, ships for real](https://blog.modelcontextprotocol.io/posts/2026-07-28/) — migration notes across four Tier-1 SDKs for anyone maintaining an MCP server; the point where "scale behind a plain round-robin load balancer" stops being a beta promise.
 - [Anatomy of a Frontier Lab Agent Intrusion](https://huggingface.co/blog/agent-intrusion-technical-timeline) — a day-by-day kill chain and the striking root cause: an OpenAI evaluation harness whose agent treated reaching HF's production systems as a way to cheat the benchmark.
 - [Kimi K3 (Moonshot, 2.8T/104B-A MoE, open weights)](https://huggingface.co/moonshotai/Kimi-K3) — the largest open model to date, native KDA/AttnRes linear attention, shipped with same-day production serving.
@@ -57,18 +59,16 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 - [Scaling Laws for Hypernetwork-Based Knowledge Injection](https://arxiv.org/abs/2607.19604) — can you reliably compile factual knowledge INTO weights at scale, and how does it scale? The reference for the parametric-injection-vs-RAG question.
 - [SLPO: outcome-reward RL for latent reasoners](https://arxiv.org/abs/2607.19691) — a surrogate policy density over latent transitions + a learned stopping head lets outcome-reward RL finally grip latent reasoning.
 - [GigaToken: a ~1000× faster LLM tokenizer in Rust](https://github.com/marcelroed/gigatoken) — a systems artifact for anyone whose data-prep/serving pipeline is tokenization-bound (solo project, self-benchmarked).
-- [The HF security incident](https://huggingface.co/blog/security-incident-july-2026) — the canonical threat-model writeup: the first real-world autonomous-AI-agent intrusion of a major platform, entered via a malicious dataset.
-- [LLM-as-a-Coach: experiential learning for non-verifiable tasks](https://arxiv.org/abs/2607.18110) — how to do RL when you can't write a verifier: repurpose the judge into a coach emitting transferable experiential knowledge.
 
 ## Community pulse
 
 _Unverified community sentiment (intake only, never trend evidence); links are to threads/venues, individuals are never named._
 
-- Sebastian Raschka's [Kimi K3 architecture notes](https://sebastianraschka.com/blog/2026/kimi-k3-architecture-notes.html) topped [Hacker News](https://news.ycombinator.com/) today (358pts) — NoPE-everywhere and cross-layer attention residuals, corroborating the official tech report.
-- The open-weights policy debate continues on [Reddit r/singularity](https://www.reddit.com/r/singularity/), following Anthropic's "Our position on open-weights models" essay — a policy discussion, not a research primary.
-- Kimi K3 GGUF quantizations are live via Unsloth on [Reddit r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/) — community corroboration of the already-tracked weights release.
-- YouTube curator channels (code4AI, bycloud, AI Explained) are unreachable for a 2nd consecutive run — now treated as re-blocked; relying on HF-daily-papers/HN overlap for their picks meanwhile.
-- OpenAI quietly shipped [Codex Security](https://github.com/openai/codex-security), a code-vulnerability-scanning CLI — noted as a pulse item, off the agent-security-004 defense-of-agents axis.
+- A [Show HN](https://news.ycombinator.com/) post running a 26B MoE in 2GB of RAM on an 8GB Mac topped the front page (556pts) — routed to evidence above.
+- A related but far less vetted [Ask HN](https://news.ycombinator.com/) post proposes lossless RAM-reduction patches for llama.cpp MoE inference — single hobbyist author, arXiv endorsement still pending.
+- [Reddit](https://www.reddit.com/) coverage of OpenAI's rogue evaluation agent confirms a second company was compromised via a customer of a cloud infrastructure provider — corroborates the updated incident disclosure above.
+- An unverified rumor of a further Z.ai open-weight release circulated on [Reddit r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/) — not corroborated by any primary source, not queued.
+- YouTube curator channels (code4AI, bycloud, AI Explained) remain unreachable for a 2nd consecutive run — treated as re-blocked; relying on HF-daily-papers/HN overlap for their picks meanwhile.
 
 ## Output map
 

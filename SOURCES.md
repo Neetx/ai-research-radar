@@ -95,6 +95,7 @@ verification (real feed, on-axis, not SEO). Line format:
 
 - aws.amazon.com/blogs/aws — 1 — AWS Lambda MicroVMs, Firecracker agent/AI-code sandbox primitive (2026-06-22) — first seen 2026-06-27 (surfaced via HN front page → agent-sandbox-007 evidence; the cloud vendors' own blogs — AWS, and by extension GCP/Azure — aren't in any swept list, yet the agent-sandbox category now includes a hyperscaler. Weekly: verify the AWS "What's New"/compute-blog feed and consider promoting an AWS-AI-infra feed for agent-sandbox / serving announcements)
 - kimi.com/blog — 1 — Kimi K3 announcement, 2.8T "world's first open 3T-class model" (2026-07-16) — first seen 2026-07-17 (surfaced via HN #1 → open-weight-003 + subquad-attn-012 evidence. Moonshot is currently covered ONLY via its HF org recheck, but K3 was announced on the org's own blog with weights/tech-report deferred to 07-27 — so the announcement blog is a high-signal pointer the HF-org lane misses at announcement time. Weekly: verify kimi.com/blog has a usable feed/index and consider promoting it as a Moonshot announcement source, esp. ahead of the 07-27 weights drop)
+- enklypesalt.com — 1 — "Context Collapse, Part 3 — AI Worming through Word" (2026-07-28), an MSRC-coordinated prompt-injection-worm disclosure → agent-security-004 evidence — first seen 2026-07-29 (Håkon Måløy's independent security-research blog; discovered via Simon Willison's blog, which pointed to it the same day it published. A named individual's personal research blog, not a lab/vendor — but produces primary-grade, vendor-coordinated (MSRC) security disclosures on the agent-security axis; this is Part 3 of a series, so Parts 1-2 may hold earlier on-axis material. Weekly: check whether the blog has a feed/archive worth a recurring sweep, or whether Simon Willison's blog (already a swept curator) is a sufficient pointer)
 
 ## Social & community channels (Phase 2 — INTAKE ONLY, never evidence)
 
@@ -177,7 +178,12 @@ no tier that is skipped a priori. Agent: verify each on first use.
   https://alphamatch.ai/blog` (or built-in fetch of that URL) to list posts. Sweep
   it EVERY run as part of the mandatory curator lane and log it as opened OR as
   `degraded: <reason>` — do NOT silently omit it (it was listed-but-never-fetched
-  for days precisely because no access method was recorded).
+  for days precisely because no access method was recorded). NAVIGATION TRAP
+  (confirmed 2026-07-29): the bare domain `https://alphamatch.ai/` (and
+  `www.alphamatch.ai`) now redirects to an UNRELATED AI-consulting/agency
+  homepage sharing the domain — do NOT check the bare domain and conclude the
+  source is dead or off-topic; the `/blog` path is a distinct, correctly-scoped
+  index and is the only URL that should ever be fetched for this source.
 - (explainer/SEO blogs that REPEATEDLY surface verified primaries get ADDED here
   as tracked pointers via the discovery mechanism below — alphamatch.ai is the
   first; always pointer → primary → cite the primary, never the blog)
