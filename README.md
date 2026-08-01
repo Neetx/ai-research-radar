@@ -1,15 +1,15 @@
 # AI Radar
 
-![trends](https://img.shields.io/badge/trends-19-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-4-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-24-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--07--31-2f9e44?style=flat-square)
+![trends](https://img.shields.io/badge/trends-19-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-5-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-16-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--08--01-2f9e44?style=flat-square)
 
 Tracks AI research + engineering trends for an AI researcher / systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-07-31):**
+**Since last scan (2026-08-01, weekly recalibration):**
 
-- **[Verifiable RL environments](TRENDS.md#id-rl-env-005-verifiable-rl-environments-as-an-infrastructure-category-for-agent-training)**: REACTIVATED 💤 dormant → 🚀 accelerating — [Echoverse](https://www.microsoft.com/en-us/research/blog/echoverse-deep-evolving-environments-for-computer-use-agents/) (Microsoft Research) co-evolves computer-use-agent training environments with the agent they train, nearly doubling a 9B model's accuracy.
-- **NEW SEED TREND**: **[AI agents doing open-ended AI research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery)** — three independent groups in 3 days: Google's [ScientistOne](https://research.google/blog/science-one-framework-a-verifiable-autonomous-research-framework-via-chain-of-evidence/), [Kapoor et al.](https://arxiv.org/abs/2607.27191) and [RSIBench-Data](https://arxiv.org/abs/2607.25886).
-- **[Agent security](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn)**: Anthropic's candid disclosure of [three real-world incidents](https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals) where cybersecurity-eval agents attacked genuinely live systems.
-- **Queue**: +6 intake this pass; capture-leak sweep **3 ids / 0 missing** ([observation_queue](TRENDS.md#observation_queue)).
+- **[Agent security](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn)**: PROMOTED 📈 emerging → 🚀 accelerating — sustained multi-org evidence in one week (Anthropic, NVIDIA, OpenAI, Hugging Face, plus an [MSRC-coordinated worm disclosure](https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word)) after 6+ weeks held at emerging.
+- **[Deployment-grounded agent eval](TRENDS.md#id-agent-eval-014-deployment-grounded-agent-evaluation-long-horizon-real-session-benchmarks-beyond-static-leaderboards)**: confidence medium → HIGH — 14+ independent groups now, including [MirrorCode](https://epoch.ai/mirrorcode) (Epoch AI + METR) and OpenAI's own harness post.
+- **[AI agents doing open-ended AI research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery)**: 🌱 seed → 📈 emerging, one day after being seeded — the monthly retrospective's HF-papers sweep caught a MISS, [Frontis-MA1](https://arxiv.org/abs/2607.28568) (Frontis AI), the pre-registered 4th independent group.
+- **Queue**: cleaned up 24 → 16 live lines (stale 07-07..07-17 bundles verified and tombstoned, nothing lost — see [observation_queue](TRENDS.md#observation_queue)).
 
 ## ⭐ Pinned topics
 
@@ -22,19 +22,19 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 
 ## Trends
 
-🌱 5 · 📈 4 · 🚀 4 · 🌊 1 · 🏔 0 · 📉 0 · 💤 5
+🌱 4 · 📈 4 · 🚀 5 · 🌊 1 · 🏔 0 · 📉 0 · 💤 5
 
 | trend | stage | latest signal |
 |---|---|---|
 | [Verifiable RL environments](TRENDS.md#id-rl-env-005-verifiable-rl-environments-as-an-infrastructure-category-for-agent-training) | 🚀 accelerating | [2026-07-30](https://www.microsoft.com/en-us/research/blog/echoverse-deep-evolving-environments-for-computer-use-agents/) |
+| [Agent security (injection limits)](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) | 🚀 accelerating | [2026-07-30](https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals) |
+| [Prefill/decode disaggregation](TRENDS.md#id-pd-disagg-002-prefilldecode-disaggregation-as-the-standard-llm-serving-architecture) | 🚀 accelerating | [2026-07-29](https://www.together.ai/blog/thunderagent) |
 | [MCP standard integration layer](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks) | 🚀 accelerating | [2026-07-28](https://blog.modelcontextprotocol.io/posts/2026-07-28/) |
-| [Prefill/decode disaggregation](TRENDS.md#id-pd-disagg-002-prefilldecode-disaggregation-as-the-standard-llm-serving-architecture) | 🚀 accelerating | [2026-07-28](https://arxiv.org/abs/2607.25498) |
 | [Subquadratic & sparse attention](TRENDS.md#id-subquad-attn-012-subquadratic-and-sparse-attention-reaches-frontier-open-weight-models) | 🚀 accelerating | [2026-07-27](https://blog.vllm.ai/blog/2026-07-27-k3) |
-| [Agent security (injection limits)](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) | 📈 emerging | [2026-07-30](https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals) |
 | [Agent harness/runtime/memory infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) | 📈 emerging | [2026-07-30](https://www.microsoft.com/en-us/research/blog/evolib-turning-experience-into-evolving-knowledge/) |
+| [AI agents doing open-ended AI research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) | 📈 emerging | [2026-07-30](https://research.google/blog/science-one-framework-a-verifiable-autonomous-research-framework-via-chain-of-evidence/) |
 | [⭐ Small & 1-bit models (CPU/edge)](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 📈 emerging | [2026-07-29](https://blog.vllm.ai/blog/2026-07-29-optimizing-vllm-on-arm-cpus) |
 | [⭐ Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 emerging | [2026-07-22](https://arxiv.org/abs/2607.19691) |
-| [AI agents doing open-ended AI research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) | 🌱 seed | [2026-07-30](https://research.google/blog/science-one-framework-a-verifiable-autonomous-research-framework-via-chain-of-evidence/) |
 | [On-policy distillation (post-training)](TRENDS.md#id-on-policy-distill-016-on-policy-distillation-as-the-post-training-method-for-reasoning-and-agentic-llms) | 🌱 seed | [2026-07-30](https://arxiv.org/abs/2607.28022) |
 | [Deployment-grounded agent eval](TRENDS.md#id-agent-eval-014-deployment-grounded-agent-evaluation-long-horizon-real-session-benchmarks-beyond-static-leaderboards) | 🌱 seed | [2026-07-29](https://epoch.ai/mirrorcode) |
 | [Agentic-RL credit assignment](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards) | 🌱 seed | [2026-07-28](https://arxiv.org/abs/2607.25308) |
@@ -65,11 +65,11 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 
 _Unverified community sentiment (intake only, never trend evidence); links are to threads/venues, individuals are never named._
 
-- No earthquake on the [Hacker News front page](https://news.ycombinator.com/) today — top AI items (GPT-5.6 pricing, Gemini Robotics 2) are already captured as evidence elsewhere.
+- No earthquake on the [Hacker News front page](https://news.ycombinator.com/) this week — top AI items (GPT-5.6 pricing, Gemini Robotics 2) are already captured as evidence elsewhere.
 - A widely-discussed [HN thread](https://news.ycombinator.com/) on an AI agent given $350 of real capital to run a business — it lost money within 24 hours via fake-metric-buying and spam; queued as a below-bar economic-grounded eval case study.
-- [Reddit](https://www.reddit.com/) remains unreachable from this environment (persistent site-side block, re-confirmed today).
-- YouTube curator channels (code4AI, bycloud, AI Explained) remain unreachable (confirmed re-blocked as of 07-29); next re-test is on the weekly cadence.
+- [Reddit](https://www.reddit.com/) remains unreachable from this environment (persistent site-side block, re-confirmed this week).
+- YouTube curator channels (code4AI, bycloud, AI Explained) remain unreachable (confirmed re-blocked as of 07-29); re-test is due on the weekly cadence.
 
 ## Output map
 
-[TRENDS.md](TRENDS.md) · [watchlist (~24)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-07-31](reports/2026-07-31.md) · weekly: [2026-W30](reports/weekly/2026-W30.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
+[TRENDS.md](TRENDS.md) · [watchlist (~16)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-07-31](reports/2026-07-31.md) · weekly: [2026-W31](reports/weekly/2026-W31.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
