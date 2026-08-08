@@ -1,14 +1,15 @@
 # AI Radar
 
-![trends](https://img.shields.io/badge/trends-19-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-6-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-21-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--08--07-2f9e44?style=flat-square)
+![trends](https://img.shields.io/badge/trends-19-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-7-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-16-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--08--08-2f9e44?style=flat-square)
 
 Tracks AI research + engineering trends for an AI researcher / systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-08-07):**
+**Since last scan (2026-08-08, weekly recalibration):**
 
-- **New evidence** across four trends: OpenAI's [Agent Plugins](https://developers.openai.com/codex/plugins) (a cross-vendor open standard with AWS, Cursor, GitHub and Vercel) on [MCP integration layer](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks); [AFD-Ledger](https://arxiv.org/abs/2608.04502) on [prefill/decode disaggregation](TRENDS.md#id-pd-disagg-002-prefilldecode-disaggregation-as-the-standard-llm-serving-architecture); [ABSeeker](https://arxiv.org/abs/2608.05102) — a third independent group on turn-level credit assignment — on [agentic-RL credit assignment](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards); Google's [Gemma Translator](https://github.com/google-gemma/gemma-translator) on [small & 1-bit models](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference).
-- **Queue**: +8 intake (20 → 21 lines) — see [observation_queue](TRENDS.md#observation_queue). Two source candidates staged (`developers.openai.com`, `github.com/google-gemma`); `blog.cloudflare.com` still awaiting the weekly's promotion review.
-- **Coverage**: no earthquake today; two curator-lane sources healed (Interconnects, Latent.Space/AINews now have working RSS feeds); an unverified third-lab (Meta) agent-security incident was queued pending an official primary.
+- **Stage moves**: [Agent harness/runtime/memory infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) promoted emerging → accelerating (Prime Intellect's [Prime Agent](https://www.primeintellect.ai/blog/prime-agent) is the pre-registered gate's "second independently-shipped harness framework," after NVIDIA's NOOA); [Agentic-RL credit assignment](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards) confidence raised to medium (three independent groups — ECHO, CAST, [ABSeeker](https://arxiv.org/abs/2608.05102) — now converge on turn-level credit), held at seed pending a shared benchmark.
+- **Source growth**: [Cloudflare's blog](https://blog.cloudflare.com/) promoted to the swept lab-blog registry after two on-axis primaries this month; a genuine coverage gap was found and flagged — the Hugging Face lab blog was silently missed all week (distinct from the HF-papers exploration lane, which ran daily).
+- **Queue & shelf**: [observation_queue](TRENDS.md#observation_queue) condensed 7 stale lines (07-18..07-25) into one tombstone, now 16 live; the study shelf pruned its 07-02..07-08 tail past the 30-day floor.
+- Full detail in the [W32 weekly report](reports/weekly/2026-W32.md).
 
 ## ⭐ Pinned topics
 
@@ -21,20 +22,20 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 
 ## Trends
 
-🌱 3 · 📈 7 · 🚀 6 · 🌊 1 · 🏔 0 · 📉 0 · 💤 2
+🌱 3 · 📈 6 · 🚀 7 · 🌊 1 · 🏔 0 · 📉 0 · 💤 2
 
 | trend | stage | latest signal |
 |---|---|---|
 | [MCP standard integration layer](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks) | 🚀 accelerating | [2026-08-06](https://developers.openai.com/codex/plugins) |
 | [Prefill/decode disaggregation](TRENDS.md#id-pd-disagg-002-prefilldecode-disaggregation-as-the-standard-llm-serving-architecture) | 🚀 accelerating | [2026-08-05](https://arxiv.org/abs/2608.04502) |
 | [Agent security (injection limits)](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) | 🚀 accelerating | [2026-08-05](https://www.promptarmor.com/resources/atlassian-rovo-exfiltrates-data) |
+| [Agent harness/runtime/memory infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) | 🚀 accelerating | [2026-08-05](https://www.primeintellect.ai/blog/prime-agent) |
 | [Diffusion language models](TRENDS.md#id-diffusion-lm-013-diffusion-language-models-reach-open-weights-production-scale) | 🚀 accelerating | [2026-08-04](https://arxiv.org/abs/2608.03457) |
 | [Verifiable RL environments](TRENDS.md#id-rl-env-005-verifiable-rl-environments-as-an-infrastructure-category-for-agent-training) | 🚀 accelerating | [2026-08-03](https://www.microsoft.com/en-us/research/blog/orchard-an-open-framework-for-scalable-agentic-ai/) |
 | [Subquadratic & sparse attention](TRENDS.md#id-subquad-attn-012-subquadratic-and-sparse-attention-reaches-frontier-open-weight-models) | 🚀 accelerating | [2026-07-31](https://developer.nvidia.com/blog/co-designing-ai-model-attention-for-fast-interactive-long-context-inference/) |
 | [⭐ Small & 1-bit models (CPU/edge)](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 📈 emerging | [2026-08-07](https://github.com/google-gemma/gemma-translator) |
 | [Remote agent sandboxes](TRENDS.md#id-agent-sandbox-007-remote-sandboxes-as-the-execution-layer-for-agents) | 📈 emerging | [2026-08-05](https://blog.cloudflare.com/cloudflare-os/) |
 | [Multi-agent engineering](TRENDS.md#id-multi-agent-eng-009-multi-agent-engineering-becomes-product-surface-teams-workflows-a2a) | 📈 emerging | [2026-08-05](https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2) |
-| [Agent harness/runtime/memory infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) | 📈 emerging | [2026-08-05](https://www.primeintellect.ai/blog/prime-agent) |
 | [On-policy distillation (post-training)](TRENDS.md#id-on-policy-distill-016-on-policy-distillation-as-the-post-training-method-for-reasoning-and-agentic-llms) | 📈 emerging | [2026-08-04](https://arxiv.org/abs/2608.03632) |
 | [AI agents doing open-ended AI research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) | 📈 emerging | [2026-08-01](https://openai.com/index/ten-advances-in-mathematics) |
 | [⭐ Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 emerging | [2026-07-22](https://arxiv.org/abs/2607.19691) |
@@ -64,12 +65,11 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 
 _Unverified community sentiment (intake only, never trend evidence); links are to threads/venues, individuals are never named._
 
-- No earthquake today — the Hacker News front page and broad Reddit pulse were both led by non-AI items; the closest AI story was [DeepMind open-sourcing WeatherNext](https://deepmind.google/blog/), a weather-forecasting model (watch-area, not a core axis).
-- Press (via [Simon Willison's blog](https://simonwillison.net)) reports a Meta model "hacked" another company during a misconfigured cybersecurity evaluation — the same failure pattern already tracked for OpenAI and Anthropic — but no official Meta primary has surfaced yet, so it stays an unverified queue item rather than trend evidence.
-- [AlphaSignal](https://alphasignal.ai) surfaced Google's Gemma Translator and Hark's newly-launched computer-use agent among today's trending items; the former routed to evidence, the latter still lacks a primary benchmark write-up.
-- [Hacker News](https://news.ycombinator.com/) also carried a solo developer's [Herdr](https://herdr.dev/blog/herdr-is-joining-y-combinator/) (an open terminal-agent runtime joining YC) and a large-scale human-approval-accuracy dataset from a browser game — both below the evidence bar but queued as genuinely on-axis signals.
-- YouTube curator channels (code4AI, bycloud, AI Explained) were unreachable again today, one day after briefly lifting — the block/lift pattern remains unstable and is re-tested every run.
+- The Google DeepMind leadership change (Demis Hassabis CEO → Chair, Jeff Dean departing) topped both [Hacker News](https://news.ycombinator.com/) and r/singularity simultaneously this week — corporate/leadership news, not a research trend, so it stays a pulse note rather than ledger evidence.
+- YouTube curator channels (code4AI, bycloud, AI Explained) kept flip-flopping between reachable and blocked all week — the radar now re-tests every run rather than waiting for the weekly cadence, given how unstable the pattern has been.
+- [AlphaSignal](https://alphasignal.ai) and the HN front page were the week's most productive curator lanes, surfacing Prime Agent, Muse Code, and Google's Gemma Translator among other finds that made it into evidence.
+- Press (via [Simon Willison's blog](https://simonwillison.net)) reported a Meta model "hacked" another company during a misconfigured cybersecurity evaluation — the same failure pattern already tracked for OpenAI and Anthropic — but no official Meta primary has surfaced yet, so it stays an unverified queue item.
 
 ## Output map
 
-[TRENDS.md](TRENDS.md) · [watchlist (~21)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-08-07](reports/2026-08-07.md) · weekly: [2026-W31](reports/weekly/2026-W31.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
+[TRENDS.md](TRENDS.md) · [watchlist (~16)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-08-07](reports/2026-08-07.md) · weekly: [2026-W32](reports/weekly/2026-W32.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
