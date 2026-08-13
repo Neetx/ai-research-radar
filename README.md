@@ -1,16 +1,15 @@
 # AI Radar
 
-![trends](https://img.shields.io/badge/trends-19-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-7-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-24-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--08--12-2f9e44?style=flat-square)
+![trends](https://img.shields.io/badge/trends-19-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-7-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-16-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--08--13-2f9e44?style=flat-square)
 
 Tracks AI research + engineering trends for an AI researcher / systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-08-11):**
+**Since last scan (2026-08-12):**
 
-- **Cloudflare's "Agents Week"**: [MCP standard](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks) gained production adoption of the stateless-core spec ([MCPv2](https://blog.cloudflare.com/mcp-v2/)) plus a new Chrome-146 browser standard ([WebMCP](https://blog.cloudflare.com/webmcp/)); [remote agent sandboxes](TRENDS.md#id-agent-sandbox-007-remote-sandboxes-as-the-execution-layer-for-agents) gained [Kitesurf](https://blog.cloudflare.com/kitesurf/), a purpose-built agent-first browser runtime.
-- **A top-of-HN formal security finding**: [Agent security](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) gained [Stealing Reasoning Traces from Proprietary LLM APIs](https://arxiv.org/abs/2608.09867) (HN #1, 568pts) — encrypted chain-of-thought is not isolated across a provider's own model family, demonstrated across Anthropic/OpenAI/Google.
-- **Latent reasoning saved from dormancy**: [Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) gained [BDH-CQ](https://arxiv.org/abs/2608.09888) (266 HF upvotes), breaking the ARC-AGI-1 cost-accuracy Pareto frontier at 150M params — landing the exact day the trend would have crossed the 21-day line.
-- **NVIDIA ships two agent-infrastructure primitives**: [Agent harness/runtime infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) gained [Nemotron 3.5 Lightning](https://developer.nvidia.com/blog/nvidia-nemotron-3-5-lightning-delivers-fast-accurate-specialized-task-execution-for-long-running-agents/) (a model built for the harness execution layer); [multi-agent engineering](TRENDS.md#id-multi-agent-eng-009-multi-agent-engineering-becomes-product-surface-teams-workflows-a2a) gained [NeMo Switchyard](https://developer.nvidia.com/blog/route-ai-agent-workloads-across-models-with-nvidia-nemo-switchyard) for cross-model routing.
-- Full detail in the daily report [2026-08-12](reports/2026-08-12.md).
+- **Qwen3.8-Max weights ship**: [Open-weight frontier MoE wave](TRENDS.md#id-open-weight-003-open-weight-wave-frontier-scale-moe-released-at-high-cadence-across-labs) closes an 11-day watch as Alibaba's [2.4T-parameter Qwen3.8-Max](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B) goes downloadable, with day-0 NVIDIA GB300 serving; its hybrid linear/full-attention backbone also lands as evidence on [Subquadratic & sparse attention](TRENDS.md#id-subquad-attn-012-subquadratic-and-sparse-attention-reaches-frontier-open-weight-models).
+- **A seventh multi-agent orchestration form**: [Multi-agent engineering](TRENDS.md#id-multi-agent-eng-009-multi-agent-engineering-becomes-product-surface-teams-workflows-a2a) gained Zed's [Delta](https://zed.dev/blog/introducing-delta) — a multiplayer human+agent code-review environment anchored to a live, evolving worktree.
+- **AI writing its own papers**: [AI agents doing open-ended AI research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) gained [Spark-to-Paper](https://arxiv.org/abs/2608.11924), an end-to-end research-paper-generation system built as 13 composable coding-assistant skills.
+- Full detail in the daily report [2026-08-13](reports/2026-08-13.md).
 
 ## ⭐ Pinned topics
 
@@ -27,19 +26,19 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 
 | trend | stage | latest signal |
 |---|---|---|
+| [Agent harness/runtime/memory infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) | 🚀 accelerating | [2026-08-11](https://developer.nvidia.com/blog/nvidia-nemotron-3-5-lightning-delivers-fast-accurate-specialized-task-execution-for-long-running-agents/) |
 | [MCP standard integration layer](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks) | 🚀 accelerating | [2026-08-10](https://blog.cloudflare.com/mcp-v2/) |
 | [Agent security (injection limits)](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) | 🚀 accelerating | [2026-08-10](https://arxiv.org/abs/2608.09867) |
-| [Agent harness/runtime/memory infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) | 🚀 accelerating | [2026-08-11](https://developer.nvidia.com/blog/nvidia-nemotron-3-5-lightning-delivers-fast-accurate-specialized-task-execution-for-long-running-agents/) |
+| [Subquadratic & sparse attention](TRENDS.md#id-subquad-attn-012-subquadratic-and-sparse-attention-reaches-frontier-open-weight-models) | 🚀 accelerating | [2026-08-08](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B) |
 | [Verifiable RL environments](TRENDS.md#id-rl-env-005-verifiable-rl-environments-as-an-infrastructure-category-for-agent-training) | 🚀 accelerating | [2026-08-07](https://www.primeintellect.ai/blog/multi-agent-systems) |
 | [Prefill/decode disaggregation](TRENDS.md#id-pd-disagg-002-prefilldecode-disaggregation-as-the-standard-llm-serving-architecture) | 🚀 accelerating | [2026-08-07](https://blog.vllm.ai/blog/2026-08-07-decode-context-parallelism) |
 | [Diffusion language models](TRENDS.md#id-diffusion-lm-013-diffusion-language-models-reach-open-weights-production-scale) | 🚀 accelerating | [2026-08-04](https://arxiv.org/abs/2608.03457) |
-| [Subquadratic & sparse attention](TRENDS.md#id-subquad-attn-012-subquadratic-and-sparse-attention-reaches-frontier-open-weight-models) | 🚀 accelerating | [2026-07-31](https://developer.nvidia.com/blog/co-designing-ai-model-attention-for-fast-interactive-long-context-inference/) |
+| [Multi-agent engineering](TRENDS.md#id-multi-agent-eng-009-multi-agent-engineering-becomes-product-surface-teams-workflows-a2a) | 📈 emerging | [2026-08-12](https://zed.dev/blog/introducing-delta) |
+| [AI agents doing open-ended AI research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) | 📈 emerging | [2026-08-12](https://arxiv.org/abs/2608.11924) |
 | [⭐ Small & 1-bit models (CPU/edge)](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 📈 emerging | [2026-08-10](https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model) |
 | [⭐ Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 emerging | [2026-08-10](https://arxiv.org/abs/2608.09888) |
 | [On-policy distillation (post-training)](TRENDS.md#id-on-policy-distill-016-on-policy-distillation-as-the-post-training-method-for-reasoning-and-agentic-llms) | 📈 emerging | [2026-08-10](https://arxiv.org/abs/2608.04419) |
-| [Multi-agent engineering](TRENDS.md#id-multi-agent-eng-009-multi-agent-engineering-becomes-product-surface-teams-workflows-a2a) | 📈 emerging | [2026-08-11](https://developer.nvidia.com/blog/route-ai-agent-workloads-across-models-with-nvidia-nemo-switchyard) |
 | [Remote agent sandboxes](TRENDS.md#id-agent-sandbox-007-remote-sandboxes-as-the-execution-layer-for-agents) | 📈 emerging | [2026-08-10](https://blog.cloudflare.com/kitesurf/) |
-| [AI agents doing open-ended AI research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) | 📈 emerging | [2026-08-01](https://openai.com/index/ten-advances-in-mathematics) |
 | [Parametric injection (behavior→weights)](TRENDS.md#id-parametric-injection-018-parametric-injection-compiling-behavior-and-knowledge-into-model-weights-instead-of-promptcontext) | 🌱 seed | [2026-08-10](https://arxiv.org/abs/2608.09819) |
 | [Agentic-RL credit assignment](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards) | 🌱 seed | [2026-08-05](https://arxiv.org/abs/2608.05102) |
 | [Deployment-grounded agent eval](TRENDS.md#id-agent-eval-014-deployment-grounded-agent-evaluation-long-horizon-real-session-benchmarks-beyond-static-leaderboards) | 🌱 seed | [2026-08-03](https://arxiv.org/abs/2608.02499) |
@@ -49,6 +48,7 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 
 ## Worth studying
 
+- [Introducing Delta](https://zed.dev/blog/introducing-delta) — Zed's new multiplayer environment for coding with agents: comments anchored to a live, evolving worktree instead of a stale diff, agent and teammates sharing the same conversational context, layered on the git repo you already use.
 - [Stealing Reasoning Traces from Proprietary LLM APIs](https://arxiv.org/abs/2608.09867) — encrypted chain-of-thought is not isolated across a provider's own model family: a jailbroken cheap sibling decodes a frontier model's hidden reasoning verbatim, demonstrated across Anthropic/OpenAI/Google with real credentials/PII recovered from public agent trajectories.
 - [BDH-CQ: In-Context Learning with Recurrent Latent Reasoning](https://arxiv.org/abs/2608.09888) — a recurrent latent-reasoning model breaking the ARC-AGI-1 cost-accuracy Pareto frontier at 150M parameters; a rare case of a latent/continuous-reasoning architecture delivering genuine SOTA rather than just an architectural study.
 - [Introducing Muse Glimmer](https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model) — Meta Superintelligence Labs' first open release: a concrete distillation recipe for compressing a frontier agentic model to consumer hardware, day-0 llama.cpp/MLX/ExecuTorch support.
@@ -66,11 +66,11 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 
 _Unverified community sentiment (intake only, never trend evidence); links are to threads/venues, individuals are never named._
 
-- The day's top Hacker News story (#1, 568pts) was a formal security paper on [stealing encrypted reasoning traces](https://stolen-thoughts.com/) from Anthropic/OpenAI/Google APIs — a genuine field-wide finding, now routed to trend evidence.
-- Cloudflare's coordinated "[Agents Week](https://blog.cloudflare.com/agents-week-review-august-2026/)" product launch (MCPv2, WebMCP, Kitesurf, and more) was the other dominant thread, discussed alongside NVIDIA's same-day Nemotron 3.5 Lightning / NeMo Switchyard release on Hacker News (204pts).
-- [AlphaSignal](https://alphasignal.ai) and [alphamatch.ai](https://alphamatch.ai/blog) both corroborated the Nemotron/Kitesurf releases; no additional on-axis items beyond what the lab sweep already surfaced.
-- YouTube curator channels (code4AI, bycloud, AI Explained) failed again this run (2nd consecutive failure) — now treated as a confirmed re-block, falling back to HF-daily-papers/HN overlap until the weekly re-test.
+- No earthquake today: Hacker News' front page was topped by non-AI stories (a 16-year-old SQLite bug, a software-engineering-jobs essay); the AI conversation centered on the same-day cluster of model releases below.
+- A cluster of model releases broke within hours of each other: [Qwen3.8-Max](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B) weights, a [DeepSeek V4 Pro refresh](https://openrouter.ai/deepseek/deepseek-v4-pro-0813) (API-only so far), [xAI's Grok 4.6](https://x.ai/news/grok-4-6), and Microsoft's first from-scratch reasoning model (MAI-Thinking-1) — the digests dubbed it "Frontier Model Day."
+- Unverified press reporting (via The Information) says NVIDIA is training a rumored ≥1-trillion-parameter open model, Nemotron 4 — watching for NVIDIA's own announcement before treating this as more than a rumor.
+- YouTube curator channels (code4AI, bycloud, AI Explained) were not re-tested this run — still a confirmed repeat-failure pattern, deferred to the weekly re-test cadence.
 
 ## Output map
 
-[TRENDS.md](TRENDS.md) · [watchlist (~24)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-08-12](reports/2026-08-12.md) · weekly: [2026-W32](reports/weekly/2026-W32.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
+[TRENDS.md](TRENDS.md) · [watchlist (~16)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-08-13](reports/2026-08-13.md) · weekly: [2026-W32](reports/weekly/2026-W32.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
