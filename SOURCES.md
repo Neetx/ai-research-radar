@@ -21,6 +21,18 @@ error). These are not permanent — a source that fails the same way twice must 
 repaired and its working method recorded here, per the `radar-source-heal`
 skill. Don't leave a "degraded" note standing across runs.
 
+TOOLING DEGRADATION (2026-08-20, daily): the `tvly` (Tavily) CLI hit its ACCOUNT
+PLAN USAGE LIMIT this run — both `tvly search` and `tvly extract` return "This
+request exceeds your plan's set usage limit" on every call, including on URLs
+that extracted fine in prior sessions. This is account-level credit exhaustion,
+not a broken access path — self-heal (finding a different URL/method) does not
+apply; it needs a curator plan upgrade or the credit window to reset. Fell back
+to built-in WebFetch/WebSearch + direct `curl` of RSS/Atom feeds for the entire
+run per the AGENTS.md fallback rule; full coverage was maintained, but a few
+feed-less/JS-rendered sources that relied on `tvly extract` (LMSYS/SGLang blog,
+Qwen blog) degraded to nav-only. Re-test `tvly --status` at the start of the
+next run before assuming this still holds.
+
 ---
 
 ## Lab & big-tech AI blogs (Phase 1 — TIERED, prefer RSS/Atom)
@@ -115,7 +127,8 @@ verification (real feed, on-axis, not SEO). Line format:
 - cactuscompute.com — 1 — "Needle 2" (08-10, 45M-param/14MB tool-calling model for sub-$200 devices) → small-cpu-models-008 EVIDENCE — first seen 2026-08-11, via the HN front-page pulse (256pts). An untracked small-on-device lab; below the ≥2-artifact bar, watch for a follow-on release.
 - mindlab-research (GitHub + HF org) — 1 — Macaron-V1 (08-10, arXiv 2608.09819, Mixture-of-LoRA production system) → parametric-injection-018 EVIDENCE — first seen 2026-08-11, via HF daily papers (35up). An untracked lab publishing directly to HF/GitHub rather than a blog; below the ≥2-artifact bar, watch for a second release.
 - deepseek.com — 1 — "DeepSeek Harness developer preview" (08-13, deepseek.com/harness) → agent-runtime-015 EVIDENCE — first seen 2026-08-14, via the HN front-page pulse (#2, 607pts). DeepSeek's own product/marketing domain, DISTINCT from the already-tracked `api-docs.deepseek.com/news` (API changelog only, no product-launch content) — below the ≥2-artifact bar on its own; watch for a second on-axis product post before considering a dedicated sweep entry.
-- cerebras.ai — 2 — CS-4 launch (08-18, investors.cerebras.ai, "up to 30x faster than GPU-based solutions") — first seen 2026-08-14 (Ultrafast-mode serving post), 2nd sighting 2026-08-19 via the HN pulse (#13, 167pts). Both sightings are investor-relations/press-release framed (not a technical engineering blog post) — stays below the promotion bar despite the ≥2-artifact count; the standing note ("watch for a second TECHNICAL, not press-release, post") is deliberately not satisfied by either sighting. Keep watching for an actual technical writeup.
+- cerebras.ai — 3 — CS-4 launch (08-18, investors.cerebras.ai, "up to 30x faster than GPU-based solutions") — first seen 2026-08-14 (Ultrafast-mode serving post), 2nd sighting 2026-08-19 via the HN pulse (#13, 167pts), 3rd sighting 2026-08-20 via AlphaSignal. All three sightings are investor-relations/press-release framed (not a technical engineering blog post) — stays below the promotion bar despite the ≥3-artifact count; the standing note ("watch for a second TECHNICAL, not press-release, post") is deliberately not satisfied by any sighting. Keep watching for an actual technical writeup.
+- ornith.ai / ornith-ai (HF org) — 1 — Ornith-1.5 (08-18, 397B/35B/9B MoE, MIT license, self-scaffolding→self-improvement RL loop) → agent-runtime-015/agentic-rl-credit-017-adjacent, queued below-bar — first seen 2026-08-20, via the HN front-page pulse (#11, 181pts). A previously-untracked lab shipping frontier-scale open weights with a novel self-generated-task RL training loop; below the ≥2-artifact bar — watch for a second release or technical writeup before promoting.
 - huggingface.co/blog/ibm-research — 2 — "How Much Memory Does Your Agent Actually Need?" (08-18, ALTK-Evolve 8-model dosage-calibration study) — first seen 2026-08-12 ("Thinking of ACE? We Can Do It with Fewer Tokens", the original ALTK-Evolve-vs-ACE post → agent-runtime-015 queue/notes), 2nd sighting 2026-08-19 via the HF blog RSS sweep. IBM Research publishes agent-memory research directly to its own namespace under huggingface.co/blog rather than a lab blog already in any swept list — crosses the ≥2-artifact bar; flagged for the weekly to verify+promote as a dedicated tracked pointer (working method: the HF blog RSS `/blog/feed.xml` already surfaces these, no separate fetch needed — the question for the weekly is whether to watch the `ibm-research` HF-blog author page directly for full coverage between RSS-surfaced hits).
 
 ## Social & community channels (Phase 2 — INTAKE ONLY, never evidence)
