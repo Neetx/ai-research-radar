@@ -21,17 +21,20 @@ error). These are not permanent — a source that fails the same way twice must 
 repaired and its working method recorded here, per the `radar-source-heal`
 skill. Don't leave a "degraded" note standing across runs.
 
-TOOLING DEGRADATION (2026-08-20, daily): the `tvly` (Tavily) CLI hit its ACCOUNT
-PLAN USAGE LIMIT this run — both `tvly search` and `tvly extract` return "This
-request exceeds your plan's set usage limit" on every call, including on URLs
-that extracted fine in prior sessions. This is account-level credit exhaustion,
-not a broken access path — self-heal (finding a different URL/method) does not
-apply; it needs a curator plan upgrade or the credit window to reset. Fell back
-to built-in WebFetch/WebSearch + direct `curl` of RSS/Atom feeds for the entire
-run per the AGENTS.md fallback rule; full coverage was maintained, but a few
-feed-less/JS-rendered sources that relied on `tvly extract` (LMSYS/SGLang blog,
-Qwen blog) degraded to nav-only. Re-test `tvly --status` at the start of the
-next run before assuming this still holds.
+TOOLING DEGRADATION (2026-08-21, daily — 2nd CONSECUTIVE occurrence): the `tvly`
+(Tavily) CLI hit its ACCOUNT PLAN USAGE LIMIT again this run — a fresh
+`pip install -q tavily-cli` at session start did not change this (confirms it is
+account-credit exhaustion, not a broken install/access path); both `tvly search`
+and `tvly extract` return "This request exceeds your plan's set usage limit" on
+every call. Self-heal does not apply here — it needs a curator plan upgrade or
+the credit window to reset. Fell back to built-in WebFetch/WebSearch + direct
+`curl` of RSS/Atom feeds for the entire run per the AGENTS.md fallback rule;
+full coverage was maintained, but a few feed-less/JS-rendered sources that rely
+on `tvly extract` (Qwen blog, LMSYS/SGLang blog) stayed degraded to nav-only.
+First occurrence 2026-08-20. Per the routine's own escalation rule, a 3rd
+consecutive occurrence at the next run crosses this repo's push-notification
+bar for a self-flagged "heal owed" degradation — re-test `tvly --status` first
+thing next run before assuming this still holds.
 
 ---
 
