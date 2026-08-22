@@ -31,10 +31,14 @@ the credit window to reset. Fell back to built-in WebFetch/WebSearch + direct
 `curl` of RSS/Atom feeds for the entire run per the AGENTS.md fallback rule;
 full coverage was maintained, but a few feed-less/JS-rendered sources that rely
 on `tvly extract` (Qwen blog, LMSYS/SGLang blog) stayed degraded to nav-only.
-First occurrence 2026-08-20. Per the routine's own escalation rule, a 3rd
-consecutive occurrence at the next run crosses this repo's push-notification
-bar for a self-flagged "heal owed" degradation — re-test `tvly --status` first
-thing next run before assuming this still holds.
+First occurrence 2026-08-20. **3rd CONSECUTIVE occurrence confirmed 2026-08-22
+(W34 weekly)**: a fresh `pip install -q tavily-cli` again did not help; both
+`tvly search` and `tvly extract` still return the same plan-limit error. This
+crosses the repo's own push-notification bar for a self-flagged "heal owed"
+degradation across ≥3 consecutive runs — a notification was sent to the
+curator this run (account-credit exhaustion needs a plan upgrade or the credit
+window to reset; there is no self-heal available). Re-test `tvly --status`
+every run going forward; drop this note once a call succeeds.
 
 ---
 
@@ -85,6 +89,7 @@ all 7 days' rotation logs — a coverage lie). Two tiers:
 - GSAI-ML (Renmin University, the LLaDA / iLLaDA diffusion-LM group) — HF org https://huggingface.co/GSAI-ML — added 2026-06-27 (W26 source-discovery): recurring on the diffusion-lm-013 axis (3rd independent open diffusion base model, iLLaDA-8B). Check the HF org for new open diffusion base models; announces via arXiv + HF card, not a blog. RE-SWEPT 2026-08-01 (W31 weekly): still iLLaDA-8B (Jun 28) as the newest diffusion-LM entry; ReFusion (Dec 2025, text-generation, not diffusion) is older/off-thread — nothing new this week.
 - Prime Intellect — https://www.primeintellect.ai/blog — PROMOTED to swept 2026-08-15 W33 via source-discovery — crossed the ≥2-artifact bar (verified 08-11 daily via direct open): Prime Agent (08-05, "A Self-Improving RLM Harness" → agent-runtime-015 evidence) + "Multi-Agent Systems in PRIME-RL" (08-07, → rl-env-005 evidence). An active RL-training-infra lab publishing agent-harness and RL-environment research directly on its own blog — working method: `tvly extract "https://www.primeintellect.ai/blog"` for the index, individual posts at /blog/<slug>.
 - Zed — https://zed.dev/blog — PROMOTED to swept 2026-08-15 W33 via source-discovery — crossed the ≥2-artifact bar: "Sandboxing" (08-05, 1.14 OS-enforced sandboxing → agent-sandbox-007 evidence) + "Introducing Delta" (08-12, multiplayer human+agent code review → multi-agent-eng-009 evidence). TALLY-MISS NOTE: the 08-13 daily correctly routed Delta as evidence but did not increment the zed.dev staging tally (stayed at "1" through 08-14) — caught only at this weekly's source-discovery review; the underlying evidence itself was never lost, only the staging count lagged. Zed ships agent-feature engineering (sandboxing, multiplayer agent review) directly on its own blog at a steady cadence — worth the tier-(ii) weekly+rotation cadence going forward.
+- IBM Research (HF-blog namespace) — https://huggingface.co/ibm-research — PROMOTED to swept 2026-08-22 W34 via source-discovery — crossed the ≥2-artifact bar: "Thinking of ACE? We Can Do It with Fewer Tokens" (08-11, the ALTK-Evolve-vs-ACE post) + "How Much Memory Does Your Agent Actually Need?" (08-18, 8-model dosage-calibration study), both → agent-runtime-015 evidence/queue, plus the original "ALTK-Evolve: On-the-Job Learning for AI Agents" foundational post (04-08). IBM Research publishes agentic-memory research directly to its own HF org/blog namespace rather than a lab blog already in any swept list. Working method verified this weekly (WebFetch of `huggingface.co/ibm-research`, since `huggingface.co/blog/ibm-research` 404s): the org page lists dated posts directly; the tier-(i) HF blog RSS (`/blog/feed.xml`) already surfaces most of these, so no separate fetch is required — the promotion here is to explicitly WATCH the `ibm-research` account for on-axis agent-memory posts rather than routing them as one-off community-blog hits.
 
 ### Tier (ii) — Hardware (LOW-CADENCE: weekly sweep + 1/day rotation) — technical
 only, coupled to the small/CPU, low-bit-quant and serving axes; scan for
@@ -132,7 +137,7 @@ verification (real feed, on-axis, not SEO). Line format:
 - deepseek.com — 1 — "DeepSeek Harness developer preview" (08-13, deepseek.com/harness) → agent-runtime-015 EVIDENCE — first seen 2026-08-14, via the HN front-page pulse (#2, 607pts). DeepSeek's own product/marketing domain, DISTINCT from the already-tracked `api-docs.deepseek.com/news` (API changelog only, no product-launch content) — below the ≥2-artifact bar on its own; watch for a second on-axis product post before considering a dedicated sweep entry.
 - cerebras.ai — 3 — CS-4 launch (08-18, investors.cerebras.ai, "up to 30x faster than GPU-based solutions") — first seen 2026-08-14 (Ultrafast-mode serving post), 2nd sighting 2026-08-19 via the HN pulse (#13, 167pts), 3rd sighting 2026-08-20 via AlphaSignal. All three sightings are investor-relations/press-release framed (not a technical engineering blog post) — stays below the promotion bar despite the ≥3-artifact count; the standing note ("watch for a second TECHNICAL, not press-release, post") is deliberately not satisfied by any sighting. Keep watching for an actual technical writeup.
 - ornith.ai / ornith-ai (HF org) — 1 — Ornith-1.5 (08-18, 397B/35B/9B MoE, MIT license, self-scaffolding→self-improvement RL loop) → agent-runtime-015/agentic-rl-credit-017-adjacent, queued below-bar — first seen 2026-08-20, via the HN front-page pulse (#11, 181pts). A previously-untracked lab shipping frontier-scale open weights with a novel self-generated-task RL training loop; below the ≥2-artifact bar — watch for a second release or technical writeup before promoting.
-- huggingface.co/blog/ibm-research — 2 — "How Much Memory Does Your Agent Actually Need?" (08-18, ALTK-Evolve 8-model dosage-calibration study) — first seen 2026-08-12 ("Thinking of ACE? We Can Do It with Fewer Tokens", the original ALTK-Evolve-vs-ACE post → agent-runtime-015 queue/notes), 2nd sighting 2026-08-19 via the HF blog RSS sweep. IBM Research publishes agent-memory research directly to its own namespace under huggingface.co/blog rather than a lab blog already in any swept list — crosses the ≥2-artifact bar; flagged for the weekly to verify+promote as a dedicated tracked pointer (working method: the HF blog RSS `/blog/feed.xml` already surfaces these, no separate fetch needed — the question for the weekly is whether to watch the `ibm-research` HF-blog author page directly for full coverage between RSS-surfaced hits).
+- (huggingface.co/blog/ibm-research PROMOTED 2026-08-22 W34 weekly to the Tier (ii) Research labs/independents swept list — see above; staging line cleared.)
 
 ## Social & community channels (Phase 2 — INTAKE ONLY, never evidence)
 
@@ -280,6 +285,7 @@ its `channel_id` once (open the channel page, grep `"channelId":"UC…"`), then 
 - **RE-DEGRADED 2026-08-07**: re-tested per the above — all four channels 404'd again, one day after the 08-06 lift. A single-run failure relative to that lift (needs the SAME failure twice before treating as a confirmed re-block per `radar-source-heal`); re-test again next run before concluding the block is back.
 - **RE-DEGRADED 2026-08-11**: after the 08-10 lift (all 4 channels 200), re-tested 3 channels (code4AI, bycloud, AI Explained) — all 404'd again. A single-run failure relative to the 08-10 lift; re-test again next run before treating as a confirmed re-block.
 - **RE-DEGRADED AGAIN 2026-08-12**: re-tested per the above — code4AI/AI-Explained still 404, bycloud now 500. A 2nd consecutive failure after 08-11 (the 08-10 lift did not hold) — per `radar-source-heal` this is now a confirmed repeat-failure pattern; fall back to HF-daily-papers + HN overlap for curator picks and re-test on the weekly cadence rather than every daily run until there's a reason to expect it changed.
+- **HEALED 2026-08-22 (W34 weekly)**: after 10 straight failed re-tests (08-12 through 08-21, all via WebFetch on the Atom feed URL or the channel's `/videos` page), a DIRECT `curl` of the exact same Atom URL (`curl -sL "https://www.youtube.com/feeds/videos.xml?channel_id=UC…"`) returned HTTP 200 with real dated entries for all three channels (code4AI through 08-21, bycloud through 08-18, AI Explained through 08-06) on the FIRST try this weekly. Root cause: the daily's repeat-failure pattern was very likely a TOOL-method issue, not a channel/IP block — WebFetch appears to mishandle this specific Atom/XML endpoint (its HTML-to-markdown + summarization step may reject or mangle raw XML), where a plain `curl` succeeds cleanly. Working method going forward: fetch this URL with `curl`/Bash, NOT WebFetch — parse `<title>`/`<published>` directly (`grep -oP` or any XML parse), do not route it through WebFetch's summarizer. Re-test with curl specifically before ever re-declaring this source blocked.
 - @code4AI (now "Discover AI") — daily deep-dives on fresh AI papers (curator-supplied, high signal) — channel_id `UCfOvNb3xj28SNqPQ_JIbumg` (resolved 2026-06-21; NOTE: the handle's HTML lists featured side-channels first — take the canonical `channel/UC…` link, not the first `"channelId"` match)
 - Yannic Kilcher — long-form, section-by-section paper readings — channel_id `UCZHmQk67mSJgfCCTn7xBfew` (resolved 2026-06-21; main channel quiet, newest 2026-03)
 - bycloud — frontier research breakdowns + lab analysis (high signal) — channel_id `UCgfe2ooZD3VJPB6aJAnuQng` (resolved 2026-06-21)
@@ -380,6 +386,13 @@ non-github primary mirrors it) — lower fidelity (no diff of commit/PR turbulen
 but catches new release tags and version bumps. If the block persists, the
 weekly should ask the curator to enable broader GitHub read scope (restores the
 direct `releases.atom` lane and fork-tree analysis, which tvly cannot replicate).
+STILL UNRESOLVED as of 2026-08-22 (W34 weekly) — now 10+ CONSECUTIVE weeks
+since first flagged (W27). A push notification was sent to the curator this
+run: this repo's own escalation rule treats a duration this long as
+notification-worthy regardless of the per-run "3 consecutive occurrences"
+threshold used for tool-level degradations. The `tvly`-routed fallback above
+continues to maintain coverage (version-bump/tag detection); only diff-level
+fidelity (commit/PR turbulence, fork-tree analysis) remains lost.
 
 ### Watched repositories (releases / merged PRs / hot issues)
 - vllm-project/vllm
