@@ -35,6 +35,8 @@ GitHub watch (every run, light): follow the `radar-repo-watch` skill across watc
 
 Self-healing: if any source or tool above fails the same way it did before (broken/stale feed, 404, empty, JSON/parse error), repair it this run per the `radar-source-heal` skill and record the working method in `SOURCES.md` — don't just re-log "degraded" (cap: 1–2 heals per run).
 
+Heal re-test (W34-P1, applied 2026-08-29 W35): when the PRIOR run (daily or weekly) recorded a genuine tool-access heal (a fix that made a previously-failing source/tool work again, not just a routine "opened" log), THIS run explicitly re-tests that exact access method first, rather than assuming it holds — this repo's YouTube Atom-feed block has flipped back within 1-2 daily runs on repeated prior occasions, and a run that silently falls back to the old broken method would mis-log a fresh "re-degraded" state that is actually just the same bug recurring. Once a heal has been confirmed to hold for a full week, re-testing drops back to the normal cadence for that source.
+
 Then cover 3–6 further source families, prioritizing those NOT covered in the last 3 days according to `logs/source_rotation.md`. Depth beats breadth.
 
 Scope, in priority order:
