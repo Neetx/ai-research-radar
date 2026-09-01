@@ -40,6 +40,16 @@ curator this run (account-credit exhaustion needs a plan upgrade or the credit
 window to reset; there is no self-heal available). Re-test `tvly --status`
 every run going forward; drop this note once a call succeeds.
 
+**RESOLVED 2026-09-01 (daily):** after 10+ consecutive prior runs hitting the
+plan-limit error, a fresh `pip install -q tavily-cli` this session succeeded on
+the FIRST `tvly search` call — both `search` and `extract` worked normally all
+run (used extensively for the curator lane and evidence extraction). Most
+likely the account-credit window reset or a curator plan action; no explicit
+confirmation from the curator side is visible from here. Re-test next run
+before fully retiring this note — the outage was long-running enough (6+
+weeks) that a single clean run is encouraging but not yet proof of a lasting
+fix.
+
 ---
 
 ## Lab & big-tech AI blogs (Phase 1 — TIERED, prefer RSS/Atom)
@@ -140,6 +150,7 @@ verification (real feed, on-axis, not SEO). Line format:
 - (huggingface.co/blog/ibm-research PROMOTED 2026-08-22 W34 weekly to the Tier (ii) Research labs/independents swept list — see above; staging line cleared.)
 - apodex.ai — 1 — Apodex 1.1 (08-24, arXiv 2608.23283, "Scaling Agentic Intelligence for Complex Work") → rl-env-005 EVIDENCE — first seen 2026-08-25, via the HF-daily-papers significance-first exploration slot (128 upvotes, the day's dominant item by a wide margin). A previously-untracked AI lab (verified via apodex.ai: "an AI research platform... verified analysis") shipping a frontier-scale agent system built on environment-scaling + a named execution harness (AgentOS); below the ≥2-artifact bar on its own — watch for a second on-axis release or technical post before promoting.
 - newsletter.semianalysis.com — 1 — "OpenAI Jalapeño: Better than Nvidia Blackwell" (08-25, InferenceX independent benchmark of OpenAI's Jalapeño inference chip) → queued (below-bar, hardware axis) — first seen 2026-08-26, via the HN front-page pulse (#7, 398pts). SemiAnalysis runs its own independent inference-hardware benchmark suite (InferenceX) and is a distinct discovery surface from the labs/vendors it benchmarks; below the ≥2-artifact bar on its own — watch for a second on-axis independent-benchmark post before promoting.
+- antigravity.google — 1 — `/boost` deep-reasoning + `/teamwork-preview` multi-agent docs (undated, accessed 2026-09-01) → multi-agent-eng-009 EVIDENCE — first seen 2026-09-01, via the AlphaSignal curator lane. Google's Antigravity coding-IDE docs domain, distinct from any already-tracked Google source (deepmind.google, research.google, blog.google); below the ≥2-artifact bar on its own — watch for a second on-axis Antigravity feature doc/post before promoting a dedicated sweep entry.
 
 ## Social & community channels (Phase 2 — INTAKE ONLY, never evidence)
 
