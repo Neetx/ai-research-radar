@@ -45,10 +45,12 @@ plan-limit error, a fresh `pip install -q tavily-cli` this session succeeded on
 the FIRST `tvly search` call — both `search` and `extract` worked normally all
 run (used extensively for the curator lane and evidence extraction). Most
 likely the account-credit window reset or a curator plan action; no explicit
-confirmation from the curator side is visible from here. Re-test next run
-before fully retiring this note — the outage was long-running enough (6+
-weeks) that a single clean run is encouraging but not yet proof of a lasting
-fix.
+confirmation from the curator side is visible from here.
+
+**CONFIRMED HOLDING 2026-09-02 (daily):** a 2nd consecutive clean run — `tvly`
+worked normally on first call again today, no reinstall needed. Two clean runs
+in a row after 10+ weeks of outage is a real fix, not a fluke; retiring this
+note as an active concern. Re-flag only if the plan-limit error recurs.
 
 ---
 
@@ -151,6 +153,8 @@ verification (real feed, on-axis, not SEO). Line format:
 - apodex.ai — 1 — Apodex 1.1 (08-24, arXiv 2608.23283, "Scaling Agentic Intelligence for Complex Work") → rl-env-005 EVIDENCE — first seen 2026-08-25, via the HF-daily-papers significance-first exploration slot (128 upvotes, the day's dominant item by a wide margin). A previously-untracked AI lab (verified via apodex.ai: "an AI research platform... verified analysis") shipping a frontier-scale agent system built on environment-scaling + a named execution harness (AgentOS); below the ≥2-artifact bar on its own — watch for a second on-axis release or technical post before promoting.
 - newsletter.semianalysis.com — 1 — "OpenAI Jalapeño: Better than Nvidia Blackwell" (08-25, InferenceX independent benchmark of OpenAI's Jalapeño inference chip) → queued (below-bar, hardware axis) — first seen 2026-08-26, via the HN front-page pulse (#7, 398pts). SemiAnalysis runs its own independent inference-hardware benchmark suite (InferenceX) and is a distinct discovery surface from the labs/vendors it benchmarks; below the ≥2-artifact bar on its own — watch for a second on-axis independent-benchmark post before promoting.
 - antigravity.google — 1 — `/boost` deep-reasoning + `/teamwork-preview` multi-agent docs (undated, accessed 2026-09-01) → multi-agent-eng-009 EVIDENCE — first seen 2026-09-01, via the AlphaSignal curator lane. Google's Antigravity coding-IDE docs domain, distinct from any already-tracked Google source (deepmind.google, research.google, blog.google); below the ≥2-artifact bar on its own — watch for a second on-axis Antigravity feature doc/post before promoting a dedicated sweep entry.
+- worldlabs.ai — 1 — Atlas (09-01, "multimodal autoregressive diffusion transformer" world model) → world-action-models-020 EVIDENCE — first seen 2026-09-02, via the HN front-page pulse (189pts). A well-resourced dedicated spatial-intelligence startup (Fei-Fei Li's World Labs), the trend's first major non-academic entrant; below the ≥2-artifact bar on its own — watch for a second on-axis release before promoting.
+- github.com/lightorigins (+ HF LightOriginsHQ org) — 1 — LightNav-0 (08-31, arXiv 2608.30935, generalist embodied-navigation model eliciting VLM spatial intelligence) → embodied-nav-021 EVIDENCE (new seed trend) — first seen 2026-09-02, via the HF-daily-papers significance-first exploration slot. A previously-untracked independent lab publishing open weights + code directly to GitHub/HF; below the ≥2-artifact bar on its own — watch for a second release.
 
 ## Social & community channels (Phase 2 — INTAKE ONLY, never evidence)
 
