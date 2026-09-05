@@ -77,6 +77,16 @@ structure is a contract.
   sources only.
 - `calibration` (now `logs/calibration.md`) is append-only and written by weekly
   runs only (see the `radar-self-eval` skill); daily runs never touch it.
+- **Notes compaction (amendment W35-P2, applied 2026-09-05 W36):** once a
+  trend's `notes` field exceeds roughly 1500 words, the NEXT run that touches
+  that trend's notes (daily or weekly) compacts older `Update YYYY-MM-DD`
+  entries into one running-summary paragraph — preserving the founding/
+  anchor reasoning and the most recent 2-3 updates verbatim — rather than
+  accumulating every update verbatim forever. State in that day's/week's
+  report that a compaction happened and roughly how much was condensed;
+  nothing is lost (the pre-compaction notes text remains readable in the git
+  history of this file). This mirrors the precedent that already externalized
+  `source_rotation`/`calibration` out of TRENDS.md for the same size reason.
 - Update the `Last updated` line. Keep everything in English.
 
 ## Validate before commit
