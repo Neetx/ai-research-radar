@@ -58,6 +58,17 @@ structure is a contract.
   day's/week's report (write-once, permanent). NEVER silently delete — because
   every removal is either a promotion or a recorded drop, shrinking the queue
   loses no knowledge. Re-date an item only if it is genuinely still worth watching.
+- **Queue-line format (amendment W35-P1, applied 2026-09-05 W36):** a queue entry
+  holds ONLY genuine unresolved signals, one line per signal (or one tightly
+  bundled line per day listing just the still-open below-bar/adjacent/unverified
+  items), in the file's own stated `date — description — link` shape. It must
+  NEVER restate what a lane already routed to trend evidence, the day's dormancy
+  enumeration, the capture-leak count, or source-rotation narration — that audit
+  trail already lives permanently in `reports/YYYY-MM-DD.md`; duplicating it here
+  is a bloat failure, not thoroughness (it drove TRENDS.md from 41KB at W24
+  baseline to ~650KB by W36, with individual daily queue lines reaching 7-21KB).
+  When in doubt, ask "does this line name something still awaiting a decision?" —
+  if not, it belongs in the report only.
 - Append one dated line per session to `logs/source_rotation.md` (the coverage
   log; not the TRENDS.md stub). Append dated corrections to the `strategy_notes`
   section of TRENDS.md; never delete curator entries.
