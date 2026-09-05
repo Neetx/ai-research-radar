@@ -1,15 +1,15 @@
 # AI Radar
 
-![trends](https://img.shields.io/badge/trends-21-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-10-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-24-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--09--04-2f9e44?style=flat-square)
+![trends](https://img.shields.io/badge/trends-21-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-10-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-33-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--09--05-2f9e44?style=flat-square)
 
 Tracks AI research + engineering trends for an AI researcher / systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-09-04):**
+**Since last scan (2026-09-05, weekly):**
 
-- **GPT-6 Astra ships CRITICAL, and the defensive mirror keeps growing**: OpenAI's [GPT-6 Astra](https://openai.com/index/gpt-6-astra/) crosses the CRITICAL cybersecurity threshold, launched alongside a [$1B Daybreak defender commitment](https://openai.com/index/daybreak-for-frontline-defenders) and [Cloudflare's own Daybreak-model integration](https://blog.cloudflare.com/vulnerability-discovery-remediation/) — new evidence for [Agent security](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn).
-- **Radically open, at frontier adjacency**: MBZUAI's [K2 Horizon](https://ifm.ai/blog/k2/) ships a 6-model fleet with the entire training lifecycle published — new evidence for [Open-weight frontier MoE wave](TRENDS.md#id-open-weight-003-open-weight-wave-frontier-scale-moe-released-at-high-cadence-across-labs).
-- **Quantizing what was assumed too fragile**: [Why Gated DeltaNet Survives 4-Bit Quantization](https://arxiv.org/abs/2609.04098) pushes NVFP4 W4A4 into a recurrent linear-attention state — new evidence for [⭐ Low-bit quantization (vector/trellis)](TRENDS.md#id-lowbit-quant-011-ultra-low-bit-quantization-vector-and-trellis-coding-for-weights-and-kv-cache).
-- **Agent memory, owned by you**: Hugging Face's [funes](https://huggingface.co/blog/funes) turns coding-agent session traces into a durable, cross-agent, user-owned memory — new evidence for [Agent harness/runtime/memory infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object).
+- **Ledger housekeeping, not new evidence**: applied two standing amendments and compacted 8 bloated trend `notes` fields plus the [watchlist](TRENDS.md#observation_queue) — TRENDS.md shrank 646KB → 417KB (-35%) with zero evidence lost.
+- **Queue burndown**: resolved the 5-day 08-17..08-21 backlog (31 below-bar items, no 2nd sighting in 3+ weeks) — see the [watchlist](TRENDS.md#observation_queue).
+- **New seed**: [VLM-scaffolded navigation](TRENDS.md#id-embodied-nav-021-vlm-scaffolded-generalist-embodied-navigation-policies) seeded 09-02 from a same-day 3-group convergence ([Mistral's Robostral Navigate](https://mistral.ai/news/robostral-navigate), an academic NavMCP framework, [LightOrigins' LightNav-0](https://github.com/lightorigins/LightNav-0)).
+- **Source coverage**: promoted [Epoch AI](https://epoch.ai/benchmarks) into the swept registry and closed a coverage gap on xAI/SpaceXAI surfaced by this month's [retrospective](reports/weekly/2026-W36.md).
 
 ## ⭐ Pinned topics
 
@@ -67,12 +67,15 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 
 _Unverified community sentiment (intake only, never trend evidence); links are to threads/venues, individuals are never named._
 
-- Earthquake this scan: OpenAI's [GPT-6 Astra](https://openai.com/index/gpt-6-astra/) topped Hacker News (1551pts) — routed to [Agent security](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) above.
-- A [LessWrong discussion](https://www.lesswrong.com/posts/PLisnSFir8y5AHkmP/how-concerned-should-we-be-about-astra-s-recurrent) (HN 114pts) claims GPT-6 Astra uses a "recurrent depth"/looped-transformer architecture — widely reported but not confirmed in OpenAI's own materials this session; queued unverified on [Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent), watching for a primary.
-- A commissioned study on which tools coding agents recommend ([armature.tech](https://armature.tech/blog/which-tools-coding-agents-install), 151pts) measured 16,893 sessions — kept below the evidence bar since the firm sells growth services to the tools being measured, a disclosed conflict of interest.
-- Broad Reddit pulse stayed blocked (standing network-policy block) this run; the Hacker News broad-pulse tier and curator/digest lane carried the load in its place.
-- Tooling note: the Tavily (`tvly`) CLI worked cleanly for a 4th consecutive run; the YouTube curator-lane Atom feed re-degraded again (404 on all three tracked channels) after last holding on 08-22. The GitHub external API remains scope-blocked for a 15th consecutive week.
+This was a weekly recalibration session (ledger housekeeping, source-strategy review,
+self-evaluation) rather than a fresh daily scan — no new pulse sampling ran today.
+The last live pulse is from the [2026-09-04 daily](reports/2026-09-04.md):
+
+- Earthquake that day: OpenAI's [GPT-6 Astra](https://openai.com/index/gpt-6-astra/) topped Hacker News (1551pts) — routed to [Agent security](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn).
+- A [LessWrong discussion](https://www.lesswrong.com/posts/PLisnSFir8y5AHkmP/how-concerned-should-we-be-about-astra-s-recurrent) claims GPT-6 Astra uses a "recurrent depth"/looped-transformer architecture — still unconfirmed by any OpenAI primary; queued on [Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent).
+- Broad Reddit pulse stays blocked (standing network-policy block); the Hacker News broad-pulse tier and curator/digest lane carry the load in its place.
+- Tooling note: the GitHub external API remains scope-blocked for a 16th consecutive week; the YouTube curator-lane Atom feed is re-degraded again.
 
 ## Output map
 
-[TRENDS.md](TRENDS.md) · [watchlist (~24)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-09-04](reports/2026-09-04.md) · weekly: [2026-W35](reports/weekly/2026-W35.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
+[TRENDS.md](TRENDS.md) · [watchlist (~33)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-09-04](reports/2026-09-04.md) · weekly: [2026-W36](reports/weekly/2026-W36.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
