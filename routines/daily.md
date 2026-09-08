@@ -13,7 +13,7 @@ EVERY run does the FULL CHECK — there is NO "light/lean/confirmation pass", an
 - Recover orphaned state first: `git ls-remote --heads origin` — if any `claude/*` branch holds a `radar:` commit missing from your history (`git log origin/<branch> --oneline -3`), fetch and merge it (fast-forward preferred, never force) before anything else, and note the recovery in today's report.
 - Read `TRENDS.md` in full.
 - Read the most recent report in `reports/` (skip if none exists yet).
-- Read `strategy_notes` and the recent tail (~7 days) of `logs/source_rotation.md` — the coverage log lives there now, not in TRENDS.md; read only the tail, not the whole file — to decide what to cover today.
+- Read the recent tail (~10 entries) of `logs/strategy_notes.md` and the recent tail (~7 days) of `logs/source_rotation.md` — the coverage log lives there now, not in TRENDS.md; read only the tail, not the whole file — to decide what to cover today.
 
 ## 2. Scan
 
