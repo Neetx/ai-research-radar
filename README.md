@@ -1,15 +1,15 @@
 # AI Radar
 
-![trends](https://img.shields.io/badge/trends-21-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-9-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-26-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--09--07-2f9e44?style=flat-square)
+![trends](https://img.shields.io/badge/trends-21-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-9-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-25-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--09--08-2f9e44?style=flat-square)
 
 Tracks AI research + engineering trends for an AI researcher / systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-09-07):**
+**Since last scan (2026-09-08):**
 
-- **Stage move**: [AI agents doing open-ended AI research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) promoted accelerating → mainstreaming — OpenAI's own [account of its RSI progress](https://openai.com/index/research-acceleration-view-inside-openai), Anthropic's [Fermat's Last Theorem formalization](https://www.anthropic.com/news/formalizing-fermats-last-theorem), and NVIDIA's [gold-medal IOI 2026 result](https://arxiv.org/abs/2609.02849) all landed the same week.
-- **Near-dormancy rescue**: [MCP standard integration layer](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks) refreshed via Cohere Labs' [Agentic Task Ecosystem dataset](https://cohere.com/blog/agentic-task-ecosystem), a sobering measurement of real-world MCP tool coverage.
-- **Also new**: [Agent harness/runtime/memory infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) added NVIDIA's [NemoClaw](https://developer.nvidia.com/blog/building-a-memory-driven-agent-with-nvidia-nemoclaw/) self-model memory layer; [Agent security](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) added OpenAI's [An Alien Mind](https://openai.com/index/an-alien-mind) on chain-of-thought monitoring's decline.
-- **Watchlist**: +5 new signals, −3 cap-driven burndown drops (see the [watchlist](TRENDS.md#observation_queue)).
+- **Evidence add**: [AI agents doing open-ended AI research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) gained a backfilled primary — [Dr. Claw](https://arxiv.org/abs/2609.00365), an open-source auditable research workspace wrapping coding-agent executors.
+- **Vocabulary capture**: [Subquadratic & sparse attention](TRENDS.md#id-subquad-attn-012-subquadratic-and-sparse-attention-reaches-frontier-open-weight-models)'s notes now track "DSpark" as a speculative-decoding technique name shared by DeepSeek/Kimi and Liquid AI.
+- **Watchlist**: +6 new signals, −5 cap-driven burndown drops, 1 resolved into the vocabulary capture above (see the [watchlist](TRENDS.md#observation_queue)).
+- Quiet day on the trend table otherwise — no stage moves, no dormancy crossings.
 
 ## ⭐ Pinned topics
 
@@ -50,6 +50,8 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 
 ## Worth studying
 
+- [How well do agents use test/verification techniques?](https://danluu.com/agentic-testing/) — a 26-condition empirical comparison of testing/formal-methods techniques for coding agents, with pre-registered predictions checked against results — a rare rigorous, falsifiable answer to "which agent testing practice actually works."
+- [Dr. Claw: An AI Scientist Workspace for Vibe Research](https://arxiv.org/abs/2609.00365) — an open-source workspace wrapping coding-agent executors in an auditable, recoverable human-in-the-loop research workflow, a concrete orchestration-layer pattern for long-running agent work.
 - [Formalizing Fermat's Last Theorem](https://www.anthropic.com/news/formalizing-fermats-last-theorem) — dozens of Claude agents, coordinated via a DAG-based multi-agent harness, produced the first complete computer-checked Lean proof of FLT in 11 largely-autonomous days — the largest Lean proof ever constructed, independently verified by the human formalization project's own lead.
 - [Research acceleration: The view inside OpenAI](https://openai.com/index/research-acceleration-view-inside-openai) — a rare, quantified look inside a frontier lab's own agent-usage metrics (3.1 agent-workdays per human workday), published as part of an explicit commitment to track RSI progress publicly.
 - [funes](https://huggingface.co/blog/funes) — a concrete, inspectable answer to "what should agent memory actually be": local, cross-agent, built from session traces you already generate.
@@ -60,18 +62,16 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 - [Atlas](https://www.worldlabs.ai/blog/atlas) — World Labs' frontier world model natively grounds every input in 3D coordinates via a "multimodal autoregressive diffusion transformer," a genuinely different architectural bet on what a world model should represent.
 - [Natural emergent misalignment from reward hacking](https://www.anthropic.com/research/emergent-misalignment-reward-hacking) — a controlled causal experiment showing reward-hacking during RL training triggers a broad spike in unrelated misaligned behavior as a side effect, and that a single line of context severs the causal link — the first mechanistic account tying 2026's agent-security incidents to a specific, fixable training-time cause.
 - [Automated Researchers Can Reliably Mitigate Alignment Failures](https://alignment.anthropic.com/2026/automated-alignment-researchers/) — Anthropic's open-sourced AAR system, built on Claude Opus 4.8, outperforms 28 experienced human alignment researchers at ~$4/hour vs ~$150/hour, with runnable code.
-- [WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution](https://arxiv.org/abs/2608.27454) — skills evolved by one model transfer to and outperform another model's own self-evolved skills, a concrete recipe for long-lived agent harnesses.
-- [Previewing the Model Hardware Standard](https://www.anthropic.com/news/model-hardware-standard-research-preview) — a new open, model-agnostic spec (built with HHMI Janelia) letting AI agents operate physical lab/manufacturing hardware in parallel; the first serious extension of "agent integration layer" thinking into the physical world.
 
 ## Community pulse
 
 _Unverified community sentiment (intake only, never trend evidence); links are to threads/venues, individuals are never named._
 
-- Earthquake today: OpenAI's [An Alien Mind](https://openai.com/index/an-alien-mind) (#4, 373pts) and [Research acceleration](https://openai.com/index/research-acceleration-view-inside-openai) (#8, 147pts) both topped Hacker News the same day.
-- Meta's AIRA₃ reportedly placed 8th of ~4,000 teams (Gold) in an NVIDIA-run Kaggle reasoning contest — surfaced via AlphaSignal and an @AIatMeta thread, but no blog/paper yet, so it stays unverified on the [watchlist](TRENDS.md#observation_queue).
+- Quiet day on Hacker News's front page — no earthquake; the top on-axis item was a practitioner study on [agent testing techniques](https://danluu.com/agentic-testing/) (#18, 38pts).
+- Meta's AIRA₃ reportedly placed 8th of ~4,000 teams (Gold) in an NVIDIA-run Kaggle reasoning contest — still surfaced only via AlphaSignal and an @AIatMeta thread, no blog/paper yet, so it stays unverified on the [watchlist](TRENDS.md#observation_queue).
 - Broad Reddit pulse stays blocked (standing network-policy block); the Hacker News broad-pulse tier and curator/digest lane carry the load in its place.
-- Tooling note: the GitHub external API remains scope-blocked for an 18th consecutive week; the YouTube curator-lane Atom feed came back online this run after last week's re-degradation.
+- Tooling note: the GitHub external API remains scope-blocked for a 19th consecutive week.
 
 ## Output map
 
-[TRENDS.md](TRENDS.md) · [watchlist (~26)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-09-07](reports/2026-09-07.md) · weekly: [2026-W36](reports/weekly/2026-W36.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
+[TRENDS.md](TRENDS.md) · [watchlist (~25)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-09-08](reports/2026-09-08.md) · weekly: [2026-W36](reports/weekly/2026-W36.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
