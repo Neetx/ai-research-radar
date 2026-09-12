@@ -1,15 +1,15 @@
 # AI Radar
 
-![trends](https://img.shields.io/badge/trends-21-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-11-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-24-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--09--11-2f9e44?style=flat-square)
+![trends](https://img.shields.io/badge/trends-21-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-11-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-24-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--09--12-2f9e44?style=flat-square)
 
 Tracks AI research + engineering trends for an AI researcher / systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-09-11):**
+**Since last scan (2026-09-12, weekly recalibration):**
 
-- **Stage move**: [Multi-agent engineering](TRENDS.md#id-multi-agent-eng-009-multi-agent-engineering-becomes-product-surface-teams-workflows-a2a) promoted emerging → accelerating: [Cursor's Projects](https://cursor.com/blog/projects) and [OpenAI's new Agents API](https://openai.com/index/introducing-the-agents-api) both shipped coordinator/subagent orchestration the same day — a third and fourth major lab converging on one form.
-- **Major new primary**: OpenAI shipped [the Agents API](https://openai.com/index/introducing-the-agents-api), productizing its Codex harness/sandbox infrastructure as a public-beta platform — evidence across [agent harness infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object), [remote sandboxes](TRENDS.md#id-agent-sandbox-007-remote-sandboxes-as-the-execution-layer-for-agents) and multi-agent engineering.
-- **Evidence add**: [Agent security](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) gained Anthropic's own [threat-intelligence report](https://www.anthropic.com/threat-intelligence-report-september-2026) — a state-linked actor whose AI agents monitored their own malware's detection status and iteratively rebuilt it to evade defenses.
-- **Watchlist**: +2 new signals, −3 cap-driven burndown drops (see the [watchlist](TRENDS.md#observation_queue)).
+- **Stage move**: [Agentic-RL credit assignment](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards) promoted seed → emerging — the longest-running seed on the board (10+ weeks), evidence at the cap, promoted on sustained multi-org evidence.
+- **Confidence raise**: [AI agents doing open-ended AI research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) raised medium → HIGH after [OpenAI's Navier-Stokes swarm](https://openai.com/index/navier-stokes-solution) and a [human-directed math result](https://cims.nyu.edu/~tristanb/statement.pdf) landed in the same week as its mainstreaming promotion.
+- **Held, judged**: [World/action models](TRENDS.md#id-world-action-models-020-learned-worldaction-models-from-video-as-a-substrate-for-embodied-and-open-ended-agent-generalization) stays accelerating (mainstreaming gate unfired); [⭐ latent inter-model communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) confirmed still dormant after a dedicated reactivation search.
+- **Housekeeping**: study shelf pruned (10 picks ≥30 days old archived), [watchlist](TRENDS.md#observation_queue) gained 2 low-cadence sweep signals.
 
 ## ⭐ Pinned topics
 
@@ -22,7 +22,7 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 
 ## Trends
 
-🌱 2 · 📈 3 · 🚀 11 · 🌊 4 · 🏔 0 · 📉 0 · 💤 1
+🌱 1 · 📈 4 · 🚀 11 · 🌊 4 · 🏔 0 · 📉 0 · 💤 1
 
 | trend | stage | latest signal |
 |---|---|---|
@@ -40,7 +40,7 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 | [Deployment-grounded agent eval](TRENDS.md#id-agent-eval-014-deployment-grounded-agent-evaluation-long-horizon-real-session-benchmarks-beyond-static-leaderboards) | 📈 emerging | [2026-09-02](https://arxiv.org/abs/2609.02783) |
 | [⭐ Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 emerging | [2026-09-09](https://arxiv.org/abs/2609.10715) |
 | [Parametric injection (behavior→weights)](TRENDS.md#id-parametric-injection-018-parametric-injection-compiling-behavior-and-knowledge-into-model-weights-instead-of-promptcontext) | 📈 emerging | [2026-08-28](https://arxiv.org/abs/2608.21750) |
-| [Agentic-RL credit assignment](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards) | 🌱 seed | [2026-08-31](https://arxiv.org/abs/2608.31075) |
+| [Agentic-RL credit assignment](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards) | 📈 emerging | [2026-08-31](https://arxiv.org/abs/2608.31075) |
 | [VLM-scaffolded navigation](TRENDS.md#id-embodied-nav-021-vlm-scaffolded-generalist-embodied-navigation-policies) | 🌱 seed | [2026-08-31](https://github.com/lightorigins/LightNav-0) |
 | [Agent security (injection limits)](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) | 🌊 mainstreaming | [2026-09-10](https://www.anthropic.com/threat-intelligence-report-september-2026) |
 | [Agent harness/runtime/memory infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) | 🌊 mainstreaming | [2026-09-10](https://openai.com/index/introducing-the-agents-api) |
@@ -68,12 +68,12 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 
 _Unverified community sentiment (intake only, never trend evidence); links are to threads/venues, individuals are never named._
 
-- No earthquake today (an iPhone launch and a "Shopify moves off React Native" post dominated Hacker News); the day's biggest on-axis signal was OpenAI's new Agents API landing on the front page same-day as its own official blog post.
-- Discourse thread: a mathematician's Mastodon essay questioned whether researchers can trust OpenAI's unpublished-math claims — commentary on this week's Navier-Stokes story, not a new primary.
-- Independent-developer/practitioner curiosities on the pulse: a below-bar single-org RL-scaling claim and a tool-use dataset-generation technique, both feeding the [watchlist](TRENDS.md#observation_queue) rather than a trend.
+- No earthquake this week; the field's biggest on-axis story was OpenAI's Agents API landing on the front page alongside its own official blog post, and (before that) the same-week Navier-Stokes/FLT math-agent results.
+- Discourse thread: a mathematician's Mastodon essay questioned whether researchers can trust OpenAI's unpublished-math claims — commentary on the Navier-Stokes story, not a new primary.
+- news.smol.ai (Latent.Space/AINews) stays down (HTTP 402, host-side outage, 3rd consecutive day as of this run) — not yet at the 2-week drop threshold; re-test weekly.
 - Broad Reddit pulse stays blocked (standing network-policy block); the Hacker News broad-pulse tier and curator/digest lane carry the load in its place.
-- Tooling note: the GitHub external API remains scope-blocked for a 22nd consecutive week (already notification-flagged); direct RSS/Atom fetches and the `r.jina.ai` proxy continue to cover the lab-sweep and curator lanes without it.
+- Tooling note: the GitHub external API remains scope-blocked for a 22nd+ consecutive week (already notification-flagged); direct RSS/Atom fetches and the `r.jina.ai` proxy continue to cover the lab-sweep and curator lanes without it.
 
 ## Output map
 
-[TRENDS.md](TRENDS.md) · [watchlist (~24)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-09-11](reports/2026-09-11.md) · weekly: [2026-W36](reports/weekly/2026-W36.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
+[TRENDS.md](TRENDS.md) · [watchlist (~24)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-09-11](reports/2026-09-11.md) · weekly: [2026-W37](reports/weekly/2026-W37.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
