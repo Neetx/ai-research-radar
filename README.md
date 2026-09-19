@@ -1,15 +1,15 @@
 # AI Radar
 
-![trends](https://img.shields.io/badge/trends-21-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-11-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-25-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--09--18-2f9e44?style=flat-square)
+![trends](https://img.shields.io/badge/trends-21-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-11-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-26-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--09--19-2f9e44?style=flat-square)
 
 Tracks AI research + engineering trends for an AI researcher / systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-09-18):**
+**Since last scan (2026-09-19, weekly recalibration):**
 
-- **New evidence**: [AI agents doing open-ended AI research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) gets Anthropic's own quantified disclosure, [When AI builds itself](https://www.anthropic.com/institute/recursive-self-improvement) (Claude leads 26% of Anthropic's internal R&D), plus [Agora](https://arxiv.org/abs/2609.18094), a shared Git-backed memory for parallel autoresearch agents.
-- **New evidence**: [agent security](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) gets [Hacktron's exploit chain into OpenAI's internal repos](https://www.hacktron.ai/blog/hacking-openai), built almost entirely by autonomous Claude agents; [world/action models](TRENDS.md#id-world-action-models-020-learned-worldaction-models-from-video-as-a-substrate-for-embodied-and-open-ended-agent-generalization) gets Figure AI's [Helix 2.5](https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization), zero-shot across 30 unseen homes.
-- **Rescue**: [parametric injection](TRENDS.md#id-parametric-injection-018-parametric-injection-compiling-behavior-and-knowledge-into-model-weights-instead-of-promptcontext) was 19 days from the dormancy line — rescued by [Infinite-Parameter LLMs](https://arxiv.org/abs/2609.18842), a live-weight-generation sub-facet.
-- **Housekeeping**: watchlist burned down 9 stale items, added 8 below-bar signals; no dormancy crossings — [agentic-RL credit assignment](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards) and [VLM-scaffolded navigation](TRENDS.md#id-embodied-nav-021-vlm-scaffolded-generalist-embodied-navigation-policies) are the closest at 18 days.
+- **Reactivated**: [⭐ latent inter-model communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) comes back dormant → emerging via [LLAMIA](https://arxiv.org/abs/2609.00474), a 10th independent cluster projecting a chess engine's continuous state directly into an LLM's token stream.
+- **Confidence raised to HIGH**: [prefill/decode disaggregation](TRENDS.md#id-pd-disagg-002-prefilldecode-disaggregation-as-the-standard-llm-serving-architecture) (vLLM/NVIDIA/AMD/Meituan, sustained since June), [remote agent sandboxes](TRENDS.md#id-agent-sandbox-007-remote-sandboxes-as-the-execution-layer-for-agents) (9 orgs incl. AWS/Meta/OpenAI/Cloudflare), and [world/action models](TRENDS.md#id-world-action-models-020-learned-worldaction-models-from-video-as-a-substrate-for-embodied-and-open-ended-agent-generalization) (now two major non-academic entrants, World Labs + Figure AI).
+- **Housekeeping**: full capture-leak sweep across 180 arXiv ids found zero genuine leaks; study shelf pruned 9 picks older than 30 days to the archive.
+- **Watch**: [agentic-RL credit assignment](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards) and [VLM-scaffolded navigation](TRENDS.md#id-embodied-nav-021-vlm-scaffolded-generalist-embodied-navigation-policies) both cross the 21-day dormancy line ~09-21 unless refreshed.
 
 ## ⭐ Pinned topics
 
@@ -18,11 +18,11 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 | [⭐ Small & 1-bit models (CPU/edge)](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 🚀 accelerating | [2026-09-17](https://prismml.com/news/bonsai-2-27b) |
 | [⭐ Low-bit quantization (vector/trellis)](TRENDS.md#id-lowbit-quant-011-ultra-low-bit-quantization-vector-and-trellis-coding-for-weights-and-kv-cache) | 🚀 accelerating | [2026-09-14](https://arxiv.org/abs/2609.16338) |
 | [⭐ Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 emerging | [2026-09-12](https://github.com/yifanzhang-pro/recurrent-looped-tranformer) |
-| [⭐ Latent inter-model communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 💤 dormant | [2026-08-13](https://arxiv.org/abs/2608.13317) |
+| [⭐ Latent inter-model communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 📈 emerging | [2026-08-31](https://arxiv.org/abs/2609.00474) |
 
 ## Trends
 
-🌱 1 · 📈 4 · 🚀 11 · 🌊 4 · 🏔 0 · 📉 0 · 💤 1
+🌱 1 · 📈 5 · 🚀 11 · 🌊 4 · 🏔 0 · 📉 0 · 💤 0
 
 | trend | stage | latest signal |
 |---|---|---|
@@ -41,12 +41,12 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 | [AI agents doing open-ended AI research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) | 🌊 mainstreaming | [2026-09-17](https://www.anthropic.com/institute/recursive-self-improvement) |
 | [Agent security (injection limits)](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) | 🌊 mainstreaming | [2026-09-16](https://docs.cohere.com/docs/encrypted-vault-overview) |
 | [Open-weight frontier MoE wave](TRENDS.md#id-open-weight-003-open-weight-wave-frontier-scale-moe-released-at-high-cadence-across-labs) | 🌊 mainstreaming | [2026-09-10](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash) |
+| [Parametric injection (behavior→weights)](TRENDS.md#id-parametric-injection-018-parametric-injection-compiling-behavior-and-knowledge-into-model-weights-instead-of-promptcontext) | 📈 emerging | [2026-09-16](https://arxiv.org/abs/2609.18842) |
 | [Deployment-grounded agent eval](TRENDS.md#id-agent-eval-014-deployment-grounded-agent-evaluation-long-horizon-real-session-benchmarks-beyond-static-leaderboards) | 📈 emerging | [2026-09-15](https://huggingface.co/blog/ibm-research/altk-evolve-consistency) |
 | [⭐ Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 emerging | [2026-09-12](https://github.com/yifanzhang-pro/recurrent-looped-tranformer) |
-| [Parametric injection (behavior→weights)](TRENDS.md#id-parametric-injection-018-parametric-injection-compiling-behavior-and-knowledge-into-model-weights-instead-of-promptcontext) | 📈 emerging | [2026-09-16](https://arxiv.org/abs/2609.18842) |
+| [⭐ Latent inter-model communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 📈 emerging | [2026-08-31](https://arxiv.org/abs/2609.00474) |
 | [Agentic-RL credit assignment](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards) | 📈 emerging | [2026-08-31](https://arxiv.org/abs/2608.31075) |
 | [VLM-scaffolded navigation](TRENDS.md#id-embodied-nav-021-vlm-scaffolded-generalist-embodied-navigation-policies) | 🌱 seed | [2026-08-31](https://github.com/lightorigins/LightNav-0) |
-| [⭐ Latent inter-model communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 💤 dormant | [2026-08-13](https://arxiv.org/abs/2608.13317) |
 
 ## Worth studying
 
@@ -67,12 +67,12 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 
 _Unverified community sentiment (intake only, never trend evidence); links are to threads/venues, individuals are never named._
 
-- No front-page "earthquake" today — the densest thread was [Figure's zero-shot 30-home robot generalization](https://alphasignal.ai/news/figure-s-helix-2-5-cleans-30-strangers-homes-it-has-never-seen), well above the noise floor and now routed to evidence.
-- Chip-business/macro news (a new Japan-made CPU launch) topped Hacker News today but stays explicitly out of scope per the hardware-axis rule (capability changes only, never business/fab news).
-- news.smol.ai (Latent.Space/AINews) stays back online (HTTP 200) but content is still stuck stale (9 days behind) — treated as degraded pending a fresh digest.
+- No front-page "earthquake" this week — the densest recent thread was [Figure's zero-shot 30-home robot generalization](https://alphasignal.ai/news/figure-s-helix-2-5-cleans-30-strangers-homes-it-has-never-seen), well above the noise floor and now routed to evidence.
+- A weekly scouting pass staged a new candidate curator ([Zvi Mowshowitz's AI roundup](https://thezvi.substack.com/)) for probation — watching for verified-serious hits over the coming weeks before promoting.
+- news.smol.ai (Latent.Space/AINews) stays back online (HTTP 200) but content is still stuck stale (9+ days behind) — treated as degraded pending a fresh digest, re-test weekly.
 - Broad Reddit pulse stays blocked (standing network-policy block); the Hacker News broad-pulse tier and curator/digest lane carry the load in its place.
-- Tooling note: the GitHub external API remains scope-blocked for a 27th+ consecutive week (already notification-flagged); direct RSS/Atom fetches and the `r.jina.ai` proxy continue to cover the lab-sweep and curator lanes without it.
+- Tooling note: the GitHub external API remains scope-blocked for a 28th+ consecutive week (already notification-flagged); direct RSS/Atom fetches and the `r.jina.ai` proxy continue to cover the lab-sweep and curator lanes without it.
 
 ## Output map
 
-[TRENDS.md](TRENDS.md) · [watchlist (~25)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-09-18](reports/2026-09-18.md) · weekly: [2026-W37](reports/weekly/2026-W37.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
+[TRENDS.md](TRENDS.md) · [watchlist (~26)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-09-18](reports/2026-09-18.md) · weekly: [2026-W38](reports/weekly/2026-W38.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)

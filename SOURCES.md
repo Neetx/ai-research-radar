@@ -350,7 +350,7 @@ blog sitting on a great paper. Three mechanisms, all agent-owned:
    the self-improvement loop applied to GROWING the source set, not just healing it.
 
 Candidate curators (probation — agent fills; format: name/handle — why — hits/since):
-- (none yet — populate via mechanisms 1–2 above)
+- Zvi Mowshowitz ("Don't Worry About the Vase," thezvi.substack.com) — a long-running, widely-cited weekly AI-news/research/policy roundup — staged 2026-09-19 W38 via a dedicated scouting search (`tvly search "best AI research newsletter Substack 2026 recommended explainer"`), not yet verified against a specific serious primary this radar independently caught. 0 hits/since 2026-09-19 — watch for ≥2 verified-serious primary hits over the next 3-4 weeks before promoting; drop if it never recurs as the origin of a verified find.
 - (agent: ADD a channel when it repeatedly surfaces work the radar later verifies
   as serious; drop noisy ones. conference/lab talk channels — vLLM, SGLang,
   PyTorch, NeurIPS/ICLR — by discovery.)
