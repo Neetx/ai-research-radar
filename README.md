@@ -1,15 +1,15 @@
 # AI Radar
 
-![trends](https://img.shields.io/badge/trends-21-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-11-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-26-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--09--25-2f9e44?style=flat-square)
+![trends](https://img.shields.io/badge/trends-21-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-11-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-19-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--09--26-2f9e44?style=flat-square)
 
 Tracks AI research + engineering trends for an AI researcher / systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-09-25):**
+**Since last scan (2026-09-26, weekly recalibration):**
 
-- **New architectural primitive**: Stanford's [CLM-8B](https://huggingface.co/Contrastive-LM/CLM-v0.1-8B) scores agent actions via cheap contrastive vector search instead of a full LLM call, landing on [agent harness/runtime infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object); CMU's [Codetta](https://arxiv.org/abs/2609.28900) demonstrates a provably-undetectable multi-agent collusion channel, landing on [agent security](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn).
-- **Capture-leak backfill**: Google Research's 260-configuration scaling study, ["Towards a Science of Scaling Agent Systems"](https://research.google/blog/towards-a-science-of-scaling-agent-systems-when-and-why-agent-systems-work/) (published 2026-01-28, only found today via a pulse pointer), lands on [multi-agent engineering](TRENDS.md#id-multi-agent-eng-009-multi-agent-engineering-becomes-product-surface-teams-workflows-a2a).
-- **⭐ Small/CPU models**: two adds — Edge0's [Audio8 ASR Infinite](https://huggingface.co/Edge0/Audio8-ASR-Infinite) (2nd artifact, promotion-flagged) and Liquid AI's [LFM2.5-VL-DSpark](https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark).
-- **Queue**: +9 new below-bar items (a vLLM watermarking artifact, an agent-name-collision attack, a new-architecture memory paper, a world-models pair) − 5 stale drops; sits just over the ~25 soft cap, burndown flagged for next run.
+- **New lab evidenced**: xAI's ["Designing Grok Bot"](https://x.ai/news/designing-grok-bot) (a persistent-agent harness design, backfilled from 09-03) lands as a 6th independent lab on [agent harness/runtime infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object); x.ai promoted to the every-run swept source registry.
+- **Mainstreaming gate judged, held**: [Small & 1-bit models](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference)'s "extreme-low-bit as default" gate stays unfired — Hugging Face's [native GGUF loading](https://huggingface.co/blog/transformers-llama-cpp-quants) and vLLM's Apple-Silicon port are both opt-in integrations, not a default path yet; Edge0-AI promoted to the swept source list on a 2nd independent artifact.
+- **Full recalibration, no stage moves**: all 21 trends reviewed against 2-3 week velocity — every promotion/mainstreaming gate checked, none cleared this week; dormancy watch clear (nothing within 21 days of last_evidence).
+- **Housekeeping**: queue burned down from ~26 to 19 (6 stale below-bar items dropped, 0 promotions lost); study shelf pruned 11 picks older than 30 days to the archive.
 
 ## ⭐ Pinned topics
 
@@ -67,12 +67,12 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 
 _Unverified community sentiment (intake only, never trend evidence); links are to threads/venues, individuals are never named._
 
-- A marketing/explainer post on distributed-systems framing for agent swarms pointed back to a genuinely significant, previously-uncaptured Google Research primary on multi-agent scaling — an indirect-pointer capture-leak, now closed.
-- The Australian government Medicare-portal OpenAI agent breach (flagged in yesterday's pulse) still has no OpenAI primary report as of this session — stays unverified in the queue.
-- YouTube's curator channels (code4AI, bycloud, AI Explained) 404'd again on re-test — the intermittent block/lift pattern continues; HF-daily-papers and HN overlap keep covering their typical picks.
-- Broad Reddit pulse stayed unreachable this run (Tavily plan-limited, direct JSON still returns a login-wall page); the Hacker News broad-pulse tier carried the full community-pulse load today.
+- The Australian government Medicare-portal OpenAI agent breach stays unverified for citation all week — no OpenAI primary report has appeared on its own misalignment-reports hub.
+- A curator-scouting probation candidate (a long-running weekly AI newsletter) got its first real sweep this run — commentary/roundup on already-tracked releases only, no independently-sourced primary yet.
+- YouTube's curator channels 404'd again on re-test — the intermittent block/lift pattern continues; HF-daily-papers and HN overlap keep covering their typical picks.
+- Broad Reddit pulse stayed unreachable most of the week (Tavily plan-limited, direct JSON still returns a login-wall page); the Hacker News broad-pulse tier carried the full community-pulse load.
 - Tooling note: the GitHub external API remains scope-blocked for a 36th+ consecutive week (already notification-flagged); web-search fallbacks continue to cover the lab-sweep and curator lanes without it.
 
 ## Output map
 
-[TRENDS.md](TRENDS.md) · [watchlist (~26)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-09-25](reports/2026-09-25.md) · weekly: [2026-W38](reports/weekly/2026-W38.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
+[TRENDS.md](TRENDS.md) · [watchlist (~19)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-09-25](reports/2026-09-25.md) · weekly: [2026-W39](reports/weekly/2026-W39.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
