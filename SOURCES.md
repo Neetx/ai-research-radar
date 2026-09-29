@@ -63,6 +63,16 @@ run per the AGENTS.md fallback rule, full coverage maintained. Re-test
 `tvly search` (not just `--status`) at the start of the next run before relying
 on it.
 
+**RE-FLAGGED AGAIN 2026-09-29 (daily), 2nd CONSECUTIVE occurrence:** `tvly --status`
+authenticated fine but the first `tvly search` call immediately hit the same
+plan-usage-limit error again, one day after the 09-28 occurrence. Fell back to
+WebSearch/WebFetch/direct curl/r.jina.ai for the entire run per the AGENTS.md
+fallback rule; full coverage was maintained (this session's lab sweep, pulse
+and exploration slot all ran on the fallback tools alone). Two consecutive
+daily occurrences is short of the repo's own 3-consecutive-run notification
+bar — not pushing a notification yet, but the next run should check whether
+this has become a standing daily pattern rather than intermittent.
+
 ---
 
 ## Lab & big-tech AI blogs (Phase 1 — TIERED, prefer RSS/Atom)
@@ -179,6 +189,7 @@ verification (real feed, on-axis, not SEO). Line format:
 - (Edge0-AI PROMOTED 2026-09-26 W39 weekly to the Tier (ii) Hardware swept list — see above; staging line cleared.)
 - fireworks.ai — 1 — Ember-1 (09-23, fireworks.ai/blog/ember-1) → queued below-bar (on-policy-distill-016-adjacent, ambiguous methodology) — first seen 2026-09-28, via the HN front-page pulse. Fireworks AI is an established inference-hosting vendor now also publishing its own derived/compressed models (Fireworks Research); below the ≥2-artifact bar on its own — watch for a second technical writeup naming its actual training method before promoting.
 - synthetic-sciences.com (GitHub org synthetic-sciences) — 1 — OpenScience (an Apache-2.0, model-agnostic open-source AI research workbench, 250+ skills across ML/comp-bio/cheminformatics, continuously released since ~July per third-party coverage) → agentic-ai-research-019-adjacent, not routed as fresh evidence this run (an ongoing project resurfaced by AlphaSignal today, not a discrete new-artifact event with a pinnable date) — first seen 2026-09-28, via the AlphaSignal curator lane. Below the ≥2-artifact bar — watch for a specific dated release/version worth citing as evidence.
+- Hcompany (HF org/blog namespace) — 1 — Holo4 (09-28, huggingface.co/blog/Hcompany/holo4, an open-weight generalist computer-use agent) → queued below-bar (no clean axis match yet) — first seen 2026-09-29, via the tier-i HF blog RSS sweep. A previously-untracked AI lab (H company) shipping open weights + trajectory data for a unified GUI/code/API/MCP computer-use model; below the ≥2-artifact bar on its own — watch for a second release before promoting.
 - Contrastive-LM (HF org, Stanford Scaling Intelligence Lab / Hazy Research) — 1 — CLM-v0.1-8B (09-21/23) → agent-runtime-015 EVIDENCE — first seen 2026-09-25, via the AlphaSignal curator lane, followed to the primary HF/GitHub artifacts. An academic lab (Stanford) shipping a genuinely new agent-runtime architectural primitive (contrastive System One model) directly to HF/GitHub, not a blog; below the ≥2-artifact bar on its own — watch for a second release (e.g. larger CLM sizes, a dedicated paper) before promoting.
 - github.com/Human-Agent-Society — 1 — Reef (09-12, an open-source agent-feedback-to-model-update proxy, 1,000+ GitHub stars within days) → queued below-bar (agent-runtime-015-adjacent) — first seen 2026-09-14, via the AlphaSignal curator lane. Below the ≥2-artifact bar on its own — watch for a second release or adoption signal before promoting.
 - strix.ai — 1 — "We wanted to use Baseten for inference. We ended up with admin access to their GitHub" (published 09-01, surfaced 09-16 via the HN front-page pulse) → agent-security-004 EVIDENCE — first seen 2026-09-16. An AI-security-tooling vendor (autonomous pentesting agent) publishing real-infrastructure disclosure write-ups; below the ≥2-artifact bar on its own — watch for a second disclosure before promoting.

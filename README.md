@@ -1,22 +1,22 @@
 # AI Radar
 
-![trends](https://img.shields.io/badge/trends-21-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-11-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-25-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--09--28-2f9e44?style=flat-square)
+![trends](https://img.shields.io/badge/trends-21-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-11-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-27-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--09--29-2f9e44?style=flat-square)
 
 Tracks AI research + engineering trends for an AI researcher / systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-09-28):**
+**Since last scan (2026-09-29):**
 
-- **New evidence, no gate fired**: Cloudflare's [cross-tenant Containers/Sandboxes vulnerability](https://blog.cloudflare.com/containers-cross-tenant-vulnerability/) and OpenAI's [self-replicating prompt injection report](https://alignment.openai.com/misalignment-reports/) both land on [agent security](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) — a real multi-tenant isolation break in agent-sandbox infrastructure, and a worm-class self-propagating injection.
-- **Dormancy watch**: [Multi-agent engineering](TRENDS.md#id-multi-agent-eng-009-multi-agent-engineering-becomes-product-surface-teams-workflows-a2a) (18d) and ⭐ [latent inter-model communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) (19d) are the closest trends to the 21-day line; dedicated rescue searches found nothing new yet.
-- **Mainstreaming gates re-checked, held**: small/1-bit models' extreme-low-bit-default gate, multi-agent engineering's cross-vendor-abstraction gate, and world/action models' adoption-side gate all stay unfired.
-- **Housekeeping**: queue grew to ~25 (7 new below-bar items, 4 dropped) — still over the ~25 soft cap; burndown continues next run.
+- **New evidence, no gate fired**: NVIDIA's [Open Agent Safety Platform](https://nvidianews.nvidia.com/news/open-agent-safety-platform) — a hardware watchdog on dedicated BlueField-4 DPU silicon, out-of-band from the agent's own software — lands on [agent security](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) with 100+ launch partners including Anthropic and Microsoft.
+- **Cross-cutting finds**: [Disaggregated Quantization](https://arxiv.org/abs/2609.26333) specializes quantization format to prefill vs. decode, bridging [low-bit quantization](TRENDS.md#id-lowbit-quant-011-ultra-low-bit-quantization-vector-and-trellis-coding-for-weights-and-kv-cache) with [PD disaggregation](TRENDS.md#id-pd-disagg-002-prefilldecode-disaggregation-as-the-standard-llm-serving-architecture); [Skill2Env](https://arxiv.org/abs/2609.33772) extends [verifiable RL environments](TRENDS.md#id-rl-env-005-verifiable-rl-environments-as-an-infrastructure-category-for-agent-training) to skill-derived construction.
+- **Dormancy watch**: ⭐ [latent inter-model communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) (20d) crosses the 21-day line tomorrow if unrefreshed; [multi-agent engineering](TRENDS.md#id-multi-agent-eng-009-multi-agent-engineering-becomes-product-surface-teams-workflows-a2a) (19d) is close behind — dedicated rescue searches found nothing new yet.
+- **Housekeeping**: queue burndown continues (3 new below-bar items, 4 dropped, 1 resolved into trend evidence) — still working toward the ~25 soft cap.
 
 ## ⭐ Pinned topics
 
 | trend | stage | latest signal |
 |---|---|---|
-| [⭐ Small & 1-bit models (CPU/edge)](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 🚀 accelerating | [2026-09-24](https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark) |
-| [⭐ Low-bit quantization (vector/trellis)](TRENDS.md#id-lowbit-quant-011-ultra-low-bit-quantization-vector-and-trellis-coding-for-weights-and-kv-cache) | 🚀 accelerating | [2026-09-14](https://arxiv.org/abs/2609.16338) |
+| [⭐ Small & 1-bit models (CPU/edge)](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 🚀 accelerating | [2026-09-29](https://github.com/firelex/jeff) |
+| [⭐ Low-bit quantization (vector/trellis)](TRENDS.md#id-lowbit-quant-011-ultra-low-bit-quantization-vector-and-trellis-coding-for-weights-and-kv-cache) | 🚀 accelerating | [2026-09-28](https://arxiv.org/abs/2609.26333) |
 | [⭐ Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 emerging | [2026-09-12](https://github.com/yifanzhang-pro/recurrent-looped-tranformer) |
 | [⭐ Latent inter-model communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 📈 emerging | [2026-09-09](https://arxiv.org/abs/2609.10266) |
 
@@ -26,8 +26,10 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 
 | trend | stage | latest signal |
 |---|---|---|
-| [Agent security (injection limits)](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) | 🌊 mainstreaming | [2026-09-25](https://alignment.openai.com/misalignment-reports/) |
-| [Agent harness/runtime/memory infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) | 🌊 mainstreaming | [2026-09-24](https://huggingface.co/Contrastive-LM/CLM-v0.1-8B) |
+| [Agent security (injection limits)](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) | 🌊 mainstreaming | [2026-09-28](https://nvidianews.nvidia.com/news/open-agent-safety-platform) |
+| [Agent harness/runtime/memory infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) | 🌊 mainstreaming | [2026-09-28](https://x.ai/news/team-bots) |
+| [Verifiable RL environments](TRENDS.md#id-rl-env-005-verifiable-rl-environments-as-an-infrastructure-category-for-agent-training) | 🚀 accelerating | [2026-09-28](https://arxiv.org/abs/2609.33772) |
+| [⭐ Low-bit quantization (vector/trellis)](TRENDS.md#id-lowbit-quant-011-ultra-low-bit-quantization-vector-and-trellis-coding-for-weights-and-kv-cache) | 🚀 accelerating | [2026-09-28](https://arxiv.org/abs/2609.26333) |
 | [Deployment-grounded agent eval](TRENDS.md#id-agent-eval-014-deployment-grounded-agent-evaluation-long-horizon-real-session-benchmarks-beyond-static-leaderboards) | 📈 emerging | [2026-09-23](https://arxiv.org/abs/2609.26777) |
 | [Remote agent sandboxes](TRENDS.md#id-agent-sandbox-007-remote-sandboxes-as-the-execution-layer-for-agents) | 🚀 accelerating | [2026-09-22](https://blog.cloudflare.com/worker-previews/) |
 | [AI agents doing open-ended AI research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) | 🌊 mainstreaming | [2026-09-22](https://arxiv.org/abs/2609.26457) |
@@ -37,12 +39,10 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 | [Open-weight frontier MoE wave](TRENDS.md#id-open-weight-003-open-weight-wave-frontier-scale-moe-released-at-high-cadence-across-labs) | 🌊 mainstreaming | [2026-09-21](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL) |
 | [MCP standard integration layer](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks) | 🚀 accelerating | [2026-09-20](https://arxiv.org/abs/2609.23809) |
 | [Agentic-RL credit assignment](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards) | 📈 emerging | [2026-09-20](https://arxiv.org/abs/2609.23808) |
-| [Verifiable RL environments](TRENDS.md#id-rl-env-005-verifiable-rl-environments-as-an-infrastructure-category-for-agent-training) | 🚀 accelerating | [2026-09-18](https://arxiv.org/abs/2609.22068) |
 | [World/action models (video)](TRENDS.md#id-world-action-models-020-learned-worldaction-models-from-video-as-a-substrate-for-embodied-and-open-ended-agent-generalization) | 🚀 accelerating | [2026-09-18](https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization) |
 | [Diffusion language models](TRENDS.md#id-diffusion-lm-013-diffusion-language-models-reach-open-weights-production-scale) | 🚀 accelerating | [2026-09-17](https://arxiv.org/abs/2609.20751) |
 | [Parametric injection (behavior→weights)](TRENDS.md#id-parametric-injection-018-parametric-injection-compiling-behavior-and-knowledge-into-model-weights-instead-of-promptcontext) | 📈 emerging | [2026-09-16](https://arxiv.org/abs/2609.18842) |
-| [⭐ Small & 1-bit models (CPU/edge)](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 🚀 accelerating | [2026-09-24](https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark) |
-| [⭐ Low-bit quantization (vector/trellis)](TRENDS.md#id-lowbit-quant-011-ultra-low-bit-quantization-vector-and-trellis-coding-for-weights-and-kv-cache) | 🚀 accelerating | [2026-09-14](https://arxiv.org/abs/2609.16338) |
+| [⭐ Small & 1-bit models (CPU/edge)](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 🚀 accelerating | [2026-09-29](https://github.com/firelex/jeff) |
 | [Multi-agent engineering](TRENDS.md#id-multi-agent-eng-009-multi-agent-engineering-becomes-product-surface-teams-workflows-a2a) | 🚀 accelerating | [2026-09-10](https://cursor.com/blog/projects) |
 | [⭐ Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 emerging | [2026-09-12](https://github.com/yifanzhang-pro/recurrent-looped-tranformer) |
 | [⭐ Latent inter-model communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 📈 emerging | [2026-09-09](https://arxiv.org/abs/2609.10266) |
@@ -50,6 +50,8 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 
 ## Worth studying
 
+- [NVIDIA Launches Open Agent Safety Platform](https://nvidianews.nvidia.com/news/open-agent-safety-platform) — OpenShell (an open-source runtime boundary) plus Sentry, a hardware watchdog on dedicated DPU silicon that can quarantine a rogue agent in milliseconds, entirely out-of-band from the agent's own software stack.
+- [Holo4](https://huggingface.co/blog/Hcompany/holo4) — an open-weight generalist computer-use agent that clicks/types on a screen, writes and runs code, and calls MCP/API tools through one model across desktop, web, Android and code-sandbox targets.
 - [How Cloudflare addressed a cross-tenant data exposure vulnerability in Containers](https://blog.cloudflare.com/containers-cross-tenant-vulnerability/) — a clear postmortem of a shared-storage-pool bug letting one tenant recover another's residual disk data, affecting both Containers and Sandboxes.
 - [2026 in LLMs (so far)](https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/) — Simon Willison's annotated year-in-review keynote, a single practitioner-grounded recap of the whole year.
 - [Introducing Contrastive Language Models (CLM)](https://huggingface.co/Contrastive-LM/CLM-v0.1-8B) — Stanford's Scaling Intelligence Lab ships an 8B "System One" model that scores agent actions via cheap contrastive vector search, matching the incumbent Jev's quality at up to 9x lower latency.
@@ -60,19 +62,16 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 - [A Faster Shortest Path Algorithm](https://www.vals.ai/blogs/faster-shortest-path-algorithm) — ten Claude Opus 5.5 agents coordinate over 15 hours to design and Lean-verify a genuine (if narrow) asymptotic algorithms improvement, honestly caveated.
 - [dlab Open Source Week: Frontier AI on Your Own Hardware](https://timdettmers.com/2026/09/21/dlab-open-source-week/) — bitsandbytes/QLoRA creator Tim Dettmers' lab ships tooling running Qwen3.8-Flash-Next (125B) on a single 24GB consumer GPU and DeepSeek V4.1 (550B) on a 128GB Mac.
 - [Packaged, But Not Portable](https://arxiv.org/abs/2609.23809) — a 68,072-plugin-bundle audit finds only 6.2% conform to the Agent Plugins standard, and argues conformance alone wouldn't guarantee portability anyway.
-- [Same Name, Different Server](https://arxiv.org/abs/2609.14119) — a full-registry census of 21,643 MCP servers finds 51% of multi-version servers silently change what they advertise, correlating with 3x higher odds of a serious security finding.
-- [Agent Substrate / AX](https://github.com/agent-substrate/substrate) — a Google-affiliated open-source runtime claiming 10x sandbox density and sub-500ms resume for running millions of agent workloads.
 
 ## Community pulse
 
 _Unverified community sentiment (intake only, never trend evidence); links are to threads/venues, individuals are never named._
 
-- YouTube's curator channels 404'd for a 2nd consecutive check — now treated as a confirmed re-block rather than a one-off; HF-daily-papers and HN overlap keep covering their typical picks.
-- Broad Reddit pulse stayed unreachable again (`reddit.com/r/LocalLLaMA` returns a network-policy block page); the Hacker News broad-pulse tier carried the full community-pulse load.
-- The Australian government Medicare-portal OpenAI agent breach stays unverified for citation — re-checked against OpenAI's newest misalignment-report batch, still no dedicated primary.
-- A curator-scouting probation candidate (a long-running weekly AI newsletter) posted three more commentary/analysis pieces this week, still 0 independently-sourced primaries.
-- Tooling note: the GitHub external API remains scope-blocked for a 38th+ consecutive week (already notification-flagged); the Tavily search API hit its plan usage limit again this run (2nd time since a September fix) — web-search fallbacks covered the full run without it.
+- YouTube's curator channels stay confirmed re-blocked (2nd consecutive 404); HF-daily-papers and HN overlap keep covering their typical picks — next re-test on the weekly cadence.
+- Broad Reddit pulse was not attempted this run (standing egress-block precedent); the Hacker News broad-pulse tier carried the full community-pulse load, topped by Anthropic's Claude Sonnet 5.5 release.
+- An independent open-source "Jev-compatible" small decision model ([Jeff](https://github.com/firelex/jeff)) recurred on Hacker News, resolving a below-bar queue item into trend evidence — two independent developers now converge on the same open recipe.
+- Tooling note: the GitHub external API remains scope-blocked for a 39th+ consecutive week (already notification-flagged); the Tavily search API hit its plan usage limit again this run — the 2nd consecutive daily occurrence — web-search fallbacks covered the full run without it.
 
 ## Output map
 
-[TRENDS.md](TRENDS.md) · [watchlist (~25)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-09-28](reports/2026-09-28.md) · weekly: [2026-W39](reports/weekly/2026-W39.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
+[TRENDS.md](TRENDS.md) · [watchlist (~27)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-09-29](reports/2026-09-29.md) · weekly: [2026-W39](reports/weekly/2026-W39.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
