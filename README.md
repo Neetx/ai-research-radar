@@ -1,15 +1,15 @@
 # AI Radar
 
-![trends](https://img.shields.io/badge/trends-21-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-11-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-26-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--10--01-2f9e44?style=flat-square)
+![trends](https://img.shields.io/badge/trends-21-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-11-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-24-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--10--02-2f9e44?style=flat-square)
 
 Tracks AI research + engineering trends for an AI researcher / systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-10-01):**
+**Since last scan (2026-10-02):**
 
-- **Dormancy rescue**: [Multi-agent engineering](TRENDS.md#id-multi-agent-eng-009-multi-agent-engineering-becomes-product-surface-teams-workflows-a2a) was one day from the 21-day dormancy line — rescued by Zed's [v1.22.0 release](https://github.com/zed-industries/zed/releases/tag/v1.22.0), which lets a coordinator assign a different model to each spawned subagent.
-- **Two incident disclosures, one lab**: OpenAI confirms and resolves a long-queued incident in [How we will do better for Australia](https://openai.com/index/how-we-will-do-better-for-australia) (four unauthorized-access events against Australian-government systems), and discloses a new threat class in [Disrupting a coordinated model-distillation campaign](https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign) — both landing on [agent security](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn).
-- **Third frontier lab discloses its own RSI**: Z.ai's [Infra Agent built GLM-5.3-Flash's inference stack](https://z.ai/blog/glm-built-its-inference-infrastructure) on 100,000+ accelerators in under two weeks, landing on [AI agents doing open-ended AI research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery).
-- **Housekeeping**: fixed two internal queue duplicates, resolved the Australia incident into evidence, dropped 5 stale items, added 10 new below-bar finds.
+- **The day's two highest-signal finds both land on one trend**: Earendil's [Pi 1.0](https://earendil.com/posts/pi-1-0/) (HN #1, 996pts) and Cloudflare's [Clef decision models + RL platform](https://blog.cloudflare.com/clef-decision-models/) (HN #3, 473pts) both join [agent harness/runtime infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) as evidence.
+- **Cap-driven queue cleanup**: the watchlist had quietly grown to ~32 live items, over the ~25 soft cap — burned down 7 of the oldest/weakest-fit items back to 24.
+- **Two standing claims stay unresolved**: OpenAI's rumored "Decisions API" (3rd miss) and the "GPT-6.1 Astra pulled" report (2nd miss) — neither has surfaced a primary source yet.
+- **New watch item**: [Context Language Models](https://arxiv.org/abs/2609.37725) (Ai2/UW) — a model that manages its own context as a rewritable file, beating harness-external context management.
 
 ## ⭐ Pinned topics
 
@@ -42,7 +42,7 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 | [Parametric injection (behavior→weights)](TRENDS.md#id-parametric-injection-018-parametric-injection-compiling-behavior-and-knowledge-into-model-weights-instead-of-promptcontext) | 📈 emerging | [2026-09-16](https://arxiv.org/abs/2609.18842) |
 | [⭐ Latent/recursive reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 emerging | [2026-09-14](https://arxiv.org/abs/2609.15160) |
 | [VLM-scaffolded navigation](TRENDS.md#id-embodied-nav-021-vlm-scaffolded-generalist-embodied-navigation-policies) | 🌱 seed | [2026-09-15](https://arxiv.org/abs/2609.16610) |
-| [Agent harness/runtime/memory infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) | 🌊 mainstreaming | [2026-09-30](https://arxiv.org/abs/2609.31847) |
+| [Agent harness/runtime/memory infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) | 🌊 mainstreaming | [2026-10-01](https://earendil.com/posts/pi-1-0/) |
 | [Agent security (injection limits)](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) | 🌊 mainstreaming | [2026-09-30](https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign) |
 | [AI agents doing open-ended AI research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) | 🌊 mainstreaming | [2026-09-28](https://z.ai/blog/glm-built-its-inference-infrastructure) |
 | [Open-weight frontier MoE wave](TRENDS.md#id-open-weight-003-open-weight-wave-frontier-scale-moe-released-at-high-cadence-across-labs) | 🌊 mainstreaming | [2026-09-21](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL) |
@@ -50,6 +50,8 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 
 ## Worth studying
 
+- [Pi 1.0](https://earendil.com/posts/pi-1-0/) — a hardened, minimal, MIT-licensed agent harness (already independently benchmarked to the Pareto frontier in HarnessTax) ships its own 1.0 release — by far the day's highest-attention item (HN #1, 996pts).
+- [Context Language Models](https://arxiv.org/abs/2609.37725) — Ai2/UW researchers show a model that treats its own context as a rewritable file, beating SOTA harness-external context management, with a natural extension to multi-agent systems.
 - [Disrupting a coordinated model-distillation campaign](https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign) — a rare, quantified look (15,000+ users, concrete timeline) at adversarial distillation as a live operational threat, not a theoretical one.
 - [Cloudflare Containers, rebuilt to scale agent sandboxes](https://blog.cloudflare.com/faster-agent-sandboxes/) — a ground-up rewrite (Durable Objects, filesystem-snapshot pause/resume, 6x faster startup) worth studying as an architecture pattern for multi-tenant agent execution infrastructure.
 - [Introducing dots](https://openai.com/index/introducing-dots/) — OpenAI's always-on, persistent agent with its own cloud computer and learned-preference memory, plus a "teams of dots" roadmap.
@@ -60,19 +62,17 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 - [2026 in LLMs (so far)](https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/) — Simon Willison's annotated year-in-review keynote, a single practitioner-grounded recap of the whole year.
 - [Introducing Contrastive Language Models (CLM)](https://huggingface.co/Contrastive-LM/CLM-v0.1-8B) — Stanford's Scaling Intelligence Lab ships an 8B "System One" model that scores agent actions via cheap contrastive vector search, matching the incumbent Jev's quality at up to 9x lower latency.
 - [Codetta: High-Capacity, Keyless, and Undetectable Multi-Agent Collusion](https://arxiv.org/abs/2609.28900) — CMU researchers build a provably-undetectable steganographic protocol for independently-deployed agents to covertly collude, no pre-shared secret required.
-- [CliffCompaction](https://arxiv.org/abs/2609.26779) — Tim Dettmers' lab ships a drop-in Claude Code/Codex CLI proxy that only truncates or drops prior context, never rewrites it, cutting long-horizon agent token cost up to 50%.
-- [Agensh: Scaling Organizational Intelligence to 1,024 Agents](https://arxiv.org/abs/2609.26781) — a decentralized multi-agent harness with no central orchestrator, scaling from 1 to 1,024 concurrent workers, more than doubling pass rate on a hard coding task.
 
 ## Community pulse
 
 _Unverified community sentiment (intake only, never trend evidence); links are to threads/venues, individuals are never named._
 
-- Hacker News front page was dominated by Google's [Gemini 4 Argon](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/) launch; a security researcher's account of chaining a WSJ-reported pullback of an OpenAI model variant surfaced via a curator relay, still unverified against a primary.
-- A long-thin curator-lane gap (2 consecutive dailies) was closed this run — Simon Willison, Interconnects, Import AI, Lilian Weng, Sebastian Raschka and emergentmind were all individually re-opened, surfacing a third frontier lab's RSI disclosure via Import AI.
-- A previously-unseen "agent economic infrastructure" layer surfaced from Cloudflare (charging agents per-request via HTTP 402, paying creators when AI uses their work) — below any tracked axis's bar today, flagged as a candidate forming theme.
-- Broad Reddit pulse was not attempted this run (standing egress-block precedent); Hacker News + the curator lane carried the full community-pulse load.
-- Tooling note: `tvly` was not exercised this run (persistent multi-day plan-limit history); the GitHub external API remains access-scope-blocked (already notification-flagged).
+- Hacker News front page was led by Earendil's [Pi 1.0](https://earendil.com/posts/pi-1-0/) harness release (996pts) and Cloudflare's [Clef](https://blog.cloudflare.com/clef-decision-models/) decision-model launch (473pts) — both independently corroborated via the lab-sweep RSS catch and now trend evidence.
+- The curator lane (AlphaSignal, Simon Willison, Import AI, Interconnects, Lilian Weng, Sebastian Raschka, emergentmind, Zvi Mowshowitz) was NOT separately iterated this run — a real coverage gap, flagged for the very next pass.
+- Broad Reddit pulse was not attempted this run (standing egress-block precedent); Hacker News carried the pulse load this pass.
+- Two standing rumors stay unconfirmed by any primary: OpenAI's "Decisions API" (3rd miss) and a reported "GPT-6.1 Astra" pullback for alignment concerns (2nd miss).
+- Tooling note: `tvly` installed and worked throughout this run; direct GitHub API access stays scope-blocked for repos outside this session (WebFetch of public release pages is the working fallback).
 
 ## Output map
 
-[TRENDS.md](TRENDS.md) · [watchlist (~26)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-10-01](reports/2026-10-01.md) · weekly: [2026-W39](reports/weekly/2026-W39.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
+[TRENDS.md](TRENDS.md) · [watchlist (~24)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-10-02](reports/2026-10-02.md) · weekly: [2026-W39](reports/weekly/2026-W39.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
