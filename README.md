@@ -1,15 +1,15 @@
 # AI Radar
 
-![trends](https://img.shields.io/badge/trends-21-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-11-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-24-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--10--02-2f9e44?style=flat-square)
+![trends](https://img.shields.io/badge/trends-21-3266ad?style=flat-square) ![accelerating](https://img.shields.io/badge/accelerating-11-e8590c?style=flat-square) ![watchlist](https://img.shields.io/badge/watchlist-25-6c757d?style=flat-square) ![updated](https://img.shields.io/badge/updated-2026--10--03-2f9e44?style=flat-square)
 
 Tracks AI research + engineering trends for an AI researcher / systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-10-02):**
+**Since last scan (2026-10-03, weekly recalibration):**
 
-- **The day's two highest-signal finds both land on one trend**: Earendil's [Pi 1.0](https://earendil.com/posts/pi-1-0/) (HN #1, 996pts) and Cloudflare's [Clef decision models + RL platform](https://blog.cloudflare.com/clef-decision-models/) (HN #3, 473pts) both join [agent harness/runtime infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) as evidence.
-- **Cap-driven queue cleanup**: the watchlist had quietly grown to ~32 live items, over the ~25 soft cap — burned down 7 of the oldest/weakest-fit items back to 24.
-- **Two standing claims stay unresolved**: OpenAI's rumored "Decisions API" (3rd miss) and the "GPT-6.1 Astra pulled" report (2nd miss) — neither has surfaced a primary source yet.
-- **New watch item**: [Context Language Models](https://arxiv.org/abs/2609.37725) (Ai2/UW) — a model that manages its own context as a rewritable file, beating harness-external context management.
+- **Monthly retrospective catches a real miss**: Convai Innovations' [Laya](https://huggingface.co/convaiinnovations/laya) — a fast "System 1" decision model with 5,000+ HF likes — sat uncaught for 2+ weeks before this run backfilled it onto [agent harness/runtime infra](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) as a 4th independent org on the decision-model-as-harness-primitive pattern.
+- **Three standing mainstreaming gates held again**: small-cpu-models-008's extreme-low-bit-as-default, multi-agent-eng-009's cross-vendor-portable-abstraction, and world-action-models-020's adoption-side gate all stay unfired this week — no stage moves.
+- **Queue reconciled**: a direct recount found 24 live watchlist items pre-session (vs. a daily-delta projection of 28) — a 4-item gap now named and a [tightened recount step](reports/weekly/2026-W40.md) proposed for next week.
+- **Capture-leak sweep clean**: 20 ids cross-checked this week, 0 genuine leaks (2 apparent misses resolved as legitimately-dropped queue items).
 
 ## ⭐ Pinned topics
 
@@ -67,12 +67,11 @@ Tracks AI research + engineering trends for an AI researcher / systems engineer 
 
 _Unverified community sentiment (intake only, never trend evidence); links are to threads/venues, individuals are never named._
 
-- Hacker News front page was led by Earendil's [Pi 1.0](https://earendil.com/posts/pi-1-0/) harness release (996pts) and Cloudflare's [Clef](https://blog.cloudflare.com/clef-decision-models/) decision-model launch (473pts) — both independently corroborated via the lab-sweep RSS catch and now trend evidence.
-- The curator lane (AlphaSignal, Simon Willison, Import AI, Interconnects, Lilian Weng, Sebastian Raschka, emergentmind, Zvi Mowshowitz) was NOT separately iterated this run — a real coverage gap, flagged for the very next pass.
-- Broad Reddit pulse was not attempted this run (standing egress-block precedent); Hacker News carried the pulse load this pass.
-- Two standing rumors stay unconfirmed by any primary: OpenAI's "Decisions API" (3rd miss) and a reported "GPT-6.1 Astra" pullback for alignment concerns (2nd miss).
-- Tooling note: `tvly` installed and worked throughout this run; direct GitHub API access stays scope-blocked for repos outside this session (WebFetch of public release pages is the working fallback).
+- This week's curator lane ran a full sweep only 1 of 5 days; this weekly's own spot-recheck of the 4 most-productive thin-logged curators (Interconnects, Import AI, Lilian Weng, Sebastian Raschka) found all four genuinely quiet — 0 primaries actually lost, but the logging-discipline gap is named for the dailies to fix.
+- Zvi Mowshowitz's newsletter (curator probation) stays at 0 verified-serious hits since 09-19 — decision window (promote or drop) closes ~W41-W42.
+- Two standing rumors stay unconfirmed by any primary as of 10-02: OpenAI's "Decisions API" (3rd miss) and a reported "GPT-6.1 Astra" pullback for alignment concerns (2nd miss).
+- Tooling note: `tvly` reinstalled and worked throughout this weekly's source-strategy checks; direct GitHub API access stays scope-blocked for repos outside this session (WebFetch of public release pages is the working fallback).
 
 ## Output map
 
-[TRENDS.md](TRENDS.md) · [watchlist (~24)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-10-02](reports/2026-10-02.md) · weekly: [2026-W39](reports/weekly/2026-W39.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
+[TRENDS.md](TRENDS.md) · [watchlist (25)](TRENDS.md#observation_queue) · [reports/](reports/) → [2026-10-02](reports/2026-10-02.md) · weekly: [2026-W40](reports/weekly/2026-W40.md) · [AGENTS.md](AGENTS.md) · [SOURCES.md](SOURCES.md)
