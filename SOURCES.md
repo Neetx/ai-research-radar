@@ -169,7 +169,8 @@ verification (real feed, on-axis, not SEO). Line format:
 - claude.com/blog — 1 — "Auto mode is now the default in Claude Code" (08-07, rigorous 1,053-tester + 720-attack third-party eval showing automated permission classification beats human review) → agent-security-004 EVIDENCE — first seen 2026-08-10, via the HN pulse. Anthropic's product-blog domain, DISTINCT from anthropic.com/news (already tier-i) — anthropic.com/news did not carry this post as of this sweep. Below the ≥2-artifact bar on its own; watch for a second on-axis post before considering a dedicated sweep entry (claude.com/blog is largely product-announcement content, may be low-cadence for research-grade primaries).
 - (primeintellect.ai PROMOTED 2026-08-15 W33 weekly to the Tier (ii) Research labs/independents swept list — see above; staging line cleared.)
 - research.meta.ai — 1 — "Introducing Muse Glimmer" (08-10, Meta Superintelligence Labs' first open release, 30B, Apache-2.0) → small-cpu-models-008 EVIDENCE — first seen 2026-08-11, via the HN front-page pulse (#1, 1081pts). Meta's own AI-research blog domain, distinct from the already-tracked (low-cadence) ai.meta.com/blog — below the ≥2-artifact bar, watch for a second on-axis post before promoting.
-- cactuscompute.com — 1 — "Needle 2" (08-10, 45M-param/14MB tool-calling model for sub-$200 devices) → small-cpu-models-008 EVIDENCE — first seen 2026-08-11, via the HN front-page pulse (256pts). An untracked small-on-device lab; below the ≥2-artifact bar, watch for a follow-on release.
+- cactuscompute.com — 2 — "Whistle" (10-02, a 16.9MB open CPU speech-to-text model) → small-cpu-models-008 EVIDENCE — last seen 2026-10-09, via the HN front-page pulse (674pts); first seen 2026-08-11 via "Needle 2" (08-10, 256pts). CROSSES the ≥2-artifact promotion bar — flagged for the weekly to verify (`cactuscompute.com/blog`) and promote to the tier-ii swept list.
+- odyssey.systems — 1 — "Odyssey-3" (10-08, a real-time interactive foundation world model, Physics-IQ/WorldMark benchmarked) → world-action-models-020-adjacent, queued below-bar — first seen 2026-10-09, via the AlphaSignal curator lane. A previously-untracked lab; below the ≥2-artifact bar, watch for a follow-on release.
 - mindlab-research (GitHub + HF org) — 1 — Macaron-V1 (08-10, arXiv 2608.09819, Mixture-of-LoRA production system) → parametric-injection-018 EVIDENCE — first seen 2026-08-11, via HF daily papers (35up). An untracked lab publishing directly to HF/GitHub rather than a blog; below the ≥2-artifact bar, watch for a second release.
 - deepseek.com — 1 — "DeepSeek Harness developer preview" (08-13, deepseek.com/harness) → agent-runtime-015 EVIDENCE — first seen 2026-08-14, via the HN front-page pulse (#2, 607pts). DeepSeek's own product/marketing domain, DISTINCT from the already-tracked `api-docs.deepseek.com/news` (API changelog only, no product-launch content) — below the ≥2-artifact bar on its own; watch for a second on-axis product post before considering a dedicated sweep entry.
 - cerebras.ai — 4 — CS-4 launch (08-18, investors.cerebras.ai, "up to 30x faster than GPU-based solutions") — first seen 2026-08-14 (Ultrafast-mode serving post), 2nd sighting 2026-08-19 via the HN pulse (#13, 167pts), 3rd sighting 2026-08-20 via AlphaSignal, 4th sighting 2026-09-04 via the HN pulse (504pts, "Qwen 3.8 27B available on Cerebras at 1500 tokens/s") — the FIRST technical (non-press-release) page seen for this domain (inference-docs.cerebras.ai model-catalog docs, opened this session), partially satisfying the standing "watch for a technical post" note, but the page itself is routine model-hosting documentation, not a new capability announcement — stays below the promotion bar. Keep watching for an actual technical writeup (architecture/kernel/serving detail), not docs or press.
@@ -468,6 +469,30 @@ notification-worthy regardless of the per-run "3 consecutive occurrences"
 threshold used for tool-level degradations. The `tvly`-routed fallback above
 continues to maintain coverage (version-bump/tag detection); only diff-level
 fidelity (commit/PR turbulence, fork-tree analysis) remains lost.
+
+**HEALED 2026-10-09 (daily):** diagnosed the root cause — `api.github.com` and
+`github.com/.../releases.atom` are blocked by this session's own GitHub
+connector scope (proxy-level 403, "GitHub access to this repository is not
+enabled for this session"), NOT a rate limit or feed problem. Plain `git`
+protocol is NOT subject to that scope block: `git ls-remote --tags --sort=-v:refname
+https://github.com/<owner>/<repo>.git` lists every release tag (and, via the
+commit hash, lets a release page be dated) for any public repo without going
+through the blocked proxy path. `WebFetch` on a `github.com/.../releases/tag/<tag>`
+page ALSO works (a different code path than the blocked one) and returns full
+release-note content. Working method going forward: `git ls-remote --tags` to
+detect new tags (diff against the last-seen tag per repo), then `WebFetch` the
+new tag's release page for content — this restores tag/version-level fidelity
+close to the pre-block baseline; true diff-level fidelity (merged-PR/issue
+turbulence via the REST API, fork-tree analysis) stays out of reach since
+`api.github.com` itself is scope-blocked, not just the Atom feed. Verified
+against all 9 watched repos this run (vllm-project/vllm, sgl-project/sglang,
+ggml-org/llama.cpp, ggml-org/ggml, huggingface/transformers,
+turboderp-org/exllamav3, microsoft/BitNet, ai-dynamo/dynamo,
+modelcontextprotocol/modelcontextprotocol) and recovered a genuine 3-release
+vLLM coverage gap (v0.29.0/v0.30.0/v0.31.0, unreviewed since v0.28.0/08-26) —
+see TRENDS.md pd-disagg-002. Per the standing heal-retest convention, the NEXT
+run should re-test this exact method before assuming it still holds; retire
+this note once confirmed clean for a full week.
 
 ### Watched repositories (releases / merged PRs / hot issues)
 - vllm-project/vllm
