@@ -11,6 +11,17 @@ EVERY run does the FULL CHECK — there is NO "light/lean/confirmation pass", an
 
 ## 1. Load state
 - Recover orphaned state first: `git ls-remote --heads origin` — if any `claude/*` branch holds a `radar:` commit missing from your history (`git log origin/<branch> --oneline -3`), fetch and merge it (fast-forward preferred, never force) before anything else, and note the recovery in today's report.
+- Verify the previous runs COMPLETED: for every `radar: daily update` / `radar: weekly
+  recalibration` commit of the last 7 days, its report exists (`reports/YYYY-MM-DD.md`,
+  `reports/weekly/YYYY-Wnn.md`). A run can commit its work and die before writing its report —
+  then its commits exist, its report does not, and nothing downstream notices. Open today's
+  report with an INCOMPLETE-RUN warning naming what is missing. For a missing WEEKLY report,
+  write it now as `reports/weekly/YYYY-Wnn.md`, headed "RECONSTRUCTED <today> — the weekly
+  run did not write its report", built ONLY from that run's own commit messages and diffs and
+  its `logs/calibration.md` / `logs/source_rotation.md` lines — state explicitly any amendment
+  proposal found there, so its cooling-period clock is not lost; invent nothing. If the same
+  kind of run was incomplete twice in a row, send the curator a push notification: that is a
+  run that keeps dying, not a blip.
 - Read `TRENDS.md` in full.
 - Read the most recent report in `reports/` (skip if none exists yet).
 - Read the recent tail (~10 entries) of `logs/strategy_notes.md` and the recent tail (~7 days) of `logs/source_rotation.md` — the coverage log lives there now, not in TRENDS.md; read only the tail, not the whole file — to decide what to cover today.
@@ -75,6 +86,18 @@ This section is NOT skippable on a quiet pass. Even when the scan found no new e
   A run that checked a trend and found nothing new writes NOTHING into it — that non-event already
   lives in today's report and in `logs/source_rotation.md`, and copying it into the trend is how a
   ledger silently turns into a run-log. If a note would only say "checked, unchanged", omit it.
+- DORMANCY PROBE — silence must be MEASURED where the trend's evidence lives, never assumed.
+  Before moving any trend to `dormant` (or archiving it), probe its silent window
+  (`last_evidence` → today) on the channels its OWN evidence comes from: read the hosts and
+  lane types of its current evidence list (lab or vendor blogs, threat-intel, advisories/CVEs,
+  repos, arXiv, journals…) and check those — by feed or sitemap/index diff where possible —
+  PLUS one independent news search over the window
+  (`tvly search "<trend terms>" --topic news --start-date <last_evidence>`, intake only).
+  A probe on a channel the trend's evidence never came from (e.g. arXiv-only for an in-the-wild,
+  product or policy trend) proves nothing. Any on-scope hit dated inside the window is a
+  CAPTURE failure, not silence: capture it (verify on the primary) and keep the stage. Only an
+  empty probe allows the move; record the channels probed and the newest result found in the
+  trend's notes — a decision that binds future runs, so a legitimate note.
 - Stage moves: at most ONE stage up per trend per day, only on new independent evidence, justified in `notes`. Demotions are allowed without new evidence.
 - 21+ days without evidence → set stage `dormant` (the weekly pass archives at 45+). Dormancy check (W30-P2, applied 2026-08-01 W31): EVERY run, enumerate ALL active trends' `last_evidence` against today's date — not only the trends a prior report pre-flagged as "near the line". Two crossings (pd-disagg-002, latent-comm-010) sat unflagged through the W28/W29 dormancy-watch lists and were only caught at the W30 weekly; full enumeration each run closes that gap.
 - `observation_queue` (MANDATORY maintenance — do this EVERY run, including quiet/no-evidence passes): add today's weak signals (0–5, marked unverified unless opened); promote items that now meet the trend bar (new trends start at seed or emerging). KEEP IT BOUNDED to a soft cap of ~25, by a cap-driven burndown (NOT a fixed per-run quota): whenever the queue is OVER the cap, you MUST resolve the oldest items toward the cap in THIS pass regardless of what the scan found — verify→promote, or drop with a one-line reason in today's report; when already at/under the cap, still resolve the 1–2 oldest if they are stale. Over cap → always burn; at cap → it stops on its own. Intake is daily, so resolution is daily too — never defer the burndown to the weekly. NEVER silently delete: a dropped item's reason goes in today's report (permanent); re-date an item only if it's genuinely still worth watching, noting what's missing.

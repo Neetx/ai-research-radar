@@ -2,7 +2,13 @@
 
 You are the weekly operator of the AI Radar state repository (the repo this session runs in). Work in English. Compute the ISO week as YYYY-Wnn (`date +%G-W%V`).
 
+REPORT FIRST: create `reports/weekly/YYYY-Wnn.md` at the START of this run (header + "in
+progress") and append each phase's results as you finish it. Every commit of this run —
+checkpoint commits included — carries the report as it stands. A weekly that commits its work
+and dies before the report leaves its amendments and calibration with no readable record.
+
 ## 1. Load state
+Verify the previous runs COMPLETED and reconstruct any missing weekly report (see daily.md → Load state).
 Recover orphaned state first: `git ls-remote --heads origin` — if any `claude/*` branch holds a `radar:` commit missing from your history, fetch and merge it (fast-forward preferred, never force) and note the recovery in the report.
 Then read `TRENDS.md`, `ARCHIVE.md`, the daily reports of the past 7 days in `reports/`, and the previous weekly report in `reports/weekly/` if present.
 
@@ -10,6 +16,8 @@ Then read `TRENDS.md`, `ARCHIVE.md`, the daily reports of the past 7 days in `re
 Judge each trend's velocity over the last 2–3 weeks: count of new independent evidence items, breadth of orgs, presence in official docs/frameworks.
 - **Promote** (seed → emerging → accelerating → mainstreaming) only on sustained multi-org evidence; one stage max per week; justify in `notes`.
 - **Demote** honestly when evidence thinned (e.g. accelerating → emerging, or → declining when the ecosystem moved on).
+- **Dormancy probe first:** no trend moves to `dormant` and none is archived without the
+  DORMANCY PROBE of `routines/daily.md` over its full silent window coming back empty.
 - **Dormancy**: 21+ days without evidence → `dormant`. If `last_evidence` is 45+ days old, move the whole entry to `ARCHIVE.md`, compressed to a one-line post-mortem (what it was, why it stalled).
 - **Reactivation-source sweep** (W29-P1, applied 2026-07-25 W30): when a trend is `dormant` (or held-quiet) with a NAMED, dated reactivation event in its `notes` (e.g. "reactivates on the 07-28 final spec"), the weekly OPENS that named source THIS run and captures any interim primary — rather than logging "stays dormant" until the event date. Motivated by the ~3–4-week capture-lag on mcp-standard-001, whose reactivation blog carried two interim primaries (EMA 06-18, SDK betas 06-29) for weeks while the dailies waited for the 07-28 final spec.
 - **Merge** overlapping trends: keep the older id, union the aliases, keep the 10 strongest evidence items, note the merge in `notes`.
