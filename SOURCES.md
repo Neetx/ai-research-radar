@@ -144,6 +144,10 @@ capability changes, NOT chip-business/macro news. agent: verify feeds on first s
 
 ## Discovered-source candidates (auto-staged by the daily — NOT yet swept; the weekly verifies & promotes)
 
+VENUE-MOVE EXCEPTION (2026-10-19): a candidate whose domain belongs to an organization ALREADY in a
+swept list is that organization publishing somewhere new — promote it into that source's entry
+(feed + diff target) in the SAME run, never leave it staged (`radar-source-sweep` → VENUE MOVES).
+
 The source-discovery loop's staging area. The radar grows its OWN source coverage the way it
 finds papers and curators: when any daily lane NAMES an on-axis primary whose publishing
 org/domain is NOT already in a swept list above, the daily APPENDS/increments it here — a tally
