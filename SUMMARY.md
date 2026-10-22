@@ -6,5 +6,3 @@
 - **New** · [PAR](https://arxiv.org/abs/2610.27628) — supervising what each loop iteration should achieve gives 16× train-length generalization (→ [Latent-space reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent)).
 - **New** · [Ropedia W0](https://arxiv.org/abs/2610.26855) — one loco-manipulation world model trained on human and robot experience (→ [World/action models from video](TRENDS.md#id-world-action-models-020-learned-worldaction-models-from-video-as-a-substrate-for-embodied-and-open-ended-agent-generalization)).
 - **Study pick** · [Patch the Planet](https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/) — how coordinated disclosure must work when agents find vulnerabilities at scale.
-
-[Full report](reports/2026-10-22.md) · [Dashboard](README.md)
