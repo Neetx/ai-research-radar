@@ -1,0 +1,10 @@
+# AI Radar — 2026-10-22
+
+- **New** · [Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor](https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/) — a poisoned LLM-gateway release steals AI-tool and LLM-provider credentials (→ [Agent security: architectural turn](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn)).
+- **New** · [Introducing Claude Duet](https://claude.com/blog/claude-duet) — Anthropic ships a persistent, proactive agent as a product (→ [Agent harness/runtime as self-improving object](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object)).
+- **New** · [Using thousands of AI agents to uncover new leads in biological data](https://openai.com/index/scaling-ai-research-for-complex-biological-data) — OpenAI, PerturbAI and Scripps Research mine brain-cell data for Alzheimer's and Parkinson's leads (→ [AI agents doing open-ended research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery)).
+- **New** · [PAR](https://arxiv.org/abs/2610.27628) — supervising what each loop iteration should achieve gives 16× train-length generalization (→ [Latent-space reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent)).
+- **New** · [Ropedia W0](https://arxiv.org/abs/2610.26855) — one loco-manipulation world model trained on human and robot experience (→ [World/action models from video](TRENDS.md#id-world-action-models-020-learned-worldaction-models-from-video-as-a-substrate-for-embodied-and-open-ended-agent-generalization)).
+- **Study pick** · [Patch the Planet](https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/) — how coordinated disclosure must work when agents find vulnerabilities at scale.
+
+[Full report](reports/2026-10-22.md) · [Dashboard](README.md)

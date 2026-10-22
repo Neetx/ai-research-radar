@@ -108,6 +108,8 @@ This section is NOT skippable on a quiet pass. Even when the scan found no new e
 - Append one dated line to the coverage log `logs/source_rotation.md` (append-only; never edit past lines) with the sources covered today. The `source_rotation` section of TRENDS.md is now just a pointer — do not write scans into TRENDS.md.
 - Update the "Last updated" line. Do not rename sections or change the file structure.
 - Regenerate `README.md` (the dashboard / landing page) from the updated ledger in the same commit (follow the `radar-render-dashboard` skill).
+  Then overwrite `SUMMARY.md`, the daily summary page (same skill → *SUMMARY.md*): the run's
+  results in at most 6 one-line linked bullets — results only, no process detail; run its checks.
 
 ## 5. Study picks (study_shelf)
 From today's scan (exploration slot included), select 0–2 items that an AI researcher / AI-systems engineer / daily AI practitioner should know or study: a project, paper, technique or tool. The trend bar does NOT apply here — a single strong artifact qualifies — but the evidence rules do: only opened, primary sources. Add each pick to the `study_shelf` section of `TRENDS.md` (newest first: date — [name](url) — one line of why it is worth studying). Don't force it: zero picks is fine.
