@@ -2,54 +2,56 @@
 
 ![trends](https://img.shields.io/badge/trends-23-3266ad?style=flat-square)
 ![accelerating](https://img.shields.io/badge/accelerating-10-e8590c?style=flat-square)
-![watchlist](https://img.shields.io/badge/watchlist-17-6c757d?style=flat-square)
-![updated](https://img.shields.io/badge/updated-2026--10--22-2f9e44?style=flat-square)
+![watchlist](https://img.shields.io/badge/watchlist-15-6c757d?style=flat-square)
+![updated](https://img.shields.io/badge/updated-2026--10--23-2f9e44?style=flat-square)
 
 Tracks AI-ecosystem trends (research + engineering) and curates a study shelf for an AI researcher / AI-systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-10-22):** a real software-supply-chain attack — [a compromised LiteLLM 1.107.0 PyPI release](https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/) shipped a credential stealer targeting AI-tool and LLM-provider keys specifically — lands on [agent security](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) · Anthropic ships [Claude Duet](https://claude.com/blog/claude-duet), a third frontier lab (after xAI, OpenAI) converging on a persistent proactive-agent product, reinforcing [agent harness/runtime as a self-improving object](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) · OpenAI, PerturbAI and Scripps Research deploy [thousands of AI agents against millions of mouse brain cells' data](https://openai.com/index/scaling-ai-research-for-complex-biological-data) toward Alzheimer's/Parkinson's leads, landing on [AI agents doing open-ended research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) · a dedicated dormancy-rescue search caught [parametric injection](TRENDS.md#id-parametric-injection-018-parametric-injection-compiling-behavior-and-knowledge-into-model-weights-instead-of-promptcontext) exactly on the 21-day line via [MaLoW](https://arxiv.org/abs/2610.22070), compiling streaming-video memory into HyperNetwork-generated weights.
+**Since last scan (2026-10-23):** two reactivations from dormant — [latent-space communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) via [SwaT](https://arxiv.org/abs/2610.15095), the first cross-family prefill-free KV-cache transfer, and [dense credit assignment for agentic RL](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards) via [TWICE](https://arxiv.org/abs/2610.31544), resolving the decision-vs-luck confound in counterfactual credit via noise-matched twin rollouts · Anthropic + Theorem show [Claude proving 239 open-source libraries crash-free](https://www.anthropic.com/research/formal-verification) via machine-checked proofs, landing on [AI agents doing open-ended research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) · a new engineered KV-cache primitive, [Cache Engineering for Agents](https://arxiv.org/abs/2610.28577), reinforces [agent harness/runtime as a self-improving object](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) · a previously-untracked lab, Recursive Superintelligence, ships [Flint](https://alphasignal.ai/news/recursive-si-s-flint-runs-a-40b-coding-model-on-your-laptop), a 40B/2.5B-active laptop-runnable coding model built largely by its own automated-research loop, landing on [small / CPU-first models](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference).
 
 ## ⭐ Pinned topics
 
 | trend | stage | latest signal |
 |---|---|---|
+| ⭐ [Small / CPU-first models](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 📈 accelerating | [2026-10-21](https://alphasignal.ai/news/recursive-si-s-flint-runs-a-40b-coding-model-on-your-laptop) |
 | ⭐ [Ultra-low-bit quantization](TRENDS.md#id-lowbit-quant-011-ultra-low-bit-quantization-vector-and-trellis-coding-for-weights-and-kv-cache) | 📈 accelerating | [2026-10-18](https://github.com/vllm-project/vllm/releases/tag/v0.32.0) |
-| ⭐ [Small / CPU-first models](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 📈 accelerating | [2026-10-15](https://research.meta.ai/blog/muse-spark-open) |
 | ⭐ [Latent-space reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 🌱 emerging | [2026-10-21](https://arxiv.org/abs/2610.27628) |
-| ⭐ [Latent-space communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 💤 dormant | [2026-09-30](https://arxiv.org/abs/2609.39788) |
+| ⭐ [Latent-space communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 🌱 emerging | [2026-10-10](https://arxiv.org/abs/2610.15095) |
 
 ## Trends
 
-🌱 6 · 📈 10 · 🚀 0 · 🌊 0 · 🏔 5 · 📉 0 · 💤 2
+🌱 8 · 📈 10 · 🚀 0 · 🌊 0 · 🏔 5 · 📉 0 · 💤 0
 
 | trend | stage | latest signal |
 |---|---|---|
+| [Verifiable RL environments](TRENDS.md#id-rl-env-005-verifiable-rl-environments-as-an-infrastructure-category-for-agent-training) | 📈 accelerating | [2026-10-22](https://huggingface.co/blog/microsoft/thinkingbox-training) |
+| [On-policy distillation](TRENDS.md#id-on-policy-distill-016-on-policy-distillation-as-the-post-training-method-for-reasoning-and-agentic-llms) | 📈 accelerating | [2026-10-22](https://arxiv.org/abs/2610.31563) |
 | [MCP as the standard integration layer](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks) | 📈 accelerating | [2026-10-21](https://blog.cloudflare.com/webmcp-commerce/) |
+| ⭐ [Small / CPU-first models](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 📈 accelerating | [2026-10-21](https://alphasignal.ai/news/recursive-si-s-flint-runs-a-40b-coding-model-on-your-laptop) |
 | [World/action models from video](TRENDS.md#id-world-action-models-020-learned-worldaction-models-from-video-as-a-substrate-for-embodied-and-open-ended-agent-generalization) | 📈 accelerating | [2026-10-21](https://arxiv.org/abs/2610.26855) |
 | [Prefill/decode disaggregation](TRENDS.md#id-pd-disagg-002-prefilldecode-disaggregation-as-the-standard-llm-serving-architecture) | 📈 accelerating | [2026-10-19](https://github.com/sgl-project/sglang/releases/tag/v0.5.22) |
 | [Subquadratic/sparse attention](TRENDS.md#id-subquad-attn-012-subquadratic-and-sparse-attention-reaches-frontier-open-weight-models) | 📈 accelerating | [2026-10-19](https://github.com/sgl-project/sglang/releases/tag/v0.5.22) |
 | ⭐ [Ultra-low-bit quantization](TRENDS.md#id-lowbit-quant-011-ultra-low-bit-quantization-vector-and-trellis-coding-for-weights-and-kv-cache) | 📈 accelerating | [2026-10-18](https://github.com/vllm-project/vllm/releases/tag/v0.32.0) |
-| ⭐ [Small / CPU-first models](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 📈 accelerating | [2026-10-15](https://research.meta.ai/blog/muse-spark-open) |
-| [On-policy distillation](TRENDS.md#id-on-policy-distill-016-on-policy-distillation-as-the-post-training-method-for-reasoning-and-agentic-llms) | 📈 accelerating | [2026-10-15](https://arxiv.org/abs/2610.21601) |
 | [Remote sandboxes for agents](TRENDS.md#id-agent-sandbox-007-remote-sandboxes-as-the-execution-layer-for-agents) | 📈 accelerating | [2026-10-14](https://vercel.com/blog/findings-from-the-1-million-dollar-vercel-sandbox-challenge) |
-| [Verifiable RL environments](TRENDS.md#id-rl-env-005-verifiable-rl-environments-as-an-infrastructure-category-for-agent-training) | 📈 accelerating | [2026-10-07](https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/) |
 | [Multi-agent engineering as product](TRENDS.md#id-multi-agent-eng-009-multi-agent-engineering-becomes-product-surface-teams-workflows-a2a) | 📈 accelerating | [2026-10-07](https://blog.cloudflare.com/agentic-security-operations/) |
+| [Dense credit assignment for agentic RL](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards) | 🌱 emerging | [2026-10-22](https://arxiv.org/abs/2610.31544) |
 | ⭐ [Latent-space reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 🌱 emerging | [2026-10-21](https://arxiv.org/abs/2610.27628) |
 | [Deployment-grounded agent eval](TRENDS.md#id-agent-eval-014-deployment-grounded-agent-evaluation-long-horizon-real-session-benchmarks-beyond-static-leaderboards) | 🌱 emerging | [2026-10-19](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-new-models-on-slop-code-bench.md) |
-| [Decentralized multi-agent coordination](TRENDS.md#id-decentralized-mas-022-decentralized-multi-agent-coordination-without-a-central-orchestrator) | 🌱 emerging | [2026-10-15](https://arxiv.org/abs/2610.22322) |
 | [Parametric injection](TRENDS.md#id-parametric-injection-018-parametric-injection-compiling-behavior-and-knowledge-into-model-weights-instead-of-promptcontext) | 🌱 emerging | [2026-10-15](https://arxiv.org/abs/2610.22070) |
+| [Decentralized multi-agent coordination](TRENDS.md#id-decentralized-mas-022-decentralized-multi-agent-coordination-without-a-central-orchestrator) | 🌱 emerging | [2026-10-15](https://arxiv.org/abs/2610.22322) |
 | [Agent payments (x402)](TRENDS.md#id-agent-payments-023-agent-payments-http-402-based-machine-to-machine-micropayment-infrastructure) | 🌱 emerging | [2026-10-14](https://www.chainalysis.com/blog/north-america-crypto-adoption-2026) |
 | [VLM-scaffolded embodied navigation](TRENDS.md#id-embodied-nav-021-vlm-scaffolded-generalist-embodied-navigation-policies) | 🌱 emerging | [2026-10-13](https://arxiv.org/abs/2610.17593) |
-| [Agent harness/runtime as self-improving object](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) | 🏔 mainstreaming | [2026-10-21](https://claude.com/blog/claude-duet) |
-| [AI agents doing open-ended research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) | 🏔 mainstreaming | [2026-10-21](https://openai.com/index/scaling-ai-research-for-complex-biological-data) |
+| ⭐ [Latent-space communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 🌱 emerging | [2026-10-10](https://arxiv.org/abs/2610.15095) |
+| [Agent harness/runtime as self-improving object](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) | 🏔 mainstreaming | [2026-10-22](https://arxiv.org/abs/2610.28577) |
+| [AI agents doing open-ended research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) | 🏔 mainstreaming | [2026-10-22](https://www.anthropic.com/research/formal-verification) |
 | [Agent security: architectural turn](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) | 🏔 mainstreaming | [2026-10-21](https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/) |
 | [Diffusion language models](TRENDS.md#id-diffusion-lm-013-diffusion-language-models-reach-open-weights-production-scale) | 🏔 mainstreaming | [2026-10-19](https://github.com/sgl-project/sglang/releases/tag/v0.5.22) |
 | [Open-weight frontier MoE wave](TRENDS.md#id-open-weight-003-open-weight-wave-frontier-scale-moe-released-at-high-cadence-across-labs) | 🏔 mainstreaming | [2026-10-16](https://huggingface.co/blog/reflection-beam) |
-| ⭐ [Latent-space communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 💤 dormant | [2026-09-30](https://arxiv.org/abs/2609.39788) |
-| [Dense credit assignment for agentic RL](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards) | 💤 dormant | [2026-09-30](https://arxiv.org/abs/2609.40360) |
 
 ## Worth studying
 
+- [LLMs are making formal software verification feasible at a much larger scale](https://www.anthropic.com/research/formal-verification) — Anthropic + Theorem have Claude prove 239 open-source libraries crash-free via machine-checked proofs, with an honest account of what "verified" does not mean.
+- [Cache Engineering for Agents](https://arxiv.org/abs/2610.28577) — lets an agent directly drop or reposition pieces of its own KV cache instead of re-prefilling after every context trim.
 - [Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor](https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/) — a real supply-chain attack on the widely-used LiteLLM gateway, targeting AI-tool and LLM-provider credentials specifically.
 - [Patch the Planet: global response coordination as agents uncover critical vulnerabilities](https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/) — what agentic vulnerability-discovery at internet scale actually requires operationally, not just technically.
 - [DeepInfer](https://github.com/deepseek-ai/DeepInfer) — DeepSeek open-sources its own in-house production inference framework, confirmed official by the lab itself and today's #1 Hacker News story by a wide margin.
@@ -60,19 +62,17 @@ Tracks AI-ecosystem trends (research + engineering) and curates a study shelf fo
 - [Muse Spark Open](https://research.meta.ai/blog/muse-spark-open) — Meta's 816B/42B-active open-weight MoE, engineered to run end-to-end on two Mac Studios via MLX rather than just a datacenter, with day-0 agentic demos.
 - [OpenCode 2.0](https://anoma.ly/notes/opencode-2-0/) — a production-grade reference design for the architectural questions (client/server split, tool-composition layer, background orchestration) anyone building an agent harness has to answer.
 - [RoboJEPA: Scaling Robotic Latent World Models](https://arxiv.org/abs/2610.10515) — a rare genuine scaling-law study (not just a bigger model) applied to embodied/robotic world models.
-- [Redesigning source control at Anthropic](https://www.anthropic.com/engineering/redesigning-source-control) — merges grew 2,500/day → 30,000+/day as Claude took over more coding, forcing a 5-month from-scratch VCS migration (Scion).
-- [ReplaySSM](https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/) — a shared checkpoint+buffer serving fix for hybrid Mamba-2/GDN/KDA models, cutting state traffic ~50% and already in TensorRT-LLM/vLLM/FlashInfer.
 
 ## Community pulse
 
 Unverified intake, not evidence — link only, no individuals named:
 
-- Microsoft Research's own account of [solving the 31-year-old KLS conjecture](https://www.microsoft.com/en-us/research/blog/solving-a-31-year-old-grand-challenge-in-mathematics-the-kls-conjecture/) — human-directed, AI agents explored candidate approaches under researcher judgment.
-- A same-day pair of HF-daily-papers finds on egocentric world modeling from human experience — [EgoXperience](https://arxiv.org/abs/2610.26625) and [Holi-World](https://arxiv.org/abs/2610.26549) — now joined by today's evidence pick, [Ropedia W0](https://arxiv.org/abs/2610.26855).
-- [CoEvo-RSI](https://arxiv.org/abs/2610.25078) names the "brain-body mismatch" problem directly in model-harness co-evolution — a strong candidate for a future evidence pick.
-- [Matrix-Game 4.0](https://arxiv.org/abs/2610.27999) separates game execution from visual generation via an executable game harness for real-time playable worlds.
-- Reddit's direct JSON endpoints remain blocked (old.reddit.com re-tested too); HN and AlphaSignal continue covering the earthquake-check role.
+- [xAI's Grok gains OS-permissioned access](https://alphasignal.ai/news/xai-s-grok-reaches-into-your-phone-s-calendar-and-contacts) to phone Calendar, Reminders and Contacts data, broadening its already-tracked persistent-agent identity's data surface.
+- A same-day HF-daily-papers cluster on embodied/world-model agents — [SpatialScout](https://arxiv.org/abs/2610.26659), [Right Screen, Wrong Transition](https://arxiv.org/abs/2610.11942) and [Agent World Model in the Wild](https://arxiv.org/abs/2610.26828) — watching for a third independent group to converge.
+- Cloudflare's own account of [cutting an internal agent's inference bill by 68%](https://blog.cloudflare.com/obsessive-inference-optimization/) via agent-directed cost/latency optimization of its own harness.
+- A candidate 14th cluster on cross-model latent communication, [CacheBack](https://arxiv.org/abs/2609.32046), prunes up to 94% of redundant multi-agent KV-cache via a receiver-conditioned attention mask.
+- Reddit's direct JSON endpoints remain blocked; the YouTube curator Atom feed is re-confirmed re-blocked; HN and AlphaSignal continue covering the earthquake-check role.
 
 ## Output map
 
-[Full ledger](TRENDS.md) · [watchlist (~17 items)](TRENDS.md#observation_queue) · [reports](reports/) ([latest daily](reports/2026-10-22.md)) · weekly: [latest](reports/weekly/2026-W42.md) · [agent guide](AGENTS.md) · [sources registry](SOURCES.md)
+[Full ledger](TRENDS.md) · [watchlist (~15 items)](TRENDS.md#observation_queue) · [reports](reports/) ([latest daily](reports/2026-10-23.md)) · weekly: [latest](reports/weekly/2026-W42.md) · [agent guide](AGENTS.md) · [sources registry](SOURCES.md)
