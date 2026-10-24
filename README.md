@@ -3,11 +3,11 @@
 ![trends](https://img.shields.io/badge/trends-23-3266ad?style=flat-square)
 ![accelerating](https://img.shields.io/badge/accelerating-10-e8590c?style=flat-square)
 ![watchlist](https://img.shields.io/badge/watchlist-15-6c757d?style=flat-square)
-![updated](https://img.shields.io/badge/updated-2026--10--23-2f9e44?style=flat-square)
+![updated](https://img.shields.io/badge/updated-2026--10--24-2f9e44?style=flat-square)
 
 Tracks AI-ecosystem trends (research + engineering) and curates a study shelf for an AI researcher / AI-systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-10-23):** two reactivations from dormant — [latent-space communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) via [SwaT](https://arxiv.org/abs/2610.15095), the first cross-family prefill-free KV-cache transfer, and [dense credit assignment for agentic RL](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards) via [TWICE](https://arxiv.org/abs/2610.31544), resolving the decision-vs-luck confound in counterfactual credit via noise-matched twin rollouts · Anthropic + Theorem show [Claude proving 239 open-source libraries crash-free](https://www.anthropic.com/research/formal-verification) via machine-checked proofs, landing on [AI agents doing open-ended research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) · a new engineered KV-cache primitive, [Cache Engineering for Agents](https://arxiv.org/abs/2610.28577), reinforces [agent harness/runtime as a self-improving object](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) · a previously-untracked lab, Recursive Superintelligence, ships [Flint](https://alphasignal.ai/news/recursive-si-s-flint-runs-a-40b-coding-model-on-your-laptop), a 40B/2.5B-active laptop-runnable coding model built largely by its own automated-research loop, landing on [small / CPU-first models](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference).
+**Since last scan (2026-10-24, weekly recalibration):** this week's low-cadence source sweep closed a 9-day capture gap on [small / CPU-first models](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) — PrismML's own blog had quietly shipped [Bonsai 2 in 2B/4B/9B sizes](https://prismml.com/news/prismml-expands-bonsai-2-family-with-2b-4b-and-9b-models-for-on-device-ai), phone-class ternary models extending the already-tracked 27B · no trend crossed the 21-day dormancy line this week ([multi-agent engineering as product](TRENDS.md#id-multi-agent-eng-009-multi-agent-engineering-becomes-product-surface-teams-workflows-a2a) is closest, 17 days) · the study shelf's ≤09-23 tail was pruned to the archive (nothing lost, see [the weekly report](reports/weekly/2026-W43.md)).
 
 ## ⭐ Pinned topics
 
@@ -75,4 +75,4 @@ Unverified intake, not evidence — link only, no individuals named:
 
 ## Output map
 
-[Full ledger](TRENDS.md) · [watchlist (~15 items)](TRENDS.md#observation_queue) · [reports](reports/) ([latest daily](reports/2026-10-23.md)) · weekly: [latest](reports/weekly/2026-W42.md) · [agent guide](AGENTS.md) · [sources registry](SOURCES.md)
+[Full ledger](TRENDS.md) · [watchlist (~15 items)](TRENDS.md#observation_queue) · [reports](reports/) ([latest daily](reports/2026-10-23.md)) · weekly: [latest](reports/weekly/2026-W43.md) · [agent guide](AGENTS.md) · [sources registry](SOURCES.md)
