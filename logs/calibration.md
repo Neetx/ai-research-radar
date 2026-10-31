@@ -43,3 +43,41 @@ Self-evaluation log (append-only; see the radar-self-eval skill). Weekly line: `
 - amendment: no amendments were pending from W42 (none were proposed). NEW PROPOSALS this week, both motivated by the log-verbosity finding above (exact replacement text; cooling period starts now, apply earliest W44 if the signal persists and no curator veto appears in `logs/strategy_notes.md`):
   **W43-P1** (coverage-log line length) — in `routines/daily.md` §2, after the sentence "Append one dated line to the coverage log `logs/source_rotation.md` (append-only; never edit past lines) with the sources covered today.", insert: "Keep this line to a terse per-lane roll call (lane: opened/degraded, one clause of outcome each) — target under ~250 words. The full narrative (what was found, why it was routed, the independence reasoning) belongs in today's report (`reports/YYYY-MM-DD.md`), which already carries it permanently at a bounded length; the coverage log's job is a cheap-to-re-read audit trail of WHAT was checked each run, not a second copy of the day's findings." This does not relax the coverage-promise rule (every swept source still must appear as opened/degraded every run) — it only moves the narrative weight to the artifact that already has a length cap.
   **W43-P2** (evidence-bullet length) — in `.claude/skills/radar-ledger-update/SKILL.md` under "Evidence line", after "Evidence line: `- YYYY-MM-DD — URL — one line of context`.", insert: "Keep the context clause to roughly 80-120 words: the artifact, the independence/routing call, and the cap-rotation note. Extended reasoning, cross-trend framing, or historical narrative belongs in the trend's `notes` field ONLY when it binds a future run, per the daily routine's NOTE DISCIPLINE rule — do not let it balloon the evidence bullet itself." This is a skill change (per AGENTS.md's Skill maintenance policy, one dedicated commit, same cooling-period treatment as a routine amendment since it governs ledger-editing behavior) and does not relax the 10-evidence-item cap or any hard rule — only the prose length of each bullet.
+- 2026-10-31 — W44: queue +6/→0 promoted/−~34 sub-items (5 tombstone lines)/stale 0 (6 live
+  lines at close, well under the ~25 cap) · evidence +29 (24 across the 5 dailies + 5 by this
+  weekly) · stage moves 0 (checked and held: the 4 standing pending gates — small-cpu-models-008,
+  multi-agent-eng-009, world-action-models-020 mainstreaming; agent-eval-014 accelerating — all
+  re-verified UNFIRED against this week's own evidence) · exploration: HF-daily-papers lane 5/5;
+  the separate rotating arXiv-category supplement only 4/5 (10-30 explicitly skipped it,
+  budget went to dormancy-rescue searches instead) · off-axis ~2/40 new queue items (~5%) · lag:
+  dailies' own adds mostly same-day/1-2d (typical for this ledger); this weekly's 5 backfills
+  (curator-lane/tier-ii catch-up) had a median 10-day lag (8/9/10/16/25 days) — backfill share of
+  this week's evidence 5/29 (~17%) · coverage: tier-i 5/5 every day, 0 MISSING (per each daily's
+  own log). **Curator lane: a genuine 3-run coverage gap** — AlphaSignal/Import
+  AI/Interconnects/Sebastian Raschka/Lilian Weng/alphamatch.ai went unopened on 10-29 (2/7 opened)
+  and 10-30 (0/7 opened), and the 10-27 daily folded the whole lane into a blanket
+  "not independently re-swept" sentence (the exact discipline-drift shape named at W40/W36/W37) —
+  this weekly's own direct sweep (WebFetch/WebSearch, `tvly` still quota-blocked) closed the gap
+  and found 3 of its 5 new evidence captures through it (Import AI → Resolution + OpenAI
+  red-teaming; Simon Willison → Agent Skills/AAIF). Tier-ii: the daily rotation hit only Prime
+  Intellect once (10-26) all week; this weekly's own full sweep (Liquid AI, Zed, Cactus Compute,
+  Vals AI, PrismML, AI2, AMD ROCm) covered 7 more and found 1 genuine capture gap (AMD's
+  Micro-World 2) · routing-leak 0 · capture-leak 240 ids checked/0 leaks (this weekly's 5 new
+  evidence items were never-named-anywhere coverage gaps, not notes-buried capture leaks — the
+  distinction matters: nothing was named in TRENDS.md and left unqueued) · src-disc 2 staged this
+  week (perplexity.ai/hub/blog, resolution.org, both 1-seen, both via this weekly's own research)
+  / 0 promoted (lat n/a, first-seen this run).
+- retro: not due (`date +%d` = 31; October's monthly retrospective ran W40; next due W45, first
+  weekly of November).
+- **tvly plan-usage-limit error confirmed a 4th consecutive run** (10-28 through this weekly, each
+  on a freshly-reinstalled CLI) — see `logs/strategy_notes.md` for the recommendation to check the
+  account's plan/billing directly; this is a self-eval "heal owed ≥3 consecutive runs" condition
+  per AGENTS.md's operator-notification rule (see the push notification sent this run).
+- amendments: W43-P1 and W43-P2 (coverage-log/evidence-bullet length) — their motivating signal
+  (log-verbosity) persists (this run's own reads of dense evidence sections remained
+  multi-hundred-word), and no curator veto appears in `logs/strategy_notes.md` during the cooling
+  period. APPLIED this run — see `routines/daily.md` and
+  `.claude/skills/radar-ledger-update/SKILL.md` diffs, one dedicated commit each. No new
+  amendments proposed this week (this run's own findings were coverage/process fixes already
+  actioned directly — the curator-lane catch-up and tier-ii sweep — not rule gaps needing a
+  routine change).

@@ -2,12 +2,12 @@
 
 ![trends](https://img.shields.io/badge/trends-23-3266ad?style=flat-square)
 ![accelerating](https://img.shields.io/badge/accelerating-10-e8590c?style=flat-square)
-![watchlist](https://img.shields.io/badge/watchlist-5-6c757d?style=flat-square)
-![updated](https://img.shields.io/badge/updated-2026--10--30-2f9e44?style=flat-square)
+![watchlist](https://img.shields.io/badge/watchlist-6-6c757d?style=flat-square)
+![updated](https://img.shields.io/badge/updated-2026--10--31-2f9e44?style=flat-square)
 
 Tracks AI-ecosystem trends (research + engineering) and curates a study shelf for an AI researcher / AI-systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-10-30):** [Open-weight frontier MoE wave](TRENDS.md#id-open-weight-003-open-weight-wave-frontier-scale-moe-released-at-high-cadence-across-labs) added Mistral's [Mistral Large 4 "Le Chonk"](https://mistral.ai/news/mistral-large-4-oss/), the first Western lab shipping open weights at this frontier cadence/scale · [Agent security](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) added OpenAI's [layered misalignment-detection stack](https://openai.com/index/how-we-detect-frontier-model-misalignment), red-teamed by METR/Redwood Research · [Subquadratic/sparse attention](TRENDS.md#id-subquad-attn-012-subquadratic-and-sparse-attention-reaches-frontier-open-weight-models) added vLLM's confirmation that [Mistral Large 4 adopts a DeepSeek-Sparse-Attention-style indexer](https://vllm.ai/blog/2026-10-29-mistral-large-4), a third lab on the mechanism · [Parametric injection](TRENDS.md#id-parametric-injection-018-parametric-injection-compiling-behavior-and-knowledge-into-model-weights-instead-of-promptcontext) added IBM's [Granite Switch 4.1.1](https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1), swapping capabilities in via adapters on a frozen base checkpoint.
+**Since last scan (2026-10-31):** [Agent security](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) added OpenAI's [red-teaming of its own training environment](https://openai.com/index/securing-our-frontier-model-training-environment), which found real CVE-bearing microVM escapes · [MCP as the standard integration layer](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks) added Anthropic's [donation of Agent Skills to the Agentic AI Foundation](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation), the same neutral body MCP itself is governed under · [Remote sandboxes for agents](TRENDS.md#id-agent-sandbox-007-remote-sandboxes-as-the-execution-layer-for-agents) added Perplexity's [open-sourced SPACE sandbox](https://www.perplexity.ai/hub/blog/open-sourcing-space), with a published 0/108 VM-escape-attempt count · [World/action models from video](TRENDS.md#id-world-action-models-020-learned-worldaction-models-from-video-as-a-substrate-for-embodied-and-open-ended-agent-generalization) added AMD's [Micro-World 2](https://rocm.blogs.amd.com/artificial-intelligence/Micro-World-V2/README.html), a real-time streaming world model trained and served entirely on its own silicon.
 
 ## ⭐ Pinned topics
 
@@ -15,7 +15,7 @@ Tracks AI-ecosystem trends (research + engineering) and curates a study shelf fo
 |---|---|---|
 | ⭐ [Small / CPU-first models](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 📈 accelerating | [2026-10-27](https://www.liquid.ai/blog/lfm3) |
 | ⭐ [Ultra-low-bit quantization](TRENDS.md#id-lowbit-quant-011-ultra-low-bit-quantization-vector-and-trellis-coding-for-weights-and-kv-cache) | 📈 accelerating | [2026-10-26](https://arxiv.org/abs/2610.34824) |
-| ⭐ [Latent-space reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 🌱 emerging | [2026-10-26](https://arxiv.org/abs/2610.35556) |
+| ⭐ [Latent-space reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 🌱 emerging | [2026-10-26](https://arxiv.org/abs/2610.27628) |
 | ⭐ [Latent-space communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 🌱 emerging | [2026-10-23](https://arxiv.org/abs/2610.32871) |
 
 ## Trends
@@ -26,18 +26,18 @@ Tracks AI-ecosystem trends (research + engineering) and curates a study shelf fo
 |---|---|---|
 | [Multi-agent engineering as product](TRENDS.md#id-multi-agent-eng-009-multi-agent-engineering-becomes-product-surface-teams-workflows-a2a) | 📈 accelerating | [2026-10-29](https://cursor.com/blog/agent-sdk) |
 | [Subquadratic/sparse attention](TRENDS.md#id-subquad-attn-012-subquadratic-and-sparse-attention-reaches-frontier-open-weight-models) | 📈 accelerating | [2026-10-29](https://vllm.ai/blog/2026-10-29-mistral-large-4) |
-| [World/action models from video](TRENDS.md#id-world-action-models-020-learned-worldaction-models-from-video-as-a-substrate-for-embodied-and-open-ended-agent-generalization) | 📈 accelerating | [2026-10-27](https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/) |
 | ⭐ [Small / CPU-first models](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 📈 accelerating | [2026-10-27](https://www.liquid.ai/blog/lfm3) |
+| [World/action models from video](TRENDS.md#id-world-action-models-020-learned-worldaction-models-from-video-as-a-substrate-for-embodied-and-open-ended-agent-generalization) | 📈 accelerating | [2026-10-27](https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/) |
 | [Prefill/decode disaggregation](TRENDS.md#id-pd-disagg-002-prefilldecode-disaggregation-as-the-standard-llm-serving-architecture) | 📈 accelerating | [2026-10-26](https://blog.cloudflare.com/kv-cache-exposure-remediation/) |
 | ⭐ [Ultra-low-bit quantization](TRENDS.md#id-lowbit-quant-011-ultra-low-bit-quantization-vector-and-trellis-coding-for-weights-and-kv-cache) | 📈 accelerating | [2026-10-26](https://arxiv.org/abs/2610.34824) |
+| [MCP as the standard integration layer](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks) | 📈 accelerating | [2026-10-22](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation) |
 | [Verifiable RL environments](TRENDS.md#id-rl-env-005-verifiable-rl-environments-as-an-infrastructure-category-for-agent-training) | 📈 accelerating | [2026-10-22](https://huggingface.co/blog/microsoft/thinkingbox-training) |
 | [On-policy distillation](TRENDS.md#id-on-policy-distill-016-on-policy-distillation-as-the-post-training-method-for-reasoning-and-agentic-llms) | 📈 accelerating | [2026-10-22](https://arxiv.org/abs/2610.31563) |
-| [MCP as the standard integration layer](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks) | 📈 accelerating | [2026-10-21](https://blog.cloudflare.com/webmcp-commerce/) |
-| [Remote sandboxes for agents](TRENDS.md#id-agent-sandbox-007-remote-sandboxes-as-the-execution-layer-for-agents) | 📈 accelerating | [2026-10-14](https://vercel.com/blog/findings-from-the-1-million-dollar-vercel-sandbox-challenge) |
+| [Remote sandboxes for agents](TRENDS.md#id-agent-sandbox-007-remote-sandboxes-as-the-execution-layer-for-agents) | 📈 accelerating | [2026-10-15](https://www.perplexity.ai/hub/blog/open-sourcing-space) |
 | [Parametric injection](TRENDS.md#id-parametric-injection-018-parametric-injection-compiling-behavior-and-knowledge-into-model-weights-instead-of-promptcontext) | 🌱 emerging | [2026-10-30](https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1) |
 | [Dense credit assignment for agentic RL](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards) | 🌱 emerging | [2026-10-29](https://arxiv.org/abs/2610.35013) |
 | [Deployment-grounded agent eval](TRENDS.md#id-agent-eval-014-deployment-grounded-agent-evaluation-long-horizon-real-session-benchmarks-beyond-static-leaderboards) | 🌱 emerging | [2026-10-27](https://surgehq.ai/blog/dayjob-tax) |
-| ⭐ [Latent-space reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 🌱 emerging | [2026-10-26](https://arxiv.org/abs/2610.35556) |
+| ⭐ [Latent-space reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 🌱 emerging | [2026-10-26](https://arxiv.org/abs/2610.27628) |
 | ⭐ [Latent-space communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 🌱 emerging | [2026-10-23](https://arxiv.org/abs/2610.32871) |
 | [Decentralized multi-agent coordination](TRENDS.md#id-decentralized-mas-022-decentralized-multi-agent-coordination-without-a-central-orchestrator) | 🌱 emerging | [2026-10-15](https://arxiv.org/abs/2610.22322) |
 | [Agent payments (x402)](TRENDS.md#id-agent-payments-023-agent-payments-http-402-based-machine-to-machine-micropayment-infrastructure) | 🌱 emerging | [2026-10-14](https://www.chainalysis.com/blog/north-america-crypto-adoption-2026) |
@@ -69,9 +69,9 @@ Unverified intake, not evidence — link only, no individuals named:
 
 - YC Labs + Olam Labs ran [AI agent swarms in Minecraft and Mindustry](https://labs.ycombinator.com/projects/games/index.html) — a 50-agent colony self-organized a leader, rationing and bureaucratic roles; a case-study blog, not a benchmarked paper.
 - A new open-source package ([AnyDecisionModel](https://huggingface.co/blog/anydecisionmodel)) unifies five existing fast-decision-model backends under one cross-platform API — a tooling signal, not a new primary mechanism.
-- OpenAI's [updated Model Spec](https://openai.com/index/updated-model-spec) landed today but could not be opened this session (blocked both directly and via proxy) — unverified beyond the headline.
-- The curator lane (AlphaSignal/Import AI/Interconnects/Sebastian Raschka/Lilian Weng/alphamatch.ai/alphaXiv) was not independently re-swept this run — budget went to the lab-sweep/HN/vLLM-blog finds; confirm full iteration next run.
+- Moonshot's [Kimi K3.1 Pro](https://www.kimi.com/blog/kimi-k3-1-pro) is API-only for now, with open weights promised "by Nov 4" — a watch item, not yet shipped.
+- OpenAI's [updated Model Spec](https://openai.com/index/updated-model-spec) could not be opened this session (blocked both directly and via proxy) — unverified beyond the headline.
 
 ## Output map
 
-[Full ledger](TRENDS.md) · [watchlist (~5 items)](TRENDS.md#observation_queue) · [reports](reports/) ([latest daily](reports/2026-10-30.md)) · weekly: [latest](reports/weekly/2026-W43.md) · [agent guide](AGENTS.md) · [sources registry](SOURCES.md)
+[Full ledger](TRENDS.md) · [watchlist (~6 items)](TRENDS.md#observation_queue) · [reports](reports/) ([latest daily](reports/2026-10-30.md)) · weekly: [latest](reports/weekly/2026-W44.md) · [agent guide](AGENTS.md) · [sources registry](SOURCES.md)
