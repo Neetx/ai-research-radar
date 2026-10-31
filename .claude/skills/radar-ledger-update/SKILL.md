@@ -22,7 +22,12 @@ structure is a contract.
 - Trend block: `### [id: slug-NNN] Title` with fields `alias`, optional
   `pinned: true`, `stage`, `confidence`, `first_observed`, `last_evidence`,
   `evidence:` (list), `notes:`.
-- Evidence line: `- YYYY-MM-DD — URL — one line of context`.
+- Evidence line: `- YYYY-MM-DD — URL — one line of context`. Keep the context clause to
+  roughly 80-120 words: the artifact, the independence/routing call, and the cap-rotation
+  note. Extended reasoning, cross-trend framing, or historical narrative belongs in the
+  trend's `notes` field ONLY when it binds a future run — do not let it balloon the evidence
+  bullet itself. (Amendment W43-P2, applied 2026-10-31 W44 — motivated by the log-verbosity
+  metric in `logs/calibration.md`; does not relax the 10-evidence-item cap or any hard rule.)
 
 ## Rules
 
