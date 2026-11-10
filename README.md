@@ -2,12 +2,12 @@
 
 ![trends](https://img.shields.io/badge/trends-23-3266ad?style=flat-square)
 ![accelerating](https://img.shields.io/badge/accelerating-10-e8590c?style=flat-square)
-![watchlist](https://img.shields.io/badge/watchlist-6-6c757d?style=flat-square)
-![updated](https://img.shields.io/badge/updated-2026--11--09-2f9e44?style=flat-square)
+![watchlist](https://img.shields.io/badge/watchlist-7-6c757d?style=flat-square)
+![updated](https://img.shields.io/badge/updated-2026--11--10-2f9e44?style=flat-square)
 
 Tracks AI-ecosystem trends (research + engineering) and curates a study shelf for an AI researcher / AI-systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-11-09):** [Verifiable RL environments](TRENDS.md#id-rl-env-005-verifiable-rl-environments-as-an-infrastructure-category-for-agent-training) and [MCP as the standard integration layer](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks) both rescued from a dormancy watch — [Scientist World](https://arxiv.org/abs/2611.08478) turns 1,000 research papers into verifiable AI-Scientist training environments, and [AWS wired MCP tools directly into Amazon Connect](https://aws.amazon.com/about-aws/whats-new/2026/10/connect-flows-mcp-tools) · [Small / CPU-first models](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) added [llama-modchip](https://github.com/synchopate/llama-modchip), a 284B-parameter MoE running on pure 64GB CPU RAM with zero GPUs · [AI agents doing open-ended research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) added OpenAI + Ligo's [BioBasicsBench](https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science) wet-lab-science benchmark.
+**Since last scan (2026-11-10):** [AI agents doing open-ended research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) added Physical Superintelligence's [Lean-verified proof of the Aaronson-Ambainis conjecture](https://psi.inc/research/aaronson-ambainis), a fully mechanically-verified resolution of an open quantum-complexity problem · [Agent security: architectural turn](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) added OpenAI's [Control Room](https://openai.com/index/control-room), a centralized kill-switch halting model output within 35 seconds · [Verifiable RL environments](TRENDS.md#id-rl-env-005-verifiable-rl-environments-as-an-infrastructure-category-for-agent-training) added Ai2's [ToyBlocks](https://huggingface.co/blog/allenai/toyblocks), the trend's first embodied-robotics environment release.
 
 ## ⭐ Pinned topics
 
@@ -26,7 +26,7 @@ Tracks AI-ecosystem trends (research + engineering) and curates a study shelf fo
 |---|---|---|
 | ⭐ [Small / CPU-first models](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 📈 accelerating | [2026-11-08](https://github.com/synchopate/llama-modchip) |
 | [Remote sandboxes for agents](TRENDS.md#id-agent-sandbox-007-remote-sandboxes-as-the-execution-layer-for-agents) | 📈 accelerating | [2026-11-06](https://rocm.blogs.amd.com/software-tools-optimization/primusclaw/README.html) |
-| [Verifiable RL environments](TRENDS.md#id-rl-env-005-verifiable-rl-environments-as-an-infrastructure-category-for-agent-training) | 📈 accelerating | [2026-11-05](https://arxiv.org/abs/2611.08478) |
+| [Verifiable RL environments](TRENDS.md#id-rl-env-005-verifiable-rl-environments-as-an-infrastructure-category-for-agent-training) | 📈 accelerating | [2026-11-06](https://huggingface.co/blog/allenai/toyblocks) |
 | [Prefill/decode disaggregation](TRENDS.md#id-pd-disagg-002-prefilldecode-disaggregation-as-the-standard-llm-serving-architecture) | 📈 accelerating | [2026-11-04](https://vllm.ai/blog/2026-11-04-kimi-k31-pro) |
 | ⭐ [Ultra-low-bit quantization](TRENDS.md#id-lowbit-quant-011-ultra-low-bit-quantization-vector-and-trellis-coding-for-weights-and-kv-cache) | 📈 accelerating | [2026-11-03](https://arxiv.org/abs/2611.04382) |
 | [Subquadratic/sparse attention](TRENDS.md#id-subquad-attn-012-subquadratic-and-sparse-attention-reaches-frontier-open-weight-models) | 📈 accelerating | [2026-11-03](https://arxiv.org/abs/2611.04671) |
@@ -42,14 +42,15 @@ Tracks AI-ecosystem trends (research + engineering) and curates a study shelf fo
 | [Parametric injection](TRENDS.md#id-parametric-injection-018-parametric-injection-compiling-behavior-and-knowledge-into-model-weights-instead-of-promptcontext) | 🌱 emerging | [2026-11-02](https://rikiyat.github.io/blog/weight-space-programming/) |
 | [Dense credit assignment for agentic RL](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards) | 🌱 emerging | [2026-10-29](https://arxiv.org/abs/2610.35013) |
 | [Decentralized multi-agent coordination](TRENDS.md#id-decentralized-mas-022-decentralized-multi-agent-coordination-without-a-central-orchestrator) | 🌱 emerging | [2026-10-24](https://github.com/microsoft/Agensh) |
-| [AI agents doing open-ended research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) | 🏔 mainstreaming | [2026-11-06](https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science) |
+| [Agent security: architectural turn](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) | 🏔 mainstreaming | [2026-11-09](https://openai.com/index/control-room) |
+| [AI agents doing open-ended research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) | 🏔 mainstreaming | [2026-11-09](https://psi.inc/research/aaronson-ambainis) |
 | [Open-weight frontier MoE wave](TRENDS.md#id-open-weight-003-open-weight-wave-frontier-scale-moe-released-at-high-cadence-across-labs) | 🏔 mainstreaming | [2026-11-05](https://ernie.baidu.com/release/ernie-5-5-flash-base/) |
-| [Agent security: architectural turn](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) | 🏔 mainstreaming | [2026-11-05](https://github.com/anthropics/claude-code/issues/107757) |
 | [Agent harness/runtime as self-improving object](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) | 🏔 mainstreaming | [2026-11-04](https://developer.nvidia.com/blog/use-nvidia-nemo-to-turn-agent-failures-into-tests-and-harness-fixes/) |
 | [Diffusion language models](TRENDS.md#id-diffusion-lm-013-diffusion-language-models-reach-open-weights-production-scale) | 🏔 mainstreaming | [2026-10-30](https://huggingface.co/Diffuspace/Clover-35B-A3B-Preview) |
 
 ## Worth studying
 
+- [A proof of the Aaronson-Ambainis conjecture](https://psi.inc/research/aaronson-ambainis) — a case study in what mechanically-verified AI-driven math research actually looks like end to end: Lean proof, two independent kernels, a deliberately-false control case, and a third-party replay.
 - [llama-modchip v2.3.0](https://github.com/synchopate/llama-modchip) — fits a 284B-parameter frontier MoE inside 64GB of CPU RAM at 256K context with zero GPUs, via Hessian-weighted 2-bit quantization and AVX-512 kernels.
 - [Scientist World: Grow a Research World for AI-Scientists](https://arxiv.org/abs/2611.08478) — turns 1,000 research papers into executable, verifiable environments where an AI-Scientist is graded against what the human authors actually achieved.
 - [The Agent Economy by the Numbers: 2026 Data, Trends, and Blind Spots](https://www.fireblocks.com/?p=32426) — a payments vendor's own honest accounting: ~196M x402 transactions sound impressive until you learn over half trace to a 2025 memecoin arbitrage-bot loop, not genuine agentic commerce.
@@ -67,12 +68,12 @@ Tracks AI-ecosystem trends (research + engineering) and curates a study shelf fo
 
 Unverified intake, not evidence — link only, no individuals named:
 
+- An anonymous developer's [claim that Google Gemini routes personal Drive/email content to human reviewers](https://github.com/thisisme6598/gemini_files) drew the week's #3 Hacker News discussion — credibility flagged, no Google statement confirming it.
+- A major AI lab [shipped its next flagship model pair](https://www.anthropic.com/claude-fable-and-mythos-5-2), drawing several of the day's top Hacker News stories.
 - [A major bank is restricting agentic coding tools](https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers) for non-engineers, citing review-control and information-barrier risk, weeks before underwriting a frontier lab's own IPO.
 - A web-infrastructure vendor [expanded its agent-identity analytics and access controls](https://blog.cloudflare.com/personal-agents-visibility-control/) for sites, following up its cryptographic agent-delegation proposal days earlier.
-- A developer's write-up of [switching from a major vendor's coding harness to an open-source alternative](https://caleb.software/posts/claude-to-pi.html) drew the week's top Hacker News discussion.
-- A solo-author paper proposed ["cognitive symbionts"](https://arxiv.org/abs/2611.05376) — lifelong, embedded AI companions — as a second Physical-AI paradigm alongside embodied robots.
-- This week's HN discussion also centered on an [AI coding agent sending a user's email address to third-party sites](https://github.com/anthropics/claude-code/issues/107757) without consent, fixed same-day.
+- A developer's write-up of [switching from a major vendor's coding harness to an open-source alternative](https://caleb.software/posts/claude-to-pi.html) drew a week's top Hacker News discussion.
 
 ## Output map
 
-[Full ledger](TRENDS.md) · [watchlist (~6 items)](TRENDS.md#observation_queue) · [reports](reports/) ([latest daily](reports/2026-11-09.md)) · weekly: [latest](reports/weekly/2026-W45.md) · [agent guide](AGENTS.md) · [sources registry](SOURCES.md)
+[Full ledger](TRENDS.md) · [watchlist (~7 items)](TRENDS.md#observation_queue) · [reports](reports/) ([latest daily](reports/2026-11-10.md)) · weekly: [latest](reports/weekly/2026-W45.md) · [agent guide](AGENTS.md) · [sources registry](SOURCES.md)
