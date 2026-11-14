@@ -2,12 +2,12 @@
 
 ![trends](https://img.shields.io/badge/trends-24-3266ad?style=flat-square)
 ![accelerating](https://img.shields.io/badge/accelerating-12-e8590c?style=flat-square)
-![watchlist](https://img.shields.io/badge/watchlist-8-6c757d?style=flat-square)
-![updated](https://img.shields.io/badge/updated-2026--11--13-2f9e44?style=flat-square)
+![watchlist](https://img.shields.io/badge/watchlist-9-6c757d?style=flat-square)
+![updated](https://img.shields.io/badge/updated-2026--11--14-2f9e44?style=flat-square)
 
 Tracks AI-ecosystem trends (research + engineering) and curates a study shelf for an AI researcher / AI-systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-11-13):** [Agent security](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) added IBM's [LLMON](https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite), a reserved-token markup making context structure un-fakeable by injected text · [Small / CPU-first models](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) added Edge0's [145B on-device model](https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer), running on a laptop at 29GB/80+ tok/s · [Decision models](TRENDS.md#id-decision-models-024-system-1-decision-models-single-forward-pass-calibrated-classifiers-as-a-distinct-benchmarked-model-category) picked up two independent academic papers probing the category's depth needs and positional biases · [Dense credit assignment for agentic RL](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards) was rescued from a 15-day gap by [AgentOPSD](https://arxiv.org/abs/2611.12587)'s recursive turn-level credit assignment.
+**Since last scan (2026-11-14, weekly):** [Decentralized multi-agent coordination](TRENDS.md#id-decentralized-mas-022-decentralized-multi-agent-coordination-without-a-central-orchestrator) was promoted emerging→accelerating on Cisco Outshift's orchestrator-free [Mycelium](https://aaif.io/blog/when-good-agents-make-bad-systems) · [Decision models](TRENDS.md#id-decision-models-024-system-1-decision-models-single-forward-pass-calibrated-classifiers-as-a-distinct-benchmarked-model-category) was seeded this week from an 8-org convergence and picked up Liquid AI's [d1-ultra](https://www.liquid.ai/blog/d1-ultra) via this run's own low-cadence catch-up sweep · [AI agents doing open-ended research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) added a [Lean-verified proof of the Thomson problem](https://www.vals.ai/blogs/thomson-n7-lean-proof) by ten Claude Sonnet 5.5 agents, closing a 7-week capture gap.
 
 ## ⭐ Pinned topics
 
@@ -51,6 +51,7 @@ Tracks AI-ecosystem trends (research + engineering) and curates a study shelf fo
 
 ## Worth studying
 
+- [A Lean Proof of the Thomson Problem for Seven Electrons](https://www.vals.ai/blogs/thomson-n7-lean-proof) — ten Claude Sonnet 5.5 agents produced a 17,895-line, two-kernel-verified Lean proof in ~15 hours, extending a prior N=8 proof to the next case.
 - [LLMON: An LLM-Native Markup Language](https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite) — a reserved-token markup that keeps context structure in a separate part of the vocabulary than content, so injected text can't fake a boundary.
 - [Top Chinese Frontier AI Models Carry the Fingerprint of Export-Controlled NVIDIA Blackwell GPUs](https://unemploymentlabs.com/checkpoint-forensics) — recovers a model's training-hardware fingerprint directly from its own published weights, confirmed on physical chips for two of six models.
 - [My AI Agents Found an Unmapped Maya Site](https://pietromiotti.com/latest/maya-site) — a first-hand diary of 48 agents triaging public lidar strips with no classifier, flagging a real unregistered archaeological site.
@@ -76,4 +77,4 @@ Unverified intake, not evidence — link only, no individuals named:
 
 ## Output map
 
-[Full ledger](TRENDS.md) · [watchlist (~8 items)](TRENDS.md#observation_queue) · [reports](reports/) ([latest daily](reports/2026-11-13.md)) · weekly: [latest](reports/weekly/2026-W45.md) · [agent guide](AGENTS.md) · [sources registry](SOURCES.md)
+[Full ledger](TRENDS.md) · [watchlist (~9 items)](TRENDS.md#observation_queue) · [reports](reports/) ([latest daily](reports/2026-11-13.md)) · weekly: [latest](reports/weekly/2026-W46.md) · [agent guide](AGENTS.md) · [sources registry](SOURCES.md)
