@@ -88,6 +88,21 @@ spoofed-UA `curl` as a Cloudflare-gate workaround in this environment; use
 WebFetch/curl, and fresh-install `tvly` at the start of every run rather than
 assuming a prior session's install persists.
 
+**RE-FLAGGED 2026-11-16 through 2026-11-18, 3rd CONSECUTIVE occurrence
+confirmed:** the plan-usage-limit error (see above, first resolved 09-01) is
+back — a fresh `pip install -q tavily-cli` succeeds and authenticates on
+every one of these three runs, but every `tvly search`/`tvly extract` call
+returns "This request exceeds your plan's set usage limit." Combined with
+`r.jina.ai` staying sandbox-policy-blocked (above), this leaves NO fallback
+for Cloudflare-challenge-gated primaries (openai.com, AlphaSignal's direct
+path) this run — openai.com/index/introducing-gpt-6-2-astra-sol (today's #1
+HN story, 1182pts) could not be opened and stayed queued unverified as a
+direct consequence. This crosses the repo's own push-notification bar for a
+self-flagged "heal owed" degradation across ≥3 consecutive runs; a
+notification was sent to the curator this run. Re-test `tvly search` (not
+just `--status`) at the start of every run going forward; drop this note
+once a call succeeds again.
+
 ---
 
 ## Lab & big-tech AI blogs (Phase 1 — TIERED, prefer RSS/Atom)
