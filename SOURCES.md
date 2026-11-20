@@ -103,6 +103,19 @@ notification was sent to the curator this run. Re-test `tvly search` (not
 just `--status`) at the start of every run going forward; drop this note
 once a call succeeds again.
 
+**STILL DEGRADED 2026-11-20 (daily), 4th+ consecutive occurrence:** a fresh
+`pip install -q tavily-cli` succeeds (prints a deprecation notice pointing to
+`npx @tavily/cli` — not yet switched, since the PyPI CLI still authenticates)
+but the first `tvly search` call again returned the plan-usage-limit error.
+Fell back to WebFetch/WebSearch/direct `curl` of RSS/Atom/JSON endpoints for
+the entire run (HN Algolia, HF daily-papers/models APIs, `git ls-remote`,
+engine-blog slug-grep) — full coverage maintained; openai.com stayed 403'd
+under WebFetch with no working Cloudflare-bypass (r.jina.ai still
+sandbox-blocked), so two OpenAI primaries (GPT-6.2 Astra/Sol; "Performance
+Factory") stayed unverified again (see today's `observation_queue`). Not
+re-notifying the curator today (already notified 11-16..11-18 for this same
+standing issue) — re-test `tvly search` next run before relying on it.
+
 ---
 
 ## Lab & big-tech AI blogs (Phase 1 — TIERED, prefer RSS/Atom)
@@ -259,7 +272,7 @@ verification (real feed, on-axis, not SEO). Line format:
 - resolution.org (formerly Sequent) — 1 (on-axis) — "Formalizing Resolution of Singularities" (10-06, resolution.org/post/formalizing-resolution-of-singularities) → agentic-ai-research-019 EVIDENCE — first seen 2026-10-31, via this weekly's Import AI curator-lane catch-up. RE-CHECKED 2026-11-07 W45 weekly: the site's research index DOES carry a 2nd dated post since ("Patterning the Toy Model of Superposition," 10-29) but it is human-authored singular-learning-theory/interpretability work, NOT on this trend's autonomous-agent-conducts-research axis — the ≥2-ON-AXIS-artifact bar is still unmet (1 on-axis + 1 off-axis). A previously-untracked independent AI-research org; below the bar on its own — watch for a second ON-AXIS release before promoting.
 - ricursive.com (Ricursive Intelligence, Richard Socher) — 1 — "Ripple-65B Preview" (11-05, ricursive.com/ripple, claims US open-weight SOTA on TerminalBench 2.1 at 1/10th the prior SOTA's training cost) → queued below-bar (open-weight-003-adjacent, dense/mid-scale not frontier-MoE) — first seen 2026-11-05, via the HN front-page pulse. A chip-design-focused full-stack AI lab now also shipping a general-purpose open-weight model; below the ≥2-artifact bar — watch for a second model or a technical writeup on the training methodology before promoting.
 - ernie.baidu.com (Baidu ERNIE Team) — 1 — "ERNIE 5.5 Flash Base" (11-05, ernie.baidu.com/release/ernie-5-5-flash-base/, 280B-total/14B-active open-weight MoE) → open-weight-003 EVIDENCE — first seen 2026-11-06, via the HN front-page pulse. Baidu was not previously in this registry's lab roster; below the ≥2-artifact bar — watch for a second release before promoting to a swept entry.
-- github.com/Tencent-Hunyuan — 1 — "Hy4 preview" (11-05, github.com/Tencent-Hunyuan/Hy4-preview, Apache-2.0, 770B-total/49B-active MoE, 1M context) → queued below-bar/corroboration (open-weight-003-adjacent, not individually routed given today's two denser open-weight picks) — first seen 2026-11-05, via the HN front-page pulse. Tencent's Hunyuan line was not previously in this registry's lab roster; below the ≥2-artifact bar — watch for a second release or a dedicated lab blog before promoting.
+- github.com/Tencent-Hunyuan (+ huggingface.co/tencent) — 2 — "Hy4 preview" (11-05) → queued below-bar/corroboration; "Hy4-flash" (11-17, huggingface.co/tencent/Hy4-flash, 770B-total MoE, native vision, 1M context, verified via HF models API) → open-weight-003 EVIDENCE (2nd sighting, see that trend) — first seen 2026-11-05, via the HN front-page pulse; 2nd sighting 2026-11-20, via the HF global-trending lane + AlphaSignal. Tencent's Hunyuan line now crosses the ≥2-on-axis-artifact bar — flag for the weekly to promote into the Tier (ii) swept registry.
 - psi.inc (Physical Superintelligence) — 1 — "A proof of the Aaronson-Ambainis conjecture" (announced 11-06, psi.inc/research/aaronson-ambainis, Lean-verified) → agentic-ai-research-019 EVIDENCE — first seen 2026-11-10, via the Import AI 480 curator-lane sweep. A previously-untracked AI research lab explicitly pursuing AI-driven mathematics (its own page notes this is its "second major announcement in approximately two weeks," per secondary coverage); below the ≥2-artifact bar in THIS registry — watch for a second dated research-page post before promoting.
 - Nanbeige LLM Lab (Kanzhun/BOSS Zhipin-affiliated; HF org `Nanbeige`) — 1 — Nanbeige4.3-33B (huggingface.co/Nanbeige/Nanbeige4.3-33B, "flagship teacher model" for a distillation series, self-reported Terminal-Bench 2.1 80.9 vs. Qwen3.8-27B's 73.0) → queued below-bar (open-weight-003/agent-eval-014-adjacent, self-benchmarked/unverified) — first seen 2026-11-07, via this weekly's monthly-retrospective HF `likes30d` browse (a genuine MISS: sat uncaptured on this exact trending lane since creation — see `logs/calibration.md` retro M11). A previously-untracked Chinese lab; below the ≥2-artifact bar — watch for a second release or an independent benchmark confirmation before promoting.
 - XHToken / SparkLLM Team (HF org `XHToken`) — 1 — Spark-X2.6-4B (huggingface.co/XHToken/Spark-X2.6-4B, a 4B on-device model claiming parity with ~9B models, 3 thinking-effort levels) → queued below-bar (small-cpu-models-008-adjacent, self-reported/chart-only benchmarks) — first seen 2026-11-07, via this weekly's monthly-retrospective HF `likes30d` browse. A previously-untracked lab; below the ≥2-artifact bar — watch for a second release or technical writeup before promoting.
@@ -268,6 +281,7 @@ verification (real feed, on-axis, not SEO). Line format:
 - aaif.io (Agentic AI Foundation, the Linux Foundation body already governing MCP/Agent Skills) — 1 (as a DISCOVERY SURFACE, distinct from the primaries it names) — "When good agents make bad systems" (11-09), a substantive conference-recap post naming multiple named, linked primary sessions (Cisco Outshift's Mycelium, Apple's Aditi Mewada SRE-conflict design, NCSU's Munindar Singh commitment protocols) — first seen 2026-11-11, via a WebSearch dormancy-probe lead for decentralized-mas-022. A genuinely original-reporting neutral-foundation blog (not just a pointer/explainer), already a known governance entity in this ledger; below the ≥2-on-axis-artifact bar as a tracked POINTER source — watch for a second substantive recap before considering it for the curator/pointer-blog swept list.
 - radixark.com (+ huggingface.co/RadixArk) — 1 — DaisyRose-27B (11-18, radixark.com/blog/daisyrose-27b, RL post-training on long-horizon agent tasks via RadixArk's own open-source "Miles" RL framework) — queued below-bar (agentic-rl-credit-017-adjacent, incremental/no new algorithm) — first seen 2026-11-19, via the HN front-page pulse. A previously-untracked RL-post-training lab; below the ≥2-artifact bar — watch for a second model or a technical writeup on the Miles framework itself before promoting.
 - Reson8 (HF org, huggingface.co/Reson8) — 1 — Rumble-2-Flash (11-18, huggingface.co/blog/rumble-2-flash) → on-policy-distill-016 EVIDENCE — first seen 2026-11-19, via the tier-i HF-blog RSS sweep. A previously-untracked speech/ASR lab shipping an open 0.5B model distilled via on-policy distillation with GOLD from its own larger production model; below the ≥2-artifact bar — watch for a second release before promoting.
+- sensenova (HF org, SenseTime) — 1 — SenseNova-Loop-9B (11-17, huggingface.co/sensenova/SenseNova-Loop-9B, Apache-2.0, a real competitively-benchmarked looped-transformer model) → latent-reasoning-006 EVIDENCE — first seen 2026-11-20, via the HF global-trending lane. A previously-untracked lab (SenseNova/SenseTime); below the ≥2-artifact bar — watch for a second release before promoting.
 - higurashi-ai (HF org) — 1 — Haru-4B (createdAt 11-12, huggingface.co/higurashi-ai/Haru-4B, a 4B full-duplex multilingual speech-to-speech model) — first seen 2026-11-16, via the HF global trending/new lane. A previously-untracked lab; no technical writeup located this session, and no confirmed CPU-first/on-device claim beyond the small parameter count — below the ≥2-artifact bar, queued below-bar not routed as small-cpu-models-008 evidence — watch for a second release or a dedicated blog post.
 
 ## Social & community channels (Phase 2 — INTAKE ONLY, never evidence)
@@ -351,7 +365,13 @@ no tier that is skipped a priori. Agent: verify each on first use.
   https://alphamatch.ai/blog` (or built-in fetch of that URL) to list posts. Sweep
   it EVERY run as part of the mandatory curator lane and log it as opened OR as
   `degraded: <reason>` — do NOT silently omit it (it was listed-but-never-fetched
-  for days precisely because no access method was recorded). NAVIGATION TRAP
+  for days precisely because no access method was recorded). STALE 2026-11-20
+  (daily): fetched `/blog` cleanly (200, real list) but the newest post is still
+  dated 2026-09-23 — over 2 months stale, same list as the last several checks.
+  This looks like the source itself has stopped publishing, not an access-path
+  problem; re-test content freshness (not just HTTP status) roughly weekly and
+  flag for the next weekly to consider dropping if it stays stale through
+  December. NAVIGATION TRAP
   (confirmed 2026-07-29): the bare domain `https://alphamatch.ai/` (and
   `www.alphamatch.ai`) now redirects to an UNRELATED AI-consulting/agency
   homepage sharing the domain — do NOT check the bare domain and conclude the
