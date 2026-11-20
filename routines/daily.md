@@ -22,11 +22,22 @@ EVERY run does the FULL CHECK — there is NO "light/lean/confirmation pass", an
   proposal found there, so its cooling-period clock is not lost; invent nothing. If the same
   kind of run was incomplete twice in a row, send the curator a push notification: that is a
   run that keeps dying, not a blip.
+  Also check that the most recent daily report has its `Axes:` block (AXIS FLOOR); if it is
+  missing, say so at the top of today's report — the floor was skipped, not satisfied.
 - Read `TRENDS.md` in full.
 - Read the most recent report in `reports/` (skip if none exists yet).
 - Read the recent tail (~10 entries) of `logs/strategy_notes.md` and the recent tail (~7 days) of `logs/source_rotation.md` — the coverage log lives there now, not in TRENDS.md; read only the tail, not the whole file — to decide what to cover today.
 
 ## 2. Scan
+
+AXIS FLOOR (every run): every axis of the `Scope, in priority order` list below gets its own
+attention in this run — not only its sources' CHECK. Start the triage with the axis that had the
+FEWEST routed items over the last 7 days of reports, and give every axis its own triage pass
+before working through any single source's batch: a high-volume axis or producer must not consume
+the run. The report carries one line per axis (`Axis <n> <name>: <items routed> — <what, or
+"nothing new">`), even when empty. An axis with zero routed items for 3 consecutive dailies is
+flagged UNDER FLOOR in the report; the weekly decides whether that is real silence or crowding-out
+(probe its venues as in the DORMANCY PROBE).
 
 Coverage honesty (applies to EVERY sweep below). A source listed in SOURCES.md under a "swept every run" heading — lab blogs, explainer/digest pointer blogs, YouTube curators alike — is a COVERAGE PROMISE. There is no tier that is skipped a priori: every such source must appear in today's `logs/source_rotation.md` line as either opened OR `degraded: <reason>`. Listing a representative subset and silently dropping the rest (especially the feed-less ones, e.g. alphamatch.ai) is a coverage LIE, not a lean sweep — the radar would be claiming to track sources it never checks. If a source is awkward (no feed), HEAL its access method and record it in SOURCES.md (as for NVIDIA/Meta/alphamatch); if you genuinely won't sweep it every run, REMOVE it from SOURCES.md. The intake-vs-evidence distinction (lab blogs are primary/citable; pointer blogs and curators are intake-only — follow to the primary) governs what you DO with a hit, NOT whether you CHECK the source: all tracked sources are checked every run.
 
@@ -86,6 +97,15 @@ This section is NOT skippable on a quiet pass. Even when the scan found no new e
   A run that checked a trend and found nothing new writes NOTHING into it — that non-event already
   lives in today's report and in `logs/source_rotation.md`, and copying it into the trend is how a
   ledger silently turns into a run-log. If a note would only say "checked, unchanged", omit it.
+- BATCH PRODUCERS — volume is not significance. A source that releases many on-scope results
+  at once or at sustained volume (≥10 in 7 days: a lab's results repository, a venue for
+  machine-generated work, a vendor's bulk disclosure) does NOT seed one trend per item. It gets
+  ONE collection trend (create it the first time; evidence = the producer's own releases plus
+  independent commentary on them), and its individual items are listed one line each in
+  `logs/results_catalog.md` under that producer. An item leaves the collection for its own trend
+  only when it clears this radar's trend/seed bar on its own merits (AGENTS.md). Per run, triage
+  at most 5 of a producer's new items individually — most significant first — and record the rest
+  as one bundled line in the catalog.
 - DORMANCY PROBE — silence must be MEASURED where the trend's evidence lives, never assumed.
   Before moving any trend to `dormant` (or archiving it), probe its silent window
   (`last_evidence` → today) on the channels its OWN evidence comes from: read the hosts and
@@ -115,6 +135,9 @@ This section is NOT skippable on a quiet pass. Even when the scan found no new e
 From today's scan (exploration slot included), select 0–2 items that an AI researcher / AI-systems engineer / daily AI practitioner should know or study: a project, paper, technique or tool. The trend bar does NOT apply here — a single strong artifact qualifies — but the evidence rules do: only opened, primary sources. Add each pick to the `study_shelf` section of `TRENDS.md` (newest first: date — [name](url) — one line of why it is worth studying). Don't force it: zero picks is fine.
 
 ## 6. Write the daily report
+REQUIRED in every report: the `Axes:` block — one line per scope axis (AXIS FLOOR), even when an
+axis routed nothing. A report without it means the run skipped the floor: the next run's
+completion check treats it like a missing report section and the weekly flags it.
 Create `reports/YYYY-MM-DD.md` (under ~60 lines, factual):
 - **Ledger changes** — evidence added per trend, stage moves with reasons, queue promotions/drops.
 - **Capture-leak sweep** — one required line `capture-leak: N ids checked / M queued` from the §4 reconciliation (mandatory every run, even when 0; the line's absence means the sweep was skipped).
