@@ -63,6 +63,13 @@ structure is a contract.
   day's/week's report (write-once, permanent). NEVER silently delete — because
   every removal is either a promotion or a recorded drop, shrinking the queue
   loses no knowledge. Re-date an item only if it is genuinely still worth watching.
+- **Tombstone externalization (amendment W46-P1, applied 2026-11-21 W47):**
+  tombstones (DROPPED/RESOLVED/PROMOTED/LEDGER-CONSISTENCY-FIX/CAPTURE-LEAK-FIX
+  lines) older than 60 days are moved VERBATIM to the append-only
+  `logs/queue_history.md` as part of this run's own queue maintenance, replaced
+  by (or folded into) a single one-line `POINTER:` entry noting how many
+  tombstones moved and that pre-cutoff history lives there. Live (unresolved)
+  queue lines are never externalized this way — only resolved tombstones.
 - **Queue-line format (amendment W35-P1, applied 2026-09-05 W36):** a queue entry
   holds ONLY genuine unresolved signals, one line per signal (or one tightly
   bundled line per day listing just the still-open below-bar/adjacent/unverified
