@@ -3,11 +3,11 @@
 ![trends](https://img.shields.io/badge/trends-24-3266ad?style=flat-square)
 ![accelerating](https://img.shields.io/badge/accelerating-12-e8590c?style=flat-square)
 ![watchlist](https://img.shields.io/badge/watchlist-8-6c757d?style=flat-square)
-![updated](https://img.shields.io/badge/updated-2026--11--20-2f9e44?style=flat-square)
+![updated](https://img.shields.io/badge/updated-2026--11--21-2f9e44?style=flat-square)
 
 Tracks AI-ecosystem trends (research + engineering) and curates a study shelf for an AI researcher / AI-systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-11-20):** [Diffusion language models](TRENDS.md#id-diffusion-lm-013-diffusion-language-models-reach-open-weights-production-scale) moved mainstreaming → dormant after three straight probes found no qualifying release · [AI agents doing open-ended research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) added Anthropic's [Claude resolving two open black-hole-physics problems](https://www.anthropic.com/research/claude-black-hole-physics) via a weeks-long, many-agent, Lean-verified side project · ⭐ [Latent-space reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) added SenseTime's [SenseNova-Loop-9B](https://huggingface.co/sensenova/SenseNova-Loop-9B), a real open-weight looped-transformer model near Qwen3.8-27B parity at a third the size · [Agent security: architectural turn](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) added Vals AI's [autonomous-weapons jailbreak study](https://www.vals.ai/blogs/autonomous-warfare), finding no blocking classifiers across nearly every frontier model.
+**Since last scan (2026-11-21):** Weekly recalibration — no new trend evidence or stage moves this run; externalized old [`observation_queue`](TRENDS.md#observation_queue) tombstones to a new append-only log to keep the ledger lean, pruned the study shelf, and promoted Tencent Hunyuan to a swept [source](SOURCES.md).
 
 ## ⭐ Pinned topics
 
@@ -76,4 +76,4 @@ Unverified intake, not evidence — link only, no individuals named:
 
 ## Output map
 
-[Full ledger](TRENDS.md) · [watchlist (~8 items)](TRENDS.md#observation_queue) · [reports](reports/) ([latest daily](reports/2026-11-20.md)) · weekly: [latest](reports/weekly/2026-W46.md) · [agent guide](AGENTS.md) · [sources registry](SOURCES.md)
+[Full ledger](TRENDS.md) · [watchlist (~8 items)](TRENDS.md#observation_queue) · [reports](reports/) ([latest daily](reports/2026-11-20.md)) · weekly: [latest](reports/weekly/2026-W47.md) · [agent guide](AGENTS.md) · [sources registry](SOURCES.md)
