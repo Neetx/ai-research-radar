@@ -2,12 +2,12 @@
 
 ![trends](https://img.shields.io/badge/trends-24-3266ad?style=flat-square)
 ![accelerating](https://img.shields.io/badge/accelerating-13-e8590c?style=flat-square)
-![watchlist](https://img.shields.io/badge/watchlist-10-6c757d?style=flat-square)
-![updated](https://img.shields.io/badge/updated-2026--11--25-2f9e44?style=flat-square)
+![watchlist](https://img.shields.io/badge/watchlist-9-6c757d?style=flat-square)
+![updated](https://img.shields.io/badge/updated-2026--11--26-2f9e44?style=flat-square)
 
 Tracks AI-ecosystem trends (research + engineering) and curates a study shelf for an AI researcher / AI-systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-11-25):** [MCP as the standard integration layer](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks) added ["MCP Turns Two"](https://blog.modelcontextprotocol.io/posts/mcp-turns-two/) — a new "Events" core primitive (beta) plus a confirmed March-2027 next-spec date. [Subquadratic/sparse attention](TRENDS.md#id-subquad-attn-012-subquadratic-and-sparse-attention-reaches-frontier-open-weight-models) added a genuinely new mechanism, [loom attention](https://arxiv.org/abs/2611.30634) (dual control/content residual streams). [Small / CPU-first models](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) added [PrismML's Ternary Bonsai 2.5 27B](https://prismml.com/news/bonsai-2-5-27b), closing much of the gap to full precision on agentic/coding benchmarks. Queue: fixed a capture-leak from 11-10 ([collusion-probe critique](https://arxiv.org/abs/2611.10620)), dropped a 12-day-stale cohort (net 10 live lines).
+**Since last scan (2026-11-26):** [AI agents doing open-ended research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) added two same-day batches of extraordinary, still-unrefereed claims — Google's new [Cogentic](https://github.com/google-research/google-research/tree/master/cogentic_research_papers) multi-agent proof system (six further algorithmic results, including a claimed subexponential integer-factoring algorithm) and a further OpenAI/math batch claiming the matrix-multiplication exponent is [exactly ω=9/4](https://github.com/openai/math/tree/main/preprints). [Latent-space communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) was rescued from dormancy by [a cross-model KV-cache-transfer security study](https://arxiv.org/abs/2611.34278). [Agent security](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) added [Epoch AI's incident report](https://epoch.ai/publications/incident-report-ai-agents-attempted-exploits-on-our-website) of unauthorized alignment-testing agents attacking its live production website. Queue: dropped a 12-day-stale line and externalized 6 tombstones older than 60 days to `logs/queue_history.md` (net 9 live lines).
 
 ## ⭐ Pinned topics
 
@@ -16,7 +16,7 @@ Tracks AI-ecosystem trends (research + engineering) and curates a study shelf fo
 | ⭐ [Small / CPU-first models](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 📈 accelerating | [2026-11-24](https://prismml.com/news/bonsai-2-5-27b) |
 | ⭐ [Latent-space reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 accelerating | [2026-11-20](https://vllm.ai/blog/2026-11-20-inkling2-mini) |
 | ⭐ [Ultra-low-bit quantization](TRENDS.md#id-lowbit-quant-011-ultra-low-bit-quantization-vector-and-trellis-coding-for-weights-and-kv-cache) | 📈 accelerating | [2026-11-19](https://arxiv.org/abs/2611.26157) |
-| ⭐ [Latent-space communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 🌱 emerging | [2026-11-05](https://arxiv.org/abs/2611.08483) |
+| ⭐ [Latent-space communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 🌱 emerging | [2026-11-25](https://arxiv.org/abs/2611.34278) |
 
 ## Trends
 
@@ -37,11 +37,11 @@ Tracks AI-ecosystem trends (research + engineering) and curates a study shelf fo
 | [Prefill/decode disaggregation](TRENDS.md#id-pd-disagg-002-prefilldecode-disaggregation-as-the-standard-llm-serving-architecture) | 📈 accelerating | [2026-11-17](https://cerebras.ai/blog/cerebras-launches-disaggregated-inference) |
 | [Remote sandboxes for agents](TRENDS.md#id-agent-sandbox-007-remote-sandboxes-as-the-execution-layer-for-agents) | 📈 accelerating | [2026-11-13](https://blog.cloudflare.com/kitesurf-open-source/) |
 | [Decentralized multi-agent coordination](TRENDS.md#id-decentralized-mas-022-decentralized-multi-agent-coordination-without-a-central-orchestrator) | 📈 accelerating | [2026-11-09](https://aaif.io/blog/when-good-agents-make-bad-systems) |
+| ⭐ [Latent-space communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 🌱 emerging | [2026-11-25](https://arxiv.org/abs/2611.34278) |
 | [Deployment-grounded agent eval](TRENDS.md#id-agent-eval-014-deployment-grounded-agent-evaluation-long-horizon-real-session-benchmarks-beyond-static-leaderboards) | 🌱 emerging | [2026-11-23](https://huggingface.co/blog/agentic-evals) |
 | [Parametric injection](TRENDS.md#id-parametric-injection-018-parametric-injection-compiling-behavior-and-knowledge-into-model-weights-instead-of-promptcontext) | 🌱 emerging | [2026-11-19](https://arxiv.org/abs/2611.25476) |
 | [Dense credit assignment for agentic RL](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards) | 🌱 emerging | [2026-11-09](https://arxiv.org/abs/2611.12587) |
-| ⭐ [Latent-space communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 🌱 emerging | [2026-11-05](https://arxiv.org/abs/2611.08483) |
-| [AI agents doing open-ended research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) | 🏔 mainstreaming | [2026-11-24](https://github.com/anthropics/formal-math/tree/main/vp-vnp) |
+| [AI agents doing open-ended research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) | 🏔 mainstreaming | [2026-11-25](https://github.com/google-research/google-research/tree/master/cogentic_research_papers) |
 | [Agent harness/runtime as self-improving object](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) | 🏔 mainstreaming | [2026-11-21](https://facebookresearch.github.io/RAM/blogs/self_improving_memory/) |
 | [Open-weight frontier MoE wave](TRENDS.md#id-open-weight-003-open-weight-wave-frontier-scale-moe-released-at-high-cadence-across-labs) | 🏔 mainstreaming | [2026-11-17](https://huggingface.co/tencent/Hy4-flash) |
 | [Agent security: architectural turn](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) | 🏔 mainstreaming | [2026-11-17](https://www.vals.ai/blogs/autonomous-warfare) |
@@ -51,6 +51,8 @@ Tracks AI-ecosystem trends (research + engineering) and curates a study shelf fo
 
 ## Worth studying
 
+- [The matrix multiplication exponent is nine fourths](https://github.com/openai/math/tree/main/preprints) — OpenAI's internal model claims a matching lower bound for ω=9/4, the first non-trivial unconditional lower bound of this kind ever proved, if it survives scrutiny.
+- [Cogentic](https://github.com/google-research/google-research/tree/master/cogentic_research_papers) — Google's multi-agent proof-discovery harness (prover populations, adversarial verification, a persistent verified ledger), worth studying as an architecture independent of whether every individual claim holds up.
 - [Rewirable Circuits in Transformers with Loom Attention](https://arxiv.org/abs/2611.30634) — a genuinely new point in the attention design space: splitting control (a per-token matrix memory) from content (ordinary token attention) into two residual streams.
 - [Ternary Bonsai 2.5 27B](https://prismml.com/news/bonsai-2-5-27b) — a 5.9GB ternary 27B model that closes much of the agentic/coding gap to its full-precision base (SWE-bench Verified 75.6 vs. 80.6).
 - [How to build and maintain an agentic evaluation](https://huggingface.co/blog/agentic-evals) — an 8-step, directly-reusable methodology for building a deployment-grounded agent eval, plus a release checklist most teams skip.
@@ -61,17 +63,15 @@ Tracks AI-ecosystem trends (research + engineering) and curates a study shelf fo
 - [SenseNova-Loop-9B](https://huggingface.co/sensenova/SenseNova-Loop-9B) — a real, open-weight looped-transformer model reaching near-Qwen3.8-27B parity at roughly a third the parameters via loop-depth plus a novel residual-stream-mixing mechanism.
 - [180B Parameters, 32GB of RAM: Pushing MoE Inference to the Limit with Transformers](https://huggingface.co/blog/moe-expert-streaming) — a reproducible `transformers` recipe (3-bit expert quantization + SSD streaming) that runs a ~180B-parameter MoE on a 32GB Mac within 6% of a specialized inference engine.
 - [Evolving Agent Teams](https://arxiv.org/abs/2610.36848) — a central supervisor that detects when a coding-agent team converges to a local optimum and restructures the team, writing a CUDA kernel that beats production FlashInfer by 1.2x average.
-- [FrontierHarness Eval v1.1](https://runta.com/blog/introducing-frontierharness-eval-v1-1/) — 27,280 agent runs across 22 harnesses x 5 models find model choice drives ~93% of cost variance to the harness's ~2%, yet the cheapest harness flips completely depending on which model it's paired with.
-- [Weight-Space Programming Doesn't Need Transformers](https://arxiv.org/abs/2611.22055) — three frontier LLMs independently asked to design a network's weights directly all converge on the same sparse-lookup-table architecture, beating the Transformer the same LLM wrote with ~1,800x fewer parameters.
 
 ## Community pulse
 
 Unverified intake, not evidence — link only, no individuals named:
 
-- A looped-transformer coding model, [GLM-5.4](https://z.ai/blog/glm-5.4), remains inaccessible to this radar's tools (JS-rendered shell) across two days of re-attempts; its open-weight status stays unconfirmed.
-- A new open-source serving framework for generative-recommendation models, [vLLM-GR](https://vllm.ai/blog/2026-11-24-vllm-gr-announcement), drew multi-company contributions this week but doesn't yet fit any tracked axis.
+- A sprawling, independently-unverified cluster of same-day AI-authored math/CS claims — [a matrix-multiplication-exponent lower bound](https://github.com/openai/math/tree/main/preprints), [a new unconditional subexponential factoring algorithm](https://github.com/google-research/google-research/tree/master/cogentic_research_papers), and [a quantum-complexity result](https://arxiv.org/abs/2611.31236) — drew the loudest reaction of the week on Hacker News ("Holy shit holy shit...", 1195pts).
+- A looped-transformer coding model, [GLM-5.4](https://z.ai/blog/glm-5.4), remains inaccessible to this radar's tools (JS-rendered shell) across several days of re-attempts; its open-weight status stays unconfirmed.
 - A disputed 940-page draft claiming a proof of [the Riemann Hypothesis](https://johncarlosbaez.wordpress.com/2026/11/22/masullo-on-the-riemann-hypothesis/) remains under heavy community scrutiny, including an AI-agent-assisted Lean-formalization effort.
 
 ## Output map
 
-[Full ledger](TRENDS.md) · [watchlist (~10 items)](TRENDS.md#observation_queue) · [reports](reports/) ([latest daily](reports/2026-11-25.md)) · weekly: [latest](reports/weekly/2026-W47.md) · [agent guide](AGENTS.md) · [sources registry](SOURCES.md)
+[Full ledger](TRENDS.md) · [watchlist (~9 items)](TRENDS.md#observation_queue) · [reports](reports/) ([latest daily](reports/2026-11-26.md)) · weekly: [latest](reports/weekly/2026-W47.md) · [agent guide](AGENTS.md) · [sources registry](SOURCES.md)
