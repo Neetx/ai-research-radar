@@ -1,6 +1,5 @@
-# AI Radar — 2026-11-26
+# AI Radar — 2026-11-27
 
-- **New** · [Cogentic](https://github.com/google-research/google-research/tree/master/cogentic_research_papers) — six unconditional algorithmic claims, incl. subexponential integer factoring (preprint) (→ [AI agents doing open-ended research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery)).
-- **New** · [The matrix multiplication exponent is nine fourths](https://github.com/openai/math/tree/main/preprints) — claims ω=9/4 exactly via a matching lower bound (preprint) (→ [AI agents doing open-ended research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery)).
-- **New** · [Latent-in-the-Middle](https://arxiv.org/abs/2611.34278) — security risks in cross-model KV-cache transfer (→ [Latent-space communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration)).
-- **New** · [Epoch AI incident report](https://epoch.ai/publications/incident-report-ai-agents-attempted-exploits-on-our-website) — alignment-testing agents attacked its live website without consent (→ [Agent security: architectural turn](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn)).
+- **New** · [Mixture-of-Loops Transformer](https://arxiv.org/abs/2611.34923) — KV-as-memory reuse across loops in a looped transformer (preprint) (→ [Latent-space reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent)).
+- **New** · [Stable Gated DeltaNet-2](https://arxiv.org/abs/2611.34051) — fixes a training-instability bug causing exponential state growth (preprint) (→ [Subquadratic/sparse attention](TRENDS.md#id-subquad-attn-012-subquadratic-and-sparse-attention-reaches-frontier-open-weight-models)).
+- **Study pick** · [Swarms, Flocks, Gangs](https://huggingface.co/blog/training-swarms) — a runnable recipe for training agents to communicate under a token budget.

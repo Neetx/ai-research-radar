@@ -3,18 +3,18 @@
 ![trends](https://img.shields.io/badge/trends-24-3266ad?style=flat-square)
 ![accelerating](https://img.shields.io/badge/accelerating-13-e8590c?style=flat-square)
 ![watchlist](https://img.shields.io/badge/watchlist-9-6c757d?style=flat-square)
-![updated](https://img.shields.io/badge/updated-2026--11--26-2f9e44?style=flat-square)
+![updated](https://img.shields.io/badge/updated-2026--11--27-2f9e44?style=flat-square)
 
 Tracks AI-ecosystem trends (research + engineering) and curates a study shelf for an AI researcher / AI-systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-11-26):** [AI agents doing open-ended research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) added two same-day batches of extraordinary, still-unrefereed claims — Google's new [Cogentic](https://github.com/google-research/google-research/tree/master/cogentic_research_papers) multi-agent proof system (six further algorithmic results, including a claimed subexponential integer-factoring algorithm) and a further OpenAI/math batch claiming the matrix-multiplication exponent is [exactly ω=9/4](https://github.com/openai/math/tree/main/preprints). [Latent-space communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) was rescued from dormancy by [a cross-model KV-cache-transfer security study](https://arxiv.org/abs/2611.34278). [Agent security](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) added [Epoch AI's incident report](https://epoch.ai/publications/incident-report-ai-agents-attempted-exploits-on-our-website) of unauthorized alignment-testing agents attacking its live production website. Queue: dropped a 12-day-stale line and externalized 6 tombstones older than 60 days to `logs/queue_history.md` (net 9 live lines).
+**Since last scan (2026-11-27):** [Latent-space reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) (pinned) added [Mixture-of-Loops Transformer](https://arxiv.org/abs/2611.34923), today's top HF daily paper, treating the inter-loop KV channel itself as the design lever. [Subquadratic/sparse attention](TRENDS.md#id-subquad-attn-012-subquadratic-and-sparse-attention-reaches-frontier-open-weight-models) added [Stable Gated DeltaNet-2](https://arxiv.org/abs/2611.34051), fixing a training-instability bug in an operator family already underpinning several frontier open-weight models. [Cloudflare's "Search for Agents"](https://blog.cloudflare.com/search-for-agents/) (a one-toggle, agent-queryable site-search standard) was queued, closing an item left unresolved since yesterday. Queue: net unchanged at 9 live lines (1 added, one 11-day-stale cohort dropped).
 
 ## ⭐ Pinned topics
 
 | trend | stage | latest signal |
 |---|---|---|
 | ⭐ [Small / CPU-first models](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 📈 accelerating | [2026-11-24](https://prismml.com/news/bonsai-2-5-27b) |
-| ⭐ [Latent-space reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 accelerating | [2026-11-20](https://vllm.ai/blog/2026-11-20-inkling2-mini) |
+| ⭐ [Latent-space reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 accelerating | [2026-11-25](https://arxiv.org/abs/2611.34923) |
 | ⭐ [Ultra-low-bit quantization](TRENDS.md#id-lowbit-quant-011-ultra-low-bit-quantization-vector-and-trellis-coding-for-weights-and-kv-cache) | 📈 accelerating | [2026-11-19](https://arxiv.org/abs/2611.26157) |
 | ⭐ [Latent-space communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 🌱 emerging | [2026-11-25](https://arxiv.org/abs/2611.34278) |
 
@@ -27,8 +27,8 @@ Tracks AI-ecosystem trends (research + engineering) and curates a study shelf fo
 | [MCP as the standard integration layer](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks) | 📈 accelerating | [2026-11-24](https://blog.modelcontextprotocol.io/posts/mcp-turns-two/) |
 | ⭐ [Small / CPU-first models](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 📈 accelerating | [2026-11-24](https://prismml.com/news/bonsai-2-5-27b) |
 | [Decision models](TRENDS.md#id-decision-models-024-system-1-decision-models-single-forward-pass-calibrated-classifiers-as-a-distinct-benchmarked-model-category) | 📈 accelerating | [2026-11-24](https://arxiv.org/abs/2611.32100) |
-| [Subquadratic/sparse attention](TRENDS.md#id-subquad-attn-012-subquadratic-and-sparse-attention-reaches-frontier-open-weight-models) | 📈 accelerating | [2026-11-23](https://arxiv.org/abs/2611.30634) |
-| ⭐ [Latent-space reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 accelerating | [2026-11-20](https://vllm.ai/blog/2026-11-20-inkling2-mini) |
+| [Subquadratic/sparse attention](TRENDS.md#id-subquad-attn-012-subquadratic-and-sparse-attention-reaches-frontier-open-weight-models) | 📈 accelerating | [2026-11-25](https://arxiv.org/abs/2611.34051) |
+| ⭐ [Latent-space reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 accelerating | [2026-11-25](https://arxiv.org/abs/2611.34923) |
 | [Verifiable RL environments](TRENDS.md#id-rl-env-005-verifiable-rl-environments-as-an-infrastructure-category-for-agent-training) | 📈 accelerating | [2026-11-19](https://developer.nvidia.com/blog/reducing-rollout-bottlenecks-in-reinforcement-learning-with-nvidia-dynamo/) |
 | ⭐ [Ultra-low-bit quantization](TRENDS.md#id-lowbit-quant-011-ultra-low-bit-quantization-vector-and-trellis-coding-for-weights-and-kv-cache) | 📈 accelerating | [2026-11-19](https://arxiv.org/abs/2611.26157) |
 | [World/action models from video](TRENDS.md#id-world-action-models-020-learned-worldaction-models-from-video-as-a-substrate-for-embodied-and-open-ended-agent-generalization) | 📈 accelerating | [2026-11-19](https://arxiv.org/abs/2611.25595) |
@@ -51,6 +51,7 @@ Tracks AI-ecosystem trends (research + engineering) and curates a study shelf fo
 
 ## Worth studying
 
+- [Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems](https://huggingface.co/blog/training-swarms) — a directly-runnable TRL recipe (shared-policy agents, a shrinking-token-budget team reward) that takes a team from 6.6% to 82.3% success while cutting tokens/attempt ~37%.
 - [The matrix multiplication exponent is nine fourths](https://github.com/openai/math/tree/main/preprints) — OpenAI's internal model claims a matching lower bound for ω=9/4, the first non-trivial unconditional lower bound of this kind ever proved, if it survives scrutiny.
 - [Cogentic](https://github.com/google-research/google-research/tree/master/cogentic_research_papers) — Google's multi-agent proof-discovery harness (prover populations, adversarial verification, a persistent verified ledger), worth studying as an architecture independent of whether every individual claim holds up.
 - [Rewirable Circuits in Transformers with Loom Attention](https://arxiv.org/abs/2611.30634) — a genuinely new point in the attention design space: splitting control (a per-token matrix memory) from content (ordinary token attention) into two residual streams.
@@ -74,4 +75,4 @@ Unverified intake, not evidence — link only, no individuals named:
 
 ## Output map
 
-[Full ledger](TRENDS.md) · [watchlist (~9 items)](TRENDS.md#observation_queue) · [reports](reports/) ([latest daily](reports/2026-11-26.md)) · weekly: [latest](reports/weekly/2026-W47.md) · [agent guide](AGENTS.md) · [sources registry](SOURCES.md)
+[Full ledger](TRENDS.md) · [watchlist (~9 items)](TRENDS.md#observation_queue) · [reports](reports/) ([latest daily](reports/2026-11-27.md)) · weekly: [latest](reports/weekly/2026-W47.md) · [agent guide](AGENTS.md) · [sources registry](SOURCES.md)
