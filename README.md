@@ -1,13 +1,13 @@
 # AI Radar
 
 ![trends](https://img.shields.io/badge/trends-24-3266ad?style=flat-square)
-![accelerating](https://img.shields.io/badge/accelerating-13-e8590c?style=flat-square)
+![accelerating](https://img.shields.io/badge/accelerating-12-e8590c?style=flat-square)
 ![watchlist](https://img.shields.io/badge/watchlist-9-6c757d?style=flat-square)
-![updated](https://img.shields.io/badge/updated-2026--11--27-2f9e44?style=flat-square)
+![updated](https://img.shields.io/badge/updated-2026--11--28-2f9e44?style=flat-square)
 
 Tracks AI-ecosystem trends (research + engineering) and curates a study shelf for an AI researcher / AI-systems engineer who works with AI daily — generated from [TRENDS.md](TRENDS.md).
 
-**Since last scan (2026-11-27):** [Latent-space reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) (pinned) added [Mixture-of-Loops Transformer](https://arxiv.org/abs/2611.34923), today's top HF daily paper, treating the inter-loop KV channel itself as the design lever. [Subquadratic/sparse attention](TRENDS.md#id-subquad-attn-012-subquadratic-and-sparse-attention-reaches-frontier-open-weight-models) added [Stable Gated DeltaNet-2](https://arxiv.org/abs/2611.34051), fixing a training-instability bug in an operator family already underpinning several frontier open-weight models. [Cloudflare's "Search for Agents"](https://blog.cloudflare.com/search-for-agents/) (a one-toggle, agent-queryable site-search standard) was queued, closing an item left unresolved since yesterday. Queue: net unchanged at 9 live lines (1 added, one 11-day-stale cohort dropped).
+**Since last scan (2026-11-28):** [Prefill/decode disaggregation](TRENDS.md#id-pd-disagg-002-prefilldecode-disaggregation-as-the-standard-llm-serving-architecture) promoted accelerating → mainstreaming — now documented across five hardware vendors and both major open-source serving engines, via [Cerebras's production launch](https://cerebras.ai/blog/cerebras-launches-disaggregated-inference). [Parametric injection](TRENDS.md#id-parametric-injection-018-parametric-injection-compiling-behavior-and-knowledge-into-model-weights-instead-of-promptcontext) raised confidence low → medium on a converging "weight-space programming" cluster, via [WeightCode](https://arxiv.org/abs/2611.25476). Applied [amendment W47-P1](routines/daily.md) making the daily's tier-ii source rotation deterministic and mandatory; archived 10 [study-shelf](TRENDS.md#study_shelf) picks older than 30 days, queue holds steady at [9 live lines](TRENDS.md#observation_queue).
 
 ## ⭐ Pinned topics
 
@@ -20,21 +20,20 @@ Tracks AI-ecosystem trends (research + engineering) and curates a study shelf fo
 
 ## Trends
 
-🌱 4 · 📈 13 · 🚀 0 · 🌊 0 · 🏔 4 · 📉 0 · 💤 3
+🌱 4 · 📈 12 · 🚀 0 · 🌊 0 · 🏔 5 · 📉 0 · 💤 3
 
 | trend | stage | latest signal |
 |---|---|---|
+| [Latent-space reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 accelerating | [2026-11-25](https://arxiv.org/abs/2611.34923) |
+| [Subquadratic/sparse attention](TRENDS.md#id-subquad-attn-012-subquadratic-and-sparse-attention-reaches-frontier-open-weight-models) | 📈 accelerating | [2026-11-25](https://arxiv.org/abs/2611.34051) |
 | [MCP as the standard integration layer](TRENDS.md#id-mcp-standard-001-mcp-as-the-standard-integration-layer-for-agents-stateless-core-apps-tasks) | 📈 accelerating | [2026-11-24](https://blog.modelcontextprotocol.io/posts/mcp-turns-two/) |
 | ⭐ [Small / CPU-first models](TRENDS.md#id-small-cpu-models-008-small-and-1-bit-models-cpu-first-and-on-device-inference) | 📈 accelerating | [2026-11-24](https://prismml.com/news/bonsai-2-5-27b) |
 | [Decision models](TRENDS.md#id-decision-models-024-system-1-decision-models-single-forward-pass-calibrated-classifiers-as-a-distinct-benchmarked-model-category) | 📈 accelerating | [2026-11-24](https://arxiv.org/abs/2611.32100) |
-| [Subquadratic/sparse attention](TRENDS.md#id-subquad-attn-012-subquadratic-and-sparse-attention-reaches-frontier-open-weight-models) | 📈 accelerating | [2026-11-25](https://arxiv.org/abs/2611.34051) |
-| ⭐ [Latent-space reasoning](TRENDS.md#id-latent-reasoning-006-latent-space-reasoning-and-recursive-computation-looped-models-latent-multi-agent) | 📈 accelerating | [2026-11-25](https://arxiv.org/abs/2611.34923) |
 | [Verifiable RL environments](TRENDS.md#id-rl-env-005-verifiable-rl-environments-as-an-infrastructure-category-for-agent-training) | 📈 accelerating | [2026-11-19](https://developer.nvidia.com/blog/reducing-rollout-bottlenecks-in-reinforcement-learning-with-nvidia-dynamo/) |
 | ⭐ [Ultra-low-bit quantization](TRENDS.md#id-lowbit-quant-011-ultra-low-bit-quantization-vector-and-trellis-coding-for-weights-and-kv-cache) | 📈 accelerating | [2026-11-19](https://arxiv.org/abs/2611.26157) |
 | [World/action models from video](TRENDS.md#id-world-action-models-020-learned-worldaction-models-from-video-as-a-substrate-for-embodied-and-open-ended-agent-generalization) | 📈 accelerating | [2026-11-19](https://arxiv.org/abs/2611.25595) |
 | [Multi-agent engineering as product](TRENDS.md#id-multi-agent-eng-009-multi-agent-engineering-becomes-product-surface-teams-workflows-a2a) | 📈 accelerating | [2026-11-18](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/) |
 | [On-policy distillation](TRENDS.md#id-on-policy-distill-016-on-policy-distillation-as-the-post-training-method-for-reasoning-and-agentic-llms) | 📈 accelerating | [2026-11-18](https://huggingface.co/blog/rumble-2-flash) |
-| [Prefill/decode disaggregation](TRENDS.md#id-pd-disagg-002-prefilldecode-disaggregation-as-the-standard-llm-serving-architecture) | 📈 accelerating | [2026-11-17](https://cerebras.ai/blog/cerebras-launches-disaggregated-inference) |
 | [Remote sandboxes for agents](TRENDS.md#id-agent-sandbox-007-remote-sandboxes-as-the-execution-layer-for-agents) | 📈 accelerating | [2026-11-13](https://blog.cloudflare.com/kitesurf-open-source/) |
 | [Decentralized multi-agent coordination](TRENDS.md#id-decentralized-mas-022-decentralized-multi-agent-coordination-without-a-central-orchestrator) | 📈 accelerating | [2026-11-09](https://aaif.io/blog/when-good-agents-make-bad-systems) |
 | ⭐ [Latent-space communication](TRENDS.md#id-latent-comm-010-latent-space-communication-between-models-cache-to-cache-latent-collaboration) | 🌱 emerging | [2026-11-25](https://arxiv.org/abs/2611.34278) |
@@ -43,6 +42,7 @@ Tracks AI-ecosystem trends (research + engineering) and curates a study shelf fo
 | [Dense credit assignment for agentic RL](TRENDS.md#id-agentic-rl-credit-017-dense-credit-assignment-and-process-supervision-for-long-horizon-agentic-rl-beyond-sparse-outcome-rewards) | 🌱 emerging | [2026-11-09](https://arxiv.org/abs/2611.12587) |
 | [AI agents doing open-ended research](TRENDS.md#id-agentic-ai-research-019-ai-agents-conducting-open-ended-aiscientific-research-measuring-and-building-for-autonomous-discovery) | 🏔 mainstreaming | [2026-11-25](https://github.com/google-research/google-research/tree/master/cogentic_research_papers) |
 | [Agent harness/runtime as self-improving object](TRENDS.md#id-agent-runtime-015-agent-harnessruntimememory-as-a-first-class-engineered-self-improving-object) | 🏔 mainstreaming | [2026-11-21](https://facebookresearch.github.io/RAM/blogs/self_improving_memory/) |
+| [Prefill/decode disaggregation](TRENDS.md#id-pd-disagg-002-prefilldecode-disaggregation-as-the-standard-llm-serving-architecture) | 🏔 mainstreaming | [2026-11-17](https://cerebras.ai/blog/cerebras-launches-disaggregated-inference) |
 | [Open-weight frontier MoE wave](TRENDS.md#id-open-weight-003-open-weight-wave-frontier-scale-moe-released-at-high-cadence-across-labs) | 🏔 mainstreaming | [2026-11-17](https://huggingface.co/tencent/Hy4-flash) |
 | [Agent security: architectural turn](TRENDS.md#id-agent-security-004-agent-security-formal-limits-of-prompt-injection-defenses-and-the-architectural-turn) | 🏔 mainstreaming | [2026-11-17](https://www.vals.ai/blogs/autonomous-warfare) |
 | [VLM-scaffolded embodied navigation](TRENDS.md#id-embodied-nav-021-vlm-scaffolded-generalist-embodied-navigation-policies) | 💤 dormant | [2026-11-03](https://arxiv.org/abs/2611.05129) |
@@ -63,7 +63,6 @@ Tracks AI-ecosystem trends (research + engineering) and curates a study shelf fo
 - [Claude solves two open problems in the physics of black holes](https://www.anthropic.com/research/claude-black-hole-physics) — a ~6-week, many-agent Claude side project with an unusually rigorous verification chain (independent double-checking, two Lean kernels, a human physicist's full review).
 - [SenseNova-Loop-9B](https://huggingface.co/sensenova/SenseNova-Loop-9B) — a real, open-weight looped-transformer model reaching near-Qwen3.8-27B parity at roughly a third the parameters via loop-depth plus a novel residual-stream-mixing mechanism.
 - [180B Parameters, 32GB of RAM: Pushing MoE Inference to the Limit with Transformers](https://huggingface.co/blog/moe-expert-streaming) — a reproducible `transformers` recipe (3-bit expert quantization + SSD streaming) that runs a ~180B-parameter MoE on a 32GB Mac within 6% of a specialized inference engine.
-- [Evolving Agent Teams](https://arxiv.org/abs/2610.36848) — a central supervisor that detects when a coding-agent team converges to a local optimum and restructures the team, writing a CUDA kernel that beats production FlashInfer by 1.2x average.
 
 ## Community pulse
 
@@ -75,4 +74,4 @@ Unverified intake, not evidence — link only, no individuals named:
 
 ## Output map
 
-[Full ledger](TRENDS.md) · [watchlist (~9 items)](TRENDS.md#observation_queue) · [reports](reports/) ([latest daily](reports/2026-11-27.md)) · weekly: [latest](reports/weekly/2026-W47.md) · [agent guide](AGENTS.md) · [sources registry](SOURCES.md)
+[Full ledger](TRENDS.md) · [watchlist (~9 items)](TRENDS.md#observation_queue) · [reports](reports/) ([latest daily](reports/2026-11-27.md)) · weekly: [latest](reports/weekly/2026-W48.md) · [agent guide](AGENTS.md) · [sources registry](SOURCES.md)
